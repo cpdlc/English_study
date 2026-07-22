@@ -87,11 +87,79 @@
 - 유형: 어휘
 
 
+## 2026-07-22 (Set 02)
+
+### Part 5
+
+#### Q3. The manual clearly states that all safety equipment ______ inspected on a monthly basis.
+(A) is (B) are (C) has (D) have
+- 정답: A / 내 답: B
+- 해석: 매뉴얼에는 모든 안전 장비가 매달 점검된다고 명시되어 있다.
+- 해설: "equipment"는 불가산명사로 항상 단수 취급한다. "all"이 붙어도 equipment 자체의 수는 바뀌지 않으므로 단수 동사 is가 정답.
+- 유형: 문법
+
+#### Q10. Sales figures for the third quarter were ______ lower than analysts had projected.
+(A) considerable (B) considerably (C) consideration (D) considered
+- 정답: B / 내 답: A
+- 해석: 3분기 매출액은 분석가들이 예측했던 것보다 상당히 낮았다.
+- 해설: 비교급 형용사 "lower"를 수식하는 자리이므로 부사가 필요하다. considerable(A)은 형용사라 다른 형용사를 수식할 수 없다.
+- 유형: 문법
+
+#### Q12. The new intern's report was ______ thorough that the manager asked her to present it to the entire team.
+(A) so (B) such (C) as (D) very
+- 정답: A / 내 답: A (✅ 정답이지만 물음표 표시로 설명 요청)
+- 해석: 신입 인턴의 보고서가 매우 철저해서 매니저가 팀 전체 앞에서 발표하라고 했다.
+- 해설: be동사 뒤에 형용사(thorough)가 바로 오는 구조이므로 "so + 형용사 + that"이 맞다. "such"는 뒤에 명사가 필요해서("such a thorough report that") 이 구조에는 쓸 수 없다.
+- 유형: 문법 (정답이나 개념 재확인)
+
+#### Q14. The committee's decision to postpone the launch was met with ______ from several stakeholders.
+(A) resist (B) resistant (C) resistance (D) resisting
+- 정답: C / 내 답: D
+- 해석: 출시를 연기하기로 한 위원회의 결정은 여러 이해관계자들의 반대에 부딪혔다.
+- 해설: "meet with resistance"(저항/반대에 부딪히다)는 고정 표현. resisting(동명사)은 이 표현에 쓰이지 않는다.
+- 유형: 어휘
+
+---
+
+### Part 6
+
+#### Q17. Shuttle service... every fifteen minutes... ______. Employees who require accessible parking should contact Facilities in advance...
+(A) No reservation is required to use the shuttle. (B) The shuttle service was cancelled last year due to low usage. (C) Parking permits will no longer be issued after this month. (D) The overflow lot is reserved exclusively for visitors.
+- 정답: A / 내 답: D
+- 해석: 셔틀버스는 예약이 필요 없다. (반면) 장애인 주차가 필요한 직원은 미리 Facilities에 연락해야 한다.
+- 해설: 뒤 문장과 대조 구조("일반 셔틀은 자유롭게 이용 vs. 장애인 주차는 사전 연락 필요")가 성립하려면 A가 와야 자연스럽다. D는 overflow lot을 직원도 쓴다는 앞뒤 문맥과 모순된다.
+- 유형: 매칭
+
+#### Q23. We strongly encourage anyone submitting a report ______ the first time to attend.
+(A) for (B) at (C) with (D) on
+- 정답: A / 내 답: A (✅ 정답이지만 물음표 표시로 설명 요청)
+- 해석: 처음으로 보고서를 제출하는 사람은 꼭 참석하기를 권장한다.
+- 해설: "for the first time"(처음으로)은 고정 표현. 다른 전치사는 이 의미로 쓰이지 않는다.
+- 유형: 어휘
+
+---
+
+### Part 7
+
+#### Q25. What is suggested about the ideal candidate? (Regional Operations Analyst 채용공고)
+(A) no prior travel experience (B) worked in distribution or warehousing before (C) must reside near a hub (D) background in software engineering
+- 정답: B / 내 답: D
+- 해석: 유통/창고 환경에서 근무해본 지원자가 우대된다.
+- 해설: 지문에 "Candidates who have previously worked in a distribution or warehousing environment will be given priority consideration"라고 명시됨. 소프트웨어 배경은 언급되지 않음.
+- 유형: 매칭
+
+#### Q34. Why did Bristow recommend the Premium package instead of the Standard package?
+(A) Standard 상담 미포함 (B) Premium만 저녁 가능 (C) Standard 인원 제한이 팀에 부적합 (D) Premium이 전체적으로 가장 저렴
+- 정답: C / 내 답: B
+- 해석: Standard 패키지의 인원 제한(최대 12명)이 14명 규모의 팀에 맞지 않아서 Premium을 추천했다.
+- 해설: 답장 이메일에 "we recommend the Premium package, as the Standard package's group size limit would not comfortably accommodate your team"이라고 직접 명시됨. 저녁 시간 가능 여부는 패키지 등급과 무관하게 별도로 안내된 사항.
+- 유형: 매칭
+
 ## 누적 통계
 
 | 유형 | 횟수 |
 |---|---|
-| 어휘 | 1 |
-| 문법 | 7 |
-| 매칭 | 0 |
+| 어휘 | 3 |
+| 문법 | 10 |
+| 매칭 | 4 |
 | 시간 | 0 |
