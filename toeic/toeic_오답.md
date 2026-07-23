@@ -155,11 +155,56 @@
 - 해설: 답장 이메일에 "we recommend the Premium package, as the Standard package's group size limit would not comfortably accommodate your team"이라고 직접 명시됨. 저녁 시간 가능 여부는 패키지 등급과 무관하게 별도로 안내된 사항.
 - 유형: 매칭
 
+## 2026-07-23 (Set 03)
+
+### Part 5
+
+#### Q4. The more thoroughly the team prepared for the audit, ______ the process went.
+(A) the smoother (B) smoother (C) more smooth (D) the more smooth
+- 정답: A / 내 답: D
+- 해석: 팀이 감사를 철저히 준비할수록, 과정이 더 순조롭게 진행되었다.
+- 해설: "the 비교급, the 비교급" 구문에서 smooth처럼 짧은(1음절) 형용사는 -er을 붙여 비교급을 만든다(smoother). "more smooth"는 비교급 형태 자체가 틀렸다.
+- 유형: 문법
+
+#### Q7. Rarely ______ a project of this scale completed entirely ahead of schedule.
+(A) is (B) has (C) does (D) can
+- 정답: A / 내 답: D (물음표)
+- 해석: 이 정도 규모의 프로젝트가 일정보다 앞서 완전히 끝나는 경우는 드물다.
+- 해설: 문두의 "Rarely"는 주어-조동사 도치를 유발한다. 뒤에 이어지는 구조가 수동태("a project ... completed")이므로 도치되는 동사는 그 수동태의 be동사인 is여야 한다. can을 쓰려면 "can a project ... be completed"처럼 be가 따로 필요.
+- 유형: 문법
+
+#### Q12. Whoever ______ the highest score on the certification exam will receive a signing bonus.
+(A) achieve (B) achieves (C) achieving (D) achieved
+- 정답: B / 내 답: B (✅ 정답이지만 물음표 표시로 설명 요청)
+- 해석: 자격시험에서 최고 점수를 받는 사람은 누구든 채용 보너스를 받는다.
+- 해설: "whoever"는 3인칭 단수 취급하는 부정대명사라 동사에 -s가 붙는다(achieves). 일반적 사실을 나타내므로 현재시제 사용.
+- 유형: 문법 (정답이나 개념 재확인)
+
+#### Q14. ______ the deadline is extended, the design team will be unable to complete the prototype on time.
+(A) Unless (B) Provided that (C) Even if (D) As long as
+- 정답: A / 내 답: C
+- 해석: 마감이 연장되지 않는 한, 디자인팀은 제때 시제품을 완성하지 못할 것이다.
+- 해설: "Unless(~하지 않는 한)"가 뒤 문장("완료 못 함")과 논리가 맞는다. "Even if(설령 ~하더라도)"를 쓰면 "마감이 연장되더라도 완료 못 한다"는 비논리적 문장이 된다.
+- 유형: 문법
+
+---
+
+### Part 6
+
+#### Q20. The project, ______ will begin construction in early spring, includes new pedestrian walkways...
+(A) that (B) which (C) who (D) whom
+- 정답: B / 내 답: B (✅ 정답이지만 물음표 표시로 설명 요청)
+- 해석: 이 프로젝트는 이른 봄에 공사를 시작할 예정이며, 새로운 보행로 등을 포함한다.
+- 해설: 콤마로 구분된 계속적 용법(non-restrictive) 관계절이 사물 선행사(the project)를 수식할 때는 which를 쓴다. that은 이런 콤마 삽입 구조에는 쓸 수 없다.
+- 유형: 문법
+
+---
+
 ## 누적 통계
 
 | 유형 | 횟수 |
 |---|---|
 | 어휘 | 3 |
-| 문법 | 10 |
+| 문법 | 15 |
 | 매칭 | 4 |
 | 시간 | 0 |
