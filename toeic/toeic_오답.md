@@ -200,11 +200,97 @@
 
 ---
 
+## 2026-07-24 (Set 04)
+
+### Part 5
+
+#### Q1. Each of the regional offices ______ its own budget approval process.
+(A) has (B) have (C) having (D) to have
+- 정답: A / 내 답: B
+- 해석: 각 지사는 자체적인 예산 승인 절차를 가지고 있다.
+- 해설: "each of + 복수명사"에서 진짜 주어는 each(단수)이지, 뒤따르는 복수명사(offices)가 아니다. 뒤 명사에 이끌려 복수동사를 고르는 흔한 함정.
+- 유형: 문법
+
+#### Q3. Not until the final quarter ______ the company's revenue begin to recover.
+(A) did (B) does (C) has (D) had
+- 정답: A / 내 답: D (물음표)
+- 해석: 4분기가 되어서야 회사의 매출이 회복되기 시작했다.
+- 해설: 원래 문장은 "The company's revenue did not begin to recover until the final quarter." "Not until X"가 문두로 나가며 도치가 일어나는데, 본동사가 원형 "begin"이므로 과거 do-지원 형태인 did가 필요하다. had를 쓰려면 "had begun" 형태여야 한다.
+- 추가 개념(not ~ until): "not ~ until"은 얼핏 부정문처럼 보이지만 실제로는 "~에야 비로소 …했다"는 뜻. 그 시점 전에는 안 했고 그 시점엔 했다는 것이지, "아예 안 일어났다"는 진짜 부정("The revenue never recovered")과는 다르다.
+- 유형: 문법
+
+#### Q7. The technician repaired the printer ______ enough that it could be used again that afternoon.
+(A) quick (B) quickly (C) quickness (D) quickest
+- 정답: B / 내 답: A
+- 해석: 기술자가 프린터를 충분히 빨리 수리해서 그날 오후에 다시 사용할 수 있었다.
+- 해설: 동사 "repaired"를 수식하는 자리라 부사가 필요하다. quick(형용사)은 동사를 수식할 수 없다. "부사 + enough + that절" 구조.
+- 유형: 문법
+
+#### Q12. The board would only approve the expansion ______ the financial projections proved accurate.
+(A) unless (B) provided that (C) even though (D) as though
+- 정답: B / 내 답: A (물음표)
+- 해석: 이사회는 재무전망이 정확하다고 입증되어야만 확장을 승인할 것이다.
+- 해설: 긍정 조건("~라는 조건 하에")이 필요하므로 provided that이 정답. unless(~하지 않는 한)를 쓰면 "정확하다고 입증되지 않는 한 승인한다"는 반대 논리가 되어 문맥과 안 맞는다.
+- 유형: 문법
+
+#### Q15. The merger negotiations, ______ complexity surprised even seasoned analysts, took nearly a year to finalize.
+(A) which (B) whose (C) who (D) that
+- 정답: B / 내 답: A
+- 해석: 그 복잡성이 노련한 분석가들조차 놀라게 한 이 합병 협상은 마무리되는 데 거의 1년이 걸렸다.
+- 해설: 빈칸 뒤에 명사(complexity)가 바로 오므로 소유격 관계대명사 whose가 필요하다. which를 쓰려면 "the complexity of which" 구조여야 한다.
+- 유형: 문법
+
+---
+
+### Part 6
+
+#### Q21. Company founder Lisa Okafor said the investment ______ at a pivotal time...
+(A) comes (B) came (C) coming (D) come
+- 정답: B / 내 답: A
+- 해석: 창립자 리사 오카포는 이 투자가 결정적인 시기에 이루어졌다고 말했다.
+- 해설: 원래 발언은 "This investment comes at a pivotal time."인데 said(과거시제)로 인용되며 시제 일치(backshift)가 일어나 현재→과거(came)로 바뀐다.
+- 유형: 문법
+
+#### Q23. Okafor added that the company intends to double its workforce ______ the next eighteen months.
+(A) within (B) over (C) among (D) between
+- 정답: B / 내 답: A
+- 해석: 오카포는 회사가 앞으로 18개월에 걸쳐 인력을 두 배로 늘릴 계획이라고 덧붙였다.
+- 해설: "over the next 18 months"는 그 기간 동안 걸쳐 점진적으로 일어나는 과정을 나타내는 관용 표현. within은 "늦어도 그 시점까지"라는 뉘앙스라 점진적 과정엔 덜 자연스럽다.
+- 유형: 어휘
+
+---
+
+### Part 7
+
+#### Q34. According to the article, what does an increase in reported near-misses indicate? (Riverside Manufacturing 안전상 기사)
+(A) A decline in overall safety performance (B) Greater awareness of safety issues among employees (C) A rise in actual workplace injuries (D) A need for additional safety equipment
+- 정답: B / 내 답: A
+- 해석: 아차사고 보고 증가는 안전 성과 저하가 아니라 직원들의 더 큰 안전 인식을 보여주는 신호다.
+- 해설: 지문에 "a trend the association considers a sign of stronger safety awareness rather than declining safety performance"라고 명시됨. A는 지문에서 직접 부정된 내용.
+- 유형: 매칭
+
+#### Q42. According to David's email, what must be completed before the change becomes permanent? (유연근무 이메일)
+(A) An approval from senior management (B) A written flexible-schedule agreement (C) A performance review (D) A meeting with human resources in person
+- 정답: B / 내 답: D
+- 해석: 변경이 영구적으로 확정되기 전에 서면 유연근무 합의서가 작성되어야 한다.
+- 해설: 이메일에 "HR requires a written flexible-schedule agreement on file ... I'll send you the form to complete"라고 되어 있어 서면 양식이지 대면 미팅이 아니다.
+- 유형: 매칭
+
+#### Q44. What is the purpose of Priya Chandran's email? (컨퍼런스 등록 이메일)
+(A) To cancel her conference registration (B) To ask about workshop selection and a dietary accommodation (C) To request a refund for Day 1 of the summit (D) To complain about the conference schedule
+- 정답: B / 내 답: D
+- 해석: 프리야의 이메일은 워크숍 선택 방식과 식이 제한 사항 기재 방법을 정중히 문의하는 내용이다.
+- 해설: 이메일 어조에 부정적/항의성 표현이 전혀 없고, 순수하게 두 가지를 문의하는 내용이므로 D(불만 제기)는 과도한 해석.
+- 어휘 노트(accommodation): "accommodation"은 "숙박"뿐 아니라 "편의, 배려, 요구에 맞춘 조정"이라는 뜻도 있다. "dietary accommodation"은 식단 관련 요청(알레르기 등)을 들어주는 것을 의미하며 숙박과는 무관. "accommodate a request"(요청을 들어주다)와 같은 계열.
+- 유형: 매칭
+
+---
+
 ## 누적 통계
 
 | 유형 | 횟수 |
 |---|---|
-| 어휘 | 3 |
-| 문법 | 15 |
-| 매칭 | 4 |
+| 어휘 | 4 |
+| 문법 | 21 |
+| 매칭 | 7 |
 | 시간 | 0 |

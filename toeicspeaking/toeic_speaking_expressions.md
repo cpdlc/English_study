@@ -16,6 +16,11 @@
 - **포인트:** `as + S + kept + V-ing`는 "계속 ~하면서, ~하다 보니"라는 뜻으로 시간이 지나며 상황이 바뀌는 흐름을 자연스럽게 이어줌. `keep + V-ing` = "계속 ~하다".
 - **출처:** [toeic_speaking_practice_02_feedback.md](toeicspeaking/toeic_speaking_practice_02_feedback.md) Q11
 
+### ..., so fewer people can afford cars.
+- **뜻:** 그래서 더 적은 사람들이 자동차를 살 여유가 있다 (= 자동차를 살 형편이 안 되는 사람이 늘어난다).
+- **포인트:** `afford`(감당할 수 있다, 여유가 되다)는 경제적 여유를 말할 때 정확한 단어. `can buy`(단순히 살 수 있다)보다 `can afford`가 "형편/여유가 되어 살 수 있다"는 뉘앙스를 살려줌. `fewer + 셀 수 있는 명사` = 더 적은 수의 ~ (people처럼 셀 수 있는 명사엔 `less`가 아니라 `fewer`).
+- **출처:** [toeic_speaking_practice_04_feedback.md](toeicspeaking/toeic_speaking_practice_04_feedback.md) Q11
+
 ---
 
 ## Q3-Q4 — 사진 묘사 표현
@@ -30,6 +35,16 @@
 - **포인트:** `check out + 명사` = 흥미가 있어서 둘러보다/구경하다. 반면 `check + 명사`(out 없이)는 "맞는지/상태를 확인·점검하다"는 뜻이라 뉘앙스가 다름 (예: 유통기한 확인). 매장에서 손님이 상품을 구경하는 장면엔 `check out`이 훨씬 자연스러움. (참고: `check out`은 "계산하고 나가다"라는 뜻으로도 쓰이니 문맥으로 구분.)
 - **출처:** [toeic_speaking_practice_03_feedback.md](toeicspeaking/toeic_speaking_practice_03_feedback.md) Q4
 
+### I think they are looking outside toward the airplanes.
+- **뜻:** 그들은 (창) 밖의 비행기 쪽을 바라보고 있는 것 같다.
+- **포인트:** `background`는 "사진 안에서 우리가 보는 배경"을 가리키는 말이라, 사진 속 인물이 무언가를 본다고 묘사할 땐 `background`를 목적어로 쓰면 어색함(인물 입장에선 그게 배경이 아니라 그냥 눈앞 풍경이니까). 인물의 시선을 묘사할 땐 `looking outside`, `looking toward + 대상`처럼 실제로 보고 있는 대상을 직접 명시하는 게 자연스러움.
+- **출처:** [toeic_speaking_practice_04_feedback.md](toeicspeaking/toeic_speaking_practice_04_feedback.md) Q3
+
+### He seems to be serving them food.
+- **뜻:** 그는 그들에게 음식을 서빙하고 있는 것 같다.
+- **포인트:** 웨이터/직원이 음식을 갖다주는 동작은 `give`보다 `serve`가 훨씬 자연스러운 콜로케이션. `serve + 사람 + 음식` (또는 `serve 음식 to 사람`) 형태로 씀. 그리고 `food`는 셀 수 없는 명사라 `a food`처럼 관사를 붙이지 않음.
+- **출처:** [toeic_speaking_practice_04_feedback.md](toeicspeaking/toeic_speaking_practice_04_feedback.md) Q4
+
 ---
 
 ## Q5-Q7 — 답변 표현
@@ -38,6 +53,16 @@
 - **뜻:** 몸매/체력을 더 좋게 만들고 싶어요.
 - **포인트:** "몸매를 좋게 만들다"를 `make my body shape better`처럼 직역하면 어색함. `get in shape` / `get in better shape`가 "(운동으로) 몸을 만들다, 체력을 기르다"라는 뜻의 고정 표현.
 - **출처:** [toeic_speaking_practice_03_feedback.md](toeicspeaking/toeic_speaking_practice_03_feedback.md) Q5
+
+### There are a lot of leisure activities to do there.
+- **뜻:** 그곳엔 할 수 있는 여가 활동이 많이 있다.
+- **포인트:** `there are + 명사`(존재문)에서 be동사(are) 빠뜨리지 않기. `a lots of`가 아니라 `a lot of`(lot은 단수형). 그리고 "~할 것들"은 `to do things`가 아니라 `things to do` 순서 — 명사 뒤에 `to부정사`가 와서 꾸며줌 (`activities to do`, `places to visit`, `things to see` 등 여행/취미 얘기할 때 자주 쓰는 패턴).
+- **출처:** [toeic_speaking_practice_04_feedback.md](toeicspeaking/toeic_speaking_practice_04_feedback.md) Q5
+
+### I want to go somewhere reasonably priced.
+- **뜻:** 적당한 가격의 (합리적인) 곳으로 가고 싶다.
+- **포인트:** "적당한 가격의 장소"를 `something reasonable place`처럼 직역하면 어색함. `somewhere + 형용사`(장소를 나타내는 부정대명사 뒤에 형용사가 바로 옴) 패턴을 쓰고, "가격이 합리적인"은 `reasonably priced`(부사+과거분사) 형태로 표현. 비슷하게 `somewhere quiet`, `somewhere warm`처럼 장소의 성질을 말할 때 자주 쓰는 구조.
+- **출처:** [toeic_speaking_practice_04_feedback.md](toeicspeaking/toeic_speaking_practice_04_feedback.md) Q6
 
 ### As for advice, I would tell a company to start with something simple, ...
 - **뜻:** 조언을 하자면, 저는 회사에 간단한 것부터 시작하라고 말하고 싶습니다.
