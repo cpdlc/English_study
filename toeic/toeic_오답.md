@@ -286,11 +286,40 @@
 
 ---
 
+## 2026-07-25 (Set 05)
+
+### Part 5
+
+#### Q4. A number of employees ______ requested additional training on the new scheduling system.
+(A) has (B) have (C) is (D) was
+- 정답: B / 내 답: A
+- 해석: 많은 직원들이 새로운 일정 관리 시스템에 대한 추가 교육을 요청했다.
+- 해설: "a number of + 복수명사"는 "여러 ~"라는 뜻으로, 진짜 주어가 뒤의 복수명사(employees)이므로 복수동사 have가 정답. 반대로 "the number of + 복수명사"("~의 수")는 the가 붙어 "그 수" 자체가 진짜 주어(단수)이므로 단수동사(is/was)를 쓴다. 형태는 비슷하지만 수 일치가 반대로 가는 대표적인 함정 짝이므로 구별해서 암기할 것.
+- 유형: 문법
+
+#### Q15. Only after signing the confidentiality agreement ______ employees granted access to the client database.
+(A) are (B) do (C) have (D) will
+- 정답: A / 내 답: A (✅ 정답이지만 물음표 표시로 설명 요청)
+- 해석: 기밀유지계약서에 서명한 후에야 직원들은 고객 데이터베이스에 접근 권한을 부여받는다.
+- 해설: 원래 문장은 "Employees are granted access to the client database only after signing the confidentiality agreement."이다. 부정적 제한 의미의 부사구 "Only after ~"가 문두로 나가면 주어-동사(be동사) 도치가 일어나므로, 수동태의 be동사인 are가 주어(employees) 앞으로 나온다. do/have/will은 이 수동태 구조의 본동사 자리를 대신할 수 없다.
+- 유형: 문법 (정답이나 개념 재확인)
+
+### Part 7
+
+#### Q50. What is suggested about the weekend course sections? (Crestmark Institute 교육과정 광고/이메일/확인서)
+(A) They meet twice per week. (B) They are more expensive than weekday sections. (C) They do not include course materials. (D) They are only available to groups.
+- 정답: B / 내 답: D
+- 해석: 표를 보면 모든 과정에서 Weekend Rate가 Weekday Rate보다 높게 책정되어 있다(예: Project Management Fundamentals $480→$560). 따라서 주말 과정이 평일 과정보다 더 비싸다는 것이 지문에서 확인 가능한 사실이다.
+- 해설: "주 2회 수업"은 평일(weekday) 섹션에 대한 설명("weekday sections meet twice per week")이라 주말 섹션과 반대다. "그룹에게만 제공된다"는 내용은 지문 어디에도 없다(그룹은 할인만 받을 뿐 신청 자격 제한이 아님). 표의 숫자를 직접 비교해야 풀리는 매칭형 문제.
+- 유형: 매칭
+
+---
+
 ## 누적 통계
 
 | 유형 | 횟수 |
 |---|---|
 | 어휘 | 4 |
-| 문법 | 21 |
-| 매칭 | 7 |
+| 문법 | 23 |
+| 매칭 | 8 |
 | 시간 | 0 |
