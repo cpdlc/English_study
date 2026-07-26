@@ -84,3 +84,8 @@
 - **뜻:** 그래서 두 군데(항목)를 합쳐서 총 30분을 놓치게 됩니다.
 - **포인트:** `a total of + 시간/숫자` = 합쳐서 총 ~. `across both` = 둘 다에 걸쳐서, 두 항목 모두에 걸쳐 (여러 개로 나뉜 겹침을 하나로 합산해서 말할 때). 겹치는 세션이 두 개 이상일 때, 각각 얼마씩 겹치는지 말한 다음 이 표현으로 총합을 한 번 더 정리해주면 답변이 훨씬 명확해짐.
 - **출처:** [toeic_speaking_practice_03_feedback.md](toeicspeaking/toeic_speaking_practice_03_feedback.md) Q10
+
+### It fits everything you're looking for.
+- **뜻:** 그것은 당신이 찾고 있는 모든 조건에 맞습니다.
+- **포인트:** 여러 조건(가격/인원/시간 등)을 다 만족하는 항목을 추천할 때 쓰는 마무리 문장. `the things what he wants`처럼 `things` 뒤에 관계대명사 `what`을 쓰면 안 됨 (`what`은 그 자체로 "~하는 것"이란 뜻이라 선행사와 같이 못 씀) — `everything`으로 바꾸면 관계대명사 문제 자체가 사라짐. 전화 통화 상대(예: 매니저)에게 직접 말하는 상황이면 3인칭(`he`, `your manager`)이 아니라 `you`로 지칭하는 것도 같이 기억.
+- **출처:** [toeic_speaking_practice_05_feedback.md](toeicspeaking/toeic_speaking_practice_05_feedback.md) Q10
