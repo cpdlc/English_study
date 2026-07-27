@@ -315,11 +315,56 @@
 
 ---
 
+## 2026-07-27 (Set 06)
+
+### Part 5
+
+#### Q3. The architect ______ design won the competition will oversee the building's construction.
+(A) who (B) which (C) whose (D) that
+- 정답: C / 내 답: A
+- 해석: 디자인이 공모전에서 우승한 건축가가 건물 시공을 감독할 것이다.
+- 해설: 빈칸 뒤에 명사(design)가 바로 이어지므로 소유격 관계대명사 whose가 필요하다. who는 뒤에 동사가 오는 주격 관계대명사라 명사를 바로 취할 수 없다("who design"은 비문).
+- 유형: 문법
+
+#### Q7. Packages ______ during shipping should be reported to the carrier within 48 hours.
+(A) damage (B) damaging (C) damaged (D) to damage
+- 정답: C / 내 답: A (물음표)
+- 해석: 배송 중 손상된 소포는 48시간 이내에 운송업체에 신고해야 한다.
+- 해설: packages는 손상을 "당하는" 대상이므로 수동의 의미를 갖는 과거분사 damaged가 명사를 수식해야 한다("packages that were damaged"). 동사 원형 damage(A)는 분사 자리에 올 수 없다.
+- 유형: 문법
+
+#### Q10. The committee avoided ______ a final decision until all board members had reviewed the proposal.
+(A) make (B) making (C) to make (D) made
+- 정답: B / 내 답: C
+- 해석: 위원회는 모든 이사회 임원들이 제안서를 검토할 때까지 최종 결정을 내리는 것을 피했다.
+- 해설: "avoid"는 목적어로 동명사만 취하는 대표적인 동사이다("avoid + v-ing"). to부정사를 목적어로 취하지 않으므로 to make(C)는 오답. (동명사만 목적어로 취하는 동사: avoid, enjoy, finish, consider, suggest, mind 등 - 자주 출제되는 짝이므로 암기 필요)
+- 유형: 문법
+
+---
+
+### Part 6
+
+#### Q16. Beginning September 1, building access will require the new proximity badge system, ______(16)______ the keypad codes currently used at all entrances.
+(A) replace (B) replacing (C) to replace (D) replaced
+- 정답: B / 내 답: A
+- 해석: 9월 1일부터 건물 출입에는 각 출입구에서 현재 사용 중인 키패드 비밀번호를 대체하는 새로운 근접 배지 시스템이 필요하다.
+- 해설: 콤마 뒤에서 앞의 명사(the new proximity badge system)를 부가 설명하는 분사구문 자리. 이 시스템이 코드를 "대체하는" 능동의 주체이므로 현재분사 replacing이 와야 한다. 원형 replace(A)는 조동사나 to 없이 단독으로 명사를 수식할 수 없어 비문이 된다.
+- 유형: 문법
+
+#### Q23. The transition is expected to be completed ______(23)______ the start of next year.
+(A) by (B) until (C) since (D) before
+- 정답: A / 내 답: A (✅ 정답이지만 물음표 표시로 설명 요청)
+- 해석: 전환 작업은 내년 초까지는 완료될 것으로 예상된다.
+- 해설: "by + 시점"은 그 시점까지 완료되어야 하는 1회성 동작(완료)에 쓰인다. "until"은 동작·상태의 지속을 나타내므로 "완료되다"라는 일회성 동작과 맞지 않는다. Set01 Q5(by vs until)와 동일한 개념.
+- 유형: 문법 (정답이나 개념 재확인)
+
+---
+
 ## 누적 통계
 
 | 유형 | 횟수 |
 |---|---|
 | 어휘 | 4 |
-| 문법 | 23 |
+| 문법 | 28 |
 | 매칭 | 8 |
 | 시간 | 0 |
