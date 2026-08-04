@@ -360,11 +360,151 @@
 
 ---
 
+## 2026-07-28 (Set 07)
+
+### Part 5
+
+#### Q2. No sooner had the new system launched ______ users began reporting login issues.
+(A) than (B) when (C) then (D) as
+- 정답: A / 내 답: D (물음표)
+- 해석: 새 시스템이 출시되자마자 사용자들이 로그인 문제를 보고하기 시작했다.
+- 해설: "no sooner ~ than"은 "hardly ~ when/before"와 같은 계열의 고정 상관접속사로 "~하자마자"라는 뜻이다. as는 이 짝으로 쓰이지 않는다.
+- 유형: 문법
+
+#### Q3. The report was written in a clear and ______ manner that even non-specialists could understand it.
+(A) concise (B) concisely (C) conciseness (D) concision
+- 정답: A / 내 답: A (✅ 정답이지만 물음표 표시로 설명 요청)
+- 해석: 보고서는 비전문가도 이해할 수 있을 만큼 명확하고 간결한 방식으로 작성되었다.
+- 해설: "clear and concise manner"에서 concise는 clear와 나란히 명사 manner를 수식하는 형용사다. concisely(부사)는 동사를 수식해야 해서 이 자리엔 맞지 않는다.
+- 유형: 문법 (정답이나 개념 재확인)
+
+#### Q6. The CEO had the legal team ______ the contract before signing it.
+(A) review (B) reviewing (C) reviewed (D) to review
+- 정답: A / 내 답: D
+- 해석: CEO는 계약서에 서명하기 전에 법무팀에게 검토하게 했다.
+- 해설: 사역동사 "have + 목적어 + 동사원형"(능동, "~하게 시키다") 구조. to review는 이 사역구문에 쓰이지 않는다(그건 "get + 목적어 + to부정사" 패턴).
+- 유형: 문법
+
+#### Q15. It was not until the vendor's second shipment arrived ______ the quality issues were finally resolved.
+(A) that (B) when (C) which (D) since
+- 정답: A / 내 답: D (물음표)
+- 해석: 벤더의 두 번째 선적분이 도착하고 나서야 비로소 품질 문제가 해결되었다.
+- 해설: "It was not until X that Y" 강조(분열)구문에서 두 번째 절은 항상 that로 연결된다. since/when/which는 이 구조에 쓰이지 않는다. Set04 Q3의 "not until" 도치구문과 같은 개념의 다른 형태(강조구문 버전).
+- 유형: 문법
+
+---
+
+### Part 6
+
+#### Q23. Should you encounter any technical difficulties while using the portal, please contact the IT help desk ______ assistance.
+(A) for (B) with (C) to (D) about
+- 정답: A / 내 답: A (✅ 정답이지만 물음표 표시로 설명 요청)
+- 해석: 포털 사용 중 기술적 문제가 있으면 도움을 요청하기 위해 IT 헬프데스크에 연락해 주세요.
+- 해설: "contact ~ for assistance"(도움을 요청하기 위해 연락하다)는 고정 표현. for가 목적을 나타낸다.
+- 유형: 어휘
+
+---
+
+### Part 7
+
+#### Q25. What is included with every new membership, regardless of tier? (Cascade Fitness 광고)
+(A) Unlimited group classes (B) Access to the downtown pool (C) A complimentary fitness assessment (D) Two personal training sessions per month
+- 정답: C / 내 답: C (✅ 정답이지만 물음표 표시로 설명 요청)
+- 해석: 등급과 무관하게 모든 신규 회원에게 공통으로 제공되는 것은 무료 체력 평가다.
+- 해설: 광고에 "All new memberships include a complimentary fitness assessment and one free personal training session"이라고 명시됨. D(월 2회 PT)는 Elite 등급 전용 혜택이라 공통 사항이 아니다.
+- 유형: 매칭 (정답이나 개념 재확인)
+
+#### Q38. At 1:57 P.M., what does Priya Nair most likely mean when she writes, "That worked, thank you!"? (프로젝터 문자메시지)
+(A) The power strip issue has been resolved. (B) The correct HDMI cable successfully connected her laptop. (C) A replacement projector has arrived. (D) The client presentation has been postponed.
+- 정답: B / 내 답: A
+- 해석: "그게 통했다"는 것은 파워스트립 문제가 아니라 (직전에 제안받은) 올바른 HDMI 케이블로 연결이 성공했다는 뜻이다.
+- 해설: 파워스트립 문제는 1:52에 이미 해결됐고(전원은 들어오지만 노트북 인식 안 됨), 그 직후 Dev가 HDMI 케이블을 바꿔보라고 제안했으므로 "That worked"는 그 케이블 교체를 가리킨다. 대화의 시간 순서를 놓치면 틀리기 쉬운 문제.
+- 유형: 매칭
+
+#### Q50. What will happen after Harriet Song's deposit is received? (Cedarwood Banquet Hall 삼중지문)
+(A) The room assignment will be finalized for the first time. (B) Cedarwood Catering will contact her about menu options. (C) The event date will be opened to other clients. (D) A refund will be issued for the deposit.
+- 정답: B / 내 답: A
+- 해석: 보증금이 입금되면 Cedarwood Catering 팀이 별도로 연락해서 메뉴 옵션을 논의할 것이다.
+- 해설: 답장 이메일에 "Their team will reach out separately to discuss menu options once your deposit is received"라고 직접 명시됨. 방 배정은 이미 답장에서 추천/확정된 상태라 "처음으로 확정"(A)은 틀린 설명.
+- 유형: 매칭
+
+---
+
+## 2026-07-29 (Set 08)
+
+### Part 5
+
+#### Q2. Difficult ______ the client's demands were, the team managed to deliver the project on time.
+(A) as (B) that (C) so (D) which
+- 정답: A / 내 답: C
+- 해석: 고객의 요구가 까다로웠음에도 불구하고, 팀은 제시간에 프로젝트를 납품했다.
+- 해설: "형용사 + as + S + V"는 "비록 ~일지라도"라는 뜻의 양보 도치구문(= Although the client's demands were difficult...). so는 뒤에 that절이 필요한 결과구문("so + adj + that")에 쓰이는 것이라 이 자리엔 안 맞는다.
+- 유형: 문법
+
+#### Q3. The manager asked her assistant to get the conference room ______ before the client's arrival.
+(A) prepare (B) preparing (C) prepared (D) to prepare
+- 정답: C / 내 답: C (✅ 정답이지만 물음표 표시로 설명 요청)
+- 해석: 매니저는 고객이 도착하기 전에 비서에게 회의실을 준비시켜 달라고 요청했다.
+- 해설: "get + 목적어 + p.p."는 수동 사역구문("~을 …되게 하다")이다. 회의실이 "준비되는" 대상이므로 과거분사 prepared가 온다.
+- 유형: 문법 (정답이나 개념 재확인)
+
+#### Q4. Hardly ______ the meeting begun when the fire alarm went off.
+(A) had (B) did (C) has (D) was
+- 정답: A / 내 답: A (✅ 정답이지만 물음표 표시로 설명 요청)
+- 해석: 회의가 시작되자마자 화재경보가 울렸다.
+- 해설: "Hardly + had + S + p.p. ~ when..."은 "~하자마자 …했다"는 뜻의 도치구문. 과거완료(had)가 문두 도치의 핵심 표지.
+- 유형: 문법 (정답이나 개념 재확인)
+
+#### Q6. The number of applicants ______ significantly since the company began offering remote positions.
+(A) has increased (B) have increased (C) are increasing (D) were increasing
+- 정답: A / 내 답: B
+- 해석: 원격근무직을 제공하기 시작한 이후 지원자 수가 크게 증가했다.
+- 해설: "the number of + 복수명사"는 단수 취급한다(그 "수"가 진짜 주어). 반대로 "a number of + 복수명사"(많은 ~들)는 복수 취급 — Set05 Q4("A number of employees ... requested")와 정반대 규칙이라 자주 혼동되는 짝.
+- 유형: 문법
+
+#### Q9. The proposal was rejected not because it lacked merit ______ because the timing was wrong.
+(A) but (B) or (C) so (D) yet
+- 정답: A / 내 답: D (물음표)
+- 해석: 그 제안은 타당성이 부족해서가 아니라 시기가 잘못돼서 거절되었다.
+- 해설: "not because A but because B"(A 때문이 아니라 B 때문에)는 고정 대조구문. yet는 이 짝으로 쓰이지 않는다.
+- 유형: 문법
+
+---
+
+### Part 6
+
+#### Q19. Thank you for your continued ______ in helping protect company data.
+(A) vigilant (B) vigilance (C) vigilantly (D) vigil
+- 정답: B / 내 답: B (✅ 정답이지만 물음표 표시로 설명 요청)
+- 해석: 회사 데이터 보호에 지속적으로 협조해 주셔서(경계를 늦추지 않아 주셔서) 감사합니다.
+- 해설: 소유격(your)+형용사(continued) 뒤, 전치사구(in helping...) 앞이므로 명사가 필요하다. vigilance(경계심)가 정답. vigil(철야/감시)은 뜻이 안 맞고 vigilant/vigilantly는 품사가 안 맞는다.
+- 유형: 어휘
+
+---
+
+### Part 7
+
+#### Q45. What can be inferred about typical speaker arrival for the forum? (컨퍼런스 연사 초청 이중지문)
+(A) Speakers usually arrive the evening before their session. (B) Speakers usually arrive the same morning as their keynote. (C) Speakers are not required to travel to the venue. (D) Speakers typically arrive several days in advance.
+- 정답: A / 내 답: B
+- 해석: Dr. Whitecloud가 "당일 아침 도착이 필요하다, **연사들 보통 하는 것처럼 전날 저녁이 아니라**"고 썼으므로, 일반적인 관행은 전날 저녁 도착이다.
+- 해설: "rather than the evening before, as I understand is typical for speakers"는 "보통은 전날 저녁 도착이 일반적"이라는 뜻이고, 본인은 예외적으로 당일 아침에 온다는 것. 반대 의미를 고르기 쉬운 추론 함정 문제.
+- 유형: 매칭
+
+#### Q49. What will Fairhaven Logistics be billed starting July 1? (CloudSync 삼중지문)
+(A) $50 per month (B) $95.33 per month (C) $130 per month (D) $180 per month
+- 정답: D / 내 답: B
+- 해석: 7월 1일 갱신부터는 Business 플랜 정가인 월 $180이 청구된다.
+- 해설: 답장에 "Starting with your July 1 renewal, you'll be billed the full Business plan rate of $180 per month going forward"라고 명시됨. $95.33은 이번 사이클 남은 기간의 일회성 비례 청구액일 뿐, 7월 1일 이후 정기 청구액이 아니다 — 숫자 함정.
+- 유형: 매칭
+
+---
+
 ## 누적 통계
 
 | 유형 | 횟수 |
 |---|---|
-| 어휘 | 4 |
-| 문법 | 28 |
-| 매칭 | 8 |
+| 어휘 | 6 |
+| 문법 | 37 |
+| 매칭 | 13 |
 | 시간 | 0 |
