@@ -500,11 +500,130 @@
 
 ---
 
+## 2026-07-30 (Set 09)
+
+### Part 5
+
+#### Q1. The committee convened an emergency session ______ address growing concerns about the merger.
+(A) so that (B) so as to (C) in spite of (D) as though
+- 정답: B / 내 답: C
+- 해석: 위원회는 합병에 대한 우려를 해소하기 위해 긴급 회의를 소집했다.
+- 해설: "so as to + 동사원형"은 목적("~하기 위해")을 나타낸다. "so that"은 뒤에 완전한 절이 필요하고, "in spite of"(~에도 불구하고)는 목적과 정반대 의미.
+- 유형: 문법
+
+#### Q2. The revised proposal ______ reflect the client's updated requirements, unlike the earlier draft.
+(A) does (B) is (C) has (D) was
+- 정답: A / 내 답: D
+- 해석: 수정된 제안서는 (앞선 초안과 달리) 고객의 업데이트된 요구사항을 실제로 반영한다.
+- 해설: "does + 동사원형"은 강조를 나타낸다. was 뒤에는 동사원형(reflect)이 올 수 없다("was reflect"는 비문).
+- 유형: 문법
+
+#### Q3. ______ the shipment is delayed, we should notify the client in advance to manage expectations.
+(A) In case (B) If (C) Unless (D) Provided
+- 정답: A / 내 답: B
+- 해석: 배송이 지연될 경우에 대비해서, 기대치를 관리하기 위해 미리 고객에게 알려야 한다.
+- 해설: "in case + S+V"는 어떤 일이 일어나기 전에 미리 대비한다는 뉘앙스로 "in advance"(미리)와 자연스럽게 어울린다. if는 "지연되면 그때 알린다"는 사후 대응 느낌이라 in advance와 충돌한다.
+- 유형: 문법
+
+#### Q4. All new hires must complete orientation, ______ their department or job title.
+(A) regarding (B) regardless of (C) considering (D) concerning
+- 정답: B / 내 답: A
+- 해석: 모든 신입사원은 부서나 직함과 무관하게 오리엔테이션을 완료해야 한다.
+- 해설: regardless of(~와 무관하게)가 정답. regarding(~에 관하여)은 "부서에 관하여 오리엔테이션을 듣는다"는 어색한 뜻이 된다.
+- 유형: 어휘
+
+#### Q6. The training materials were updated to reflect current procedures, ______ eliminating several outdated references.
+(A) thereby (B) therefore (C) however (D) moreover
+- 정답: A / 내 답: D (물음표)
+- 해석: 교육 자료가 현행 절차를 반영하도록 업데이트되었고, 그렇게 함으로써 여러 오래된 참조 내용을 제거했다.
+- 해설: "thereby + v-ing"는 "그렇게 함으로써"라는 뜻으로 앞 내용의 결과를 동명사로 바로 연결한다. moreover는 독립절을 이끄는 접속부사라 동명사구를 직접 연결하지 못한다.
+- 유형: 문법
+
+#### Q8. As of ______, all visitors must sign in electronically rather than using the paper logbook.
+(A) next Monday (B) next Monday's (C) Monday next (D) the next Monday
+- 정답: A / 내 답: D
+- 해석: 다음 주 월요일부터 모든 방문객은 종이 명부 대신 전자 방식으로 사인해야 한다.
+- 해설: "as of + 시점"(효력 발생 시점)은 관사 없이 "as of today/now/next Monday"처럼 쓰는 고정 패턴. "the next Monday"는 주로 과거 서사에서 "그다음 월요일"을 가리킬 때 쓰여 미래 시행일에는 안 맞는다.
+- 유형: 문법
+
+#### Q9. Few departments, ______, have adapted to the new software as quickly as the sales team.
+(A) if any (B) if some (C) if none (D) if it
+- 정답: A / 내 답: D
+- 해석: 있다 해도 거의 없는 부서만이 영업팀만큼 빠르게 새 소프트웨어에 적응했다.
+- 해설: "few, if any"는 "있다 해도 거의 없는"이라는 뜻의 고정 삽입 관용구.
+- 유형: 어휘
+
+#### Q10. The auditor's findings, once made public, ______ considerable concern among shareholders.
+(A) raise (B) raised (C) rise (D) rose
+- 정답: B / 내 답: A
+- 해석: 감사 결과가 공개되자 주주들 사이에 상당한 우려가 제기되었다.
+- 해설: raise(타동사, ~을 일으키다) vs rise(자동사, 오르다) 구별에서 findings가 concern을 "일으키는" 것이므로 타동사 raise 계열이 필요(rise 계열 탈락). "once made public"이라는 과거 시점 서술이므로 과거형 raised가 자연스럽다.
+- 유형: 문법
+
+#### Q11. The negotiations were far more contentious than either side had ______.
+(A) anticipate (B) anticipating (C) anticipated (D) anticipation
+- 정답: C / 내 답: C (✅ 정답이지만 물음표 표시로 설명 요청)
+- 해석: 협상은 양측이 예상했던 것보다 훨씬 더 격렬했다.
+- 해설: 비교 구문 "than either side had ______"에서 had 뒤에는 과거분사(anticipated)가 온다(과거완료 구조).
+- 유형: 문법 (정답이나 개념 재확인)
+
+#### Q15. Let alone ______ the deadline, the team barely managed to submit a rough draft.
+(A) meet (B) meeting (C) met (D) to meet
+- 정답: B / 내 답: D
+- 해석: 마감을 맞추는 것은커녕, 팀은 겨우 초안을 제출할 수 있었다.
+- 해설: "let alone + 동명사/명사"는 "~은커녕"이라는 뜻의 관용구. to부정사는 이 표현에 쓰이지 않는다.
+- 유형: 문법
+
+---
+
+### Part 6
+
+#### Q16. Beginning Monday, the main reception desk will be temporarily relocated to the first-floor lobby ______ renovations to the current reception area are completed.
+(A) since (B) until (C) because (D) although
+- 정답: B / 내 답: C
+- 해석: 현재 리셉션 구역 리모델링이 완료될 때까지 안내 데스크가 1층 로비로 임시 이전된다.
+- 해설: "공사가 끝날 때까지" 임시 이전한다는 뜻이 되어야 자연스럽다. because(왜냐하면)는 인과관계라 "공사가 끝나기 때문에 이전한다"는 어색한 논리가 된다.
+- 유형: 문법
+
+#### Q21. "For years, we measured success ______ in terms of production output," Okafor said.
+(A) sole (B) solely (C) sold (D) solitary
+- 정답: B / 내 답: D
+- 해석: "수년간 우리는 오로지 생산량 측면에서만 성공을 측정했습니다."
+- 해설: solely(오직/전적으로, 부사)가 동사 measured를 수식한다. solitary(고독한, 외딴)는 뜻이 전혀 다른 단어라 문맥과 안 맞는다.
+- 유형: 어휘
+
+#### Q23. GreenPath plans to publish similar reports annually, with the next edition ______ for release in early next year.
+(A) schedule (B) scheduling (C) scheduled (D) schedules
+- 정답: C / 내 답: B
+- 해석: 다음 호는 내년 초 발간될 예정이다.
+- 해설: "with + 명사 + 분사" 구문에서 edition이 "예정되는" 대상이므로 수동의 과거분사 scheduled가 맞다. scheduling(능동 현재분사)은 edition이 스스로 일정을 잡는다는 어색한 의미가 된다.
+- 유형: 문법
+
+---
+
+### Part 7
+
+#### Q32. What is the article mainly about? (Harlow Brewing 유통 파트너십 기사)
+(A) The closure of a local brewery (B) A new distribution partnership for a craft brewery (C) A merger between two beverage companies (D) A decline in demand for craft beer
+- 정답: B / 내 답: C
+- 해석: 기사는 지역 양조장의 새로운 유통 파트너십을 다루고 있다.
+- 해설: 지문에 "partnership"이라고 명시되어 있고 "merger"(합병)라는 단어는 등장하지 않는다. 두 회사가 협력 관계를 맺은 것이지 합병한 것이 아니다.
+- 유형: 매칭
+
+#### Q45. When does Ines Calloway expect the payment to be received? (미수금 독촉 이중지문)
+(A) Immediately (B) Within three business days (C) By the end of the month (D) Within 60 days
+- 정답: B / 내 답: A
+- 해석: 영업일 기준 3일 이내에 입금이 반영될 것으로 예상한다.
+- 해설: 이메일에 "you should see the funds reflected within three business days"라고 명시됨. "즉시"는 과도한 해석.
+- 유형: 매칭
+
+---
+
 ## 누적 통계
 
 | 유형 | 횟수 |
 |---|---|
-| 어휘 | 6 |
-| 문법 | 37 |
-| 매칭 | 13 |
+| 어휘 | 9 |
+| 문법 | 47 |
+| 매칭 | 15 |
 | 시간 | 0 |
