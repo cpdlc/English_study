@@ -21,6 +21,26 @@
 - **포인트:** `afford`(감당할 수 있다, 여유가 되다)는 경제적 여유를 말할 때 정확한 단어. `can buy`(단순히 살 수 있다)보다 `can afford`가 "형편/여유가 되어 살 수 있다"는 뉘앙스를 살려줌. `fewer + 셀 수 있는 명사` = 더 적은 수의 ~ (people처럼 셀 수 있는 명사엔 `less`가 아니라 `fewer`).
 - **출처:** [toeic_speaking_practice_04_feedback.md](toeicspeaking/toeic_speaking_practice_04_feedback.md) Q11
 
+### I can keep up with other people's lives easily.
+- **뜻:** 다른 사람들의 근황을 쉽게 계속 확인할 수 있다.
+- **포인트:** "누군가의 삶을 안다"를 `know other people's life`처럼 직역하면 어색함. SNS 등으로 남의 근황을 계속 지켜보고 따라간다는 뜻은 `keep up with`(~에 뒤처지지 않고 계속 따라가다, 근황을 놓치지 않다)가 정확한 콜로케이션. `life`도 일반적인 진술이면 복수형 `lives`가 자연스러움.
+- **출처:** [toeic_speaking_practice_06_feedback.md](toeicspeaking/toeic_speaking_practice_06_feedback.md) Q11
+
+### Social media has a function that lets people communicate with each other easily.
+- **뜻:** 소셜미디어에는 사람들이 서로 쉽게 소통할 수 있게 해주는 기능이 있다.
+- **포인트:** `communicate`는 "서로"라는 뜻을 바로 목적어로 못 받아서 `communicate each other`처럼 쓰면 틀림 — 반드시 `communicate with each other`(전치사 `with` 필수). `let + 사람/사물 + 동사원형` = "~가 …하게 해주다/허락하다"라는 사역동사 구조도 같이 기억.
+- **출처:** [toeic_speaking_practice_06_feedback.md](toeicspeaking/toeic_speaking_practice_06_feedback.md) Q11
+
+### So that's why I agree that social media is more beneficial than harmful.
+- **뜻:** 그래서 저는 소셜미디어가 해로운 것보다 이로운 게 더 많다는 데 동의합니다.
+- **포인트:** `agree with`는 뒤에 명사/대명사가 오고, 문장(절) 전체에 동의한다고 말하려면 `agree that + 절`을 씀 (`agree with the social media is better`처럼 절을 바로 붙이면 틀림). `more beneficial than harmful`처럼 `more A than B` 비교 구문으로 "장점이 단점보다 크다"는 결론을 깔끔하게 정리할 수 있음.
+- **출처:** [toeic_speaking_practice_06_feedback.md](toeicspeaking/toeic_speaking_practice_06_feedback.md) Q11
+
+### It was hard for us to adapt to the new shift.
+- **뜻:** 우리가 새로운 근무 형태에 적응하기 힘들었다.
+- **포인트:** "우리가 적응하기 힘들었다"를 `we were hard to adapt`처럼 쓰면 "우리 자신이 딱딱하다/힘들다"는 이상한 뜻이 됨. 이런 경우엔 `It is/was hard for + 사람 + to + 동사원형`(가주어 it 구문)을 써야 "~하는 것이 …에게 힘들었다"는 원래 의도가 정확히 전달됨. `adapt to + 명사` = ~에 적응하다 (전치사 to 필수).
+- **출처:** [toeic_speaking_practice_07_feedback.md](toeicspeaking/toeic_speaking_practice_07_feedback.md) Q11
+
 ---
 
 ## Q3-Q4 — 사진 묘사 표현
@@ -44,6 +64,11 @@
 - **뜻:** 그는 그들에게 음식을 서빙하고 있는 것 같다.
 - **포인트:** 웨이터/직원이 음식을 갖다주는 동작은 `give`보다 `serve`가 훨씬 자연스러운 콜로케이션. `serve + 사람 + 음식` (또는 `serve 음식 to 사람`) 형태로 씀. 그리고 `food`는 셀 수 없는 명사라 `a food`처럼 관사를 붙이지 않음.
 - **출처:** [toeic_speaking_practice_04_feedback.md](toeicspeaking/toeic_speaking_practice_04_feedback.md) Q4
+
+### She seems to be arranging some bread.
+- **뜻:** 그녀는 빵을 정리하고 있는 것 같다.
+- **포인트:** `seems to` 뒤에는 `be + V-ing`가 와야 함 (`seems to making`처럼 `be` 없이 바로 -ing를 붙이면 틀림). `arrange`(정리하다, 진열하다)는 매대/진열대를 정돈하는 동작에 잘 맞는 동사. `bread`는 셀 수 없는 명사라 `breads`처럼 복수형을 쓰지 않음.
+- **출처:** [toeic_speaking_practice_07_feedback.md](toeicspeaking/toeic_speaking_practice_07_feedback.md) Q4
 
 ---
 
@@ -69,6 +94,16 @@
 - **포인트:** `As for advice, ...`는 의견 파트를 끝내고 조언 파트로 넘어갈 때 쓰는 신호탄 표현 (Q7처럼 "의견+조언"을 둘 다 물어보는 질문에서 특히 유용). `would tell + 사람 + to + 동사원형` = "~에게 …하라고 말하고 싶다"는 조언 제시 구문. `start with something simple` = 간단한 것부터 시작하다 — 조언을 구체화할 때 자주 쓰는 패턴.
 - **포인트2 (나에게 중요):** 이 문장 자체가 "Q7 조언 파트를 빠뜨리지 않기" 위한 고정 시작 문구입니다. 의견을 다 말한 직후 이 문장을 습관적으로 붙여보세요.
 - **출처:** [toeic_speaking_practice_03_feedback.md](toeicspeaking/toeic_speaking_practice_03_feedback.md) Q7
+
+### I would tell the restaurant to make the system as good as what servers used to provide.
+- **뜻:** 저는 그 식당에게, 예전에 종업원들이 제공하던 것만큼 그 시스템을 좋게 만들라고 말하고 싶습니다.
+- **포인트:** `as + 형용사(good) + as` = 정도를 비교하는 구문 — "~만큼 좋게" (완전히 동일하다는 게 아니라 수준/품질이 동등하다는 뜻). `what servers used to provide`의 `used to + 동사원형`은 "예전엔 ~했었다(지금은 아니다)"라는 대비를 담고 있어서, "기술이 대체하기 전 사람이 제공하던 서비스"와 자연스럽게 비교됨. 조언을 구체화할 때 "예전 기준만큼 좋게 만들어라"는 식으로 자주 쓸 수 있는 패턴.
+- **출처:** [toeic_speaking_practice_07_feedback.md](toeicspeaking/toeic_speaking_practice_07_feedback.md) Q7
+
+### I would tell the restaurant to make the system the same as what servers used to provide.
+- **뜻:** 저는 그 식당에게, 예전에 종업원들이 제공하던 것과 똑같게 그 시스템을 만들라고 말하고 싶습니다.
+- **포인트:** `same`은 다른 형용사처럼 `as ~ as`에 들어가지 않고 `the same as`라는 고정 표현을 씀 (`as same as`는 틀린 표현). `the same as`는 "완전히 동일하다"는 더 강한 주장이라, 품질이 "그만큼 좋다"는 뜻의 `as good as`보다 뉘앙스가 세다는 차이를 기억.
+- **출처:** [toeic_speaking_practice_07_feedback.md](toeicspeaking/toeic_speaking_practice_07_feedback.md) Q7
 
 ---
 
