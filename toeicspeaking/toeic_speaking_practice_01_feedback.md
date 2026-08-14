@@ -55,7 +55,8 @@
 > I think communicate by message better than direct because it makes some time to think
 
 **교정 문장:**
-> I think communicating through messages is better than talking directly, because it gives you time to think before you respond. For example, when I receive a message, I can check the details carefully before replying.
+> I think communicating through messages is better than talking directly, because it gives you time to think before you respond
+. For example, when I receive a message, I can check the details carefully before replying.
 
 **무엇이 바뀌었는지:**
 - `communicate by message better than direct` → `Communicating through messages is better than talking directly`: 비교 구문은 `동명사(-ing) + is better than + 동명사(-ing)` 형태로 맞춤.
@@ -86,7 +87,8 @@
 > The future of digital marketing will be begin at 9 30, and Ms laura chen will be speech
 
 **교정 문장:**
-> The keynote speech, "The Future of Digital Marketing," will begin at 9:30, and it will be given by Ms. Laura Chen.
+> The keynote speech, 
+"The Future of Digital Marketing," will begin at 9:30, and it will be given by Ms. Laura Chen.
 
 **무엇이 바뀌었는지:**
 - `will be begin` → `will begin`: 조동사 뒤에는 동사원형 하나만.
@@ -128,7 +130,7 @@
 > In my opinion, i prefer the one which to choose their own working hours, I think all people have their own conditions, so they have the time to work effectively and uneffectively and some work is sometimes have own scedule, so if they have fixed time on schedule they have to schedule on their own, and if i can choose my own time, i will schedule my schedule more effecectively, because i know what i want and more effectively time,. so that is what i think so
 
 **교정 문장:**
-> In my opinion, I prefer the option of choosing your own working hours. I think all people have different conditions and different times when they work best, so a flexible schedule lets them work more effectively. Some jobs also require different schedules depending on the situation, so a fixed schedule doesn't always fit everyone's needs. If I could choose my own working hours, I would be able to manage my time more effectively, because I know when I work best and what I need to get done. That's why I think flexible working hours are more effective overall.
+> In my opinion, cho I prefer the option ofosing your own working hours. I think all people have different conditions and different times when they work best, so a flexible schedule lets them work more effectively. Some jobs also require different schedules depending on the situation, so a fixed schedule doesn't always fit everyone's needs. If I could choose my own working hours, I would be able to manage my time more effectively, because I know when I work best and what I need to get done. That's why I think flexible working hours are more effective overall.
 
 **무엇이 바뀌었는지:**
 - `i prefer the one which to choose their own working hours` → `I prefer the option of choosing your own working hours`: 관계대명사 구조가 무너져 있던 부분을 `the option of + 동명사` 구조로 정리.
