@@ -173,6 +173,18 @@ Q8/Q9에서 표의 한 항목(workshop, session 등)을 설명할 때 바로 갖
 - `Visitors will get to see ___ during the visit.` (방문객들이 ~을 보게 된다)
 - `The visit will include a walk-through of ___.` (~을 둘러보는 걸 포함한다)
 
+**실전 예문:**
+> There will be a site visit to Northtown Warehouse to check safety practices, from 11:30 AM to noon.
+
+### Video call / Conference call
+> There will be a video call to ___ (목적, 예: review the budget) with ___ (상대 부서/사람), from ___ to ___.
+> The call will be hosted by ___.
+
+**포인트:** 장소가 아니라 **상대방(부서/사람)**과 하는 활동이므로 `to/at`이 아니라 `with`를 씁니다.
+
+**실전 예문:**
+> There will be a video call to review the budget with the Finance department, from 2 PM to 3 PM.
+
 ### Briefing / Orientation
 > There will be a briefing about ___ before the main event, starting at ___.
 > The orientation will be held at ___, conducted by ___.
@@ -180,6 +192,16 @@ Q8/Q9에서 표의 한 항목(workshop, session 등)을 설명할 때 바로 갖
 ### Seminar / Webinar
 > There is a seminar on ___, taught by ___. It will start at ___.
 > The webinar will be hosted by ___ and will begin at ___.
+
+### Book / Product release
+> "___" (제목), written by ___ (저자), will be released on ___ (날짜).
+> The book is titled "___," and it's written by ___. It will be released on ___.
+
+**포인트:** 제목은 따옴표로 표시하고, `release`는 항상 수동태(`will be released`)로 — be동사 빠뜨리지 않기.
+
+**실전 예문:**
+> "Beyond the Shadow," written by Mia Tate, will be released on October 25th.
+> The book is titled "Beyond the Shadow," and it's written by Mia Tate. It will be released on October 25th.
 
 ### Panel discussion
 > There will be a panel discussion on ___, moderated by ___, starting at ___.
