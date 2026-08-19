@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <rect x="0" y="0" width="400" height="300" fill="#e9edf1"/>
+
+  <!-- taxiway -->
+  <rect x="0" y="200" width="400" height="26" fill="#b9bec4"/>
+  <text x="10" y="196" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#333">Taxiway Bravo</text>
+
+  <!-- gate C4: occupied -->
+  <rect x="60" y="70" width="90" height="90" fill="#f6c6c6" stroke="#b23030" stroke-width="3"/>
+  <text x="105" y="60" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#111">Gate C4</text>
+  <text x="105" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#b23030">OCCUPIED</text>
+  <rect x="80" y="95" width="50" height="18" fill="#8a8f95"/>
+
+  <!-- gate C7: available -->
+  <rect x="250" y="70" width="90" height="90" fill="#cdeccd" stroke="#2f7d32" stroke-width="3"/>
+  <text x="295" y="60" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#111">Gate C7</text>
+  <text x="295" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#2f7d32">AVAILABLE</text>
+
+  <!-- HL123 position on taxiway with arrow -->
+  <rect x="150" y="205" width="70" height="18" fill="#274b8f"/>
+  <text x="185" y="219" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#fff">HL123</text>
+  <line x1="185" y1="200" x2="185" y2="165" stroke="#274b8f" stroke-width="4"/>
+  <polygon points="185,150 176,168 194,168" fill="#274b8f"/>
+</svg>

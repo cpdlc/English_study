@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260" width="400" height="260">
+  <rect x="0" y="0" width="400" height="260" fill="#1c2733"/>
+  <text x="200" y="34" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#e6e9ee">CABIN ALTITUDE</text>
+
+  <!-- gauge circle -->
+  <circle cx="200" cy="150" r="85" fill="#0f1720" stroke="#4a5561" stroke-width="3"/>
+  <!-- normal zone arc -->
+  <path d="M 130 190 A 85 85 0 0 1 160 80" fill="none" stroke="#1e8449" stroke-width="10"/>
+  <!-- warning zone arc -->
+  <path d="M 160 80 A 85 85 0 0 1 270 190" fill="none" stroke="#c0392b" stroke-width="10"/>
+  <!-- needle pointing into red zone -->
+  <line x1="200" y1="150" x2="255" y2="95" stroke="#f5b7b1" stroke-width="4"/>
+  <circle cx="200" cy="150" r="6" fill="#f5b7b1"/>
+
+  <text x="200" y="225" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#f5b7b1">WARNING</text>
+  <text x="200" y="248" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#cfd6dd">Cabin altitude climbing above normal</text>
+</svg>
