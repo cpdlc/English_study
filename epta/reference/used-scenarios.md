@@ -130,6 +130,8 @@ yaw 조종 곤란.
 |---|---|---|---|
 | 2026-08-18 | sets/EPTA_01.md | Baxter Airport 착륙 (Cruise/Descent/Approach). ATIS 갱신으로 활주로 변경(25R), 착륙 후 배정 게이트(Charlie 4)가 타 항공기 정비 지연으로 점유되어 재배정(Charlie 7) | Coral City Airport 착륙 직전 **좌측 메인기어 unsafe(적색) 표시** — go-around → departure에 비상상황 보고·의도 진술 → alternate 방식으로 수동 전개했으나 여전히 unsafe → fuel/SOB 보고 → tower low pass로 육안 확인 → 착륙 |
 | 2026-08-19 | sets/EPTA_02.md | Westgate Airport 출발 (Clearance/Taxi/Departure). SID가 소음절감 절차로 변경(MOXIE2→MOXIE3), 유도로 Charlie 폐쇄로 Delta 우회, 후방 광동체기의 expedite 압박 대응 | 순항 중 **cabin altitude 경고 — 여압 상실** — 비상선포·긴급강하 요청 → intentions 진술(10,000ft 강하 유지) → 10,000ft 레벨오프 후 fuel 문제로 최인접 공항(Fenwick) 회항 결정 → fuel/SOB 보고 → 착륙 |
+| 2026-08-20 | sets/EPTA_03.md | Cedar Airport 출발 (Clearance/Push-back/Taxi). Delivery가 "Report ready for push-back" 요구, Ramp에 pushback/taxi 요청, 지상 이동 중 Korean Air B747에 give way + hold position due to traffic, line up and wait 후 이륙 | 순항 중 **조종실 연기(smoke/haze) 감지** — MAYDAY 7단계 선언 → Fairview Airport로 벡터·긴급강하 → intentions 진술(체크리스트+예방착륙) → 연기 해소 후에도 예방적 회항 유지 → 위치보고+fuel/SOB(2h45m/116명) → Tower "Continue Approach"(착륙허가 아님) 함정 → 착륙 |
+| 2026-08-21 | sets/EPTA_04.md | Fernbrook Airport 도착 (Approach/Landing/Taxi). Approach·Tower·Ground 순차 핸드오프, 접근 중 speed 감속 2회+트래픽 congestion으로 활주로 변경(14→22), 착륙 후 인접 게이트 pushback으로 hold position | Meridian Airport 접근 중 **홀딩 연장으로 인한 연료 부족** — holding 지시 복창(EFC 포함) → Minimum Fuel 선언 → 추가 홀딩 요구받자 Emergency로 격상(MAYDAY) → intentions+위치+fuel/SOB(18min/143명) 보고 → 착륙 |
 
 ### 2026-08-18 세트 상세 (향후 중복 방지용)
 - Part ⅠA: 지상 pushback/taxi(Golf 경유), 이륙 시 wake turbulence 캐션(복창 불필요 유형),
@@ -154,3 +156,34 @@ yaw 조종 곤란.
 - Part ⅡB: 순항 중 cabin altitude 경고(여압 상실) → 비상선포+긴급강하 요청 → intentions 진술
   → 10,000ft 레벨오프, 무상해 확인 → 연료 소모 우려로 최인접 공항(Fenwick) 회항 결정 → fuel
   3시간/SOB 128 보고 → ILS 진입 후 착륙
+
+### 2026-08-20 세트 상세 (향후 중복 방지용)
+- Part ⅠA: 지상 give-way 지시 포함 taxi, 이륙 시 wake turbulence+traffic type 캐션(복창
+  불필요 유형)+line up and wait, 상승 중 heading/climb via SID/cross fix/speed/contact freq
+  5요소 지시, 접근 중 활주로 변경+RNAV 예상
+- Part ⅠB: 섹터 전환 주파수변경 단순 수용, autopilot 일시 이탈 후 정상화 보고(Informing),
+  난기류 중 감속지시 unable+대안 요청(3세트 연속 타깃), 고도버스트(6000→5000) 정정(방향확인),
+  direct routing 요청(REQUEST+명사), "Continue Approach≠착륙허가" 확인(Clarifying)
+- Part ⅡA: Cedar Airport 출발, 3단계(Clearance/Push-back/Taxi). Delivery "Report ready for
+  push-back" 요구, Ramp에 pushback/start-up 요청, 지상이동 중 Korean Air B747에 give way +
+  hold position due to traffic, tower line-up-and-wait 후 이륙허가(바람정보 복창불필요)
+- Part ⅡB: 순항 중 조종실 연기(smoke/haze) 감지 → MAYDAY 7단계 비상선언+긴급강하·회항 요청
+  → intentions 진술(체크리스트+예방착륙) → 연기 해소 후에도 예방적 회항 유지, 12,000ft
+  레벨오프 → 위치보고+intentions 재진술 → fuel 2h45m/SOB 116 보고 → Fairview Tower
+  "Continue Approach"(착륙허가 아님) 함정 → 착륙
+
+### 2026-08-21 세트 상세 (향후 중복 방지용)
+- Part ⅠA: 지상 hold-short 포함 taxi, 이륙 시 wind+gust 정보 캐션(복창 불필요 유형), 상승 중
+  climb via SID/cross fix/direct/speed/contact freq 5요소 지시, 접근 중 ILS 예상+circle to
+  land(바람 사유)
+- Part ⅠB: 섹터 전환 주파수변경 단순 수용, 조류 충돌 의심 후 정상 비행 지속 보고(Informing),
+  크로싱 제한고도 unable+대안 요청(4세트 연속 타깃), 유도로 오진입(Alpha→Bravo) 정정,
+  목적지 기상 요청(REQUEST+명사), 미확인 픽스(NUKEM) 경로 포함 여부 확인(Clarifying/verify)
+- Part ⅡA: Fernbrook Airport 도착, 3단계(Approach/Landing/Taxi). Approach 첫 컨택 위치보고
+  (descending through 200 for 11,000 — 정상 예시 제공), 스피드 감속 2회(210→180kt), 트래픽
+  congestion으로 활주로 변경(14→22, heading/고도 포함 5요소), Tower/Ground 순차 정확 호출
+  테스트, 인접 게이트 pushback으로 hold position
+- Part ⅡB: Meridian Airport 접근 중 홀딩 지시(DELTA NOVEMBER 픽스, EFC 포함 전체 순서) →
+  연료 재계산 후 **Minimum Fuel** 선언(25분 잔여) → 관제사가 10분 추가 홀딩 요구 → 연료가
+  안전 여유 이하로 떨어질 상황 → **Emergency로 격상**(MAYDAY, emergency fuel) → 벡터·
+  intentions·위치+fuel/SOB(18min/143명) 보고 → ILS 클리어런스+Tower 이관 → 비상 착륙

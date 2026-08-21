@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <rect x="0" y="0" width="400" height="300" fill="#e9edf1"/>
+  <text x="200" y="34" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#333">RUNWAY CHANGE</text>
+
+  <!-- old runway 14, crossed out -->
+  <g opacity="0.55">
+    <rect x="60" y="110" width="130" height="26" fill="#c9ced3" transform="rotate(-25 125 123)"/>
+    <text x="70" y="200" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#8a8f95">RWY 14</text>
+    <line x1="55" y1="90" x2="195" y2="160" stroke="#b23030" stroke-width="5"/>
+    <line x1="55" y1="160" x2="195" y2="90" stroke="#b23030" stroke-width="5"/>
+  </g>
+
+  <!-- new runway 22, highlighted -->
+  <rect x="230" y="150" width="26" height="130" fill="#2f7d32" transform="rotate(20 243 215)"/>
+  <text x="260" y="260" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#2f7d32">RWY 22</text>
+
+  <!-- HL123 arrow pointing to new runway -->
+  <rect x="150" y="230" width="70" height="18" fill="#274b8f"/>
+  <text x="185" y="244" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#fff">HL123</text>
+  <line x1="220" y1="238" x2="255" y2="220" stroke="#274b8f" stroke-width="4"/>
+  <polygon points="268,213 248,215 258,231" fill="#274b8f"/>
+</svg>

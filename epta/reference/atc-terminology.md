@@ -192,6 +192,14 @@ Pilot – Runway 32 Left, Taxi via taxiway Papa, Bravo 2,
 - **HOLD POSITION** — 현위치에서 멈춰 대기
 - **No.1 CONTINUE TAXI** — (순서가 먼저이니) 계속 진행
 
+> **채점 주의 (2026-08-20 웹조사로 확인)**: GIVE WAY TO / FOLLOW / HOLD POSITION은 §2의
+> **필수 복창(mandatory readback) 목록에 포함되지 않는다.** ICAO Annex 11 / PANS-ATM(Doc
+> 4444)이 요구하는 필수 복창은 "활주로 관련 지시(진입/착륙/이륙/hold short/횡단/역주행),
+> 사용활주로, 고도계, SSR코드(squawk), 고도·기수·속도 지시, 전이고도"뿐이다 (SKYbrary
+> "Read-Back or Hear-back" 교차검증). 아래 예시처럼 상대 항공기·방향까지 자세히 복창하는 건
+> **더 친절한 응대의 예시**일 뿐, 빠뜨렸다고 감점할 필수 항목은 아니다 — "Roger, HL123." 또는
+> 핵심 동작만 짧게 답해도 정답으로 인정한다.
+
 ```
 ATC   – HL1101, (You are No.2) Give way to (또는 Follow) Koreanair Boeing747
         on your rightside
@@ -546,6 +554,7 @@ ATC   – HL1101, Seoul approach Radar contact, 20miles South of GIMPO,
 세트를 만들거나 채점할 때 아래 체크리스트를 우선 확인한다.
 
 - [ ] §2의 **필수 복창 7항목**(비행로 허가/활주로 관련 지시/사용활주로·고도계·squawk·고도·기수·속도·전이고도)이 빠지지 않았는가?
+- [ ] **§2 목록에 없는 지시**(give way to/follow/hold position, wake turbulence 캐션, 교통정보 등)의 세부사항을 안 붙였다고 감점하지 않았는가? (핵심 동작만 정확하면 충분)
 - [ ] "confirm ~?"에 **AFFIRM/NEGATIVE**로 답했는가 (yes/no 금지)?
 - [ ] **ROGER**가 내용 없이 단독으로 CONFIRM/READ BACK을 대체하지 않았는가? (내용과 함께면 OK)
 - [ ] **REQUEST + 명사(구)** 패턴을 지켰는가?

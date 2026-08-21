@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <rect x="0" y="0" width="400" height="300" fill="#e9edf1"/>
+
+  <!-- taxiway -->
+  <rect x="0" y="120" width="400" height="26" fill="#b9bec4"/>
+  <text x="10" y="116" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#333">Taxiway Alpha</text>
+
+  <!-- crossing taxiway -->
+  <rect x="180" y="0" width="26" height="300" fill="#b9bec4"/>
+  <text x="212" y="20" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#333">Taxiway Bravo</text>
+
+  <!-- HL123 approaching from left -->
+  <rect x="30" y="98" width="70" height="18" fill="#274b8f"/>
+  <text x="65" y="112" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#fff">HL123</text>
+  <line x1="100" y1="133" x2="165" y2="133" stroke="#274b8f" stroke-width="4"/>
+  <polygon points="180,133 162,124 162,142" fill="#274b8f"/>
+
+  <!-- Korean Air B747 approaching from top on crossing taxiway -->
+  <rect x="150" y="40" width="105" height="18" fill="#b23030"/>
+  <text x="202" y="54" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#fff">KOREAN AIR B747</text>
+  <line x1="193" y1="60" x2="193" y2="118" stroke="#b23030" stroke-width="4"/>
+  <polygon points="193,133 184,116 202,116" fill="#b23030"/>
+
+  <text x="200" y="220" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#b23030">GIVE WAY?</text>
+  <circle cx="193" cy="133" r="30" fill="none" stroke="#b23030" stroke-width="3"/>
+</svg>

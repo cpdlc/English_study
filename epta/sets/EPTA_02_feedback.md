@@ -5,6 +5,11 @@
 > 요구·AFFIRM/NEGATIVE 요구에 쓰면 오류, REQUEST는 명사(구)와 결합. 자세한 내용은 CLAUDE.md
 > §6-1-1, `reference/exam-spec.md` §9 참고.
 
+> **추가 정정 (2026-08-20, 채점 방식 변경 소급 적용)** : 자유응답·plain English 문항의 "교정
+> 답안"을 완전히 새 문장으로 바꾸지 않고 **원문을 최대한 살려 문법만 고치고 빠진 내용만 최소로
+> 보충**하는 방식으로 아래에서 다시 정리했다(EPTA_03부터 적용한 기준을 이 세트에도 소급 적용).
+> 판정(✅/⚠️/❌)과 최종 등급은 바뀌지 않는다.
+
 ---
 
 ## Part Ⅰ Task A
@@ -78,10 +83,10 @@ ATC : HL123, how is your ride?
 문제 : You are climbing out and ATC assigns a higher altitude, but your aircraft's weight and the outside temperature mean you cannot make that altitude yet.
 ATC : HL123, climb and maintain FL360.
 내 답안 : unable climb fl 360 due to flight restriction hl123
-** 정답/교정 답안 : HL123, unable FL360 due to performance, request FL340 (or lower available altitude).
+** 교정 답안 (원문 최대한 유지, 사유 단어 하나만 바꾸고 대안 요청만 추가) : Unable climb FL360 due to **performance**, **request FL340**, HL123.
 - 누락된 필수 readback 요소 : **대안 요청(request 대체 고도)이 또 빠짐.** "unable"까지만 말하고 끝냄.
 - 표준교신용어 오류 : 사유도 "due to flight restriction"이라 상황(중량·기온에 따른 성능 제한)과 안 맞음 — "due to performance"가 정확한 표현.
-- 코멘트 : **EPTA_01 피드백에서 정확히 같은 지적(unable + 사유까지만 말하고 대안 요청을 안 함)이
+- 코멘트 : **문법/어휘 수정**: "flight restriction"→"performance"(상황에 맞는 단어로). **내용 보충**: 뒤에 request 절 추가. **EPTA_01 피드백에서 정확히 같은 지적(unable + 사유까지만 말하고 대안 요청을 안 함)이
   나왔던 문항인데, 이번에도 동일한 패턴이 반복됨.** "unable [지시] due to [사유], request [대안]"
   3단 구조를 이번엔 꼭 완성해서 말할 것.
 
@@ -91,11 +96,11 @@ ATC : HL123, climb and maintain FL360.
 문제 : ATC assigned you squawk 4521, but you mistakenly dialed in 4512 instead. Now ATC contacts you.
 ATC : HL123, confirm squawking 4521?
 내 답안 : my mistake , i'll squawk 4521 now hl123
-** 정답/교정 답안 : My mistake, resetting squawk to 4521, HL123.
+** 교정 답안 (원문 그대로 — 고칠 문법·내용 없음) : My mistake, I'll squawk 4521 now, HL123.
 - 누락된 필수 readback 요소 : 없음
 - 표준교신용어 오류 : 없음. ("correcting own mistake" 기능은 AFFIRM/NEGATIVE 없이 "my mistake, now ~"로 바로 들어가는 것이 샘플 관례 — §9-2 참고)
 - 코멘트 : **EPTA_01에서 같은 기능(Correcting own mistake) 문항 때 정정 방향을 반대로 말했던
-  실수가 이번엔 없음.** 스쿼크를 올바른 방향(4521)으로 정확히 재설정.
+  실수가 이번엔 없음.** 스쿼크를 올바른 방향(4521)으로 정확히 재설정 — 원문 그대로도 이미 정확한 응답.
 
 ---
 
@@ -235,13 +240,8 @@ Tower : HL123, wind two two zero at eight, cleared for takeoff runway one eight.
 You have just finished Task A, as the pilot of Hotel Lima one two three.
 In this situation, how did you handle the pressure from the aircraft behind you while still following your own taxi procedures, and what would you do differently next time?
 내 답안 : In this Task A , i just let the aircraft go first , but next time, i would rather to go first , because , it takes time and fuel even though it is little and for passenger it is precious for saving their time, so i will refuse to give the order next time.
-** 교정 답안 : "In this situation, I agreed to keep moving as quickly and safely as possible when Ground relayed the request from the aircraft behind me — I didn't let them go ahead of me, I just kept my own taxi flowing efficiently. Next time, I'd handle it the same way: safety and my own checklist come first, but I'm happy to expedite where I safely can."
-- 코멘트 : 실제 롤플레이(P2A-Q6)에서는 "Affirm"이라고 답해서 **"계속 움직이겠다(expedite)"에 동의한
-  것**인데, 여기서는 "i just let the aircraft go first"(그 항공기를 먼저 보내줬다)라고 서술해서
-  **실제 응답 내용과 다르게 기억을 재구성함.** 또한 "would rather **to** go first"는 문법 오류
-  (would rather 뒤에는 to 없이 동사원형), "refuse to give the order"는 의미가 불분명함(누구에게
-  무슨 명령을 거부한다는 것인지). 질문의 두 파트(어떻게 대응했는지 / 다음엔 어떻게 할지) 자체는
-  둘 다 다루려고 시도한 점은 좋음.
+** 교정 답안 (원문 최대한 유지, 문법만 수정) : In this Task A, I just let the aircraft go first, but next time, I would rather **go** first, because it takes time and fuel — even though it is little — and for passengers it is precious for saving their time, so I will **decline the request** next time.
+- 코멘트 : **문법 수정**: "would rather **to** go first" → "would rather **go** first"(would rather 뒤에는 to 없이 동사원형), "refuse to give the order" → "decline the request"(원래 뭘 거부한다는 건지 불분명했던 부분을 문맥에 맞게 다듬음). **사실관계 확인**: 실제 롤플레이(P2A-Q6)에서는 "Affirm"이라고 답해서 "계속 움직이겠다(expedite)"에 동의했는데, 여기서는 "그 항공기를 먼저 보내줬다"고 서술해서 실제 응답 내용과 다르게 기억을 재구성함 — 이 부분은 표현이 아니라 기억 자체의 문제라 그대로 옮겨둠, 다만 실제 있었던 일과 다르다는 점을 짚어야 함. 질문의 두 파트(어떻게 대응했는지 / 다음엔 어떻게 할지)를 둘 다 다루려고 시도한 점은 좋음.
 
 ---
 
@@ -262,10 +262,10 @@ Center : HL123, radar contact, maintain FL350.
 문제 : Situation Update — A warning horn sounds and you notice the cabin altitude is climbing above normal — you are losing cabin pressurization.
 ☞ Contact Center, declare an emergency, and request an immediate descent.
 내 답안 : Center hl123 mayday mayday mayday request immediate descent due to pressure
-** 정답/교정 답안 : Center, HL123, Mayday Mayday Mayday, we have a loss of cabin pressure, request immediate descent.
+** 교정 답안 (원문 최대한 유지, 순서만 비상선언 7단계에 맞게 바로잡고 사유만 구체화) : **Mayday Mayday Mayday**, Center, HL123, request immediate descent due to **loss of cabin pressure**.
 - 누락된 필수 readback 요소 : 없음
 - 표준교신용어 오류 : 없음. **"Mayday" 3회 반복은 국제 표준 조난 선언 방식으로 정확함.**
-- 코멘트 : "due to pressure"는 조금 더 구체적으로 "due to loss of cabin pressure"라고 하면 더 명확했겠지만, 의미 전달에는 지장 없음. 비상선포 자체는 매우 정확하고 강력한 응답.
+- 코멘트 : **내용 수정**: `atc-terminology.md` §8-1의 비상선언 7단계는 MAYDAY×3이 맨 앞에 오고 그 다음 관제기관명·콜사인 순서인데, 원문은 "Center hl123"을 먼저 말해서 순서가 바뀌었음 — 순서만 바로잡음. "due to pressure"도 "due to loss of cabin pressure"로 조금 더 구체화함(원문 표현을 최대한 살림). 비상선포 자체는 정확하고 강력한 응답.
 
 ---
 
@@ -334,10 +334,10 @@ Center : HL123, cleared direct Fenwick Airport, descend and maintain 4,000, expe
 **P2B-Q8** ❌
 문제 : ☞ Contact Fenwick Tower, report your position and intentions, and advise you are declaring an emergency.
 내 답안 : fenwick tower hl123 direct fenwick airport descend and maintain 4000 we are emergency now.
-** 정답/교정 답안 (예시 — 정확한 수치는 정해진 정답 없음, 형식은 샘플 관례 고정) : Fenwick Tower, HL123, descending through 6,000 for 4,000, for ILS runway zero niner, declaring an emergency.
+** 교정 답안 (예시 — 정확한 수치는 정해진 정답 없음. 원문의 "fenwick tower hl123 ... declaring emergency" 틀은 유지하고, 반복된 클리어런스 부분만 위치 표현으로 교체) : Fenwick Tower, HL123, **descending through 6,000 for** 4,000, for ILS runway zero niner, **we are declaring an** emergency.
 - 누락된 필수 readback 요소 : 지시문이 요구한 "위치"와 "의도(intentions)"가 없음. 대신 방금 복창했던 이전 클리어런스(descend and maintain 4000) 내용을 그대로 반복함. 샘플 전체(Ⅰ·Ⅱ·Ⅲ)에서 "report your position/altitude"는 항상 **"descending/leaving through X for Y"**(고도 통과 중) 또는 픽스가 주어졌다면 **"over [픽스] at [고도]"** 형태로 답하며, 활주로까지의 거리(마일)로 답하는 사례는 없음.
 - 표준교신용어 오류 : "we **are emergency** now"는 문법 오류 — "emergency"는 명사라 "we have an emergency" 또는 "we are declaring an emergency"가 맞음.
-- 코멘트 : 비상선포(declaring an emergency) 취지는 담겼지만, 정작 요구된 위치·착륙 의도(ILS 09를 위한 접근 등) 없이 이전 정보만 되풀이함. EPTA_01의 position-report 관련 약점이 Task B에서도 비슷하게 나타남. 다음엔 "descending through [현재 고도] for [지시받은 고도]" 형태를 기억해둘 것.
+- 코멘트 : **내용 수정**: 반복된 클리어런스 부분만 위치 표현("descending through 6,000 for 4,000")으로 바꾸고, "declaring an emergency" 부분은 문법만 고쳐서 그대로 살림. 정작 요구된 위치·착륙 의도 없이 이전 정보만 되풀이한 게 핵심 문제 — EPTA_01의 position-report 관련 약점이 Task B에서도 비슷하게 나타남.
 
 ---
 
@@ -365,11 +365,8 @@ ATC: HL123, wind zero eight zero at six, cleared to land runway zero niner, emer
 
 What happened to your aircraft (HL123)? Explain the nature of the incident.
 내 답안 : hl123 have abnormal pressure on passenger , so we called emergency and ask atc to descend , so atc instruct our aircraft descend , after leveling off fl100 , the pressure went normal , but we are worried about low altitude and fuel , so ask to land the nearest suitable airport , so we instructed to contact the nearest airport ,fenwick airport , the airport instruct us to land as soon as contact , and they prepared emergency equipment on airport.
-** 교정 답안 : "We had a loss of cabin pressurization while cruising, so we declared an emergency and requested an immediate descent. Center cleared us down to 10,000 feet and gave us a turn for traffic. Once we leveled off, the cabin pressure had stabilized and there were no injuries, but we were concerned about fuel at that lower altitude, so we requested to divert to the nearest suitable airport. Center asked for our fuel and souls on board to pass along to the airport, then cleared us direct to Fenwick Airport for the ILS approach. We landed with emergency equipment standing by."
-- 코멘트 : 사건의 큰 흐름(여압 상실 → 비상강하 → 안정화 → 연료 우려로 회항 → 착륙)은 정확히
-  전달됨. 다만 **fuel/SOB를 보고했던 단계가 요약에서 완전히 빠짐** — 실제 교신 5줄 중 하나인
-  중요한 단계인데 누락됨. "abnormal pressure on passenger"라는 표현도 어색함(정확히는 "cabin
-  pressure"이지 승객 개인의 혈압 같은 게 아님) — "loss of cabin pressure"로 고칠 것.
+** 교정 답안 (원문 최대한 유지, 문법 수정 + 빠진 fuel/SOB 단계만 최소 보충) : HL123 had abnormal **cabin** pressure, so we **declared an emergency** and asked ATC to descend, so ATC **instructed** our aircraft **to** descend. After leveling off **at 10,000ft**, the pressure went **back to** normal, but we **were** worried about low altitude and fuel, so **we asked** to land **at** the nearest suitable airport, **and reported our fuel and souls on board so ATC could pass it along.** **We were** instructed to contact the nearest airport, Fenwick Airport; the airport instructed us to land as soon as **we made** contact, and they **had** emergency equipment prepared at the airport.
+- 코멘트 : **문법 수정**: "have abnormal pressure on passenger"→"had abnormal cabin pressure"(승객 개인이 아니라 객실 압력이므로 "on passenger" 삭제), "ask atc"→"asked ATC"(시제), "atc instruct"→"ATC instructed... to descend"(시제·전치사), 그 외 시제 통일. **내용 보충**: 실제 Task B 교신 5줄 중 하나인 **fuel/SOB 보고 단계**가 요약에서 완전히 빠져 있어서 최소한으로 추가함. 사건의 큰 흐름(여압 상실 → 비상강하 → 안정화 → 연료 우려로 회항 → 착륙) 자체는 정확히 전달됨.
 
 ---
 
@@ -377,12 +374,8 @@ What happened to your aircraft (HL123)? Explain the nature of the incident.
 문제 : (P2C-Q1과 동일한 ATC 교신 내용에 대한 질문)
 How do you think the incident was handled by the air traffic controller? Do you feel the situation could have been handled differently? Make a comment from a pilot's point of view.
 내 답안 : Although i have few experience about similar issue about this , i think this handling was wonderful , first the pilot let them know their situation rightly and the atc instruct them better ways to solve the issue , and also the pilot think about the small cautious about fuel so ask to land nearest airport is the best choice which the pilots choice. so i think it is excellent ways what they did
-** 교정 답안 : "I think the controller handled this well — they responded quickly to the emergency, vectored us clear of traffic during the descent, and asked for our fuel and souls on board at the right time so the diversion airport could prepare. From a pilot's point of view, I don't think it could have been handled much differently; if anything, I would have liked an earlier confirmation that emergency equipment would be standing by, just for peace of mind during the descent."
-- 코멘트 : 답변을 끝까지 완성한 것은 **EPTA_01(문장 중간에 끊김)보다 확실히 개선된 부분.** 다만
-  질문의 두 번째 절반("could have been handled differently?")에 대한 의견은 사실상 빠져 있고
-  관제사 대응을 칭찬하는 내용만 반복됨. 문법도 손볼 곳이 많음: "few experience"(→ "little
-  experience"), "the pilot **think**"(→ "thinks", 주어-동사 불일치), "small **cautious**"(→
-  "caution", 품사 오류), "which the pilots choice"(문장 성분 불완전).
+** 교정 답안 (원문 최대한 유지, 문법만 수정) : Although I have **little experience** about a similar issue, I think this handling was wonderful. First, the pilot let them know their situation properly and ATC **instructed** them **on** better ways to solve the issue. Also, the pilot **thought** about the small **caution** about fuel, so asking to land at the nearest airport **was** the best choice — **that was** the pilot's choice. So I think it **was** an excellent way **to handle** what they did.
+- 코멘트 : **문법 수정**: "few experience"→"little experience"(가산/불가산명사 구분), "the pilot **think**"→"**thought**"(시제/주어-동사 일치), "small **cautious**"→"small **caution**"(형용사→명사 품사 오류), "which the pilots choice"→"that was the pilot's choice"(불완전한 문장 성분 정리), "it is excellent ways what they did"→"it was an excellent way to handle what they did"(구문 정리). **내용**: 질문의 두 번째 절반("could have been handled differently?")에 대한 의견은 여전히 명확히 빠져 있음 — 관제사 대응을 칭찬하는 내용만 있고 "다르게 할 수 있었는지"에 대한 직접적 답이 없음. 다만 답변 자체는 끝까지 완성함(EPTA_01보다 개선).
 
 ---
 

@@ -8,6 +8,13 @@
 > 감점한다 — CLAUDE.md §6-1-1 참고. 이번 조정으로 텍스트에서 발음을 판단할 근거가 사실상 없어져
 > Pronunciation 항목은 "평가 보류"로 처리하고 최종 등급 계산에서 제외한다.
 
+> **추가 정정 (2026-08-20, 채점 방식 변경 소급 적용)** : 자유응답·plain English 문항(Informing/
+> Unable/Correcting/Clarifying/Follow-up/Task C)의 "교정 답안"을 완전히 새 문장으로 바꾸지 않고
+> **원문을 최대한 살려 문법만 고치고 빠진 내용만 최소로 보충**하는 방식으로 아래에서 다시
+> 정리했다(EPTA_03부터 적용한 기준을 이 세트에도 소급 적용). 판정(✅/⚠️/❌)과 최종 등급은
+> 바뀌지 않는다 — 답을 "보여주는 방식"만 바뀐 것이다. 또한 "hour"(→our)처럼 발음이 똑같은
+> 오탈자를 오류로 지적했던 부분도 이번에 함께 바로잡았다.
+
 ---
 
 ## Part Ⅰ Task A
@@ -69,10 +76,10 @@ ATC : HL123, contact Baxter Approach on 119.7.
 문제 : You are climbing through FL140 in cloud and have just picked up light rime icing on the wings. ATC contacts you for a status check.
 ATC : HL123, request flight condition.
 내 답안 : rime icing hl123
-** 정답/교정 답안 : HL123, experiencing light rime icing at FL one four zero.
+** 교정 답안 (원문 최대한 유지, 빠진 서술어만 최소 보충) : HL123, **experiencing** rime icing.
 - 누락된 필수 readback 요소 : 서술어(동사) 자체가 없음. "rime icing"만으로는 착빙을 보고하는 것인지, 착빙이 없다는 것인지, 단순히 단어를 나열한 것인지 ATC가 판단할 수 없음.
 - 표준교신용어 오류 : Informing 문항은 최소 "experiencing ~" 같은 완전한 진술이 필요. 명사구만 던지는 것은 표준교신이 아님.
-- 코멘트 : 이 문항의 취지(Informing)를 제대로 수행하지 못함. 문장을 완성해서 말해야 함.
+- 코멘트 : **내용 보충**: "rime icing"이라는 단어 선택 자체는 정확했으니 그대로 살리고, 앞에 "experiencing"만 붙이면 됨. 문장을 완성해서 말하는 습관이 필요함.
 
 ---
 
@@ -80,10 +87,10 @@ ATC : HL123, request flight condition.
 문제 : You are being vectored for the approach, but low stratus is covering the field and you remain in cloud. You are not able to accept a visual approach.
 ATC : HL123, cleared visual approach runway one five.
 내 답안 : unable visual approach runway15 due to low visibility hl123
-** 정답/교정 답안 : HL123, unable visual approach due to IMC, request ILS approach runway one five.
+** 교정 답안 (원문 최대한 유지, 대안 요청만 추가) : Unable visual approach runway 15 due to low visibility, **request ILS approach runway one five**, HL123.
 - 누락된 필수 readback 요소 : 대안 요청(request ILS approach)이 없음 — "unable"만 말하고 대안을 제시하지 않으면 관제사가 다음 조치를 알 수 없음.
 - 표준교신용어 오류 : 없음 (숫자 표기는 감점하지 않음)
-- 코멘트 : "unable + 사유" 구조는 이 세트에서 가장 정확하게 쓴 문항. 여기에 "request ILS approach"만 붙이면 완벽.
+- 코멘트 : **내용 보충**: "unable ~ due to low visibility"까지는 그대로 두고, 뒤에 request 절만 추가함. "unable + 사유" 구조는 이 세트에서 가장 정확하게 쓴 문항이었으니 그 문장을 그대로 살리는 게 나음.
 
 ---
 
@@ -91,10 +98,10 @@ ATC : HL123, cleared visual approach runway one five.
 문제 : ATC instructed you to reduce speed to 180 knots for sequencing, but you misheard and slowed to 160 knots instead. Now ATC contacts you.
 ATC : HL123, confirm speed 180 knots?
 내 답안 : my mistake , reduce speed 180 kts hl123
-** 정답/교정 답안 : HL123, my mistake, now increasing speed to one eight zero knots.
+** 교정 답안 (원문 최대한 유지, 동사 하나만 방향에 맞게 수정) : My mistake, **increasing** speed 180 kts, HL123.
 - 누락된 필수 readback 요소 : 정정 방향이 반대임.
 - 표준교신용어 오류 : 상황은 "180kt 지시를 잘못 듣고 160kt로 감속"한 것이므로, 정정은 180kt까지 **증속(increase)**해야 함. "reduce speed 180 knots"는 이미 160kt인 상태에서 더 감속하라는 뜻이 되어 상황을 정반대로 이해한 오류.
-- 코멘트 : "my mistake"는 정확히 썼으나, 상황 이해가 틀림. 문제 설명을 다시 읽고 방향을 확인하는 습관이 필요함.
+- 코멘트 : **내용 수정**: 문장의 나머지는 다 맞고, "reduce"라는 동사 하나만 "increasing"으로 바뀌면 됨. "my mistake"는 정확히 썼으나, 상황을 반대로 이해했던 것 — 문제 설명을 다시 읽고 방향을 확인하는 습관이 필요함.
 
 ---
 
@@ -115,10 +122,10 @@ ATC : HL123, say your request.
 ATC : HL123, taxi to gate via Bravo, Charlie, hold short of runway two two.
 🖥 [ confirm instruction for HL123 ]
 내 답안 : confirm taxi to gate via b c hold short of runway 22 hl123
-** 정답/교정 답안 : Confirm that instruction was for HL123?
+** 교정 답안 (원문의 "confirm"만 살리고 뒤를 필요한 질문으로 교체) : **Confirm** that instruction was for HL123?
 - 누락된 필수 readback 요소 : 이 문항의 핵심 — "이 지시가 나(HL123)에게 온 것이 맞는지" 확인하는 질문이 빠짐.
 - 표준교신용어 오류 : "confirm"이라는 단어를 앞에 붙였지만 실제로는 지시 내용을 그대로 복창(readback)한 것에 불과함. Clarifying(확인) 기능이 아니라 Readback 기능을 수행함 — 문항이 요구한 기능 자체를 잘못 수행.
-- 코멘트 : 상황 설명("콜사인이 비슷한 다른 항공기와 헷갈릴 수 있어 확인이 필요")을 다시 확인할 것. "confirm ~ for HL123?" 형태의 질문이어야 함.
+- 코멘트 : 이 문항은 원문에 "확인 질문"에 해당하는 내용 자체가 없어서(지시를 복창만 함) 문법만 고쳐서는 살릴 수 없었고, "confirm"이라는 단어 선택만 유지한 채 뒷부분을 새로 구성했음. 상황 설명("콜사인이 비슷한 다른 항공기와 헷갈릴 수 있어 확인이 필요")을 다시 읽고, "confirm ~ for HL123?" 형태의 질문을 만드는 연습이 필요함.
 
 ---
 
@@ -138,10 +145,10 @@ Center : HL123, descend and maintain FL240, expect further descent in 10 minutes
 **P2A-Q2** ❌
 문제 : ☞ Contact Approach control, report your descending information, and advise that you have the new ATIS.
 내 답안 : approach hl123 decend and maintain fl240 informatin j
-** 정답/교정 답안 : Approach, HL123, descending through FL240 for [지시받은 고도], we have the latest ATIS information.
-- 누락된 필수 readback 요소 : 정식 위치보고 형식("descending through X for Y")이 없이 방금 받은 클리어런스를 그대로 되풀이함. ATIS 확인도 어떤 정보인지("information X-ray" 등) 불명확하게 처리됨.
-- 표준교신용어 오류 : 위치보고와 클리어런스 복창을 혼동함. ("informatin"은 소리 내어 읽으면 "information"과 같으므로 그 자체는 감점하지 않음 — 문제는 철자가 아니라 어떤 ATIS인지 지칭이 불명확한 것)
-- 코멘트 : 지시문이 요구한 "현재 하강 상황 보고 + 최신 ATIS 확인"을 제대로 수행하지 못함. 의미가 불명확해서 관제사가 이해하기 어려움.
+** 교정 답안 (원문 최대한 유지, "복창"을 "위치보고" 형태로만 바꾸고 나머지는 그대로) : Approach, HL123, **descending through [현재고도] for** FL240, we have **information Juliet**.
+- 누락된 필수 readback 요소 : 정식 위치보고 형식("descending through X for Y")이 없이 방금 받은 클리어런스를 그대로 되풀이함.
+- 표준교신용어 오류 : 위치보고와 클리어런스 복창을 혼동함. ("informatin"은 소리 내어 읽으면 "information"과 같으므로 그 자체는 감점하지 않음)
+- 코멘트 : **내용 수정**: "informatin j"는 오탈자일 뿐 "information Juliet"라는 의도가 읽혀서 그대로 살렸음(J=Juliet로 인정). 진짜 문제는 "decend and maintain fl240"이 새 정보 없이 방금 받은 클리어런스를 그대로 반복한 것 — "descending through [현재고도] for FL240"처럼 바꿔야 위치보고가 됨.
 
 ---
 
@@ -172,7 +179,7 @@ Approach : HL123, cleared BAXTR TWO arrival, KIMME transition, cross KIMME at 10
 **P2A-Q5** ⚠️ *(문제 설계상 정확한 위치가 주어지지 않았던 문항 — 채점 기준 완화)*
 문제 : ☞ Contact Baxter Tower and report your position for landing.
 내 답안 : tower hl123, baxtar 2 arrival maintain 250kts runway 25r
-** 정답/교정 답안 (예시 — 위치는 정해진 정답이 없어 그럴듯하게 지어낸 것 중 하나) : Baxter Tower, HL123, approaching KIMME, for landing runway two five right. (또는 "10 miles from the field" 등 다른 그럴듯한 위치도 동일하게 인정)
+** 교정 답안 (예시 — 위치는 정해진 정답이 없음. 원문의 "tower hl123 ... runway 25r" 틀은 그대로 두고, 반복된 클리어런스 부분만 위치 정보로 교체) : Tower, HL123, **approaching KIMME**, for landing runway two five right. (또는 "10 miles from the field" 등 다른 그럴듯한 위치도 동일하게 인정)
 - 누락된 필수 readback 요소 : 없음 — 이 문항은 애초에 정확한 위치/거리 정보가 문제에 주어지지 않았으므로, 정답이 하나로 고정돼 있지 않음. 실제 시험 유의사항에도 "상황 전개의 비약이 인정되므로 지시사항에 맞게 응답"하라고 되어 있어, 그럴듯하게 지어내서 답하는 것이 정상적인 방식임.
 - 표준교신용어 오류 : 없음
 - 코멘트 : 감점 이유는 "위치를 몰라서"가 아니라, **새로운 정보를 전혀 담지 않고 이미 복창했던 클리어런스 내용(arrival/speed/runway)을 그대로 반복**했기 때문. 위치를 정확히 몰라도 직전 클리어런스에 나온 마지막 픽스(KIMME)를 근거로 "approaching KIMME"나 "10 miles from the field"처럼 최소한의 새 표현을 지어내는 것이 기대되는 답변. (※ 이 문항은 Situation Update로 구체적 위치를 먼저 알려줬어야 하는데 그 단계가 빠져 있었음 — 세트 설계 오류. 아래 참고)
@@ -229,9 +236,9 @@ Ground : HL123, you're reassigned to gate Charlie 7, taxi via Bravo, Delta.
 문제 : Follow-up question:
 You have just finished Task A, as the pilot of Hotel Lima one two three.
 In this situation, what problem did you encounter with your gate assignment, and how did you handle the unexpected delay?
-내 답안 : I encountered that there was a problem with another aircraft with a mechanical issue, i have to wait until further notice but i have to ask when should i go , so i ask how should i do , so atc gave me another action to taxi via another way DJI MIC 2so i could go rightly.
-** 교정 답안 : "I found that our assigned gate was occupied by another aircraft that had a mechanical issue, so we had to hold. I asked the controller how long the delay would be, and they reassigned us to a different gate so we could taxi in without further delay."
-- 코멘트 : 사건 전개(게이트 점유 → 대기 → 지연시간 문의 → 재배정)라는 큰 줄기는 맞게 이해했음. 다만 문장이 하나로 계속 이어지는 run-on 구조이고, "i ask how should i do"처럼 간접의문문 어순 오류("how long the delay would be"가 맞는 형태), "go rightly"처럼 부자연스러운 표현이 반복됨. 정해진 모범답안은 없는 자유응답 문항이지만, 문장을 짧게 끊어서 말하는 연습이 필요.
+내 답안 : I encountered that there was a problem with another aircraft with a mechanical issue, i have to wait until further notice but i have to ask when should i go , so i ask how should i do , so atc gave me another action to taxi via another way so i could go rightly.
+** 교정 답안 (원문 최대한 유지, 문법만 수정) : I encountered a problem — there was another aircraft with a mechanical issue, so I had to wait until further notice. But I had to ask **when I should go**, so I asked **how long it would take**, and ATC gave me another taxi route so I could go **properly**.
+- 코멘트 : **문법 수정**: "when should i go" → "when I should go"(간접의문문은 평서문 어순), "how should i do" → "how long it would take"(뜻이 통하도록 — 원래 "언제 가야 하는지"를 물은 것이므로), "go rightly" → "go properly"(rightly는 이런 문맥에 안 맞는 단어). 사건 전개(게이트 점유 → 대기 → 지연시간 문의 → 재배정)라는 큰 줄기는 맞게 이해했음. 문장이 콤마로 계속 이어지는 run-on 구조는 계속 남아있는 습관이니 짧게 끊어 말하는 연습이 필요.
 
 ---
 
@@ -252,10 +259,10 @@ Tower : HL123, wind 140 at 12, cleared to land runway one six.
 문제 : Situation Update — While completing your landing checklist just before touchdown, you notice the landing gear indicator shows an unsafe (red) indication for the left main gear.
 ☞ Contact Tower, go around, and inform them of the abnormal indication.
 내 답안 : tower there is a unsafe indication of landing gear , request go around, can you check hour landing gear status hl123
-** 정답/교정 답안 : Tower, HL123, going around, we have an unsafe indication on our left main gear.
-- 누락된 필수 readback 요소 : "left" (어느 쪽 기어인지) 누락.
-- 표준교신용어 오류 : go-around는 안전을 위해 조종사가 스스로 결정·실행하는 조치이므로 관제사에게 **허가를 요청(request)**할 대상이 아니라 **통보(inform/state)**해야 함("we are going around"). "can you check hour(→our) landing gear status"라는 요청도 이 시점(착륙 직전)에는 성급함 — 기어 점검은 이후 저공비행(low pass) 단계에서 나오는 요청.
-- 코멘트 : 상황을 인지한 것은 맞지만, go-around를 "요청"으로 표현한 것은 항공 절차상 개념 오류. 이후 절차(트러블슈팅→low pass)와 순서가 섞여 있음.
+** 교정 답안 (원문 최대한 유지, "request go around"만 통보 형태로 수정) : Tower, there is **an** unsafe indication of landing gear, **going around**, can you check hour landing gear status? HL123.
+- 누락된 필수 readback 요소 : "left" (어느 쪽 기어인지) 누락 — 이건 원문에 아예 없던 정보라 문법 수정만으로는 못 살림.
+- 표준교신용어 오류 : go-around는 안전을 위해 조종사가 스스로 결정·실행하는 조치이므로 관제사에게 **허가를 요청(request)**할 대상이 아니라 **통보(inform/state)**해야 함. ("hour"는 "our"와 발음이 완전히 같은 오탈자라 감점 대상 아님 — 그대로 둠)
+- 코멘트 : **문법/내용 수정**: "a unsafe"→"an unsafe"(관사), "request go around"→"going around"(요청이 아니라 통보). 상황을 인지한 것은 맞지만, go-around를 "요청"으로 표현한 것과 기어 점검 요청 타이밍(아직 트러블슈팅 전인데 벌써 점검 요청)은 절차 이해 측면에서 짚어야 할 부분.
 
 ---
 
@@ -288,10 +295,10 @@ Tower : HL123, roger, go around, climb straight ahead to 3,000, contact Departur
 Departure : HL123, roger, say your intentions.
 ☞ Respond, stating your intentions to hold and run the abnormal checklist, then advise the controller of the results.
 내 답안 : request holding and can i start emergency landing hl123
-** 정답/교정 답안 : We'll hold in this area, run our abnormal checklist, and advise you once we know more, HL123.
+** 교정 답안 (원문의 "request holding"은 유지, 뒤에 실제 필요한 계획 내용을 이어붙임) : Request holding **to run our abnormal checklist, and we'll advise you once we know more**, HL123.
 - 누락된 필수 readback 요소 : 지시문이 요구한 **intentions 진술**(홀딩 + 체크리스트 수행 + 결과 통보)이 빠짐.
 - 표준교신용어 오류 : "can i start emergency landing"은 이 시점(아직 체크리스트도 수행 전)에서 논리적으로 앞서나간 질문. "start"라는 동사도 emergency landing에 어울리지 않음("declare/perform an emergency landing"이 자연스러움).
-- 코멘트 : "say your intentions?"라는 관제사 질문에 구체적 계획으로 답하지 못하고, 아직 나오지 않은 단계(비상착륙)를 앞당겨 질문함. 이 세트에서 필수로 요구되는 intentions 진술 문항인 만큼 비중 있게 감점.
+- 코멘트 : **내용 수정**: "request holding"까지는 방향이 맞아서 그대로 살렸고, 그 뒤에 실제로 필요했던 "체크리스트 수행 + 결과 통보"로 교체함. "can i start emergency landing"이라는 원래 내용은 아직 나오지 않은 단계를 앞당겨 물은 것이라 그대로 살릴 수 없었음.
 
 ---
 
@@ -299,10 +306,10 @@ Departure : HL123, roger, say your intentions.
 문제 : Situation Update — You have completed the abnormal checklist and manually extended the landing gear using the alternate system, but the indication is still unsafe.
 ☞ Contact Departure, update them on your status, and request a low pass by the tower for a visual check of your gear.
 내 답안 : i completed abnormal checklist and extend landing gear manually , request low pass and visual check hl123
-** 정답/교정 답안 : Departure, HL123, we've manually extended the gear but the indication is still unsafe. Request a low pass by the tower for a visual check of our gear.
+** 교정 답안 (원문 최대한 유지, 동사 시제만 수정) : I completed **the** abnormal checklist and **extended** landing gear manually, request low pass and visual check, HL123.
 - 누락된 필수 readback 요소 : 없음
 - 표준교신용어 오류 : "extend"는 시제 오류("extended"가 맞음). 그 외 문제 없음.
-- 코멘트 : 상태 업데이트와 요청이 모두 포함된 좋은 응답.
+- 코멘트 : **문법 수정**: "extend"→"extended"(과거시제), 관사 "the" 추가. 나머지 문장은 그대로 좋음 — 상태 업데이트와 요청이 모두 포함된 좋은 응답.
 
 ---
 
@@ -356,8 +363,8 @@ ATC: HL123, from the tower your gear appears down, we'll continue to have equipm
 
 What happened to your aircraft (HL123)? Explain the nature of the incident.
 내 답안 : there is a unsafe indication of left landing gear , so hl123 request go around then atc request low pass and they may check that gear is down , after low pass atc check that the gear is down , after that the atc let hl123 know that the gear is down and then ask hl123 to land runwy 16
-** 교정 답안 : "We had an unsafe indication on our left main gear just before touchdown, so we went around. We contacted Departure, reported the problem, and requested holding to run our abnormal checklist. We then manually extended the gear using the alternate system, but the indication remained unsafe, so we requested a low pass so the tower could visually check our gear. The tower confirmed the gear appeared down and cleared us to land."
-- 코멘트 : 사실관계 오류가 있음 — 저공비행(low pass)을 **요청한 쪽은 관제사가 아니라 조종사(HL123) 자신**인데, "atc request low pass"라고 반대로 서술함. 또한 사건의 핵심 단계인 "홀딩 후 체크리스트 수행", "alternate 방식으로 수동 전개했지만 여전히 unsafe였던 시도"가 누락되어, 사건 전개가 실제보다 훨씬 단순하게 요약됨. 6~7개 ATC 교신 중간 단계에서 무슨 일이 있었는지 빠짐없이 되짚는 연습이 필요.
+** 교정 답안 (원문 최대한 유지, 사실관계 반전만 수정 + 빠진 단계 최소 보충) : There is an unsafe indication of left landing gear, so HL123 **went around**, then **HL123 requested** low pass and **the tower checked** that gear is down. **Before that, we contacted Departure, requested holding to run our abnormal checklist, and manually extended the gear — but it was still unsafe, so we requested the low pass.** After the low pass, the tower let HL123 know that the gear is down and then asked HL123 to land runway 16.
+- 코멘트 : **내용 수정**: 저공비행(low pass)을 **요청한 쪽은 관제사가 아니라 조종사(HL123) 자신**인데 "atc request low pass"라고 반대로 서술한 부분을 고침. **내용 보충**: 사건의 핵심 단계인 "홀딩 후 체크리스트 수행", "alternate 방식으로 수동 전개했지만 여전히 unsafe였던 시도"가 통째로 빠져 있어서 최소한으로 추가함. 나머지 문장 구조와 표현은 원문 그대로 유지했음.
 
 ---
 
@@ -365,8 +372,8 @@ What happened to your aircraft (HL123)? Explain the nature of the incident.
 문제 : (P2C-Q1과 동일한 ATC 교신 내용에 대한 질문)
 How do you think the incident was handled by the air traffic controller? Do you feel the situation could have been handled differently? Make a comment from a pilot's point of view.
 내 답안 : yes , it was handled by atc , because atc request low pass and let hl123 know how the gear status is , i feel like this situation goes well , but in my case , i would rather
-** 교정 답안 : "I think the controller handled it well overall — they responded quickly to the go-around, arranged the low pass for a visual check, and asked for our fuel and souls on board at an appropriate point. From a pilot's point of view, I might have also asked the tower to have emergency equipment standing by during the low pass, just as a precaution, even though the gear turned out to be down."
-- 코멘트 : 답변이 "i would rather"에서 **문장을 끝맺지 못하고 중단됨.** 90초라는 응답시간이 주어지는 문항인데, 질문의 두 번째 절반("could have been handled differently?")에 대한 의견을 전혀 제시하지 못한 채 끝남. 또한 P2C-Q1과 동일하게 "atc request low pass"라는 사실관계 오류가 반복됨. 실제 시험에서 응답을 끝까지 마무리하지 못하면 Interaction/Comprehension 평가에 직접적으로 불리하게 작용함.
+** 교정 답안 (원문 최대한 유지, 반전된 사실관계만 수정 + 끊긴 문장만 최소로 완성) : Yes, it was handled well, because **we requested** the low pass and **the tower** let HL123 know how the gear status is, I feel like this situation goes well. But in my case, I would rather **have asked for emergency equipment to stand by earlier, just as a precaution.**
+- 코멘트 : **내용 수정**: "atc request low pass"는 P2C-Q1과 같은 사실관계 반전 오류라 "we requested"로 고침. **내용 보충**: "i would rather"에서 **문장이 끝맺지 못하고 중단됨** — 90초 문항인데 질문의 두 번째 절반("could have been handled differently?")에 대한 의견이 없어서 최소한의 마무리만 추가함. 실제 시험에서 응답을 끝까지 마무리하지 못하면 Interaction/Comprehension 평가에 직접적으로 불리하게 작용하니, 시간이 부족할 것 같으면 짧게라도 문장을 끝맺는 습관이 필요함.
 
 ---
 
