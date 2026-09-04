@@ -485,3 +485,43 @@ point of view.
   2. 픽스가 직전에 명시적으로 주어진 경우 — **"over [픽스] at [고도]"**: "Tower, HL123, over
      ASALT at 3,000ft for RNAV visual runway 13R approach." (샘플Ⅲ — 직전에 "You are now over
      ASALT intersection at 3,000ft."라고 픽스+고도가 먼저 주어졌음)
+
+---
+
+## 10. 실제 샘플 음성(오디오) 분석 — 세트샘플.pdf의 보조 자료
+
+**출처**: 사용자가 제공한 EPTA 샘플세트Ⅰ 실제 녹음본의 음성인식 자막(SRT, 2026-08-21 확인).
+`세트샘플.pdf` 자체가 언급하는 "한국교통안전공단 홈페이지에서 제공되는 샘플 테스트 프로그램"의
+실제 음성으로 추정됨. **자동 음성인식 자막이라 고유명사·숫자 표기에 오류가 섞여있을 수 있으니
+정확한 워딩보다 "구조·패턴"을 신뢰할 것.** PDF와 내용은 거의 동일(Smith Airport 클리어런스,
+Gate Alpha 89, 연료 과다 버닝/디퓨얼, 골프 유도로, 윙팁 클리어런스 등)하지만 아래 패턴들은
+PDF의 지면 요약만으로는 안 드러나던 것들이다.
+
+### 10-1. Task B에 쓸 수 있는 추가 패턴
+- **시차형 Informing**: 한 시점에 목격한 것을 다른(나중) 시점에 보고하는 패턴. 예: "이륙 활주
+  중 활주로 끝에서 조류 활동을 목격 → **이륙 후** ATC에 보고하라."
+  → 지금까지 우리 세트의 Informing은 전부 "즉시 보고"였다. 앞으로 가끔 이 시차형도 활용한다.
+
+### 10-2. Part Ⅰ Task A/B ATC 지시에 요청이 덧붙는 경우
+- 클리어런스 복창 문항 끝에 짧은 plain 요청이 붙기도 한다: "Descend and maintain FL290,
+  contact Tokyo control on 121.65. **Report speed.**" → 이 경우 응답 하나에 **복창 + 요청받은
+  정보(현재 속도 등)를 모두** 담아야 한다. 지금까지는 복창 문항과 정보요청 문항을 항상 분리해서
+  냈는데, 합쳐서 낼 수도 있다.
+
+### 10-3. ATC가 먼저 contingency(대안)를 주는 경우
+- "unable" 상황을 항상 조종사가 스스로 대안을 요청하는 형태로만 만들 필요는 없다. 관제사가
+  먼저 대안을 얹어 줄 수도 있다: "Climb and maintain FL210. Cross Johnson VOR at or above
+  FL150. **If unable, maintain FL130 until Johnson VOR.**" → 이땐 그 contingency 문구까지
+  포함해서 **통째로 복창**하는 게 정답이다. 조종사가 새 숫자를 지어낼 필요가 없다.
+  (참고: 이건 CLAUDE.md §3의 기존 "unable+request" 문항 — 관제사가 대안을 안 주고 조종사가
+  스스로 REQUEST 해야 하는 유형 — 과는 별개의, 추가로 낼 수 있는 유형이다. 둘 다 계속 낸다.)
+
+### 10-4. 가상 지명 사용 (기존 관행과 일치, 변경 불필요)
+- 음성에서는 PDF의 실제 지명(Cheong-Ju/Incheon/Gimpo) 대신 "Public Airport", "Sovereign",
+  "Independent" 같은 **가상 지명**이 쓰인 것으로 보인다(ASR 오류일 가능성도 있어 단정은 어려움).
+  이 프로젝트가 처음부터 Baxter/Westgate/Cedar/Fernbrook 같은 완전 가상의 지명을 써온 것과
+  방향이 일치한다 — 계속 이 방식을 유지한다.
+
+### 10-5. 응답시간 확인
+- Part Ⅰ 문항 간 간격 약 27초, Part Ⅱ 롤플레이 턴 간격 약 30초대로, 각각 "20초/30초 이하"라는
+  공식 기준과 일치함을 확인. 별도 조정 불필요.

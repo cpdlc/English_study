@@ -69,7 +69,11 @@
 | due to **natural** problem | we have **smoke in the cockpit** (실제 사유를 구체적으로) | EPTA_03 P2B-Q2 |
 | it is excellent ways what they did | it **was an excellent way to handle** what they did | EPTA_02 P2C-Q2 |
 | we could not **push back** more | we could not **hold** any longer (push back은 게이트 지상조업 용어, 전혀 다른 뜻) | EPTA_04 P2C-Q1 |
-| due to **restriction** (사유가 상황과 안 맞음) | due to **rate of descent** / due to **performance** | EPTA_03·04 P1B-Q3 (2세트 연속 같은 실수) |
+| due to **restriction** (사유가 상황과 안 맞음) | due to **rate of descent** / due to **performance** / due to **maximum speed limitation** | EPTA_03·04·05 P1B-Q3/Q4/Q6 (**3세트 연속** 같은 실수) |
+| **unable** to go ahead due to bird | (be advised) we observed bird activity... ("unable"은 지시를 거부할 때만 씀, 정보요청 허가엔 안 씀) | EPTA_05 P1B-Q1 |
+| it will **takes** 20min | it will **take** 20min (will+동사원형) | EPTA_05 P2A-Q8 |
+| **can ils approach** request ils approach | request to return for the ILS approach | EPTA_05 P2B-Q6 |
+| ill let you know if something **happen** | ill let you know if anything **changes** | EPTA_05 P2B-Q7 |
 
 ### 1-7. 콜사인을 3인칭으로 지칭하는 습관
 Follow-up·Task C에서 자기 자신을 "hl123"이나 "the pilot"으로 3인칭 지칭하는 경우가 반복됨.
@@ -86,21 +90,24 @@ Follow-up·Task C에서 자기 자신을 "hl123"이나 "the pilot"으로 3인칭
 
 | 표현 | 요점 | 확정 상태 |
 |---|---|---|
-| "unable [지시] due to [정확한 사유], request [대안]" | unable만 말하고 끝내지 말 것 — 3단 구조 | **4세트 연속 감점 중, 이 프로젝트 최우선 과제** |
-| "level at [고도]" / "descending/leaving through [현재고도] for [목표고도]" | 위치보고 표준 형식. 이미 값이 주어졌으면 "maintain" 대신 "level at"으로 | 아는 건 확인됨(EPTA_04 3/4 성공)이나 **일관성 부족 — 매번 자동으로 나와야 함** |
-| "cleared for takeoff" (o) / "clear for takeoff" (x) | clear ≠ cleared | EPTA_01 이후 재발 없음, 해결 |
-| "Souls on board (SOB)" | 탑승 인원수, 중량(lb/kg) 아님 | EPTA_02·03·04 모두 정확, 해결 |
+| "unable [지시] due to [정확한 사유], request [대안]" | unable만 말하고 끝내지 말 것 — 3단 구조 | EPTA_01~04 4세트 연속 감점 → **EPTA_05 P1B-Q6에서 처음 3단 완성**, 그러나 같은 세트 P1B-Q4에서 unable 자체 누락 — 이 프로젝트 최우선 과제 유지 |
+| "level at [고도]" / "descending/leaving through [현재고도] for [목표고도]" | 위치보고 표준 형식. 이미 값이 주어졌으면 "maintain" 대신 "level at"으로 | 아는 건 확인됨(EPTA_04 3/4 성공)이나 **EPTA_05 P2B-Q1에서 목표고도 누락 — 일관성 부족 지속** |
+| "cleared for takeoff" (o) / "clear for takeoff" (x) | clear ≠ cleared | EPTA_01 이후 EPTA_05까지 재발 없음, 해결 |
+| "Souls on board (SOB)" | 탑승 인원수, 중량(lb/kg) 아님 | EPTA_02·03·04 모두 정확, 해결 (EPTA_05엔 해당 문항 없음) |
 | "We are going around" | go-around는 request가 아니라 통보 | EPTA_01 이후 재발 없음, 해결 |
-| "confirm ~?" → AFFIRM/NEGATIVE | yes/no 대신 표준 용어 | EPTA_02·03·04 모두 정확, 해결 |
-| "Mayday, Mayday, Mayday, (기관명), (콜사인), (정확한 사유)" | 사유는 구체적으로("smoke in the cockpit", "emergency fuel") | **사유 전달은 EPTA_04에서 해결. 관제기관명 위치는 EPTA_04에서 새로 빠짐 — 계속 관찰** |
-| REQUEST + 명사(구) | 동사구 붙이지 않기 ("request land"(x) → "landing"(o)) | EPTA_02 발견 → EPTA_03 해결 확인했으나 **EPTA_04에서 다른 문항으로 재발 — 완전 해결 아님** |
+| "confirm ~?" → AFFIRM/NEGATIVE | yes/no 대신 표준 용어 | EPTA_02·03·04 정확 → **EPTA_05 P1B-Q5에서 재발**(AFFIRM/NEGATIVE 자체를 아예 안 씀) — 계속 관찰 |
+| "Mayday, Mayday, Mayday, (기관명), (콜사인), (정확한 사유)" | 사유는 구체적으로("smoke in the cockpit", "emergency fuel") | 사유 전달은 EPTA_04에서 해결. 관제기관명 위치는 EPTA_04에서 새로 빠짐 — EPTA_05엔 MAYDAY 문항 없어 재검증 보류 |
+| REQUEST + 명사(구) | 동사구 붙이지 않기 ("request land"(x) → "landing"(o)) | EPTA_02 발견 → EPTA_03 해결 → EPTA_04 재발 — EPTA_05엔 대표 사례 없음, 계속 관찰 |
 | ROGER는 **내용 없이 단독으로** 쓸 때만 오류 | "Roger, [실제 내용]"은 정상 | 정책 확정(2026-08-19) |
 | "give way to / follow / hold position" 등은 필수 복창 목록에 없음 | 세부사항(누구·어느 방향) 생략해도 감점 아님 | 정책 확정(2026-08-20) |
 | "Continue Approach" ≠ "Cleared to Land" | 착륙허가 아님 | EPTA_03에서 정확히 구분함 |
-| 엉뚱한 관제기관 호출 금지 (Delivery/Ground/Ramp/Tower/Center 구분) | 지시문에 적힌 기관명 그대로 | EPTA_02·03 2세트 연속 반복 → **EPTA_04에서 0회, 해결로 판단** |
-| 숫자 **값** 자체가 틀리면 감점 (표기 방식과 별개) | FL240을 FL250으로 잘못 복창한 사례 | EPTA_03에서 발견, EPTA_04엔 유사 사례 없음 |
+| 엉뚱한 관제기관 호출 금지 (Delivery/Ground/Ramp/Tower/Center 구분) | 지시문에 적힌 기관명 그대로 | EPTA_02·03 2세트 연속 반복 → EPTA_04 0회 해결 판단 → **EPTA_05 P2A-Q1에서 재발("Control")** — 해결 아님, 계속 관찰 |
+| 숫자 **값** 자체가 틀리면 감점 (표기 방식과 별개) | FL240을 FL250으로 잘못 복창한 사례 | EPTA_03에서 발견 → **EPTA_05에서 다수 재발**(FL260→FL230, 활주로 23→32 2회, DME 1.5→5, FL350/5000→FL250) — 이번 세트 가장 빈번한 오류 유형 |
 | "Minimum Fuel" ≠ "Emergency Fuel" | Minimum Fuel은 우선순위 보장 아님, 위험 단계면 Emergency Fuel로 명확히 격상 선언 | EPTA_04에서 처음 출제, 개념은 맞게 사용함 |
 | holding 지시 전체 형식: hold [방향] of [지점], as published/ON[radial], maintain[고도], EFC[시각] | 전 요소 복창 필요 | EPTA_04에서 처음 출제, 완벽하게 복창함 |
+| 지시를 **반대로** 이해하고 답하지 않기 (예: 대기 요청 지시를 진행 승인으로 답함) | 클루/지시의 방향(진행 vs 대기·거부)을 답하기 전 재확인 | **EPTA_05 P2A-Q12 신규, 최중대 — 다음 세트 최우선 관찰** |
+| heading(기수) vs FL/altitude(고도) 구분 | "fly heading 270"을 "maintain FL270"으로 바꿔 쓰지 않기 | EPTA_05 P2B-Q4 신규 |
+| "report speed"/"report ready" 같은 부가 요청은 복창과 함께 실제 값으로 답하기 | 복창만 하고 요청 정보를 빼먹지 않기 | **EPTA_05 P1B-Q2에서 정확히 수행 — 신규 패턴 첫 성공 사례** |
 
 ---
 
@@ -108,3 +115,7 @@ Follow-up·Task C에서 자기 자신을 "hl123"이나 "the pilot"으로 3인칭
 - 2026-08-20 : EPTA_01·02·03 채점 결과 기반으로 최초 작성.
 - 2026-08-21 : EPTA_04 채점 결과 반영. Unable+대안 누락이 4세트 연속으로 최우선 과제 확정,
   엉뚱한 관제기관 호출은 해결로 판단, "push back"/"restriction" 오용 등 신규 사례 추가.
+- 2026-09-02 : EPTA_05(실제 샘플 녹음본 재현 세트) 채점 결과 반영. Unable+대안 구조 첫 완성
+  사례(P1B-Q6) 및 report-speed 패턴 첫 성공 사례(P1B-Q2) 기록. 엉뚱한 관제기관 호출·숫자값
+  오류 재발, "지시를 반대로 이해"(신규·최중대)와 "heading/FL 혼동"(신규) 추가. Level 1로 5세트
+  중 최저 등급.

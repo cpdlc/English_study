@@ -13,6 +13,7 @@
 
 ### Q3. Describe a picture in detail.
 
+
 ![Q3 Picture](./images/q3_picture_14.jpg)
 
 > **[Context Hint]:** A smiling woman sits cross-legged on the floor, resting her chin on her hand, surrounded by black wire storage baskets and clear plastic organizing bins on a plain wooden floor.

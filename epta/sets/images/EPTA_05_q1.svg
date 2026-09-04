@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <rect x="0" y="0" width="400" height="300" fill="#e9edf1"/>
+  <text x="200" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#333">GATE AREA</text>
+
+  <!-- ramp line -->
+  <line x1="40" y1="60" x2="40" y2="240" stroke="#8a8f95" stroke-width="4"/>
+
+  <!-- gates -->
+  <rect x="60" y="70" width="60" height="18" fill="#c9ced3"/>
+  <text x="90" y="83" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#333">Gate 63</text>
+  <rect x="60" y="110" width="60" height="18" fill="#c9ced3"/>
+  <text x="90" y="123" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#333">Gate 64</text>
+  <rect x="60" y="150" width="60" height="18" fill="#274b8f"/>
+  <text x="90" y="163" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#fff">Gate 89 (HL123)</text>
+  <rect x="60" y="190" width="60" height="18" fill="#c9ced3"/>
+  <text x="90" y="203" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#333">Gate 87</text>
+
+  <!-- fuel truck -->
+  <rect x="230" y="150" width="60" height="30" fill="#b23030"/>
+  <circle cx="245" cy="185" r="7" fill="#333"/>
+  <circle cx="275" cy="185" r="7" fill="#333"/>
+  <text x="260" y="140" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#b23030">DEFUELING??</text>
+  <line x1="220" y1="165" x2="120" y2="160" stroke="#b23030" stroke-width="3" stroke-dasharray="6,4"/>
+
+  <text x="200" y="270" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="#555">HL123: too much fuel on board</text>
+</svg>

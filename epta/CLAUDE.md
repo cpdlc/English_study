@@ -51,18 +51,35 @@
 
 ## 3. 태스크별 출제 세칙
 
+**`sets/EPTA_05.md`는 실제 EPTA 샘플 녹음본을 그대로 재현한 세트로, 아래 세칙에 반영된 신규
+패턴(bundled request-in-readback, ATC-supplied contingency, 시차형 Informing 등)의 실제 출제
+사례다. 시나리오 자체는 재사용 금지 목록에 남아있지만(`reference/used-scenarios.md` 참고),
+문항 스타일·패턴의 기준으로 앞으로 계속 참고한다.** 자세한 분석은 `reference/exam-spec.md` §10.
+
 ### Part Ⅰ Task A (4문항)
 - ATC 한 줄 지시 → 응시자가 full readback.
 - 4문항은 서로 다른 비행 단계에서 뽑는다: 지상(pushback/taxi/backtrack), 이륙(clearance/wake turbulence), 상승·순항(FL 지정, speed, direct), 접근·착륙(runway change, circling).
 - 최소 1문항은 **readback 필수요소만 복창하고 부가정보는 빼야 하는 문제**로 만든다.
   (예: "winds 220 at 10, cleared for takeoff runway 24" → 바람은 복창 불필요)
 - 최소 1문항은 요소가 5개 이상인 긴 지시(SID/transition/squawk/FL 등)로 만든다.
+- **(표준 반영, EPTA_05 실제 샘플 음성 확인, 2026-08-21/22)** 아래 두 패턴은 이제 "가끔"이 아니라
+  **매 세트 Task A 4문항 중 최소 1문항에 반드시 포함**한다 (둘 다 넣어도 되고, 세트마다 번갈아도 됨):
+  - ATC 지시 끝에 **"report speed"/"report ready" 같은 짧은 요청을 덧붙여, 복창과 함께 그
+    정보까지 한 응답에 담아야 하는 문항**. 정답에는 복창 + 요청받은 정보(예: 현재 속도)가
+    둘 다 있어야 한다.
+  - climb/cross 제약에 **"if unable, maintain (대안고도) until (지점)"처럼 관제사가 먼저
+    contingency를 주는 문항**. 이때는 그 contingency 문구까지 통째로 복창해야 한다 —
+    "unable+request" 문항(부가정보 없이 조종사가 스스로 대안을 요청)과는 다른 유형이니
+    혼동하지 말 것.
 
 ### Part Ⅰ Task B (6문항)
 각 문항 = ① 영어 상황설명(2~3문장) → ② ATC 한 줄 교신 → ③ 응시자 응답.
 6문항 안에 다음 기능이 골고루 들어가야 한다.
 - **Acknowledging**: 지시를 그대로 수용
-- **Informing**: 기상/상태 보고 (turbulence, icing, flight condition)
+- **Informing**: 기상/상태 보고 (turbulence, icing, flight condition). **(표준 반영, EPTA_05 실제
+  샘플 음성 확인, 2026-08-21/22)** 2세트에 한 번 이상은 이 Informing 문항을 **"지금 목격한 것을
+  나중 시점에 보고"하는 시차형**으로 만든다 (예: "이륙 활주 중 조류 활동을 목격 → 이륙 후 ATC에
+  보고").
 - **Unable + reason**: 성능·기상·장비 사유로 거부
 - **Correcting own mistake**: 자신의 오류 정정 ("my mistake, now turning...")
 - **Requesting**: 편차·속도·고도 변경 요청

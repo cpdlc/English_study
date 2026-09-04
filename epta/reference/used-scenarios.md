@@ -132,6 +132,7 @@ yaw 조종 곤란.
 | 2026-08-19 | sets/EPTA_02.md | Westgate Airport 출발 (Clearance/Taxi/Departure). SID가 소음절감 절차로 변경(MOXIE2→MOXIE3), 유도로 Charlie 폐쇄로 Delta 우회, 후방 광동체기의 expedite 압박 대응 | 순항 중 **cabin altitude 경고 — 여압 상실** — 비상선포·긴급강하 요청 → intentions 진술(10,000ft 강하 유지) → 10,000ft 레벨오프 후 fuel 문제로 최인접 공항(Fenwick) 회항 결정 → fuel/SOB 보고 → 착륙 |
 | 2026-08-20 | sets/EPTA_03.md | Cedar Airport 출발 (Clearance/Push-back/Taxi). Delivery가 "Report ready for push-back" 요구, Ramp에 pushback/taxi 요청, 지상 이동 중 Korean Air B747에 give way + hold position due to traffic, line up and wait 후 이륙 | 순항 중 **조종실 연기(smoke/haze) 감지** — MAYDAY 7단계 선언 → Fairview Airport로 벡터·긴급강하 → intentions 진술(체크리스트+예방착륙) → 연기 해소 후에도 예방적 회항 유지 → 위치보고+fuel/SOB(2h45m/116명) → Tower "Continue Approach"(착륙허가 아님) 함정 → 착륙 |
 | 2026-08-21 | sets/EPTA_04.md | Fernbrook Airport 도착 (Approach/Landing/Taxi). Approach·Tower·Ground 순차 핸드오프, 접근 중 speed 감속 2회+트래픽 congestion으로 활주로 변경(14→22), 착륙 후 인접 게이트 pushback으로 hold position | Meridian Airport 접근 중 **홀딩 연장으로 인한 연료 부족** — holding 지시 복창(EFC 포함) → Minimum Fuel 선언 → 추가 홀딩 요구받자 Emergency로 격상(MAYDAY) → intentions+위치+fuel/SOB(18min/143명) 보고 → 착륙 |
+| 2026-08-22 | sets/EPTA_05.md | ⚠️**예외(재사용)** — 사용자 제공 실제 EPTA 샘플 녹음본(샘플세트Ⅰ)을 그대로 재현. Smith Airport 클리어런스/Apron/Taxi. **과다 연료/디퓨얼링**(Gate 89), Gulfstream 타이어 펑크로 wingtip clearance 홀드 | ⚠️**예외(재사용)** — Public Airport 접근 중 **계기 다수 상실** → vectors for troubleshooting → Sovereign/Independent 기상 비교 → 계기 일부 회복, ILS 23 복귀 |
 
 ### 2026-08-18 세트 상세 (향후 중복 방지용)
 - Part ⅠA: 지상 pushback/taxi(Golf 경유), 이륙 시 wake turbulence 캐션(복창 불필요 유형),
@@ -171,6 +172,24 @@ yaw 조종 곤란.
   → intentions 진술(체크리스트+예방착륙) → 연기 해소 후에도 예방적 회항 유지, 12,000ft
   레벨오프 → 위치보고+intentions 재진술 → fuel 2h45m/SOB 116 보고 → Fairview Tower
   "Continue Approach"(착륙허가 아님) 함정 → 착륙
+
+### 2026-08-22 세트 상세 — ⚠️ 예외: 실제 샘플 녹음본 재현 (향후 이 세트 자체를 다시 재사용하지 않기 위한 기록)
+- **이 세트는 CLAUDE.md 규칙 1의 "샘플 시나리오 재사용 금지"를 사용자의 명시적 1회성 지시
+  ("epta05는 내가 준 오디오파일로 그대로 만들어봐 새로 만들지말고")에 따라 예외 처리한 것.**
+  EPTA_06부터는 다시 원래 규칙(신규 시나리오 창작, 샘플 재사용 금지)으로 복귀한다. 즉 위
+  "샘플세트 Ⅰ" 항목의 재사용 금지 소재(과다연료/디퓨얼링, 계기 상실)는 **여전히 금지 목록에
+  남아있다** — EPTA_05가 예외로 한 번 썼다고 해제된 것이 아니다.
+- 내용은 PDF 샘플세트Ⅰ의 정확한 문구 + 사용자 제공 실제 음성 대본(SRT)에서 확인된 세부 차이를
+  결합해 재구성함:
+  - Part ⅠA 4문항: PDF와 100% 동일(ATLAS direct/FL260 stop climb/wake turbulence RWY32/
+    pushback gate 34)
+  - Part ⅠB: 음성 대본의 실제 순서·내용 반영 — PDF의 원래 Q1(이륙허가+선행트래픽)은 빼고
+    **이륙활주 중 조류 활동 → 이륙 후 보고**로 교체, Q2에 "report speed"(Mach 0.81) 추가,
+    Q4에 "if unable, maintain FL130 until Johnson VOR" contingency 추가
+  - Part ⅡA: PDF와 동일한 Smith Airport/Gate 89 디퓨얼링/Gulfstream wingtip 시퀀스
+  - Part ⅡB: 지명을 음성 대본 기준으로 교체(Cheong-Ju→**Public Airport**, Incheon/Gimpo→
+    **Sovereign/Independent**, 활주로 24L→**23**), "request vectors for troubleshooting"은
+    PDF 문구 유지(음성은 ASR 오류로 "holding"처럼 들림 — 판단상 PDF 채택)
 
 ### 2026-08-21 세트 상세 (향후 중복 방지용)
 - Part ⅠA: 지상 hold-short 포함 taxi, 이륙 시 wind+gust 정보 캐션(복창 불필요 유형), 상승 중

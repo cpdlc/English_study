@@ -3,6 +3,7 @@
 > 유형 범례: **어휘**=단순 어휘부족 / **문법**=문법개념 부족 / **매칭**=지문 간 정보 매칭 실패 / **시간**=시간부족 추측
 > 아래에 회차별로 날짜순으로 계속 추가됩니다.
 > 정식 문제풀이 오답뿐 아니라, 대화 중에 헷갈렸거나 새로 익힌 표현/문법도 "기타" 섹션에 함께 기록합니다.
+> 자동 생성 세트(Set NN)와 개인 교재 사진 오답을 모두 이 파일 하나에 통합해서 관리합니다. 날짜 옆에 "(개인 교재)"라고 표시된 섹션은 자동 생성 세트가 아니라 학원/개인 교재에서 찍어 보낸 사진 기반 오답입니다.
 
 ---
 
@@ -619,11 +620,121 @@
 
 ---
 
+## 2026-07-31 (개인 교재)
+
+### Part 5
+
+#### Q103. A dramatic rise in Werner's Restaurant's revenue has resulted ______ the city's attempts to increase tourism.
+(A) in (B) how (C) from (D) up
+- 정답: C / 내 답: C (✅ 정답이지만 별표 표시로 설명 요청)
+- 해석: 워너 레스토랑 매출의 극적인 상승은 시의 관광 증진 노력에서 비롯되었다.
+- 해설: "result from + 원인"(그것 때문에 발생하다) vs "result in + 결과"(그 결과로 이어지다)는 방향이 반대다. 여기서는 매출 상승이 "결과"이고 관광 노력이 "원인"이므로, 결과가 주어 자리에 왔을 때는 from을 쓴다.
+- 유형: 문법 (정답이나 개념 재확인)
+
+#### Q110. Many customers called Fairview Bank to see ______ they would offer high-interest savings accounts.
+(A) as if (B) whether (C) because (D) either
+- 정답: B / 내 답: A
+- 해석: 많은 고객들이 고금리 저축 계좌를 제공하는지 알아보기 위해 Fairview 은행에 전화했다.
+- 해설: "see + whether절"은 "~인지 아닌지 확인하다"라는 뜻의 명사절 구조(see의 목적어 역할). "as if"(마치 ~인 것처럼)는 가정·비유를 나타내는 부사절 접속사라 목적어 자리에 올 수 없다.
+- 유형: 문법
+
+#### Q128. Recently, Mr. Mackey has applied for a loan to ______ his business venture.
+(A) attract (B) touch (C) spend (D) fund
+- 정답: D / 내 답: C
+- 해석: 최근 Mackey 씨는 사업에 자금을 대기 위해 대출을 신청했다.
+- 해설: fund(자금을 대다)는 "loan to fund a venture"(사업에 자금을 대기 위한 대출)라는 목적 관계가 자연스럽다. spend(쓰다)를 쓰면 "대출로 사업을 쓴다"는 어색한 의미가 된다 — 대출은 자금 조달 수단이지 지출 행위 자체가 아니다.
+- 유형: 어휘
+
+#### Q123. Sufficient and immediate ______ such as cash bonuses helps the company retain competent agents.
+(A) admiration (B) recognition (C) limitation (D) lapse
+- 정답: B / 내 답: D
+- 해석: 현금 보너스와 같은 충분하고 즉각적인 보상(인정)은 회사가 유능한 직원을 유지하는 데 도움이 된다.
+- 해설: recognition(인정, 공로 인정, 보상)은 "cash bonuses"(현금 보너스)가 자연스러운 예시로 이어진다. lapse(실수, 착오, 소멸)는 "현금 보너스와 같은 실수"라는 뜻이 되어 문맥과 전혀 안 맞는다.
+- 유형: 어휘
+
+---
+
+## 2026-08-01 (개인 교재)
+
+### Part 5
+
+#### Q103 (Kraven Law School). At Kraven Law School, six months of legal internship ------- for certification as a graduate student.
+(A) require (B) will require (C) are required (D) has required
+- 정답: C / 내 답: (질문으로 물어봄, 정확한 원래 선택 미상)
+- 해석: Kraven 법대에서는, 대학원생으로서 자격 인증을 받으려면 6개월의 법률 인턴십이 필수로 요구된다.
+- 해설: 주어(six months of legal internship)가 "요구하는" 주체가 아니라 "요구받는" 대상이므로 수동태가 필요하다(능동태인 A/B/D는 전부 탈락). 보기 중 수동태는 (C) are required뿐. head noun인 "months"가 복수라 are를 쓴다.
+- 유형: 문법
+
+#### Q110 (Bearson Art Gallery). The Bearson Art Gallery won't open in ------- of the national holiday, Presidents' Day.
+(A) observance (B) evidence (C) acquaintance (D) allowance
+- 정답: A / 내 답: (질문으로 물어봄, 정확한 원래 선택 미상)
+- 해석: 대통령의 날을 기념하여 Bearson 미술관은 문을 열지 않는다.
+- 해설: "in observance of + 공휴일/기념일" = "~을 기념하여"라는 고정 표현. observe는 "준수하다"뿐 아니라 "(기념일을) 지키다/기념하다"는 뜻도 있음.
+- 유형: 어휘
+
+#### Q122 (tax code). Those who ------- the new tax code are urged to come to the city council meeting.
+(A) write (B) commit (C) oppose (D) earn
+- 정답: C / 내 답: A
+- 해석: 새 세법에 반대하는 사람들은 시의회 회의에 참석하도록 권장된다.
+- 해설: "urged to come to the city council meeting"이라는 표현은 의견(특히 반대 의견)을 내도록 독려하는 문맥이라 oppose가 자연스럽다. write는 문법상 되지만, 세법을 이미 작성한 사람(입법자)이 굳이 참석을 "독려"받을 필요가 없어 문맥상 어색함.
+- 유형: 어휘
+
+#### Q116 (South Soft Agency). Applicants who are proficient ------- photo editing software are welcome at South Soft Agency.
+(A) in (B) for (C) to (D) of
+- 정답: A / 내 답: (질문으로 물어봄, 정확한 원래 선택 미상)
+- 해석: 포토 편집 소프트웨어에 능숙한 지원자를 환영한다.
+- 해설: "be proficient in + 명사"(~에 능숙하다)는 고정 전치사 짝. skilled in, fluent in, well-versed in도 같은 계열(전부 in).
+- 유형: 어휘
+
+#### Q115 (Helvetica Corp). The research and development department at Helvetica Corp. rewards employee ------- .
+(A) innovatively (B) innovation (C) innovative (D) innovator
+- 정답: B / 내 답: (질문으로 물어봄, 정확한 원래 선택 미상)
+- 해석: 연구개발부서는 직원들의 혁신적인 기여를 포상한다.
+- 해설: "employee + 명사"가 하나로 묶인 복합명사가 rewards의 목적어. reward는 5형식 동사가 아니라서 목적어+목적보어 구조가 아니라 명사(구) 하나가 통째로 목적어로 와야 함 → 명사 innovation이 정답.
+- 유형: 문법
+
+#### Q121 (caterers). The caterers will evaluate all of the produce suppliers' bids and select ------- that suits their menu.
+(A) few (B) each (C) one (D) several
+- 정답: C / 내 답: B
+- 해석: 케이터링 업체는 모든 농산물 공급업체의 입찰을 평가한 뒤 메뉴에 맞는 것을 하나 선정할 것이다.
+- 해설: 입찰 평가는 여러 후보 중 승자 하나를 고르는 과정이라 one이 자연스럽다. each(개별적으로 전부)는 "기준에 맞는 걸 다 뽑는다"는 뜻이 되어 select(좁혀서 선정하다)의 뉘앙스와 충돌한다.
+- 유형: 어휘
+
+#### Q127 (Kayleigh Traylor furniture). Kayleigh Traylor's bespoke furniture is crafted ------- durable mahogany, then coated with varnish for a natural sheen.
+(A) over (B) ahead of (C) in case of (D) from
+- 정답: D / 내 답: (질문으로 물어봄, 정확한 원래 선택 미상)
+- 해석: 내구성 좋은 마호가니로 만들어진 뒤, 천연 광택을 위해 니스로 코팅된다.
+- 해설: "be crafted/made from + 재료" = ~로 만들어지다. 재료를 나타내는 고정 전치사 짝.
+- 유형: 어휘
+
+#### Q107 (editors approval). Before sending the final copy to the publisher, make sure it has the approval ------- the editors.
+(A) with (B) of (C) over (D) around
+- 정답: B / 내 답: A
+- 해석: 출판사에 최종본을 보내기 전, 편집자들의 승인을 받았는지 확인하세요.
+- 해설: "the approval of + 사람" = ~의 승인. of가 승인의 출처(누구의 승인인지)를 나타냄. with/over/around는 이 자리에 쓰이지 않음.
+- 유형: 어휘
+
+#### Q106 (warehouse inspection). ------- the annual inspection has been completed, the warehouse crew can begin installing the additional shelving units.
+(A) With that (B) In order that (C) In that (D) Now that
+- 정답: D / 내 답: (질문으로 물어봄, 정확한 원래 선택 미상)
+- 해석: 연례 점검이 완료되었으니, 이제 창고 직원들은 추가 선반 설치를 시작할 수 있다.
+- 해설: "now that + S+V" = 이제 ~했으니(원인→결과). in order that(목적), in that(근거 제시)와 뜻이 다름.
+- 유형: 문법
+
+#### Q126 (final project deadline). A ------- deadline for the final project has been set for the first week of May, but it will depend on the schedule for senior week.
+(A) certain (B) slack (C) tentative (D) prompt
+- 정답: C / 내 답: (질문으로 물어봄, 정확한 원래 선택 미상)
+- 해석: 기말 프로젝트의 잠정적인 마감일은 5월 첫째 주로 설정되었지만, 졸업반 주간 일정에 따라 달라질 것이다.
+- 해설: but(역접)이 있으므로 "확정됨"이 아니라 "잠정적임(변경 가능)"이라는 대조가 성립해야 한다. certain(확실한)을 쓰면 뒤 문장과 논리적으로 모순됨.
+- 유형: 문법
+
+---
+
 ## 누적 통계
 
 | 유형 | 횟수 |
 |---|---|
-| 어휘 | 9 |
-| 문법 | 47 |
+| 어휘 | 16 |
+| 문법 | 54 |
 | 매칭 | 15 |
 | 시간 | 0 |
