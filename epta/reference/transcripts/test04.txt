@@ -1,0 +1,496 @@
+1
+00:00:00,000 --> 00:00:04,600
+Task A. Read the directions on the screen to proceed.
+
+2
+00:00:19,030 --> 00:00:27,740
+1. Hotel Lima 123. Descend and maintain flight level 160. Report reaching.
+
+3
+00:00:29,390 --> 00:00:31,020
+Record your full readback.
+
+4
+00:00:38,580 --> 00:00:45,700
+2. Hotel Lima 123. Tower, after departure. Fly heading 260.
+
+5
+00:00:45,700 --> 00:00:51,080
+260. Maintain 6,000 feet. Cleared for takeoff runway 22.
+
+6
+00:00:52,980 --> 00:00:54,620
+Record your full readback.
+
+7
+00:01:06,780 --> 00:01:14,740
+3. Hotel Lima 123. Tower, hold for another 3 minutes, due to wake turbulence.
+
+8
+00:01:16,520 --> 00:01:18,080
+Record your full readback.
+
+9
+00:01:25,350 --> 00:01:32,430
+4. Hotel Lima 123. Departure. Continue on Thames 23.
+
+10
+00:01:32,450 --> 00:01:36,070
+2. Departure. After reaching Thames, proceed on course.
+
+11
+00:01:37,750 --> 00:01:39,410
+Record your full readback.
+
+12
+00:01:57,080 --> 00:01:58,580
+Part 1. Task B.
+
+13
+00:02:00,180 --> 00:02:03,000
+Read the directions on the screen to proceed.
+
+14
+00:02:17,560 --> 00:02:18,360
+1.
+
+15
+00:02:20,180 --> 00:02:28,900
+You are cruising at flight level 290. You can climb to flight level 310 in one hour due to performance.
+
+16
+00:02:29,960 --> 00:02:31,580
+Now ATC contact.
+
+17
+00:02:31,680 --> 00:02:34,720
+2. Contact you. Respond accordingly with a reason.
+
+18
+00:02:36,610 --> 00:02:42,320
+3. Hotel Lima 123. Can you accept flight level 310 as final?
+
+19
+00:02:42,580 --> 00:02:47,280
+If unable now, when can you accept flight level 310?
+
+20
+00:02:48,900 --> 00:02:50,380
+Record your response.
+
+21
+00:02:58,010 --> 00:03:06,130
+2. Due to CB, you requested a left turn to heading 060, and ATC approved the turn.
+
+22
+00:03:06,890 --> 00:03:12,790
+However, your copilot advises that the ATC seems to be referring to a right turn.
+
+23
+00:03:13,230 --> 00:03:15,490
+You are unsure about clearance.
+
+24
+00:03:16,240 --> 00:03:20,350
+Contact approach. Make a confirmation and clarify your intention.
+
+25
+00:03:22,830 --> 00:03:24,330
+Record your response.
+
+26
+00:03:32,610 --> 00:03:33,390
+3.
+
+27
+00:03:35,230 --> 00:03:42,700
+You have just received instructions to climb to flight level 370, and increase speed to Mach .80.
+
+28
+00:03:43,170 --> 00:03:43,710
+Do you understand myt?
+
+29
+00:03:43,710 --> 00:03:57,630
+But you cannot comply with Mach .80 due to performance. You want to maintain Mach .78. Listen to the controller, make a readback, and a request with a reason.
+
+30
+00:03:58,590 --> 00:04:07,450
+Hotel Lima 123, continue climb to flight level Tree 70, and increase speed to Mach .80 for sequence.
+
+31
+00:04:08,970 --> 00:04:10,490
+Record your response.
+
+32
+00:04:17,180 --> 00:04:17,980
+Four.
+
+33
+00:04:18,940 --> 00:04:26,200
+Due to the low visibility condition at the airport, you are conducting ILS approach to runway Tree 4L.
+
+34
+00:04:26,840 --> 00:04:33,180
+While approaching, the localizer signal on your display fluctuates too much with unknown reason.
+
+35
+00:04:34,000 --> 00:04:40,740
+Listen to the controller. Explain your situation and request to go around for stable approach.
+
+36
+00:04:42,900 --> 00:04:44,900
+Hotel Lima 123.
+
+37
+00:04:44,900 --> 00:04:48,460
+Tower, cleared to land runway Tree 4L.
+
+38
+00:04:50,300 --> 00:04:51,960
+Record your response.
+
+39
+00:04:59,780 --> 00:05:00,680
+Five.
+
+40
+00:05:01,400 --> 00:05:06,200
+You are experiencing severe turbulence at flight level Tree 80.
+
+41
+00:05:06,580 --> 00:05:12,180
+You want to have PIREP, including turbulence information at lower altitude.
+
+42
+00:05:12,980 --> 00:05:17,460
+Contact controller. Report your status and make a request.
+
+43
+00:05:19,080 --> 00:05:20,640
+Record your response.
+
+44
+00:05:27,260 --> 00:05:28,100
+Six.
+
+45
+00:05:29,320 --> 00:05:35,100
+You just received weather information from Seoul Radio, but the transmission cut out.
+
+46
+00:05:35,400 --> 00:05:42,340
+You want to listen again after visibility. Listen to the transmission, and make a request with a reason.
+
+47
+00:05:44,140 --> 00:05:55,620
+Hotel Lima 123, Seoul Radio, Incheon Airport weather information, wind Tree 00 at 5 knots, visibility 5 km with haze.
+
+48
+00:05:55,620 --> 00:05:59,660
+Clouds, clouds, clouds, clouds, clouds...
+
+49
+00:06:10,160 --> 00:06:12,300
+Record your response.
+
+50
+00:06:13,440 --> 00:06:13,880
+Six.
+
+51
+00:06:15,480 --> 00:06:20,840
+You just received weather information from Seoul Radio, but the transmission cut out.
+
+52
+00:06:21,540 --> 00:06:25,600
+You want to listen again after visibility. Listen to the transmission, and make a request with a reason.
+
+53
+00:06:25,600 --> 00:06:28,080
+Transmission, and make a request with a reason.
+
+54
+00:07:06,920 --> 00:07:11,140
+Read the directions on the screen, to proceed.
+
+55
+00:07:35,470 --> 00:07:43,250
+Initial situation. The passengers have finished boarding. And you are going to receive ATC clearance.
+
+56
+00:07:46,430 --> 00:07:50,010
+Contact delivery. Request ATC clearance.
+
+57
+00:08:00,500 --> 00:08:02,520
+You have requested pushback.
+
+58
+00:08:02,540 --> 00:08:04,900
+And start up. Listen to the apron.
+
+59
+00:08:05,100 --> 00:08:06,420
+And respond accordingly.
+
+60
+00:08:08,560 --> 00:08:14,880
+Hotel Lima 123. Apron, pushback and start up approved. Facing north.
+
+61
+00:08:24,860 --> 00:08:27,860
+Listen to the apron. Respond properly.
+
+62
+00:08:28,100 --> 00:08:30,480
+And inquire which aircraft you need to follow.
+
+63
+00:08:32,440 --> 00:08:37,520
+Hotel Lima 123. Apron. Runway tree tree left.
+
+64
+00:08:37,760 --> 00:08:39,080
+Taxi via Romeo.
+
+65
+00:08:39,280 --> 00:08:44,320
+207 then alpha. Follow Boeing 747 on your left.
+
+66
+00:08:53,900 --> 00:08:57,500
+Situation update. You are now on the ground frequency.
+
+67
+00:08:58,000 --> 00:09:04,520
+While taxiing, you have found something not normal from the Boeing 747 ahead of you.
+
+68
+00:09:08,690 --> 00:09:12,950
+Contact ground. Explain the situation to ATC.
+
+69
+00:09:25,320 --> 00:09:26,940
+Listen to the ground.
+
+70
+00:09:27,140 --> 00:09:28,460
+And give a readback.
+
+71
+00:09:29,860 --> 00:09:30,840
+Hotel Lima 123. Absent.
+
+72
+00:09:30,840 --> 00:09:41,040
+Roger. Thank you for your information. Revise taxi instruction. Taxi via Bravo then Golf. You are number one.
+
+73
+00:09:51,680 --> 00:10:08,800
+Make an initial contact with departure control. Listen to the departure and respond negatively with a reason.
+
+74
+00:10:10,040 --> 00:10:24,580
+Hotel Lima 123. Departure, radar contact, climb to flight level 270. Reduce and maintain speed 210 knots until reaching 10,000 feet for spacing.
+
+75
+00:10:37,560 --> 00:10:48,180
+Situation update. You are now passing 10,000 feet for 13,000 feet and experiencing moderate turbulence.
+
+76
+00:10:51,320 --> 00:10:57,060
+Contact departure. Give a PIREP and inquire if there is any PIREP on your route.
+
+77
+00:11:09,200 --> 00:11:13,940
+Listen to departure. Make the same request as the previous aircraft.
+
+78
+00:11:17,100 --> 00:11:28,980
+Hotel Lima 123. We don't have any PIREP so far. But previous aircraft offset 30 miles right to avoid weather. Say your intention?
+
+79
+00:11:38,630 --> 00:11:40,110
+Follow up question.
+
+80
+00:11:41,250 --> 00:11:49,510
+In this situation, why did you give a PIREP to ATC? How can a PIREP benefit other aircraft? Give an example.
+
+81
+00:12:29,390 --> 00:12:35,790
+Part 2 Task B. Read the directions on the screen to proceed.
+
+82
+00:13:00,080 --> 00:13:04,700
+As the pilot of Hotel Lima 123, you're now descending.
+
+83
+00:13:07,740 --> 00:13:11,760
+Listen to the Smith approach and respond accordingly.
+
+84
+00:13:13,720 --> 00:13:22,840
+Hotel Lima 123. Smith approach. Descend to 5,000 feet. Expect radar vector to Cosmo.
+
+85
+00:13:32,530 --> 00:13:42,430
+You have some weather echo appeared on the navigation display. You want to make a right turn heading 210 to avoid the area.
+
+86
+00:13:45,530 --> 00:13:50,050
+Listen to the Smith approach and make a request with a reason.
+
+87
+00:13:51,710 --> 00:14:03,110
+Hotel Lima 123. Smith approach. Position 20 miles from Cosmo. Direct to Cosmo. Cleared for RNAV runway 21 approach.
+
+88
+00:14:12,030 --> 00:14:22,810
+After transmitting, you think that the current deviation is not enough to clear the weather. You would like to deviate a little more, so you can avoid the weather with a wider margin.
+
+89
+00:14:26,070 --> 00:14:31,930
+Listen to the Smith approach. Acknowledge and explain your situation with a request.
+
+90
+00:14:33,550 --> 00:14:42,650
+Hotel Lima 123. Smith approach. Heading 210 is approved. When clear, direct to Cosmo.
+
+91
+00:14:50,430 --> 00:14:59,350
+While turning, you are struck by lightning. The impact of the lightning damages your front windshield, and all of your FMCs are blinking.
+
+92
+00:15:02,670 --> 00:15:10,490
+Contact approach. Explain your situation, and request to maintain present heading and altitude for troubleshooting.
+
+93
+00:15:17,640 --> 00:15:23,920
+You need some time to figure out the problem. You would like to maintain your current heading and altitude.
+
+94
+00:15:26,600 --> 00:15:31,460
+Listen to the Smith approach. And respond negatively with a reason.
+
+95
+00:15:33,180 --> 00:15:38,220
+Hotel Lima 123. Smith approach. Understood your situation.
+
+96
+00:15:38,220 --> 00:15:42,100
+If able, right-turn to heading tree 40.
+
+97
+00:15:49,360 --> 00:15:58,800
+Situation update. After checking aircraft system and status, your FMCs are restored, and your navigation systems are operational.
+
+98
+00:15:59,480 --> 00:16:02,040
+So, now you can make a turn.
+
+99
+00:16:05,040 --> 00:16:11,880
+Listen to the Smith approach. Respond positively, and inform current status of your aircraft.
+
+100
+00:16:13,900 --> 00:16:22,940
+Hotel Lima 123. Approach. I cannot give you that heading anymore. Turn right heading tree 40 immediately.
+
+101
+00:16:30,530 --> 00:16:39,050
+Because of the damaged windshield, you would like to make an auto landing on runway 21. Therefore, you need to make an ILS approach.
+
+102
+00:16:40,110 --> 00:16:43,250
+Additionally, upon landing you need towing assistance.
+
+103
+00:16:46,660 --> 00:16:48,440
+Listen to the Smith approach.
+
+104
+00:16:48,440 --> 00:16:52,640
+State your intention, and request the assistance you need.
+
+105
+00:16:54,120 --> 00:17:04,320
+Hotel Lima 123. Roger. Smith approach. Turn left heading 090, and descend to 4000 feet.
+
+106
+00:17:05,210 --> 00:17:10,960
+This will be radar vector to final approach course of RNAV approach runway 21.
+
+107
+00:17:20,240 --> 00:17:24,740
+Listen to the Smith approach. Acknowledge, and respond accordingly.
+
+108
+00:17:26,820 --> 00:17:43,320
+Hotel Lima 123. Smith approach. Roger. I will vector you to ILS final approach course runway 21. And I will deliver your message to the tower. Continue descend to 2500 feet.
+
+109
+00:17:54,240 --> 00:18:00,580
+Part 2 Task C. Read the directions on the screen to proceed.
+
+110
+00:18:14,340 --> 00:18:23,840
+Hotel Lima 123. Smith approach. Descend to 5000 feet. Expect radar vector to Cosmo.
+
+111
+00:18:24,040 --> 00:18:33,200
+Hotel Lima 123. Smith approach. Position 20 miles from Cosmo. Direct to Cosmo.
+
+112
+00:18:33,560 --> 00:18:36,340
+Cleared for RNAV runway 21 approach.
+
+113
+00:18:36,900 --> 00:18:43,160
+Hotel Lima 123. Smith approach. Heading 210 is approved.
+
+114
+00:18:43,180 --> 00:18:46,340
+When clear, direct to Cosmo.
+
+115
+00:18:47,640 --> 00:18:56,500
+Hotel Lima 123. Smith approach. Understood your situation. If able, right turn to heading tree 40.
+
+116
+00:18:57,140 --> 00:19:06,140
+Hotel Lima 123. Approach. I cannot give you that heading anymore. Turn right heading tree 40 immediately.
+
+117
+00:19:06,860 --> 00:19:13,160
+Hotel Lima 123. Roger. Smith approach. Turn left heading 090.
+
+118
+00:19:13,180 --> 00:19:23,200
+And descend to 4000 feet. This will be radar vector to final approach course of RNAV approach runway 21.
+
+119
+00:19:23,880 --> 00:19:33,140
+Hotel Lima 123. Smith approach. Roger. I will vector you to an ILS final approach course runway 21.
+
+120
+00:19:33,700 --> 00:19:40,540
+And I will deliver your message to the tower. Continue descend to 2500 feet.
+
+121
+00:19:43,180 --> 00:19:50,380
+What happened to your aircraft, Hotel Lima 123? Explain the nature of the incident.
+
+122
+00:20:27,340 --> 00:20:31,700
+How do you think the incident was handled by the air traffic controller?
+
+123
+00:20:33,020 --> 00:20:36,560
+Do you feel the situation could have been handled differently?
+
+124
+00:20:38,480 --> 00:20:41,040
+Make a comment from a pilot's point of view.
+

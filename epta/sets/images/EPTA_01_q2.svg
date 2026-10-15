@@ -1,22 +1,28 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260" width="400" height="260">
-  <rect x="0" y="0" width="400" height="260" fill="#1c2733"/>
-  <text x="200" y="34" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#e6e9ee">LANDING GEAR</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" width="640" height="400" font-family="Arial, Helvetica, sans-serif">
+  <rect width="640" height="400" fill="#ffffff"/>
+  <text x="20" y="36" font-size="22" font-weight="bold" fill="#1d2330">HYDRAULIC</text>
 
-  <!-- L indicator -->
-  <rect x="30" y="60" width="100" height="70" fill="#c0392b" stroke="#fff" stroke-width="2"/>
-  <text x="80" y="95" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" font-weight="bold" fill="#fff">L</text>
-  <text x="80" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#f5b7b1">UNSAFE</text>
+  <!-- column headers -->
+  <text x="190" y="78" font-size="18" fill="#6b7384">PRESS (PSI)</text>
+  <text x="360" y="78" font-size="18" fill="#6b7384">QTY</text>
 
-  <!-- N indicator -->
-  <rect x="150" y="60" width="100" height="70" fill="#1e8449" stroke="#fff" stroke-width="2"/>
-  <text x="200" y="95" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" font-weight="bold" fill="#fff">N</text>
-  <text x="200" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#abebc6">SAFE</text>
+  <!-- SYSTEM A -->
+  <rect x="20" y="95" width="600" height="80" rx="10" fill="#f1f4f8" stroke="#c9ced6" stroke-width="2"/>
+  <text x="40" y="145" font-size="26" font-weight="bold" fill="#1d2330">SYS A</text>
+  <text x="190" y="145" font-size="28" fill="#1d2330">3000</text>
+  <text x="360" y="145" font-size="28" fill="#1d2330">0.98</text>
+  <text x="470" y="145" font-size="22" font-weight="bold" fill="#2e8b57">NORMAL</text>
 
-  <!-- R indicator -->
-  <rect x="270" y="60" width="100" height="70" fill="#1e8449" stroke="#fff" stroke-width="2"/>
-  <text x="320" y="95" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" font-weight="bold" fill="#fff">R</text>
-  <text x="320" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#abebc6">SAFE</text>
+  <!-- SYSTEM B -->
+  <rect x="20" y="190" width="600" height="80" rx="10" fill="#fbeee5" stroke="#b4531c" stroke-width="3"/>
+  <text x="40" y="240" font-size="26" font-weight="bold" fill="#b4531c">SYS B</text>
+  <text x="190" y="240" font-size="28" fill="#b4531c">480 ▼</text>
+  <text x="360" y="240" font-size="28" fill="#b4531c">0.31 ▼</text>
+  <text x="470" y="240" font-size="22" font-weight="bold" fill="#b4531c">LOW PRESS</text>
 
-  <text x="200" y="195" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="#cfd6dd">Gear selected DOWN</text>
-  <text x="200" y="220" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="#cfd6dd">Left main gear indication remains red</text>
+  <!-- standby pump -->
+  <rect x="20" y="285" width="600" height="70" rx="10" fill="#fbeee5" stroke="#b4531c" stroke-width="3"/>
+  <text x="40" y="328" font-size="23" font-weight="bold" fill="#1d2330">STBY PUMP</text>
+  <text x="250" y="328" font-size="24" fill="#1d2330">ON</text>
+  <text x="360" y="328" font-size="22" font-weight="bold" fill="#b4531c">NO PRESSURE</text>
 </svg>

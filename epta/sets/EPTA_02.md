@@ -1,4 +1,4 @@
-# EPTA 항공영어구술능력시험 조종사용 모의세트 EPTA_02 — 2026-08-19
+# EPTA 항공영어구술능력시험 조종사용 모의세트 EPTA_02 — 2026-10-14
 
 안 내 메모 가능 / 문항당 1회 Say again 기능 사용 가능. 응시자 콜사인은 항상 **HL123**.
 
@@ -23,34 +23,45 @@ available once only. You may take notes while listening.
 | 유의사항 | 올바른 readback : 운항절차에 필요한 필수 사항을 모두 포함한 readback · 필수사항은 아니지만 지시사항을 전체 readback 해도 감점되지 않음 |
 
 **P1A-Q1** 🎙 20초
-ATC : HL123, pushback and start up approved, face south, contact ground point six when ready to taxi.
+Ground : HL123, Fairmont Ground, hold short of runway 09.
+
+Record your full readback.
 
 [정답]
-pushback and start up approved face south contack ground .6 when ready to taxi hl123
+
 
 ---
 
 **P1A-Q2** 🎙 20초
-ATC : HL123, traffic departing ahead is a heavy Boeing 777, caution wake turbulence, runway one eight, cleared for takeoff.
+Tower : HL123, after departure fly heading 350, cleared for takeoff runway 09, traffic is
+a Cessna on base.
+
+Record your full readback.
 
 [정답]
-cleared for takeoff runway18 hl123
+
 
 ---
 
 **P1A-Q3** 🎙 20초
-ATC : HL123, turn left heading 340, climb via SID to FL200, cross PIRUX at or below FL100, contact Center on 133.45 when leaving FL180.
+Center : HL123, descend to flight level 180, reduce speed to 250 knots, contact Kingsley
+Approach on 127.85.
+
+Record your full readback.
 
 [정답]
-left turn hd 340 climb via sid to fl200 , cross pirux at or below fl100 , contact center 133.45 when leaving fl180 hl123
+
 
 ---
 
 **P1A-Q4** 🎙 20초
-ATC : HL123, expect a short approach due to traffic, cleared ILS approach runway two two, circle to land runway two seven.
+Delivery : HL123, cleared to Ravenna Airport via the NAVIO ONE departure, maintain 4,000,
+departure frequency 121.9, squawk 5146.
+
+Record your full readback.
 
 [정답]
-cleared ils approach runway22 circle to land runway 27 hl123
+
 
 ---
 
@@ -73,72 +84,91 @@ only once. Your callsign is HL123. You may take notes while listening.
 | 유의사항 | 상황정보(prompt) 음성에는 교신용어가 플레인 영어(발음)로 들려질 수 있음. 필요 시 올바른 교신용어로 응답해야 함 |
 
 **P1B-Q1** 🎙 20초
-You have just landed and are taxiing to the gate. Ground gives you a straightforward
-instruction.
+You are descending into Kingsley and you are now passing flight level 120. The transition
+level is below you, so a new pressure setting is coming. Now ATC contacts you. Acknowledge
+the instruction and report your present altitude.
 
-ATC : HL123, continue on Alpha, contact ramp control on 131.8.
+Approach : HL123, Kingsley Approach, descend to 6,000, QNH 1008, transition level 70.
+
+Record your response.
 
 [정답]
-contine on a , contact ramp 131.8 hl123
+
 
 ---
 
 **P1B-Q2** 🎙 20초
-You are cruising at FL330 and have been experiencing light-to-moderate chop for the
-last ten minutes. ATC checks in with you.
+On short final into Fairmont you saw a small drone hovering about two hundred feet above
+the ground, just left of the runway threshold. You were too busy to report it then. You
+have now landed and the ground controller calls you. Acknowledge the taxi instruction and
+report what you saw during the approach.
 
-ATC : HL123, how is your ride?
+Ground : HL123, Fairmont Ground, taxi to the gate via Charlie.
+
+Record your response.
 
 [정답]
-expreiencing light to moderate chop for 10 min at fl330 hl123
+
 
 ---
 
 **P1B-Q3** 🎙 20초
-You are climbing out and ATC assigns a higher altitude, but your aircraft's weight and
-the outside temperature mean you cannot make that altitude yet.
+Centre instructed you to maintain 290 knots for separation. At your present weight and
+altitude 290 knots leaves you no buffet margin, so you reduced to 270 knots and you are
+flying at 270 now. Now ATC contacts you. Respond accordingly.
 
-ATC : HL123, climb and maintain FL360.
+Center : HL123, confirm maintaining 290 knots?
+
+🖥 [ 270 knots / buffet margin ]
+
+Record your response.
 
 [정답]
-unable climb fl 360 due to flight restriction hl123
+
 
 ---
 
 **P1B-Q4** 🎙 20초
-ATC assigned you squawk 4521, but you mistakenly dialed in 4512 instead. Now ATC
-contacts you.
+You are being vectored for the approach and you are twelve miles from QUILL at 9,000 feet.
+Your descent calculation shows that you cannot lose that much height before QUILL without
+exceeding your descent rate limits. Listen to the controller, make a readback of what you
+can accept, and a request with a reason.
 
-ATC : HL123, confirm squawking 4521?
+Approach : HL123, descend to 4,000, cross QUILL at 4,000.
+
+Record your response.
 
 [정답]
-my mistake , i'll squawk 4521 now hl123
+
 
 ---
 
 **P1B-Q5** 🎙 20초
-Your company has put you on a ground delay program before departure, and you would
-like to know when you're expected to leave the gate.
+Delivery gave you squawk 3027 before departure. You set 3207 in the transponder by mistake
+and it has been running that way since take-off. Now ATC contacts you. Respond accordingly.
 
-ATC : HL123, say your request.
+Center : HL123, verify your squawk.
 
-🖥 [ request expected departure time ]
+Record your response.
 
 [정답]
-request expected departure time hl123
+
 
 ---
 
 **P1B-Q6** 🎙 20초
-You've just been given a complex reroute over the radio and are not fully sure whether
-one of the altitude restrictions still applies after the change.
+Your clearance includes the SELDO transition. Your flight management computer holds two
+points called SELDO and you are not sure which one is on your route, and the crossing
+altitude on your chart does not match the one in the computer. You are level at flight
+level 310. Contact Westlake Control. Verify which waypoint is on your route, and request
+the crossing altitude.
 
-ATC : HL123, cross MOXIE at FL200, then as filed.
+🖥 [ SELDO ]
 
-🖥 [ verify altitude restriction at MOXIE ]
+Record your response.
 
 [정답]
-verify altitude restrtiction at moxie hl123
+
 
 ---
 
@@ -166,113 +196,136 @@ Flight Paths
 In this scenario, you'll be the pilot flying HL123, which goes through 3 flight stages:
 Clearance, Taxi, Departure.
 
-Initial Situation You are ready for IFR clearance to Westgate Airport. There may be a
-routing or procedure change before departure. 🔔(dingdong)
+Initial Situation You are the pilot of HL123 at Fairmont Airport, bound for Kingsley.
+Boarding is complete and you are ready to copy your clearance. It is a cold morning and
+the ground crew has reported light frost on the wings. 🔔(dingdong)
 
 **P2A-Q1** 🎙 30초
-☞ Contact Clearance Delivery and make a request.
+☞ Contact Fairmont Delivery and request your clearance.
 
 [정답]
-ground hl123 request ifr clearance to westgate airport
+
 
 ---
 
 **P2A-Q2** 🎙 30초
-Continued…
 ☞ Listen to the controller and give a full readback.
-Delivery : HL123, cleared to Westgate Airport, MOXIE TWO departure, PIRUX transition,
-maintain 5,000, expect FL220 10 minutes after departure, squawk 4521.
+Delivery : HL123, cleared to Kingsley Airport via the BRAVA TWO departure, SELDO
+transition, climb and maintain 7,000, departure frequency 126.4, squawk 3027.
 
 [정답]
-cleared to westgate airport moxie 2 departure , pirux transition maintain 5000 expect fl220 10min after departure suawk 4521 hl123
+
 
 ---
-
-Situation Update Before you finish your cockpit setup, the SID has been revised due to
-a noise abatement procedure change. 🔔(dingdong)
 
 **P2A-Q3** 🎙 30초
-☞ Listen to the controller and give a full readback.
-Delivery : HL123, your SID has been changed to MOXIE THREE departure, rest of the
-clearance unchanged.
+☞ Listen to the controller's message, respond accordingly and advise what you need before
+departure.
+Delivery : HL123, readback is correct, your slot time is 0845, and the ground crew reports
+light frost on the upper wing surfaces.
 
-🖥 [ MOXIE THREE ]
+🖥 [ de-icing required ]
 
 [정답]
-roger moxie 3 departure hl123
+
 
 ---
 
+Situation Update De-icing is complete and the ground crew has cleared you off the pad.
+Your slot has moved back and you have not been told the new time. You are holding short of
+taxiway Delta. 🔔(dingdong)
+
 **P2A-Q4** 🎙 30초
-☞ Contact Ground and request pushback and taxi.
+☞ Contact Fairmont Ground, request taxi and inquire about your new slot time.
 
 [정답]
-ground hl123 request pushback and taxi
+
 
 ---
 
 **P2A-Q5** 🎙 30초
-Continued…
 ☞ Listen to the controller and give a full readback.
-Ground : HL123, pushback approved, taxi to runway one eight via Alpha, Bravo, taxiway
-Charlie is closed, use Delta instead.
-
-(Q5) ![](images/EPTA_02_q1.svg)
+Ground : HL123, runway 09, taxi via Delta and Foxtrot, hold short of runway 14, give way
+to the Bombardier CRJ on Foxtrot.
 
 [정답]
-pushback approved taxi to runway 18 via a b d hl123
+
 
 ---
-
-Situation Update While taxiing, Ground relays that the aircraft behind you would like
-to expedite if possible. 🔔(dingdong)
 
 **P2A-Q6** 🎙 30초
-☞ Listen to the controller's message and respond accordingly.
-Ground : HL123, the traffic behind you would like to expedite if able, can you keep it
-moving?
+☞ Listen to the controller's question and respond accordingly. Tell him what you need to
+know before you can answer.
+Ground : HL123, the CRJ ahead of you is going to be a while sorting out a paperwork
+problem. If you can take an intersection departure from Foxtrot I can get you out ahead of
+him — can you work with that?
+
+(Q6) ![](images/EPTA_02_q1.svg)
 
 [정답]
-Affrim hl123
+
 
 ---
 
+Situation Update You have checked the performance figures and the distance from Foxtrot is
+enough for today's weight. You are now holding short of runway 09 at Foxtrot.
+🔔(dingdong)
+
 **P2A-Q7** 🎙 30초
-☞ Contact Tower, report holding short and ready for departure.
+☞ Listen to the tower and give a full readback.
+Tower : HL123, Fairmont Tower, wind 080 at 11, line up and wait runway 09 at Foxtrot,
+number one.
 
 [정답]
-tower hl123 hold short of runway and ready for departure.
+
 
 ---
 
 **P2A-Q8** 🎙 30초
-Continued…
-☞ Listen to the controller and give a full readback.
-Tower : HL123, traffic on a three mile final, line up and wait runway one eight.
+☞ Listen to the tower and give a full readback. Then advise that you are ready for an
+immediate departure.
+Tower : HL123, traffic is a Cessna Caravan on a three mile final, cleared for immediate
+takeoff runway 09 at Foxtrot, no delay.
 
 [정답]
-traffic insight, line up and wait runway 18 hl123
+
 
 ---
+
+Situation Update You are airborne and climbing through 2,500 feet on the BRAVA TWO
+departure. 🔔(dingdong)
 
 **P2A-Q9** 🎙 30초
-Continued…
-☞ Listen to the controller and give a full readback.
-Tower : HL123, wind two two zero at eight, cleared for takeoff runway one eight.
+☞ Contact Fairmont Departure and report your passing altitude.
 
 [정답]
-cleared for takeoff runway 18 hl123
+
 
 ---
 
-**P2A-Q10** 🎙 90초 (Follow-up)
-Follow-up question:
-You have just finished Task A, as the pilot of Hotel Lima one two three.
-In this situation, how did you handle the pressure from the aircraft behind you while
-still following your own taxi procedures, and what would you do differently next time?
+**P2A-Q10** 🎙 30초
+☞ Listen to the controller and give a full readback. Then request the information you are
+missing.
+Departure : HL123, Fairmont Departure, radar contact, climb and maintain flight level 190,
+cleared direct SELDO.
+
+🖥 [ SELDO crossing altitude not on the chart ]
 
 [정답]
-In this Task A , i just let the aircraft go first , but next time, i would rather to go first , because , it takes time and fuel even though it is little and for passenger it is precious for saving their time, so i will refuse to give the order next time.
+
+
+---
+
+**P2A-Q11** 🎙 90초 (Follow-up)
+Follow-up question:
+You have just finished Task A, as the pilot of Hotel Lima one two three.
+In this situation, you accepted an intersection departure instead of waiting for the full
+runway. What did you have to check before you accepted it, and why did you ask the
+controller what you asked? In your role as a pilot, when would you refuse an intersection
+departure? Give an example.
+
+[정답]
+
 
 
 
@@ -296,107 +349,103 @@ you can accept all the instructions, unless being specified otherwise. "Say agai
 | 평가항목 | 음성 또는 화면에 제공되는 Text clue(🖥)를 이용하여 지시대로 응대하는 능력 · 상황정보 및 ATC의 내용에 따라 요구되는 교신용어 또는 플레인 영어 사용 능력 · 표준 교신속도/발음/억양의 사용 여부 및 정보의 효율적 전달능력 평가 · 교신 응대력(Role-play)과 플레인 영어능력을 전체적으로 평가 |
 | 유의사항 | 교신상황은 시간제한 및 언어평가 목적에 따라 '인위적'일 수 있고, 상황 전개의 '비약'이 인정되므로 지시사항에 맞게 응답해야 함 · 응답 직전 '약간의' 준비시간은 용인됨. 다만 '매우' 늦은 응답 또는 무응답은 영향을 미침 · 플레인 영어 사용 빈도가 다소 높을 수 있고, 응대 내용의 정확도 및 유창도에 따라 Operational(Level4)과 Extended(Level5) 여부가 평가됨 |
 
-Initial Situation You are the pilot of HL123, cruising at FL350 en-route to your
-destination. Everything is normal so far. 🔔(dingdong)
+Initial Situation You are the pilot of HL123, descending through flight level 200 for
+8,000, inbound to Thornbury Airport. You have information Kilo. 🔔(dingdong)
 
 **P2B-Q1** 🎙 30초
-☞ Listen to Center and give a full readback.
-Center : HL123, radar contact, maintain FL350.
+☞ Contact Thornbury Approach and report your position.
 
 [정답]
-roger maintain fl350 hl123
+
 
 ---
-
-Situation Update A warning horn sounds and you notice the cabin altitude is climbing
-above normal — you are losing cabin pressurization. 🔔(dingdong)
-
-(Q2) ![](images/EPTA_02_q2.svg)
 
 **P2B-Q2** 🎙 30초
-☞ Contact Center, declare an emergency, and request an immediate descent.
+☞ Listen to the controller and give a full readback.
+Approach : HL123, Thornbury Approach, good morning, descend and maintain 8,000, reduce
+speed to 230 knots, expect the ILS runway 27, Thornbury altimeter 30.12.
 
 [정답]
-Center hl123 mayday mayday mayday request immediate descent due to pressure
+
 
 ---
 
+Situation Update Levelling off at 8,000 you notice that the captain's and the first
+officer's airspeed indications differ by about twenty knots, and the standby indicator
+does not agree with either of them. 🔔(dingdong)
+
 **P2B-Q3** 🎙 30초
-Continued…
-☞ Listen to the controller's response and give a full readback.
-Center : HL123, roger, descend and maintain 10,000, turn left heading 250 for traffic,
-all traffic advised.
+☞ Inform the controller of your situation, state that you are maintaining 8,000, and
+request a groundspeed readout from his radar.
+
+(Q3) ![](images/EPTA_02_q2.svg)
 
 [정답]
-descned and maintain 10000 turn left hd250 hl123
+
 
 ---
 
 **P2B-Q4** 🎙 30초
-Continued…
-Center : HL123, say your intentions.
-☞ Respond, stating you'll continue the emergency descent to 10,000 and advise once
-you've assessed the cabin.
+☞ Listen to the controller's response, give a full readback and say your intentions.
+Approach : HL123, roger, I show your groundspeed 290, fly heading 240 and maintain 8,000,
+and say your intentions.
 
 [정답]
-continue descend to 10000 and i will advise you once i assesed the cabin hl123
+
 
 ---
-
-Situation Update You have leveled off at 10,000ft. Cabin pressure has stabilized and
-there are no injuries, but you're now concerned about fuel at this lower altitude.
-🔔(dingdong)
 
 **P2B-Q5** 🎙 30초
-☞ Contact Center, update them on your status, and state your intention to divert to
-the nearest suitable airport.
+☞ Listen to the controller and respond negatively with a reason. Request what you need
+instead.
+Approach : HL123, I have a Boeing 737 closing from behind — are you able to give me 250
+knots or better? If not I will have to turn you off.
 
 [정답]
-pressure has stabilized and no injuries , request to the nearest airport due to fuel hl123
+
 
 ---
 
-**P2B-Q6** 🎙 30초
-Continued…
-Center : HL123, roger, let me know your fuel and souls on board so I can coordinate
-with the airport.
-☞ Provide the requested information.
+Situation Update You have finished the checklist. The captain's indications now agree with
+the groundspeed the controller gave you, but you will have to fly the approach manually
+and you cannot use autoland. 🔔(dingdong)
 
-🖥 [ 3 hours fuel remaining / 128 SOB ]
+**P2B-Q6** 🎙 30초
+☞ Contact approach, give them an update of your situation and state what you will need for
+the approach.
 
 [정답]
-we have 3hours of fuel remaining and 128 souls on board hl123
+
 
 ---
 
 **P2B-Q7** 🎙 30초
-Continued…
-☞ Listen to the controller and give a full readback.
-Center : HL123, cleared direct Fenwick Airport, descend and maintain 4,000, expect ILS
-runway zero niner.
+☞ Listen to the controller and respond accordingly.
+Approach : HL123, I have to change your approach. The ILS 27 glide path is out for
+calibration, so the best I can do is the RNAV 27. Weather is fine, ceiling 4,000 broken.
 
 [정답]
-cleared direct fenwick airport descned and maintain 4000 expect ils runway 09 hl123
+
 
 ---
 
 **P2B-Q8** 🎙 30초
-☞ Contact Fenwick Tower, report your position and intentions, and advise you are
-declaring an emergency.
+☞ Listen to the controller and give a full readback.
+Approach : HL123, roger, turn right heading 300, descend and maintain 3,000 until
+established, cleared for the RNAV runway 27 approach, contact Thornbury Tower on 118.1.
 
 [정답]
-fenwick tower hl123 direct fenwick airport descend and maintain 4000 we are emergency now.
+
 
 ---
 
 **P2B-Q9** 🎙 30초
-Continued…
-☞ Listen to the controller and give a full readback.
-Tower : HL123, wind zero eight zero at six, cleared to land runway zero niner,
-emergency equipment standing by.
+☞ Listen to the controller's question and provide the requested information.
+Approach : HL123, the tower wants to know whether you need the emergency services out, or
+whether a normal landing is fine.
 
 [정답]
-cleared to land runway09 hl123
+
 
 ---
 
@@ -418,15 +467,18 @@ asked two questions about the situation. You will have 90 seconds for each quest
 
 ☞ Now listen to the controller's radiotelephony messages.
 
-ATC: HL123, roger, descend and maintain 10,000, turn left heading 250 for traffic, all traffic
-advised.
-ATC: HL123, say your intentions.
-ATC: HL123, roger, let me know your fuel and souls on board so I can coordinate with the
-airport.
-ATC: HL123, cleared direct Fenwick Airport, descend and maintain 4,000, expect ILS runway
-zero niner.
-ATC: HL123, wind zero eight zero at six, cleared to land runway zero niner, emergency
-equipment standing by. 🔔(dingdong)
+ATC: HL123, Thornbury Approach, good morning, descend and maintain 8,000, reduce speed to
+230 knots, expect the ILS runway 27, Thornbury altimeter 30.12.
+ATC: HL123, roger, I show your groundspeed 290, fly heading 240 and maintain 8,000, and
+say your intentions.
+ATC: HL123, I have a Boeing 737 closing from behind — are you able to give me 250 knots or
+better? If not I will have to turn you off.
+ATC: HL123, I have to change your approach. The ILS 27 glide path is out for calibration,
+so the best I can do is the RNAV 27. Weather is fine, ceiling 4,000 broken.
+ATC: HL123, roger, turn right heading 300, descend and maintain 3,000 until established,
+cleared for the RNAV runway 27 approach, contact Thornbury Tower on 118.1.
+ATC: HL123, the tower wants to know whether you need the emergency services out, or
+whether a normal landing is fine. 🔔(dingdong)
 
 ☞ Now answer the questions.
 
@@ -434,19 +486,19 @@ equipment standing by. 🔔(dingdong)
 What happened to your aircraft (HL123)? Explain the nature of the incident.
 
 [정답]
-hl123 have abnormal pressure on passenger , so we called emergency and ask atc to descend , so atc instruct our aircraft descend , after leveling off fl100 , the pressure went normal , but we are worried about low altitude and fuel , so ask to land the nearest suitable airport , so we instructed to contact the nearest airport ,fenwick airport , the airport instruct us to land as soon as contact , and they prepared emergency equipment on airport.
+
 
 
 
 ---
 
 **P2C-Q2** 🎙 90초
-How do you think the incident was handled by the air traffic controller? Do you feel
-the situation could have been handled differently? Make a comment from a pilot's point
-of view.
+How do you think the incident was handled by the air traffic controller? Do you feel the
+situation could have been handled differently? Make a comment from a pilot's point of
+view.
 
 [정답]
-Although i have few experience about similar issue about this , i think this handling was wonderful , first the pilot let them know their situation rightly and the atc instruct them better ways to solve the issue , and also the pilot think about the small cautious about fuel so ask to land nearest airport is the best choice which the pilots choice. so i think it is excellent ways what they did
+
 
 
 

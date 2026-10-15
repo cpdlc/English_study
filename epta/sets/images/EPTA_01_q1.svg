@@ -1,24 +1,31 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
-  <rect x="0" y="0" width="400" height="300" fill="#e9edf1"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" width="640" height="420" font-family="Arial, Helvetica, sans-serif">
+  <rect width="640" height="420" fill="#ffffff"/>
+  <text x="20" y="34" font-size="20" font-weight="bold" fill="#1d2330">ND — APPROACH RUNWAY 14</text>
 
-  <!-- taxiway -->
-  <rect x="0" y="200" width="400" height="26" fill="#b9bec4"/>
-  <text x="10" y="196" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#333">Taxiway Bravo</text>
+  <!-- range arcs -->
+  <path d="M 150 330 A 170 170 0 0 1 490 330" fill="none" stroke="#c9ced6" stroke-width="2" stroke-dasharray="8 8"/>
+  <path d="M 230 330 A 90 90 0 0 1 410 330" fill="none" stroke="#c9ced6" stroke-width="2" stroke-dasharray="8 8"/>
+  <text x="498" y="336" font-size="17" fill="#6b7384">4 NM</text>
+  <text x="418" y="336" font-size="17" fill="#6b7384">2 NM</text>
 
-  <!-- gate C4: occupied -->
-  <rect x="60" y="70" width="90" height="90" fill="#f6c6c6" stroke="#b23030" stroke-width="3"/>
-  <text x="105" y="60" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#111">Gate C4</text>
-  <text x="105" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#b23030">OCCUPIED</text>
-  <rect x="80" y="95" width="50" height="18" fill="#8a8f95"/>
+  <!-- final approach track -->
+  <line x1="320" y1="330" x2="320" y2="95" stroke="#2459d6" stroke-width="3"/>
 
-  <!-- gate C7: available -->
-  <rect x="250" y="70" width="90" height="90" fill="#cdeccd" stroke="#2f7d32" stroke-width="3"/>
-  <text x="295" y="60" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#111">Gate C7</text>
-  <text x="295" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#2f7d32">AVAILABLE</text>
+  <!-- runway -->
+  <rect x="302" y="60" width="36" height="52" fill="#3a4150"/>
+  <text x="352" y="82" font-size="22" font-weight="bold" fill="#1d2330">RWY 14</text>
 
-  <!-- HL123 position on taxiway with arrow -->
-  <rect x="150" y="205" width="70" height="18" fill="#274b8f"/>
-  <text x="185" y="219" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#fff">HL123</text>
-  <line x1="185" y1="200" x2="185" y2="165" stroke="#274b8f" stroke-width="4"/>
-  <polygon points="185,150 176,168 194,168" fill="#274b8f"/>
+  <!-- traffic -->
+  <g transform="translate(320,196)">
+    <path d="M 0 -16 L 15 0 L 0 16 L -15 0 Z" fill="#b4531c"/>
+  </g>
+  <text x="348" y="192" font-size="22" font-weight="bold" fill="#b4531c">E190</text>
+  <text x="348" y="218" font-size="21" fill="#b4531c">3.0 NM</text>
+
+  <!-- own aircraft -->
+  <g transform="translate(320,330)">
+    <path d="M 0 -20 L 16 18 L 0 10 L -16 18 Z" fill="#1d2330"/>
+  </g>
+  <text x="346" y="344" font-size="22" font-weight="bold" fill="#1d2330">HL123</text>
+  <text x="346" y="368" font-size="20" fill="#1d2330">185 KT</text>
 </svg>

@@ -728,13 +728,95 @@
 - 해설: but(역접)이 있으므로 "확정됨"이 아니라 "잠정적임(변경 가능)"이라는 대조가 성립해야 한다. certain(확실한)을 쓰면 뒤 문장과 논리적으로 모순됨.
 - 유형: 문법
 
+## 2026-10-14 (개인 교재)
+
+### Part 6
+
+#### Q133 (Sensasia 광고). On weekends, Hong Kong style dim sum, consisting of various bite-size portions of food, ------- along with our regular menu items.
+(A) prepares (B) prepared (C) is prepared (D) preparing
+- 정답: C / 내 답: (질문으로 물어봄, 정확한 원래 선택 미상)
+- 해석: 주말에는 한입 크기의 다양한 음식으로 구성된 홍콩식 딤섬이 정규 메뉴와 함께 준비된다.
+- 해설: 주어 dim sum 뒤에 본동사가 없음(consisting of ~는 콤마 삽입 분사구, along with ~는 전치사구) → 빈칸은 본동사 자리라 (B) prepared(과거분사로 볼 경우)·(D) preparing 탈락. 딤섬은 스스로 준비하는 게 아니라 "준비되는" 대상이고 뒤에 목적어도 없으므로 능동 (A) prepares 탈락 → 단수 수동태 is prepared. 광고 속 반복되는 일상 사실이라 현재시제.
+- 유형: 문법
+
+#### Q141 (Ryder's Hartford 기사). According to Mr. Solomon, he ------- contemplated the idea of opening a Ryder's in Hartford a few weeks after launching the Elmwood location two years ago.
+(A) first (B) seldom (C) never (D) likewise
+- 정답: A / 내 답: (질문으로 물어봄, 정확한 원래 선택 미상)
+- 해석: Solomon 씨에 따르면, 그는 2년 전 Elmwood 지점을 연 지 몇 주 뒤에 처음으로 Hartford 지점 개설을 고려했다.
+- 해설: "a few weeks after launching ~"는 특정한 한 시점이라, 그때 그 생각을 "처음" 했다는 first가 자연스럽다. 뒤 문맥(원래는 손님이 그렇게 많을 줄 몰랐는데 개점 2주 차에 주문이 몰려 두 번째 지점 수요를 깨달음)이 바로 "처음 떠올린 계기"를 설명해 준다. seldom(좀처럼 ~않다)은 반복·빈도를 나타내는 부사라 한 시점 표현과 맞지 않고, never는 실제로 확장하는 기사 내용과 모순되며, likewise(마찬가지로)는 비교 대상이 없다.
+- 유형: 매칭
+
+#### Q143 (Employee handbook 메모). We are now working to ------- the situation.
+(A) maintain (B) inspect (C) address (D) ignore
+- 정답: C / 내 답: (질문으로 물어봄, 정확한 원래 선택 미상)
+- 해석: 저희는 현재 이 상황을 해결하기 위해 노력하고 있습니다.
+- 해설: 앞 문장에서 "직원들이 업무 절차를 모른다"는 문제가 제기되었으므로 그 문제를 다루고 해결한다는 address(= deal with)가 맞다. maintain은 현 상태를 유지한다는 뜻이라 문제를 그대로 두는 게 되고, inspect는 점검만 하는 것, ignore는 반대 의미다. "address a problem/issue/concern/situation"은 토익 단골 콜로케이션.
+- 유형: 어휘
+
+#### Q144 (Employee handbook 메모). A printed guide will give management and staff an official reference on the performance of daily tasks. -------. Hopefully, it will help move us closer to our goal of having firmly established policies.
+(A) A provisional copy of this handbook will be distributed at the next meeting.
+(B) Your comments on the revised manual were very much appreciated.
+(C) A copy of the article may be found in last month's company newsletter.
+(D) We are glad that everyone is now up-to-date on our meeting schedule.
+- 정답: A / 내 답: (질문으로 물어봄, 정확한 원래 선택 미상)
+- 해석: 이 핸드북의 임시본이 다음 회의 때 배포될 예정입니다.
+- 해설: 뒤 문단의 "수정 사항이 있으면 나중 버전에 반영", "최종본(final version)은 사내망으로"와 짝을 이루려면 지금 나오는 건 임시본(provisional copy)이어야 한다 → provisional ↔ revisions/later version/final version 연결 단서. (B) 매뉴얼은 아직 나오지도 않았으니 revised manual에 대한 의견은 시점이 맞지 않는다. (C) article(기사)은 지문에 등장한 적이 없다. (D) 회의 일정은 주제와 관련이 없다.
+- 유형: 매칭
+
+### Part 7
+
+#### Q165 (Sampat Labs 편지). Who most likely is Ms. Fulton?
+(A) A laboratory assistant (B) A store branch manager (C) A client relations representative (D) A makeup manufacturer employee
+- 정답: D / 내 답: (질문으로 물어봄, 정확한 원래 선택 미상)
+- 해석: Fulton 씨는 누구일 가능성이 가장 높은가? → 화장품 제조사 직원
+- 해설: 수신인 주소가 "Little Miss Makeup"이고, 본문에서 "manufacturing companies like yours"(귀사 같은 제조사)라고 부름 → 화장품 제조사 직원. (C) client relations는 발신자 Jacob West의 직함이라 함정. (A) 연구소 직원은 Sampat Labs 쪽 사람이다.
+- 유형: 매칭
+
+#### Q167 (Sampat Labs 편지). "In this regard, you can be assured that they will be able to provide you with expert service." 들어갈 위치는?
+(A) [1] (B) [2] (C) [3] (D) [4]
+- 정답: A / 내 답: (질문으로 물어봄, 정확한 원래 선택 미상)
+- 해석: 이런 점에서, 그들이 전문적인 서비스를 제공할 수 있을 것이라고 확신하셔도 됩니다.
+- 해설: they가 가리킬 복수 명사(사람)가 바로 앞에 있어야 한다 → [1] 앞 문장 "experienced technicians and researchers who understand the issues that most concern ... companies like yours". "In this regard"(그 점에서) = 경험 많고 고객사 사정을 잘 이해한다는 점. [2]·[3] 앞은 서비스 내용(테스트 항목) 설명이라 they가 받을 사람 명사가 없고, [4]는 동봉 서류 안내 부분이다.
+- 유형: 매칭
+
+#### Q182 (Donnelly & Chung 광고 + 편지, 이중 지문). What is suggested about Mr. Swords?
+(A) He has worked with Ms. Draper on previous projects.
+(B) He was not charged a fee for his session with Ms. Draper.
+(C) He plans to open additional bakery branches.
+(D) He has a supply partnership with Just-Ate.
+- 정답: B / 내 답: (질문으로 물어봄, 정확한 원래 선택 미상)
+- 해석: Swords 씨에 대해 암시된 것은? → Draper 씨와의 상담에 비용이 청구되지 않았다.
+- 해설: 연계 문제. 편지 "I enjoyed our **first meeting** and appreciated the opportunity to consult with someone"(첫 상담을 했다) + 광고 "Your **first consultation is completely free!**" → 첫 상담은 무료였다. (A) first meeting이므로 이전에 함께 일한 적 없음. (C) 이제 막 Denver에서 개업했다는 말만 있고 지점 확장 계획은 없음. (D) Just-Ate는 광고에 나온 Donnelly & Chung의 고객사일 뿐 Swords 씨와의 관계는 언급 없음.
+- 유형: 매칭
+
+#### Q183 (Donnelly & Chung 광고 + 편지, 이중 지문). Who is Mr. Preston?
+(A) An advertising consultant (B) A co-owner of PS Baked Goods (C) An ingredients supplier (D) A Shasta-Clear executive
+- 정답: B / 내 답: (질문으로 물어봄, 정확한 원래 선택 미상)
+- 해석: Preston 씨는 누구인가? → PS Baked Goods의 공동 소유주
+- 해설: 편지 "my **business partner** Walter Preston" + 서명 "Kevin Swords, **Co-proprietor**, PS Baked Goods" → Swords 씨가 공동 소유주이고 Preston 씨는 그의 사업 파트너이므로 나머지 공동 소유주(PS = Preston & Swords). co-proprietor ↔ co-owner 패러프레이즈. (D) "he remembers a promotional campaign you did for Shasta-Clear"는 그 캠페인을 기억한다는 뜻일 뿐 Shasta-Clear 소속이라는 말이 아님(함정). (A) 광고 컨설턴트는 Draper 씨. (C) ingredients는 동봉한 제품 목록 이야기에서 나온 단어를 끌어온 함정.
+- 유형: 매칭
+
+#### Q184 (Donnelly & Chung 광고 + 편지, 이중 지문). What does Mr. Swords want Ms. Draper to do?
+(A) Print out a list of produce (B) Schedule a complimentary consultation (C) Write a promotional proposal (D) Confirm her availability for a meeting
+- 정답: D / 내 답: (질문으로 물어봄, 정확한 원래 선택 미상)
+- 해석: Swords 씨는 Draper 씨가 무엇을 하기를 원하는가? → 회의 가능한 시간을 확인해 주기
+- 해설: 요청문 "please **let me know when you are free to meet** with Walter and me in person" → 만날 수 있는 시간을 알려 달라 = Confirm her availability. (B) 무료 첫 상담은 이미 받았음(first meeting), 이번은 유료 본계약 진행 단계. (C) 브랜딩 계획을 맡기려는 건 맞지만 편지에서 Draper 씨에게 직접 요청한 행동은 일정 회신. (A) 제품 목록은 Swords 씨가 보낸 것.
+- 유형: 매칭
+
+#### Q185 (Donnelly & Chung 광고 + 편지, 이중 지문). What is enclosed with the letter?
+(A) Descriptions of items for sale (B) Details about an upcoming product line (C) Signed business contracts (D) A completed questionnaire
+- 정답: A / 내 답: (질문으로 물어봄, 정확한 원래 선택 미상)
+- 해석: 편지에 동봉된 것은? → 판매 제품에 대한 설명
+- 해설: "your firm would require **complete descriptions of all products that we sell** ... I have **enclosed a list of all our goods, including the ingredients**" + 하단 "Enclosure: Product list" → 판매 중인 제품 설명 = Descriptions of items for sale (products that we sell ↔ items for sale 패러프레이즈). (B) upcoming(출시 예정) 제품이 아니라 현재 판매 중인 제품. (C) 계약은 아직 회의도 안 잡힌 단계라 없음. (D) 설문지 언급 없음.
+- 유형: 매칭
+
 ---
 
 ## 누적 통계
 
 | 유형 | 횟수 |
 |---|---|
-| 어휘 | 16 |
-| 문법 | 54 |
-| 매칭 | 15 |
+| 어휘 | 17 |
+| 문법 | 55 |
+| 매칭 | 23 |
 | 시간 | 0 |

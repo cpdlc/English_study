@@ -1,449 +1,421 @@
-# EPTA_02 채점 결과 — 2026-08-19
+# EPTA_02 채점 결과 — 2026-10-15 (세션 20261014-215141)
 
-> 채점 기준(2026-08-18~19 정책 반영): 숫자 아라비아 표기, ICAO 알파벳 한 글자 축약, 발음상 문제
-> 없는 오탈자는 감점하지 않는다. "confirm ~?"에는 AFFIRM/NEGATIVE, ROGER는 CONFIRM/READ BACK
-> 요구·AFFIRM/NEGATIVE 요구에 쓰면 오류, REQUEST는 명사(구)와 결합. 자세한 내용은 CLAUDE.md
-> §6-1-1, `reference/exam-spec.md` §9 참고.
+32/32 응답, 무응답 없음. EPTA_01(재응시) 대비 변화를 함께 적었다.
 
-> **추가 정정 (2026-08-20, 채점 방식 변경 소급 적용)** : 자유응답·plain English 문항의 "교정
-> 답안"을 완전히 새 문장으로 바꾸지 않고 **원문을 최대한 살려 문법만 고치고 빠진 내용만 최소로
-> 보충**하는 방식으로 아래에서 다시 정리했다(EPTA_03부터 적용한 기준을 이 세트에도 소급 적용).
-> 판정(✅/⚠️/❌)과 최종 등급은 바뀌지 않는다.
+| | EPTA_01 1차 | EPTA_01 재응시 | **EPTA_02** |
+|---|---|---|---|
+| ✅ | 1 | 6 | **11** |
+| ⚠️ | 15 | 20 | 16 |
+| ❌ | 16 | 6 | **5** |
+| 최종 | Level 1 | Level 2 | **Level 3** |
 
 ---
 
-## Part Ⅰ Task A
+## Part Ⅰ TASK A
 
 **P1A-Q1** ✅
-문제 : ATC : HL123, pushback and start up approved, face south, contact ground point six when ready to taxi.
-내 답안 : pushback and start up approved face south contack ground .6 when ready to taxi hl123
-** 정답/교정 답안 : Pushback and start up approved, face south, contact ground point six when ready to taxi, HL123.
+문제 : Ground : HL123, Fairmont Ground, hold short of runway 09.
+내 답안 : Holding short of runway09 hl123
+** 정답 : Holding short of runway 09, HL123.
 - 누락된 필수 readback 요소 : 없음
-- 표준교신용어 오류 : 없음 ("contack" 오탈자, ".6" 숫자 표기 모두 감점 대상 아님)
-- 코멘트 : 필수요소를 빠짐없이 정확히 복창함.
+- 표준교신용어 오류 : 없음
+- 코멘트 : 활주로 번호까지 정확합니다. EPTA_01 Q1 에서는 `hold short of runway` 로 번호를 빠뜨렸는데 이번엔 잡았습니다.
 
 ---
 
 **P1A-Q2** ✅
-문제 : ATC : HL123, traffic departing ahead is a heavy Boeing 777, caution wake turbulence, runway one eight, cleared for takeoff.
-내 답안 : cleared for takeoff runway18 hl123
-** 정답/교정 답안 : Cleared for takeoff runway one eight, HL123. (또는 "Runway one eight, cleared for takeoff" — 샘플에 두 어순 모두 있음)
-- 누락된 필수 readback 요소 : 없음. traffic 정보와 wake turbulence 캐션을 정확히 뺌 — 이 문항의 "부가정보 제외" 취지에 딱 맞는 처리.
+문제 : Tower : HL123, after departure fly heading 350, cleared for takeoff runway 09, traffic is a Cessna on base.
+내 답안 : after departurn heading 350 cleared for take off runway 09 hl123
+** 정답 : After departure fly heading 350, cleared for takeoff runway 09, HL123.
+- 누락된 필수 readback 요소 : 없음 (트래픽 정보는 복창 불필요 — 제외한 판단 정확)
 - 표준교신용어 오류 : 없음
-- 코멘트 : 필수요소만 간결하게 복창한 좋은 예.
+- 코멘트 : **`cleared` 를 정확히 썼습니다.** EPTA_01 에서 `clear`/`cleared` 혼동이 세 번 반복됐던 항목입니다 — 이 문항에서는 해결됐습니다. `fly` 가 빠진 것은 경미합니다. `departurn` 오탈자는 감점하지 않았습니다.
 
 ---
 
 **P1A-Q3** ⚠️
-문제 : ATC : HL123, turn left heading 340, climb via SID to FL200, cross PIRUX at or below FL100, contact Center on 133.45 when leaving FL180.
-내 답안 : left turn hd 340 climb via sid to fl200 , cross pirux at or below fl100 , contact center 133.45 when leaving fl180 hl123
-** 정답/교정 답안 : Turn left heading 340, climb via SID to FL200, cross PIRUX at or below FL100, contact Center on 133.45 when leaving FL180, HL123.
-- 누락된 필수 readback 요소 : 없음 — 5개 요소(heading/climb via SID/cross 제약/contact 조건) 전부 정확히 포함.
-- 표준교신용어 오류 : "left turn hd 340"은 어순이 뒤바뀜. 샘플 전체에서 turn 지시는 항상 "**turn left/right heading** (숫자)" 순서로 나오지 "**left/right turn heading**" 순서는 없음. ("hd" 축약 자체는 감점 아님)
-- 코멘트 : 내용 구성력은 훌륭함 — 5요소를 하나도 안 빠뜨림. 어순만 표준으로 고치면 완벽.
-
----
-
-**P1A-Q4** ✅
-문제 : ATC : HL123, expect a short approach due to traffic, cleared ILS approach runway two two, circle to land runway two seven.
-내 답안 : cleared ils approach runway22 circle to land runway 27 hl123
-** 정답/교정 답안 : Cleared ILS approach runway two two, circle to land runway two seven, HL123.
-- 누락된 필수 readback 요소 : 없음. "expect short approach due to traffic"는 정보성 문구라 복창 불필요 — 정확히 뺌.
+문제 : Center : HL123, descend to flight level 180, reduce speed to 250 knots, contact Kingsley Approach on 127.85.
+내 답안 : decent fl180 reduce speed 250 knots contack 127.85 hl123
+** 정답 : Descend to flight level 180, reduce speed to 250 knots, contact Kingsley Approach on 127.85, HL123.
+- 누락된 필수 readback 요소 : **이관 기관명 `Kingsley Approach`** — 주파수만 복창했습니다
 - 표준교신용어 오류 : 없음
-- 코멘트 : 정확하고 간결한 복창.
+- 코멘트 : **주파수 127.85 를 정확히 복창했습니다.** EPTA_01 에서 주파수를 두 번 연속 틀렸던(118.5 / 119.75) 항목이라 이건 분명한 개선입니다. 남은 것은 기관명입니다 — 주파수만 복창하면 어느 기관으로 가는지 확인되지 않습니다.
 
 ---
 
-## Part Ⅰ Task B
+**P1A-Q4** ❌
+문제 : Delivery : HL123, cleared to Ravenna Airport via the NAVIO ONE departure, maintain 4,000, departure frequency 121.9, squawk 5146.
+내 답안 : clear avia airport navia 1 departure maintain 14000 departure frequency 121.9 quawk 5146 hl123
+** 정답 : Cleared to Ravenna Airport via the NAVIO ONE departure, maintain 4,000, departure frequency 121.9, squawk 5146, HL123.
+- 누락된 필수 readback 요소 : 없음
+- 표준교신용어 오류 : **초기고도를 4,000 이 아니라 14000 으로 복창했습니다** (값 오류). 목적지를 `Ravenna` 가 아니라 `avia` 로, SID 를 `NAVIO ONE` 이 아니라 `navia 1` 로 들었습니다 — 두 고유명사가 서로 섞인 것으로 보입니다. `clear` → `cleared`.
+- 코멘트 : **주파수 121.9 와 squawk 5146 을 둘 다 맞췄습니다** — EPTA_01 에서 "하나 맞추면 하나 틀린다"던 항목이라 이건 개선입니다. 그런데 이번에는 **고도**가 틀렸습니다. 4,000 과 14,000 은 만 피트 차이입니다. `maintain 4,000` 처럼 네 자리 고도는 `=4000` 으로 적고, 앞에 숫자가 더 붙지 않았는지 한 번 더 보세요.
+
+---
+
+## Part Ⅰ TASK B
 
 **P1B-Q1** ✅
-문제 : You have just landed and are taxiing to the gate. Ground gives you a straightforward instruction.
-ATC : HL123, continue on Alpha, contact ramp control on 131.8.
-내 답안 : contine on a , contact ramp 131.8 hl123
-** 정답/교정 답안 : Continue on Alpha, contact ramp control on 131.8, HL123.
-- 누락된 필수 readback 요소 : 없음 ("control"이라는 단어가 빠졌지만 "ramp"만으로도 의미 전달에 지장 없음)
-- 표준교신용어 오류 : 없음 ("contine" 오탈자, "a" 알파벳 축약 모두 감점 대상 아님)
-- 코멘트 : 간결하고 정확한 수용(Acknowledging) 응답.
+문제 : You are descending into Kingsley and you are now passing flight level 120. The transition level is below you, so a new pressure setting is coming. Now ATC contacts you. Acknowledge the instruction and report your present altitude.
+Approach : HL123, Kingsley Approach, descend to 6,000, QNH 1008, transition level 70.
+내 답안 : decending through fl120 to 6000 qnh 1008 transition level 70 hl123
+** 정답 : Descending through flight level 120 for 6,000, QNH 1008, transition level 70, HL123.
+- 누락된 필수 readback 요소 : 없음 — 고도·QNH·전이고도 **세 가지 필수 복창 항목을 전부** 잡았습니다
+- 표준교신용어 오류 : `to 6000` → `for 6,000` (경미)
+- 코멘트 : **복합 지시의 두 부분을 모두 수행했습니다** — 복창과 현재고도 보고. 이게 EPTA_01 에서 2세트 연속 최우선 약점이었던 항목입니다. 이번 세트의 가장 중요한 성과 중 하나입니다.
 
 ---
 
-**P1B-Q2** ✅
-문제 : You are cruising at FL330 and have been experiencing light-to-moderate chop for the last ten minutes. ATC checks in with you.
-ATC : HL123, how is your ride?
-내 답안 : expreiencing light to moderate chop for 10 min at fl330 hl123
-** 정답/교정 답안 : HL123, experiencing light to moderate chop for the last ten minutes at FL330.
+**P1B-Q2** ⚠️
+문제 : On short final into Fairmont you saw a small drone hovering about two hundred feet above the ground, just left of the runway threshold. You were too busy to report it then. You have now landed and the ground controller calls you. Acknowledge the taxi instruction and report what you saw during the approach.
+Ground : HL123, Fairmont Ground, taxi to the gate via Charlie.
+내 답안 : taxi via gate c , ground we saw a drawn hl123
+** 교정 답안 : Taxi to the gate via Charlie, HL123. And be advised, on short final we saw a small drone about two hundred feet, just left of the runway 09 threshold.
 - 누락된 필수 readback 요소 : 없음
-- 표준교신용어 오류 : 없음 ("expreiencing" 오탈자는 감점 대상 아님)
-- 코멘트 : **EPTA_01의 같은 유형(Informing) 문항에서 동사 없이 명사만 던졌던 문제가 이번엔 완전히
-  해결됨.** "experiencing ~"으로 완전한 문장을 구성한 좋은 응답 — 눈에 띄는 개선점.
+- 표준교신용어 오류 : `taxi via gate c` → `taxi to the gate via Charlie` (어순)
+- 코멘트 : **드론 보고를 했습니다** — 복합 지시 두 부분 수행. 다만 **위치와 고도가 없습니다.** 지문은 "약 200피트, 활주로 threshold 좌측" 이라고 줬는데 `we saw a drawn` 뿐입니다. 관제사는 이 보고로 활주로 폐쇄 여부와 통보 범위를 정하는데, 위치가 없으면 아무 조치도 못 합니다. 고친 것은 위치·고도·시점 보충입니다.
 
 ---
 
 **P1B-Q3** ⚠️
-문제 : You are climbing out and ATC assigns a higher altitude, but your aircraft's weight and the outside temperature mean you cannot make that altitude yet.
-ATC : HL123, climb and maintain FL360.
-내 답안 : unable climb fl 360 due to flight restriction hl123
-** 교정 답안 (원문 최대한 유지, 사유 단어 하나만 바꾸고 대안 요청만 추가) : Unable climb FL360 due to **performance**, **request FL340**, HL123.
-- 누락된 필수 readback 요소 : **대안 요청(request 대체 고도)이 또 빠짐.** "unable"까지만 말하고 끝냄.
-- 표준교신용어 오류 : 사유도 "due to flight restriction"이라 상황(중량·기온에 따른 성능 제한)과 안 맞음 — "due to performance"가 정확한 표현.
-- 코멘트 : **문법/어휘 수정**: "flight restriction"→"performance"(상황에 맞는 단어로). **내용 보충**: 뒤에 request 절 추가. **EPTA_01 피드백에서 정확히 같은 지적(unable + 사유까지만 말하고 대안 요청을 안 함)이
-  나왔던 문항인데, 이번에도 동일한 패턴이 반복됨.** "unable [지시] due to [사유], request [대안]"
-  3단 구조를 이번엔 꼭 완성해서 말할 것.
+문제 : Centre instructed you to maintain 290 knots for separation. At your present weight and altitude 290 knots leaves you no buffet margin, so you reduced to 270 knots and you are flying at 270 now. Now ATC contacts you. Respond accordingly.
+Center : HL123, confirm maintaining 290 knots?
+🖥 [ 270 knots / buffet margin ]
+내 답안 : Negative maintain speed 290 due to buffet margin hl123
+** 정답 : Negative, maintaining 270 knots due to buffet margin, HL123.
+- 누락된 필수 readback 요소 : **실제 속도 270 knots**
+- 표준교신용어 오류 : **`Negative` 라고 해놓고 290 을 말했습니다** — 앞뒤가 모순입니다. 관제사는 "290 이 아니다"까지는 알지만 그럼 몇 노트인지 모릅니다.
+- 코멘트 : **첫 단어를 `Negative` 로 쓴 것은 해결입니다.** EPTA_01 에서 1차·재응시 모두 `affirmative` 로 시작해 정반대 답을 했던 항목입니다. 남은 것은 **그 뒤에 실제 값을 넣는 것**입니다 — 화면 클루에 `270 knots` 가 떠 있었습니다. NEGATIVE 다음은 반드시 "그럼 실제로는 무엇인가" 입니다.
 
 ---
 
-**P1B-Q4** ✅
-문제 : ATC assigned you squawk 4521, but you mistakenly dialed in 4512 instead. Now ATC contacts you.
-ATC : HL123, confirm squawking 4521?
-내 답안 : my mistake , i'll squawk 4521 now hl123
-** 교정 답안 (원문 그대로 — 고칠 문법·내용 없음) : My mistake, I'll squawk 4521 now, HL123.
-- 누락된 필수 readback 요소 : 없음
-- 표준교신용어 오류 : 없음. ("correcting own mistake" 기능은 AFFIRM/NEGATIVE 없이 "my mistake, now ~"로 바로 들어가는 것이 샘플 관례 — §9-2 참고)
-- 코멘트 : **EPTA_01에서 같은 기능(Correcting own mistake) 문항 때 정정 방향을 반대로 말했던
-  실수가 이번엔 없음.** 스쿼크를 올바른 방향(4521)으로 정확히 재설정 — 원문 그대로도 이미 정확한 응답.
+**P1B-Q4** ❌
+문제 : You are being vectored for the approach and you are twelve miles from QUILL at 9,000 feet. Your descent calculation shows that you cannot lose that much height before QUILL without exceeding your descent rate limits. Listen to the controller, make a readback of what you can accept, and a request with a reason.
+Approach : HL123, descend to 4,000, cross QUILL at 4,000.
+내 답안 : decent 4000 cross qualit hl123
+** 교정 답안 : Descend to 4,000, HL123. Unable to cross QUILL at 4,000 — we are twelve miles out at 9,000 and that would exceed our descent rate. Request descent now, or a wider vector to lose the height.
+- 누락된 필수 readback 요소 : **unable · 사유 · 요청 전부**
+- 표준교신용어 오류 : 없음
+- 코멘트 : **지시문을 정반대로 수행했습니다.** `make a readback of what you can accept` 는 "할 수 있는 것만 복창하라"는 뜻인데, 할 수 없는 교차 제약까지 복창했습니다. 이대로면 관제사는 QUILL 을 4,000 으로 통과하겠다고 약속받은 것이 되고, 실제로는 못 지킵니다. 받아들일 수 있는 부분(강하 4,000)만 복창하고 나머지는 unable 로 돌려야 합니다.
 
 ---
 
-**P1B-Q5** ✅
-문제 : Your company has put you on a ground delay program before departure, and you would like to know when you're expected to leave the gate.
-ATC : HL123, say your request.
-🖥 [ request expected departure time ]
-내 답안 : request expected departure time hl123
-** 정답/교정 답안 : HL123, request expected departure time.
+**P1B-Q5** ⚠️
+문제 : Delivery gave you squawk 3027 before departure. You set 3207 in the transponder by mistake and it has been running that way since take-off. Now ATC contacts you. Respond accordingly.
+Center : HL123, verify your squawk.
+내 답안 : quawk 3027 hl123
+** 교정 답안 : HL123, correction — we had 3207 set by mistake. Now squawking 3027.
+- 누락된 필수 readback 요소 : **오설정 사실과 정정 조치**
+- 표준교신용어 오류 : 없음
+- 코멘트 : **squawk 값 3027 은 정확합니다.** 그러나 이 문항은 자기 오류 정정 문항입니다. 지금 트랜스폰더에는 3207 이 들어가 있으므로, "3027 입니다"라고만 하면 관제사 화면의 3207 과 맞지 않아 되묻게 됩니다. **무엇을 잘못 넣었고 지금 어떻게 바꿨는지**를 말해야 정정이 됩니다.
+
+---
+
+**P1B-Q6** ⚠️
+문제 : Your clearance includes the SELDO transition. Your flight management computer holds two points called SELDO and you are not sure which one is on your route, and the crossing altitude on your chart does not match the one in the computer. You are level at flight level 310. Contact Westlake Control. Verify which waypoint is on your route, and request the crossing altitude.
+🖥 [ SELDO ]
+내 답안 : western control hl123 , we can see same seldo 2 waypoint , verify which right waypoint height
+** 교정 답안 : Westlake Control, HL123, we have two points called SELDO in the computer. Request verification of which one is on our route, and request the crossing altitude.
+- 누락된 필수 readback 요소 : 해당 없음 (발신 문항)
+- 표준교신용어 오류 : **기관명을 `Westlake` 가 아니라 `western` 으로** 불렀습니다.
+- 코멘트 : **기관 호출을 했습니다** — EPTA_01 에서 신규 약점으로 잡혔던 항목이라 호출 자체는 개선입니다. 이름이 틀린 것은 별개 문제입니다. 문법 교정 : `we can see same seldo 2 waypoint` → `we have two points called SELDO`, `verify which right waypoint height` → 문장이 성립하지 않습니다. 내용 보충은 교차고도를 **요청**으로 명확히 분리한 것입니다.
+
+---
+
+## Part Ⅱ TASK A
+
+**P2A-Q1** ✅
+문제 : ☞ Contact Fairmont Delivery and request your clearance.
+내 답안 : Fairmont Delivery hl123 request clearance
+** 정답 : Fairmont Delivery, HL123, request clearance to Kingsley.
 - 누락된 필수 readback 요소 : 없음
 - 표준교신용어 오류 : 없음
-- 코멘트 : **REQUEST + 명사(구) 패턴을 정확히 사용함** — 지난 세트에서 배운 표현을 그대로 잘 적용.
+- 코멘트 : 기관·콜사인·요청이 순서대로 들어갔습니다. 목적지까지 붙이면 더 좋지만 이대로도 충분합니다.
 
 ---
 
-**P1B-Q6** ✅
-문제 : You've just been given a complex reroute over the radio and are not fully sure whether one of the altitude restrictions still applies after the change.
-ATC : HL123, cross MOXIE at FL200, then as filed.
-🖥 [ verify altitude restriction at MOXIE ]
-내 답안 : verify altitude restrtiction at moxie hl123
-** 정답/교정 답안 : HL123, verify altitude restriction at MOXIE still applies?
-- 누락된 필수 readback 요소 : 없음
-- 표준교신용어 오류 : 없음 ("restrtiction" 오탈자는 감점 대상 아님). VERIFY는 §9 표준용어표에도 있는 정식 확인 요청 표현.
-- 코멘트 : **EPTA_01에서 이 기능(Clarifying) 문항 때 확인 질문 대신 단순 복창을 해버렸던 실수가
-  이번엔 없음.** 실제로 "확인을 요청하는" 형태로 정확히 응답함 — 뚜렷한 개선.
+**P2A-Q2** ⚠️
+문제 : ☞ Listen to the controller and give a full readback.
+Delivery : HL123, cleared to Kingsley Airport via the BRAVA TWO departure, SELDO transition, climb and maintain 7,000, departure frequency 126.4, squawk 3027.
+내 답안 : Clear to kings airport via B 2 deperture climb and maintain 7000 frequency 126.4 squawk 3027 hl123
+** 정답 : Cleared to Kingsley Airport via the BRAVA TWO departure, SELDO transition, climb and maintain 7,000, departure frequency 126.4, squawk 3027, HL123.
+- 누락된 필수 readback 요소 : **`SELDO transition`** — 비행로 허가의 한 요소입니다
+- 표준교신용어 오류 : `Clear` → `Cleared`. SID 이름을 `BRAVA` 가 아니라 `B` 로 줄였습니다 — 유도로 문자 축약은 감점하지 않지만 **SID 이름은 고유명사라 줄이면 다른 절차가 됩니다.**
+- 코멘트 : **고도 7,000 · 주파수 126.4 · squawk 3027 세 개를 동시에 맞췄습니다.** EPTA_01 에서 가장 반복적으로 틀리던 조합이라 이건 분명한 개선입니다.
 
 ---
 
-## Part Ⅱ Task A
-
-**P2A-Q1** ❌
-문제 : ☞ Contact Clearance Delivery and make a request.
-내 답안 : ground hl123 request ifr clearance to westgate airport
-** 정답/교정 답안 : Delivery, HL123, request IFR clearance to Westgate Airport.
-- 누락된 필수 readback 요소 : 없음
-- 표준교신용어 오류 : 지시문이 분명히 "Contact **Clearance Delivery**"인데 "ground"라고 잘못된 기관을 호출함. Ground(지상관제)와 Delivery(클리어런스 델리버리)는 완전히 다른 주파수·관제사임.
-- 코멘트 : 요청 내용(request IFR clearance to Westgate Airport)은 정확하고 완전했음. 다만 상대 기관을 착각한 건 실제 운항에서 엉뚱한 주파수에 대고 말하는 셈이라 반드시 고쳐야 할 부분.
-
----
-
-**P2A-Q2** ✅
-문제 : Continued…
-☞ Listen to the controller and give a full readback.
-Delivery : HL123, cleared to Westgate Airport, MOXIE TWO departure, PIRUX transition, maintain 5,000, expect FL220 10 minutes after departure, squawk 4521.
-내 답안 : cleared to westgate airport moxie 2 departure , pirux transition maintain 5000 expect fl220 10min after departure suawk 4521 hl123
-** 정답/교정 답안 : Cleared to Westgate Airport, MOXIE TWO departure, PIRUX transition, maintain 5,000, expect FL220 10 minutes after departure, squawk 4521, HL123.
-- 누락된 필수 readback 요소 : 없음 — 6개 요소 전부 정확히 포함된 완전한 복창.
-- 표준교신용어 오류 : 없음 ("suawk" 오탈자는 감점 대상 아님)
-- 코멘트 : 이번 세트에서 가장 긴 지시문을 하나도 안 빠뜨림 — 훌륭함.
-
----
-
-**P2A-Q3** ✅ *(재채점: 최초 판정 ⚠️에서 정정)*
-문제 : Continued…
-☞ Listen to the controller and give a full readback.
-Delivery : HL123, your SID has been changed to MOXIE THREE departure, rest of the clearance unchanged.
-🖥 [ MOXIE THREE ]
-내 답안 : roger moxie 3 departure hl123
-** 정답/교정 답안 : HL123, roger, change SID MOXIE THREE departure. (샘플Ⅱ의 동일 유형 문항 모범답안과 같은 패턴: "HL123, roger, change SID HIPPO 1 Departure.")
-- 누락된 필수 readback 요소 : 없음. "rest of the clearance unchanged"는 관제사가 "나머지는 다시 복창 안 해도 된다"고 알려주는 말이라, 바뀐 항목(새 SID)만 확인하면 충분함 — 그 문구 자체를 복창할 필요는 없음.
-- 표준교신용어 오류 : 없음. ROGER 뒤에 바뀐 내용(MOXIE THREE)을 실제로 붙여 말했으므로, "ROGER가 복창을 완전히 대체"하는 금지 상황이 아님. (샘플Ⅱ Part ⅠB Q2와 정확히 같은 패턴)
-- 코멘트 : 최초 채점에서 이 문항과 P2B-Q1을 과도하게 엄격히 봤음 — 정정함. 새 SID 이름을 정확히 확인한 좋은 응답.
+**P2A-Q3** ⚠️
+문제 : ☞ Listen to the controller's message, respond accordingly and advise what you need before departure.
+Delivery : HL123, readback is correct, your slot time is 0845, and the ground crew reports light frost on the upper wing surfaces.
+🖥 [ de-icing required ]
+내 답안 : request de icing hl123
+** 교정 답안 : Roger, slot time 0845, HL123. We will need de-icing before departure — request de-icing.
+- 누락된 필수 readback 요소 : **슬롯 시각 0845 수신 확인**
+- 표준교신용어 오류 : 없음
+- 코멘트 : **제빙 요청은 했습니다** — 지시문 뒷부분 수행. 이번엔 **앞부분(`respond accordingly`)이 빠졌습니다.** 슬롯 시각은 출발 시각을 좌우하는 정보라 받았다는 확인이 필요합니다. EPTA_01 에서는 뒷부분을 빠뜨렸는데, 이번엔 반대가 됐습니다 — **둘 다 해야 합니다.**
 
 ---
 
 **P2A-Q4** ✅
-문제 : ☞ Contact Ground and request pushback and taxi.
-내 답안 : ground hl123 request pushback and taxi
-** 정답/교정 답안 : Ground, HL123, request pushback and taxi.
+문제 : ☞ Contact Fairmont Ground, request taxi and inquire about your new slot time.
+내 답안 : fairmon ground hl123 request taxi and new slot time
+** 정답 : Fairmont Ground, HL123, de-icing complete, request taxi. Request also our new slot time.
 - 누락된 필수 readback 요소 : 없음
 - 표준교신용어 오류 : 없음
-- 코멘트 : 올바른 기관(Ground)에 정확히 컨택함 — P2A-Q1과 대조적으로 여기선 기관명을 맞게 씀.
+- 코멘트 : **기관 호출 + 요청 + 문의, 세 가지가 모두 있습니다.** 복합 지시를 온전히 수행한 사례입니다. `fairmon` 오탈자는 감점하지 않았습니다.
 
 ---
 
 **P2A-Q5** ✅
-문제 : Continued…
-☞ Listen to the controller and give a full readback.
-Ground : HL123, pushback approved, taxi to runway one eight via Alpha, Bravo, taxiway Charlie is closed, use Delta instead.
-내 답안 : pushback approved taxi to runway 18 via a b d hl123
-** 정답/교정 답안 : Pushback approved, taxi to runway one eight via Alpha, Bravo, Delta, HL123.
-- 누락된 필수 readback 요소 : 없음
-- 표준교신용어 오류 : 없음 (알파벳 축약 "a b d"는 감점 대상 아님)
-- 코멘트 : Charlie 폐쇄 정보를 그대로 복창하는 대신 **우회 경로(Alpha-Bravo-Delta)로 자연스럽게
-  합쳐서 복창함** — 실제 교신에서 흔히 쓰는 효율적인 방식으로 잘 처리함.
-
----
-
-**P2A-Q6** ✅
-문제 : Situation Update — While taxiing, Ground relays that the aircraft behind you would like to expedite if possible.
-☞ Listen to the controller's message and respond accordingly.
-Ground : HL123, the traffic behind you would like to expedite if able, can you keep it moving?
-내 답안 : Affrim hl123
-** 정답/교정 답안 : Affirm, HL123.
-- 누락된 필수 readback 요소 : 없음
-- 표준교신용어 오류 : 없음 ("Affrim" 오탈자는 감점 대상 아님)
-- 코멘트 : **"can you ~?"라는 예/아니오 질문에 정확히 AFFIRM으로 답함** — §9에서 배운 대로 "yes" 대신 표준 용어를 쓴 좋은 예.
-
----
-
-**P2A-Q7** ⚠️
-문제 : ☞ Contact Tower, report holding short and ready for departure.
-내 답안 : tower hl123 hold short of runway and ready for departure.
-** 정답/교정 답안 : Tower, HL123, holding short runway one eight, ready for departure.
-- 누락된 필수 readback 요소 : 활주로 번호(one eight)가 빠짐 — "holding short of runway"까지만 말하고 어느 활주로인지 명시하지 않음.
+문제 : ☞ Listen to the controller and give a full readback.
+Ground : HL123, runway 09, taxi via Delta and Foxtrot, hold short of runway 14, give way to the Bombardier CRJ on Foxtrot.
+내 답안 : runway 09 taxi via delta foxtrot holding short of runway 14 give way to drzfoxtrot hl123
+** 정답 : Runway 09, taxi via Delta and Foxtrot, hold short of runway 14, give way to the CRJ on Foxtrot, HL123.
+- 누락된 필수 readback 요소 : 없음 — 사용활주로·유도로·hold short·give way 네 요소 전부
 - 표준교신용어 오류 : 없음
-- 코멘트 : 위치 보고에는 구체적 활주로 번호까지 포함하는 것이 표준. 활주로를 특정하지 않으면 관제사가 재확인해야 할 수 있음.
+- 코멘트 : `drzfoxtrot` 는 양보 대상(CRJ)이 빠지고 오타가 겹친 것으로 보입니다. 유도로 지시 중 가장 긴 문항이었는데 구조는 다 잡았습니다.
 
 ---
 
-**P2A-Q8** ✅
-문제 : Continued…
-☞ Listen to the controller and give a full readback.
-Tower : HL123, traffic on a three mile final, line up and wait runway one eight.
-내 답안 : traffic insight, line up and wait runway 18 hl123
-** 정답/교정 답안 : Line up and wait runway one eight, HL123.
-- 누락된 필수 readback 요소 : 없음
-- 표준교신용어 오류 : 없음. "insight"는 소리 내어 읽으면 "in sight"와 동일하게 들리므로 감점하지 않음.
-- 코멘트 : 필수 지시(line up and wait, 활주로 번호)를 정확히 복창함.
+**P2A-Q6** ❌
+문제 : ☞ Listen to the controller's question and respond accordingly. Tell him what you need to know before you can answer.
+Ground : HL123, the CRJ ahead of you is going to be a while sorting out a paperwork problem. If you can take an intersection departure from Foxtrot I can get you out ahead of him — can you work with that?
+내 답안 : roger request intersection runway hl123
+** 교정 답안 : HL123, before I can accept — request the runway distance available from Foxtrot. If it is enough for our weight we can take the intersection departure.
+- 누락된 필수 readback 요소 : **답하기 전에 알아야 할 것(Foxtrot 에서의 잔여 활주거리)을 묻지 않았습니다**
+- 표준교신용어 오류 : **`can you work with that?` 은 AFFIRM/NEGATIVE 질문인데 `roger` 로 답했습니다.** ROGER 는 "들었다"일 뿐이라 수락 여부가 전달되지 않습니다. `request intersection runway` 도 표현이 정확하지 않습니다 — `intersection departure from Foxtrot` 입니다.
+- 코멘트 : 지시문이 `Tell him what you need to know before you can answer` 로 **무엇을 해야 하는지 그대로 적혀 있었습니다.** 교차점 출발은 활주거리가 짧아지므로, 수락하기 전에 남은 거리를 확인하는 것이 안전상 당연한 절차입니다. 확인 없이 수락하면 성능 계산 없이 짧은 활주로에서 이륙하는 셈이 됩니다.
 
 ---
 
-**P2A-Q9** ✅
-문제 : Continued…
-☞ Listen to the controller and give a full readback.
-Tower : HL123, wind two two zero at eight, cleared for takeoff runway one eight.
-내 답안 : cleared for takeoff runway 18 hl123
-** 정답/교정 답안 : Cleared for takeoff runway one eight, HL123.
-- 누락된 필수 readback 요소 : 없음. 바람 정보를 정확히 뺌.
+**P2A-Q7** ✅
+문제 : ☞ Listen to the tower and give a full readback.
+Tower : HL123, Fairmont Tower, wind 080 at 11, line up and wait runway 09 at Foxtrot, number one.
+내 답안 : line up and wati runway 09 foxtrot i'm number 1 hl123
+** 정답 : Line up and wait runway 09 at Foxtrot, HL123.
+- 누락된 필수 readback 요소 : 없음 (바람은 복창 불필요 — 제외한 판단 정확)
 - 표준교신용어 오류 : 없음
-- 코멘트 : 필수요소만 간결하게 복창한 좋은 예.
+- 코멘트 : `i'm number 1` 은 불필요하지만 해롭지는 않습니다. `wati` 오탈자는 감점하지 않았습니다.
 
 ---
 
-**P2A-Q10** (Follow-up) ⚠️
-문제 : Follow-up question:
-You have just finished Task A, as the pilot of Hotel Lima one two three.
-In this situation, how did you handle the pressure from the aircraft behind you while still following your own taxi procedures, and what would you do differently next time?
-내 답안 : In this Task A , i just let the aircraft go first , but next time, i would rather to go first , because , it takes time and fuel even though it is little and for passenger it is precious for saving their time, so i will refuse to give the order next time.
-** 교정 답안 (원문 최대한 유지, 문법만 수정) : In this Task A, I just let the aircraft go first, but next time, I would rather **go** first, because it takes time and fuel — even though it is little — and for passengers it is precious for saving their time, so I will **decline the request** next time.
-- 코멘트 : **문법 수정**: "would rather **to** go first" → "would rather **go** first"(would rather 뒤에는 to 없이 동사원형), "refuse to give the order" → "decline the request"(원래 뭘 거부한다는 건지 불분명했던 부분을 문맥에 맞게 다듬음). **사실관계 확인**: 실제 롤플레이(P2A-Q6)에서는 "Affirm"이라고 답해서 "계속 움직이겠다(expedite)"에 동의했는데, 여기서는 "그 항공기를 먼저 보내줬다"고 서술해서 실제 응답 내용과 다르게 기억을 재구성함 — 이 부분은 표현이 아니라 기억 자체의 문제라 그대로 옮겨둠, 다만 실제 있었던 일과 다르다는 점을 짚어야 함. 질문의 두 파트(어떻게 대응했는지 / 다음엔 어떻게 할지)를 둘 다 다루려고 시도한 점은 좋음.
+**P2A-Q8** ⚠️
+문제 : ☞ Listen to the tower and give a full readback. Then advise that you are ready for an immediate departure.
+Tower : HL123, traffic is a Cessna Caravan on a three mile final, cleared for immediate takeoff runway 09 at Foxtrot, no delay.
+내 답안 : clear for take off runway 09 foxtrot no delay hl123
+** 교정 답안 : Cleared for immediate takeoff runway 09 at Foxtrot, no delay, HL123. We are ready for an immediate departure.
+- 누락된 필수 readback 요소 : 없음 (트래픽 정보는 복창 불필요 — 제외 정확)
+- 표준교신용어 오류 : **`clear` → `cleared`.** P1A-Q2 에서는 맞게 썼는데 여기서는 틀렸습니다 — 같은 세트 안에서 갈립니다.
+- 코멘트 : **지시문 뒷부분(`advise that you are ready`)이 빠졌습니다.** `no delay` 로 이륙하려면 준비됐다는 통보가 필요합니다.
 
 ---
 
-## Part Ⅱ Task B
+**P2A-Q9** ❌
+문제 : ☞ Contact Fairmont Departure and report your passing altitude.
+(Situation Update : You are airborne and climbing through 2,500 feet on the BRAVA TWO departure.)
+내 답안 : climb through fl250 hl123
+** 정답 : Fairmont Departure, HL123, climbing through 2,500 feet.
+- 누락된 필수 readback 요소 : **기관 호출 `Fairmont Departure`**
+- 표준교신용어 오류 : **`2,500 feet` 를 `FL250` 으로 썼습니다.** 2,500피트와 FL250(25,000피트)은 **만 피트 이상 차이** 나는 완전히 다른 고도입니다. 이륙 직후 2,500피트에 있는 항공기가 FL250 을 통과한다고 보고하면 관제사는 전혀 다른 항공기를 찾게 됩니다.
+- 코멘트 : 이번 세트에서 가장 심각한 오류입니다. **네 자리 피트 고도와 FL 은 표기부터 다릅니다** — `2,500 ft` 는 `2500` 또는 `2.5` 로, `FL250` 은 `250` 으로 적어 구분하세요. P2B-Q1 에서는 `fl200` 을 정확히 썼으므로 구분을 아는데, 숫자만 보고 FL 을 붙인 것으로 보입니다.
 
-**P2B-Q1** ✅ *(재채점: 최초 판정 ⚠️에서 정정)*
-문제 : ☞ Listen to Center and give a full readback.
-Center : HL123, radar contact, maintain FL350.
-내 답안 : roger maintain fl350 hl123
-** 정답/교정 답안 : Roger, maintain FL350, HL123. (샘플Ⅰ의 "Roger hold for release, HL123."과 같은 패턴 — ROGER + 실제 지시 내용을 함께 말하는 것은 허용됨)
-- 누락된 필수 readback 요소 : 없음 — 고도(FL350)가 정확히 포함됨.
-- 표준교신용어 오류 : 없음. ROGER 금지 규칙은 "ROGER **단독으로** 복창을 대신할 때"만 해당하고, 이 답안처럼 실제 값(FL350)을 같이 말하면 문제없음.
-- 코멘트 : 최초 채점에서 과도하게 엄격히 봤음 — 정정함. 고도를 정확히 복창한 좋은 응답.
+---
+
+**P2A-Q10** ✅
+문제 : ☞ Listen to the controller and give a full readback. Then request the information you are missing.
+Departure : HL123, Fairmont Departure, radar contact, climb and maintain flight level 190, cleared direct SELDO.
+🖥 [ SELDO crossing altitude not on the chart ]
+내 답안 : climb and maintain fl190 , direct seldo , request crossing altitude at seldo hl123
+** 정답 : Climb and maintain flight level 190, cleared direct SELDO, HL123. Request the SELDO crossing altitude — it is not on our chart.
+- 누락된 필수 readback 요소 : 없음
+- 표준교신용어 오류 : `cleared direct` 에서 `cleared` 가 빠졌습니다 (경미)
+- 코멘트 : **복창과 요청을 둘 다 했습니다.** 복합 지시 수행 성공 사례입니다. 이번 세트에서 복합 지시를 온전히 해낸 것이 네 문항(P1B-Q1, P1B-Q2, P2A-Q4, P2A-Q10)인데, EPTA_01 에서는 사실상 없었습니다.
+
+---
+
+**P2A-Q11** ⚠️ (90초 Follow-up)
+문제 : You have just finished Task A, as the pilot of Hotel Lima one two three. In this situation, you accepted an intersection departure instead of waiting for the full runway. What did you have to check before you accepted it, and why did you ask the controller what you asked? In your role as a pilot, when would you refuse an intersection departure? Give an example.
+내 답안 : When we get a chance to short roll take off , then we have to check the aircraft performance which can airborn even if the runway is short , and if the performance is low or unsatified we have to refuse until the all the runway is clear , all we have to do is make aircraft safe
+** 교정 답안 : When we are offered an intersection departure, we have to check the aircraft performance to see whether we can get airborne with the shorter distance. That is why I asked the controller for the runway distance available from Foxtrot — without that number I cannot run the calculation. If the performance is not satisfactory, we have to refuse and wait until the full runway is available. For example, on a wet runway at high take-off weight, 2,150 metres would not be enough for us, so I would tell the controller we need the full length even if it means waiting behind the CRJ.
+- 누락된 필수 readback 요소 : 해당 없음 (자유응답)
+- 표준교신용어 오류 : 해당 없음
+- 코멘트 : **세 부분 중 두 부분을 다뤘습니다** — 확인사항(성능)과 거부 조건. EPTA_01 Follow-up 이 세 부분 중 하나였던 것에 비해 진전입니다. 남은 것은 ① `why did you ask the controller what you asked` — 관제사에게 무엇을 왜 물었는지(실제로 P2A-Q6 에서 묻지 않았으므로 여기서도 비었습니다) ② **`Give an example.`** — 3세트 연속 예시를 들지 않았습니다. 문법 교정 : `short roll take off` → `intersection departure`, `which can airborn` → `whether we can get airborne`, `unsatified` → `not satisfactory`, `until the all the runway` → `until the full runway`.
+
+---
+
+## Part Ⅱ TASK B
+
+**P2B-Q1** ✅
+문제 : ☞ Contact Thornbury Approach and report your position.
+(Initial Situation : descending through flight level 200 for 8,000, inbound to Thornbury Airport, information Kilo)
+내 답안 : Thornbury approach hl123 decending through fl200 to 8000
+** 정답 : Thornbury Approach, HL123, descending through flight level 200 for 8,000, information Kilo.
+- 누락된 필수 readback 요소 : 없음 (ATIS Kilo 는 있으면 좋지만 필수는 아닙니다)
+- 표준교신용어 오류 : `to 8000` → `for 8,000` (경미)
+- 코멘트 : **기관 호출 + 통과고도 + 목표고도가 전부 들어갔습니다.** EPTA_01 재응시에서 이 문항 유형의 기관 호출이 빠졌던 것이 해결됐고, 통과고도도 정확합니다. 같은 세트의 P2A-Q9 에서는 둘 다 틀렸으므로, **아는데 매번 적용하지는 못하는** 상태입니다.
 
 ---
 
 **P2B-Q2** ✅
-문제 : Situation Update — A warning horn sounds and you notice the cabin altitude is climbing above normal — you are losing cabin pressurization.
-☞ Contact Center, declare an emergency, and request an immediate descent.
-내 답안 : Center hl123 mayday mayday mayday request immediate descent due to pressure
-** 교정 답안 (원문 최대한 유지, 순서만 비상선언 7단계에 맞게 바로잡고 사유만 구체화) : **Mayday Mayday Mayday**, Center, HL123, request immediate descent due to **loss of cabin pressure**.
+문제 : ☞ Listen to the controller and give a full readback.
+Approach : HL123, Thornbury Approach, good morning, descend and maintain 8,000, reduce speed to 230 knots, expect the ILS runway 27, Thornbury altimeter 30.12.
+내 답안 : decent and maintain 8000 reduce speed 230 expect ils runway 27 altimeter 3012 hl123
+** 정답 : Descend and maintain 8,000, reduce speed to 230 knots, expect the ILS runway 27, altimeter 30.12, HL123.
 - 누락된 필수 readback 요소 : 없음
-- 표준교신용어 오류 : 없음. **"Mayday" 3회 반복은 국제 표준 조난 선언 방식으로 정확함.**
-- 코멘트 : **내용 수정**: `atc-terminology.md` §8-1의 비상선언 7단계는 MAYDAY×3이 맨 앞에 오고 그 다음 관제기관명·콜사인 순서인데, 원문은 "Center hl123"을 먼저 말해서 순서가 바뀌었음 — 순서만 바로잡음. "due to pressure"도 "due to loss of cabin pressure"로 조금 더 구체화함(원문 표현을 최대한 살림). 비상선포 자체는 정확하고 강력한 응답.
+- 표준교신용어 오류 : 없음
+- 코멘트 : **네 요소 전부 정확합니다** — 고도·속도·접근·고도계. 고도계는 EPTA_01 에서 세 번 빠뜨렸던 항목입니다.
 
 ---
 
-**P2B-Q3** ✅
-문제 : Continued…
-☞ Listen to the controller's response and give a full readback.
-Center : HL123, roger, descend and maintain 10,000, turn left heading 250 for traffic, all traffic advised.
-내 답안 : descned and maintain 10000 turn left hd250 hl123
-** 정답/교정 답안 : Descend and maintain 10,000, turn left heading 250, HL123.
-- 누락된 필수 readback 요소 : 없음 — 고도·헤딩 모두 정확히 포함.
-- 표준교신용어 오류 : 없음 ("descned" 오탈자는 감점 대상 아님)
-- 코멘트 : 정확하고 완전한 복창.
+**P2B-Q3** ⚠️
+문제 : ☞ Inform the controller of your situation, state that you are maintaining 8,000, and request a groundspeed readout from his radar.
+(Situation Update : 기장·부기장 속도계가 20노트 차이, 예비계기도 둘 중 어느 것과도 일치하지 않음)
+내 답안 : controller hl123 we have different speed at indication each , so request ground spped in radar
+** 교정 답안 : Thornbury Approach, HL123, our airspeed indications disagree — the captain's, the first officer's and the standby all read differently. Maintaining 8,000. Request a groundspeed readout from your radar.
+- 누락된 필수 readback 요소 : **① 기관 호출 ② `maintaining 8,000`**
+- 표준교신용어 오류 : **`controller` 는 호출부호가 아닙니다.** EPTA_01 P2B-Q3 에서 **똑같이** 지적된 오류입니다. `Thornbury Approach` 로 불러야 합니다.
+- 코멘트 : 세 가지 요구 중 두 가지(상황·groundspeed 요청)를 했습니다. 문법 교정 : `different speed at indication each` → `our airspeed indications disagree`. 상황 설명이 모호한 것도 문제입니다 — "셋이 서로 다르다"는 사실이 전달돼야 관제사가 사태의 성격을 압니다.
 
 ---
 
-**P2B-Q4** ✅
-문제 : Continued…
-Center : HL123, say your intentions.
-☞ Respond, stating you'll continue the emergency descent to 10,000 and advise once you've assessed the cabin.
-내 답안 : continue descend to 10000 and i will advise you once i assesed the cabin hl123
-** 정답/교정 답안 : Continuing the descent to 10,000, will advise once we've assessed the cabin, HL123.
-- 누락된 필수 readback 요소 : 없음
-- 표준교신용어 오류 : 없음 ("assesed" 오탈자는 감점 대상 아님)
-- 코멘트 : **EPTA_01에서 intentions 진술 문항 때 애매한 질문("can i start emergency landing")으로
-  대체했던 실수가 이번엔 완전히 해결됨.** 지시받은 대로 구체적인 계획을 정확히 진술함 — 뚜렷한 개선.
+**P2B-Q4** ❌
+문제 : ☞ Listen to the controller's response, give a full readback and say your intentions.
+Approach : HL123, roger, I show your groundspeed 290, fly heading 240 and maintain 8,000, and say your intentions.
+내 답안 : roger , request landing hl123
+** 교정 답안 : Heading 240, maintain 8,000, HL123. We are running the unreliable airspeed checklist. Our intention is to continue for the ILS runway 27 using your groundspeed, and we will need you to keep passing us the groundspeed.
+- 누락된 필수 readback 요소 : **기수 240 과 고도 8,000 — 둘 다 필수 복창 항목인데 통째로 빠졌습니다**
+- 표준교신용어 오류 : **`roger` 로 full readback 요구를 대체했습니다.** ROGER 는 복창을 대신할 수 없습니다.
+- 코멘트 : 이번 세트에서 가장 많이 잃은 문항입니다. 지시문이 `give a full readback and say your intentions` 로 두 가지를 명시했는데 **둘 다 하지 않았습니다.** `request landing` 은 의도가 아닙니다 — 착륙하려는 것은 관제사도 압니다. 의도는 "지금 무엇을 하고 있고, 앞으로 어떻게 할 것이며, 무엇이 필요한가" 입니다.
 
 ---
 
 **P2B-Q5** ⚠️
-문제 : Situation Update — You have leveled off at 10,000ft. Cabin pressure has stabilized and there are no injuries, but you're now concerned about fuel at this lower altitude.
-☞ Contact Center, update them on your status, and state your intention to divert to the nearest suitable airport.
-내 답안 : pressure has stabilized and no injuries , request to the nearest airport due to fuel hl123
-** 정답/교정 답안 : Center, HL123, pressure has stabilized, no injuries, request diversion to the nearest suitable airport due to fuel.
-- 누락된 필수 readback 요소 : 없음 — 상태 업데이트와 의도 둘 다 담김.
-- 표준교신용어 오류 : "**request to** the nearest airport"는 REQUEST 뒤에 전치사구가 붙은 비표준 형태. REQUEST 뒤에는 바로 명사(구)가 와야 함 — "request **diversion to**" 또는 "request **the nearest suitable airport**"처럼.
-- 코멘트 : 내용은 완전하지만, 이번 세트에서 반복 학습 중인 REQUEST+명사 패턴이 이 문항에서는 살짝 어긋남.
+문제 : ☞ Listen to the controller and respond negatively with a reason. Request what you need instead.
+Approach : HL123, I have a Boeing 737 closing from behind — are you able to give me 250 knots or better? If not I will have to turn you off.
+내 답안 : negative unable to speed up 250 due to performance hl123
+** 교정 답안 : Negative, HL123. Unable 250 knots — our airspeed indications are unreliable, so we cannot set a speed accurately. Request you vector us out of the sequence, or give us the groundspeed you need.
+- 누락된 필수 readback 요소 : **요청(request)** — 지시문의 두 번째 부분
+- 표준교신용어 오류 : **사유가 틀렸습니다.** `due to performance` 는 기체 성능이 모자란다는 뜻인데, 실제 이유는 **속도계를 믿을 수 없어 속도를 정확히 맞출 수 없다**는 것입니다. 성능 문제로 들으면 관제사는 다른 판단을 합니다.
+- 코멘트 : `negative` + `unable` 로 거부 방향은 정확히 잡았습니다. 남은 것은 ① 사유를 이 사건에 맞게 말하는 것 ② 대안 요청입니다. 관제사가 `If not I will have to turn you off` 라고 했으므로, 그 조치를 수락하거나 다른 안을 내는 것이 자연스러운 응답입니다.
 
 ---
 
-**P2B-Q6** ✅
-문제 : Continued…
-Center : HL123, roger, let me know your fuel and souls on board so I can coordinate with the airport.
-☞ Provide the requested information.
-🖥 [ 3 hours fuel remaining / 128 SOB ]
-내 답안 : we have 3hours of fuel remaining and 128 souls on board hl123
-** 정답/교정 답안 : We have 3 hours of fuel remaining and 128 souls on board, HL123.
+**P2B-Q6** ⚠️
+문제 : ☞ Contact approach, give them an update of your situation and state what you will need for the approach.
+(Situation Update : 체크리스트 완료, 기장 계기는 groundspeed 와 일치, 그러나 수동 접근만 가능하고 autoland 불가)
+내 답안 : we cannot use autoland due to aircraft something happen , so request radar vector to airport hl123
+** 교정 답안 : Thornbury Approach, HL123. The checklist is complete and the captain's indications now agree with your groundspeed, but we will have to fly the approach manually and we cannot use autoland. Request radar vectors to the final approach course, and continue to pass us your groundspeed.
+- 누락된 필수 readback 요소 : **① 기관 호출 ② 계기가 회복됐다는 핵심 갱신**
+- 표준교신용어 오류 : `due to aircraft something happen` 은 사유가 전달되지 않습니다.
+- 코멘트 : autoland 불가는 맞게 전달했지만, **상황이 좋아졌다는 사실(기장 계기가 groundspeed 와 일치)** 이 빠졌습니다. 그게 빠지면 관제사는 여전히 속도 정보가 없는 항공기로 취급합니다. 그리고 `what you will need for the approach` 에 대해 vector 만 요청했는데, 이 상황에서 실제로 필요한 것은 **groundspeed 를 계속 받는 것**입니다.
+
+---
+
+**P2B-Q7** ⚠️
+문제 : ☞ Listen to the controller and respond accordingly.
+Approach : HL123, I have to change your approach. The ILS 27 glide path is out for calibration, so the best I can do is the RNAV 27. Weather is fine, ceiling 4,000 broken.
+내 답안 : roger request rnav runway27 approach hl123
+** 정답 : Roger, we accept the RNAV runway 27 approach, HL123.
 - 누락된 필수 readback 요소 : 없음
-- 표준교신용어 오류 : 없음
-- 코멘트 : **EPTA_01에서 SOB(탑승 인원)를 "lb"(중량)로 완전히 잘못 이해했던 오류가 이번엔 정확히
-  교정됨.** "128 souls on board"라고 정확히 표현 — 가장 확실하게 개선된 부분.
+- 표준교신용어 오류 : `request` 가 어색합니다 — 관제사가 이미 RNAV 27 을 제시했으므로 **요청이 아니라 수락**입니다.
+- 코멘트 : 접근 방식 변경을 받아들인 것은 맞습니다. `roger` 뒤에 내용이 따라오므로 ROGER 단독 오용은 아닙니다.
 
 ---
 
-**P2B-Q7** ✅
-문제 : Continued…
-☞ Listen to the controller and give a full readback.
-Center : HL123, cleared direct Fenwick Airport, descend and maintain 4,000, expect ILS runway zero niner.
-내 답안 : cleared direct fenwick airport descned and maintain 4000 expect ils runway 09 hl123
-** 정답/교정 답안 : Cleared direct Fenwick Airport, descend and maintain 4,000, expect ILS runway zero niner, HL123.
+**P2B-Q8** ✅
+문제 : ☞ Listen to the controller and give a full readback.
+Approach : HL123, roger, turn right heading 300, descend and maintain 3,000 until established, cleared for the RNAV runway 27 approach, contact Thornbury Tower on 118.1.
+내 답안 : trun right hd 300 decend 3000 until established cleared rnav runway 27 contact tower 118.1 hl123
+** 정답 : Turn right heading 300, descend and maintain 3,000 until established, cleared for the RNAV runway 27 approach, contact Thornbury Tower on 118.1, HL123.
+- 누락된 필수 readback 요소 : 없음 — 선회방향·기수·고도·established·**접근 허가**·주파수 전부
+- 표준교신용어 오류 : 없음. `hd`·`trun`·`decend` 는 감점하지 않았습니다
+- 코멘트 : **이번 세트 최고의 성과입니다.** EPTA_01 에서 1차·재응시 모두 빠뜨렸던 **접근 허가(`cleared`)** 를 복창했고, 두 번 연속 틀렸던 **주파수(118.1)** 도 정확합니다. 선회 방향도 들어갔습니다. 가장 요소가 많은 복창 문항에서 전부 잡았습니다.
+
+---
+
+**P2B-Q9** ⚠️
+문제 : ☞ Listen to the controller's question and provide the requested information.
+Approach : HL123, the tower wants to know whether you need the emergency services out, or whether a normal landing is fine.
+내 답안 : roger request emergency equipment standing by runway to tow off hl123
+** 교정 답안 : HL123, request the emergency services standing by as a precaution — we will be flying the approach manually. We expect a normal landing and we can vacate the runway ourselves.
 - 누락된 필수 readback 요소 : 없음
-- 표준교신용어 오류 : 없음 ("descned" 오탈자는 감점 대상 아님)
-- 코멘트 : 정확하고 완전한 복창.
+- 표준교신용어 오류 : **`to tow off` 는 이 상황과 무관합니다.** 견인은 기체가 자력으로 움직일 수 없을 때 필요한데, 속도계 문제는 지상 이동에 영향이 없습니다. EPTA_01 의 유압 사건(견인 필요)과 섞인 것으로 보입니다.
+- 코멘트 : 소방대 대기를 요청한 선택 자체는 타당합니다. 다만 관제사는 둘 중 하나를 물었으므로 **어느 쪽인지 분명히** 답하고, 필요하면 사유를 붙이면 됩니다.
 
 ---
 
-**P2B-Q8** ❌
-문제 : ☞ Contact Fenwick Tower, report your position and intentions, and advise you are declaring an emergency.
-내 답안 : fenwick tower hl123 direct fenwick airport descend and maintain 4000 we are emergency now.
-** 교정 답안 (예시 — 정확한 수치는 정해진 정답 없음. 원문의 "fenwick tower hl123 ... declaring emergency" 틀은 유지하고, 반복된 클리어런스 부분만 위치 표현으로 교체) : Fenwick Tower, HL123, **descending through 6,000 for** 4,000, for ILS runway zero niner, **we are declaring an** emergency.
-- 누락된 필수 readback 요소 : 지시문이 요구한 "위치"와 "의도(intentions)"가 없음. 대신 방금 복창했던 이전 클리어런스(descend and maintain 4000) 내용을 그대로 반복함. 샘플 전체(Ⅰ·Ⅱ·Ⅲ)에서 "report your position/altitude"는 항상 **"descending/leaving through X for Y"**(고도 통과 중) 또는 픽스가 주어졌다면 **"over [픽스] at [고도]"** 형태로 답하며, 활주로까지의 거리(마일)로 답하는 사례는 없음.
-- 표준교신용어 오류 : "we **are emergency** now"는 문법 오류 — "emergency"는 명사라 "we have an emergency" 또는 "we are declaring an emergency"가 맞음.
-- 코멘트 : **내용 수정**: 반복된 클리어런스 부분만 위치 표현("descending through 6,000 for 4,000")으로 바꾸고, "declaring an emergency" 부분은 문법만 고쳐서 그대로 살림. 정작 요구된 위치·착륙 의도 없이 이전 정보만 되풀이한 게 핵심 문제 — EPTA_01의 position-report 관련 약점이 Task B에서도 비슷하게 나타남.
+## Part Ⅱ TASK C
+
+**P2C-Q1** ⚠️ (90초)
+문제 : What happened to your aircraft (HL123)? Explain the nature of the incident.
+내 답안 : we had situation as same as what we had before decent , at decent section , we have malfuction about autolanding , and there was a difference between first officer and captain's indication speed, so we request about the information and make it match with controller and each pilots , and we are not sure that the landing work properly so we request to stand emergency kit on the runway
+** 교정 답안 : During the descent into Thornbury we had a problem with our airspeed indications — the captain's, the first officer's and the standby all read differently, about twenty knots apart. So we asked the controller for a groundspeed readout from his radar and flew with that. We could not accept the speed he needed for the traffic behind us, because we could not set a speed accurately. After the checklist the captain's indications agreed again, but we had to fly manually and we could not use autoland. The controller also had to change us from the ILS 27 to the RNAV 27, because the glide path was out for calibration, and we landed with the emergency services standing by.
+- 누락된 필수 readback 요소 : 해당 없음 (자유응답)
+- 표준교신용어 오류 : 해당 없음
+- 코멘트 : **속도계 불일치를 원인으로 짚은 것은 정확합니다.** 그런데 **순서가 뒤집혔습니다** — `malfunction about autolanding` 을 먼저 말했는데, autoland 불가는 속도계 문제의 *결과*입니다. 그리고 **ILS 27 → RNAV 27 변경이 통째로 빠졌습니다.** 이건 이 사건의 큰 축 하나입니다. 예비계기도 달랐다는 점, 737 때문에 증속을 거절한 것도 없습니다. 문법 교정 : `as same as` → `the same as`, `at decent section` → `during the descent`, `we have malfuction` → `we had a malfunction`, `indication speed` → `airspeed indications`, `request about the information` → `asked for the groundspeed`, `the landing work properly` → `the landing would be normal`.
 
 ---
 
-**P2B-Q9** ✅
-문제 : Continued…
-☞ Listen to the controller and give a full readback.
-Tower : HL123, wind zero eight zero at six, cleared to land runway zero niner, emergency equipment standing by.
-내 답안 : cleared to land runway09 hl123
-** 정답/교정 답안 : Cleared to land runway zero niner, HL123.
-- 누락된 필수 readback 요소 : 없음. 바람 정보를 정확히 뺌.
-- 표준교신용어 오류 : 없음
-- 코멘트 : 필수요소만 간결하게 복창한 좋은 예.
+**P2C-Q2** ⚠️ (90초)
+문제 : How do you think the incident was handled by the air traffic controller? Do you feel the situation could have been handled differently? Make a comment from a pilot's point of view.
+내 답안 : I think we handled it well , in the first section that we know we have something work bad , such as heigh indication , so all we have to do is just ask the exact height, and we lost the autolanding system at moment , also we cannot use ils approach , it make us little bit embarrase , but controller gave us another option as rnav , and there was a time to checklist to landing by rnav approach , thanks to controller , we can land well , so I think it handled well rather than i expected
+** 교정 답안 : I think the controller handled it well. When our airspeed indications went bad, he gave us the groundspeed from his radar straight away, which was exactly what we needed. He also gave us another option when the ILS was not available — the RNAV 27 — and he gave us time to run the checklist before the approach. Thanks to the controller we could land safely. One thing that could have been handled differently is that he could have told us about the ILS glide path being out for calibration earlier, because we had already set up for the ILS and we had to change everything late in the approach.
+- 누락된 필수 readback 요소 : 해당 없음 (자유응답)
+- 표준교신용어 오류 : 해당 없음
+- 코멘트 : 중간에 `controller gave us another option as rnav`, `thanks to controller` 로 관제사를 평가했으므로 EPTA_01 처럼 대상을 완전히 오독하지는 않았습니다. 다만 **첫 문장이 또 `I think we handled it well`** 입니다 — 질문은 관제사를 묻습니다. 더 큰 문제는 **사건의 핵심 단어를 틀린 것**입니다 : `heigh indication`, `just ask the exact height` — 이 사건은 **속도(speed)** 문제였지 고도가 아닙니다. 그리고 **`could have been handled differently` 에 3세트 연속 답하지 않았습니다.** 문법 교정 : `something work bad` → `something going wrong`, `at moment` → `at that moment`, `make us little bit embarrase` → `it made things difficult`, `there was a time to checklist to landing` → `he gave us time to run the checklist`, `we can land well` → `we could land safely`.
 
 ---
 
-## Part Ⅱ Task C
+## ICAO 6개 항목 등급
 
-**P2C-Q1** ⚠️
-문제 : ☞ Now listen to the controller's radiotelephony messages.
-ATC: HL123, roger, descend and maintain 10,000, turn left heading 250 for traffic, all traffic advised.
-ATC: HL123, say your intentions.
-ATC: HL123, roger, let me know your fuel and souls on board so I can coordinate with the airport.
-ATC: HL123, cleared direct Fenwick Airport, descend and maintain 4,000, expect ILS runway zero niner.
-ATC: HL123, wind zero eight zero at six, cleared to land runway zero niner, emergency equipment standing by.
+| 항목 | 등급 | EPTA_01 재응시 | 근거 |
+|---|---|---|---|
+| Pronunciation | **평가 보류** | 보류 | 텍스트 답안이라 판단 근거가 없습니다. 등급 계산에서 제외합니다. |
+| Structure | **Level 3** | 3 | 복문을 꾸준히 시도하고 의미가 대체로 전달됩니다. 다만 오류가 남습니다 — `as same as`, `at decent section`, `something work bad`, `which can airborn`, `unsatified`, `different speed at indication each`, `due to aircraft something happen`. 자유응답이 길어진 만큼 문장 연결이 끊기는 곳도 늘었습니다. |
+| Vocabulary | **Level 3** | 3 | `buffet margin`, `transition level`, `QNH`, `groundspeed`, `autoland` 등 기술 어휘를 맥락에 맞게 썼습니다. 그러나 **핵심 단어를 틀려 뜻이 바뀐 사례가 세 건** : `height`(←speed, P2C-Q2), `due to performance`(←계기 불신뢰, P2B-Q5), `to tow off`(무관, P2B-Q9). `clear`/`cleared` 는 한 번 맞고 한 번 틀렸습니다. |
+| Fluency | **Level 3** | 3 | 90초 문항 두 개와 Follow-up 모두 분량을 확보했습니다. 다만 30초 문항에서 `quawk 3027 hl123`, `roger , request landing hl123` 처럼 지나치게 짧은 응답이 남아 있습니다. |
+| Comprehension | **Level 3** | 3 | 복창 정확도는 올랐습니다 — P2B-Q2 4요소, P2B-Q8 6요소를 전부 잡았습니다. 그러나 **값·단어를 다른 것으로 바꾸는 패턴이 계속됩니다** : **2,500 feet → FL250**(가장 심각), 4,000 → 14000, Ravenna → avia, Westlake → western, speed → height. 지시문 자체를 반대로 읽은 경우도 둘(P1B-Q4, P2A-Q6) 있습니다. |
+| **Interactions** | **Level 3** | **2** | **복합 지시를 온전히 수행한 문항이 네 개**(P1B-Q1, P1B-Q2, P2A-Q4, P2A-Q10) 생겼습니다 — EPTA_01 에서는 사실상 없었습니다. **기관 호출도 네 번**(P2A-Q1, P2A-Q4, P2B-Q1, P1B-Q6) 했습니다. 다만 뒷부분을 빠뜨린 문항이 아직 여섯(P1B-Q4·Q5, P2A-Q3·Q8, P2B-Q5·Q6) 이고, P2B-Q4 에서는 복창 요구를 `roger` 로 대체했습니다. 예상 밖 전개(P2A-Q6 교차점 제안, P2B-Q4 intentions)에서 실패하는 것이 Level 3 의 특성에 해당합니다. |
 
-What happened to your aircraft (HL123)? Explain the nature of the incident.
-내 답안 : hl123 have abnormal pressure on passenger , so we called emergency and ask atc to descend , so atc instruct our aircraft descend , after leveling off fl100 , the pressure went normal , but we are worried about low altitude and fuel , so ask to land the nearest suitable airport , so we instructed to contact the nearest airport ,fenwick airport , the airport instruct us to land as soon as contact , and they prepared emergency equipment on airport.
-** 교정 답안 (원문 최대한 유지, 문법 수정 + 빠진 fuel/SOB 단계만 최소 보충) : HL123 had abnormal **cabin** pressure, so we **declared an emergency** and asked ATC to descend, so ATC **instructed** our aircraft **to** descend. After leveling off **at 10,000ft**, the pressure went **back to** normal, but we **were** worried about low altitude and fuel, so **we asked** to land **at** the nearest suitable airport, **and reported our fuel and souls on board so ATC could pass it along.** **We were** instructed to contact the nearest airport, Fenwick Airport; the airport instructed us to land as soon as **we made** contact, and they **had** emergency equipment prepared at the airport.
-- 코멘트 : **문법 수정**: "have abnormal pressure on passenger"→"had abnormal cabin pressure"(승객 개인이 아니라 객실 압력이므로 "on passenger" 삭제), "ask atc"→"asked ATC"(시제), "atc instruct"→"ATC instructed... to descend"(시제·전치사), 그 외 시제 통일. **내용 보충**: 실제 Task B 교신 5줄 중 하나인 **fuel/SOB 보고 단계**가 요약에서 완전히 빠져 있어서 최소한으로 추가함. 사건의 큰 흐름(여압 상실 → 비상강하 → 안정화 → 연료 우려로 회항 → 착륙) 자체는 정확히 전달됨.
+### 최종 등급 : **Level 3 (불합격)** — EPTA_01 Level 2 → **+1**
 
----
-
-**P2C-Q2** ⚠️
-문제 : (P2C-Q1과 동일한 ATC 교신 내용에 대한 질문)
-How do you think the incident was handled by the air traffic controller? Do you feel the situation could have been handled differently? Make a comment from a pilot's point of view.
-내 답안 : Although i have few experience about similar issue about this , i think this handling was wonderful , first the pilot let them know their situation rightly and the atc instruct them better ways to solve the issue , and also the pilot think about the small cautious about fuel so ask to land nearest airport is the best choice which the pilots choice. so i think it is excellent ways what they did
-** 교정 답안 (원문 최대한 유지, 문법만 수정) : Although I have **little experience** about a similar issue, I think this handling was wonderful. First, the pilot let them know their situation properly and ATC **instructed** them **on** better ways to solve the issue. Also, the pilot **thought** about the small **caution** about fuel, so asking to land at the nearest airport **was** the best choice — **that was** the pilot's choice. So I think it **was** an excellent way **to handle** what they did.
-- 코멘트 : **문법 수정**: "few experience"→"little experience"(가산/불가산명사 구분), "the pilot **think**"→"**thought**"(시제/주어-동사 일치), "small **cautious**"→"small **caution**"(형용사→명사 품사 오류), "which the pilots choice"→"that was the pilot's choice"(불완전한 문장 성분 정리), "it is excellent ways what they did"→"it was an excellent way to handle what they did"(구문 정리). **내용**: 질문의 두 번째 절반("could have been handled differently?")에 대한 의견은 여전히 명확히 빠져 있음 — 관제사 대응을 칭찬하는 내용만 있고 "다르게 할 수 있었는지"에 대한 직접적 답이 없음. 다만 답변 자체는 끝까지 완성함(EPTA_01보다 개선).
-
----
-
-## ICAO 6개 항목 등급 (Level 1~6, 합격선 Level 4)
-
-| 항목 | 등급 | 근거 |
-|---|---|---|
-| Pronunciation | **평가 보류** | 텍스트로 발음을 판단할 근거가 없음. 등급 계산에서 제외. |
-| Structure | **Level 4** | readback 문항은 구조가 전반적으로 안정적. 자유응답(P2A-Q10, P2C-Q2)에서 "would rather to go", "the pilot think", "small cautious" 같은 문법 오류가 남아있지만 의미 전달에는 지장이 없는 수준. |
-| Vocabulary | **Level 4** | AFFIRM/MAYDAY/SOB/REQUEST+명사 등 표준 어휘를 대부분 정확히 사용. "request to the nearest airport"처럼 REQUEST 뒤 전치사 오용이 1건, "we are emergency now" 품사 오류 1건 있으나 전반적으로 정확도가 크게 상승함. |
-| Fluency | **Level 4** | 문장이 끊기거나 미완성으로 끝난 경우가 없음(EPTA_01 대비 개선). 다만 P2A-Q10·P2C-Q2에 콤마로 계속 이어붙이는 run-on 경향은 남아있음. |
-| Comprehension | **Level 4** | 대부분의 지시를 정확히 이해하고 반응함. 다만 P2A-Q1(잘못된 기관 호출), P2B-Q8(새 위치·의도 없이 이전 정보 반복), P2C-Q1(fuel/SOB 단계 누락)은 여전히 지시 내용을 완전히 소화하지 못한 사례로 남아있어 Level 5로는 못 올라감. |
-| Interactions | **Level 4** | intentions 진술(P2B-Q4), AFFIRM 응답(P2A-Q6), fuel/SOB 보고(P2B-Q6) 등 이번에 의도적으로 다시 넣은 문항들에서 상호작용을 정확히 수행함. P2C-Q2가 질문의 절반만 다룬 점, P2B-Q8에서 관제사가 요구한 새 정보를 안 준 점이 감점 요인. |
-
-**최종 등급 = Level 4** (평가 보류인 Pronunciation을 제외한 5개 항목 모두 Level 4). **합격선 통과**입니다.
-EPTA_01(Level 2)에서 큰 폭으로 향상됐습니다 — 특히 지난 세트에서 지적된 약점 중 SOB 단위,
-intentions 진술, Clarifying 기능, 스쿼크 정정 방향은 **이번 세트에서 전부 정확히 고쳐졌습니다.**
-(※ P2A-Q3·P2B-Q1의 "ROGER" 사용은 최초 채점에서 과도하게 엄격히 봤던 것으로, 실제 샘플 관례상
-문제없어 정정했습니다 — 자세한 내용은 각 문항 참고.) "새 위치/의도 없이 이전 정보를 반복하는
-패턴"과 "unable 뒤에 대안을 안 붙이는 습관"은 아직 남아 있어 Level 5로 올라가려면 이 부분들을
-더 다듬어야 합니다.
+6개 항목 중 최저값입니다. 합격선 Level 4 까지 **1단계** 남았습니다.
+2세트 연속으로 한 단계씩 올랐고(1 → 2 → 3), 이번에는 **Interactions 가 최저값에서 벗어나
+여섯 항목이 모두 Level 3 으로 평평해졌습니다.** 특정 항목이 끌어내리는 단계는 지났습니다.
 
 ---
 
 ## 태스크별 총평
 
-**Part Ⅰ Task A** : 4문항 전부 ✅. 특히 5요소 긴 지시(P1A-Q3)를 하나도 안 빠뜨렸다는 점에서
-readback 능력은 이미 안정적이다. "turn left heading" 어순만 정확히 고치면 완벽하다.
+**Part Ⅰ Task A** — 네 문항 중 둘이 완전하고(Q1·Q2), Q3 는 기관명만, Q4 는 고도값만 틀렸습니다. 특히 **주파수를 세 번 다 맞춘 것**(127.85 / 121.9 / 126.4)이 눈에 띕니다 — EPTA_01 에서 두 번 연속 틀리던 항목입니다. `clear`/`cleared` 도 Q2 에서는 맞게 썼습니다. 남은 문제는 **고도 자릿수**입니다. Q4 의 4,000 → 14000 과 P2A-Q9 의 2,500ft → FL250 은 같은 뿌리입니다.
 
-**Part Ⅰ Task B** : 6개 기능 중 4개(Acknowledging, Informing, Correcting mistake, Requesting,
-Clarifying — 5개나 됨)가 정확히 수행됐다. **EPTA_01에서 지적됐던 Informing 미완성 문장, Clarifying
-기능 오수행, Correcting mistake 방향 오류가 전부 이번에 고쳐졌다.** 유일하게 남은 문제는
-Unable+reason(P1B-Q3)에서 대안 요청을 빠뜨리는 것 — 두 세트 연속으로 반복되는 패턴이라 다음
-세트에서도 계속 짚어야 한다.
+**Part Ⅰ Task B** — Q1 이 이 파트의 성과입니다. 복창 세 요소와 현재고도 보고를 모두 해냈습니다. Q3 에서 **`Negative` 로 시작한 것**도 2세트 연속 실패하던 항목이라 중요한 진전입니다 — 다만 그 뒤에 실제 값 270 을 넣지 않아 "290 이 아니다"에서 멈췄습니다. Q4 는 지시문을 정반대로 수행했고, Q5 는 정정 없이 값만 말했습니다. **지시문이 요구하는 "기능"을 한 번 더 읽는 습관**이 필요합니다.
 
-**Part Ⅱ Task A** : 대부분의 readback과 상황 대응이 정확했다. Delivery에 처음 컨택할 때 기관명을
-"ground"로 잘못 부른 것(P2A-Q1)이 유일하게 눈에 띄는 오류다. Follow-up 답변은 실제 롤플레이
-내용과 다르게 기억을 재구성한 부분이 있어 사실관계를 다시 점검할 필요가 있다.
+**Part Ⅱ Task A** — 열 턴 중 다섯이 완전합니다(Q1·Q4·Q5·Q7·Q10). 기관 호출이 필요한 세 턴 중 둘을 해냈고, 복합 지시도 둘을 온전히 수행했습니다. 실패한 둘은 성격이 다릅니다 — Q6 는 **지시문이 "물어보라"고 명시했는데 묻지 않고 `roger` 로 수락**했고, Q9 는 **고도를 FL 로 잘못 올려** 썼습니다. Q6 는 안전 판단의 문제이고(활주거리 확인 없이 교차점 출발 수락), Q9 는 받아적기의 문제입니다.
 
-**Part Ⅱ Task B** : **이 세트의 핵심 목표였던 intentions 진술(P2B-Q4)과 fuel/SOB 보고(P2B-Q6)가
-둘 다 정확했다.** Mayday 선언(P2B-Q2)도 표준적이고 강력했다. 다만 Fenwick Tower에 처음 컨택할
-때(P2B-Q8) 새로운 위치·의도 정보 없이 이전 클리어런스를 반복한 것은 EPTA_01의 position-report
-약점이 아직 완전히 해결되지 않았음을 보여준다.
+**Part Ⅱ Task B** — Q8 이 이 세트 전체의 최고점입니다. 선회방향·기수·고도·established·**접근 허가**·주파수 여섯 요소를 전부 복창했습니다. 접근 허가와 주파수는 EPTA_01 에서 반복해 틀리던 바로 그 항목입니다. 반면 Q4 는 최저점입니다 — 복창도 intentions 도 없이 `roger, request landing` 으로 끝냈습니다. **상황이 복잡해지는 구간(Q3~Q6)에서 기관 호출이 빠지고 응답이 얕아지는** 양상은 EPTA_01 과 같습니다.
 
-**Part Ⅱ Task C** : Q1은 전체 흐름은 맞게 짚었지만 fuel/SOB 단계가 요약에서 빠졌다. Q2는
-**문장을 끝까지 완성했다는 점에서 EPTA_01보다 나아졌지만**, 질문의 "다르게 처리할 수 있었는지"
-부분에는 답하지 않았고 문법 오류(주어-동사 불일치, 품사 오류)가 여러 곳에서 나타난다.
+**Part Ⅱ Task C** — 두 문항 모두 분량을 확보했고 사건의 원인(속도계 불일치)을 짚었습니다. 그러나 **Q1 은 ILS→RNAV 변경이 통째로 빠졌고 원인·결과 순서가 뒤집혔으며, Q2 는 speed 를 height 로 잘못 기억했습니다.** Task B 를 풀면서 **ATC 대사와 전개 순서를 메모**하지 않으면 90초를 채워도 내용이 어긋납니다. 그리고 Q2 의 `could have been handled differently` 는 **3세트 연속** 답하지 않았습니다.
 
 ---
 
 ## 다음 학습 과제
 
-**반복되는 약점 3개**
-1. **Unable + reason 뒤에 대안(request)을 안 붙이는 습관** — 두 세트 연속 반복(EPTA_01 P1B-Q3,
-   EPTA_02 P1B-Q3). "unable due to ~"까지만 말하고 끝내지 말 것.
-2. **새 기관에 처음 컨택하거나 상황이 바뀌었을 때, 새로운 정보(위치/의도) 없이 이전 내용을
-   반복하는 패턴** (EPTA_02 P2B-Q8, EPTA_01의 position-report 약점과 같은 계열).
-3. **turn 지시의 어순 도치** — "left turn heading X"가 아니라 "**turn left** heading X" 순서로
-   말해야 함(P1A-Q3). 내용은 정확했지만 어순이 표준과 다름.
+### 반복되는 약점 3개
 
-**외워야 할 표현 5개**
-1. "unable [지시] due to [정확한 사유], request [대안]" — 3단 구조를 끝까지 완성하기.
-2. "Mayday, Mayday, Mayday" — 조난 선언은 세 번 반복하는 것이 국제 표준(정확히 잘 쓴 표현이니 계속 유지).
-3. REQUEST는 항상 명사(구)와 결합 — "request **to** the airport"(x) → "request **diversion to** the airport" 또는 "request **the nearest suitable airport**"(o).
-4. "we have an emergency" / "we are declaring an emergency" (o) vs "we are emergency"(x) — emergency는 명사.
-5. 새 관제사·새 상황에 처음 보고할 땐 **이전 정보 반복 대신 현재 위치·의도를 새로 말하기.**
+1. **고도 자릿수 — 피트와 FL 을 섞는다 (신규, 최우선)** — `2,500 feet` → `FL250`(만 피트 이상 차이), `maintain 4,000` → `14000`. 둘 다 안전과 직결되는 값입니다. **네 자리 피트는 `2500`, FL 은 `FL250` 으로 모양을 다르게 적으세요.** P2B-Q1 에서는 `fl200` 을 정확히 썼으므로 구분을 모르는 것이 아니라 받아적는 방식이 없는 것입니다.
 
----
+2. **NEGATIVE 뒤에 실제 값을 넣지 않는다 (진전 중)** — `Negative maintain speed 290`(실제 270). 첫 단어를 고친 것은 큰 성과이지만, **NEGATIVE 다음은 반드시 "그럼 실제로는 무엇인가"** 입니다. 화면 클루에 값이 떠 있었습니다. `Negative, maintaining 270 knots due to buffet margin` 한 문장을 통째로 외우세요.
 
-## 로그 갱신 완료
-`progress/log.md`에 이번 채점 결과를 반영했습니다.
+3. **지시문이 "물어보라"고 할 때 묻지 않는다 (3세트 연속)** — P2A-Q6 `Tell him what you need to know`, P1B-Q4 `a request with a reason`, P2B-Q5 `Request what you need instead`, P2A-Q8 `advise that you are ready`. 복합 지시 수행이 네 건으로 늘었지만 여섯 건은 여전히 뒷부분이 비었습니다. **말하기 전에 지시문의 `and`/`then` 뒤를 손으로 짚고, 말한 뒤 지우세요.**
+
+### 외워야 할 표현 5개
+
+| 영어 | 뜻 | 쓰는 상황 |
+|---|---|---|
+| `Negative, maintaining 270 knots due to buffet margin.` | 아닙니다, buffet margin 때문에 270노트 유지 중입니다 | `confirm ~?` — **NEGATIVE + 실제 값 + 사유**. 값이 빠지면 절반만 전달된다 |
+| `Climbing through 2,500 feet.` | 2,500피트 통과 상승 중 | 네 자리 피트는 `feet` 를 붙여 말한다. `FL250` 과 혼동하면 만 피트가 어긋난다 |
+| `Before I can accept — request the runway distance available from Foxtrot.` | 수락 전에 Foxtrot 잔여 활주거리를 요청합니다 | 교차점 출발 제안을 받았을 때. **수락 전에 확인**하는 것이 절차 |
+| `Unable 250 knots — our airspeed indications are unreliable.` | 250노트 불가 — 속도계를 신뢰할 수 없습니다 | 사유는 그 사건에 맞게. `due to performance` 는 다른 뜻이 된다 |
+| `One thing that could have been handled differently is …` | 다르게 처리할 수 있었던 한 가지는 … | Task C Q2 후반부. **3세트 연속 비운 부분** — 이 틀로 한 문장만 붙이면 된다 |

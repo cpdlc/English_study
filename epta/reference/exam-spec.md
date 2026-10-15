@@ -1,527 +1,627 @@
-# EPTA 항공영어구술능력시험(조종사용) 시험 스펙
+# EPTA 시험 스펙 — 실제 출제 음성 4세트 분석 기반
 
-출처: `세트샘플.pdf` (한국교통안전공단 공식 샘플세트 Ⅰ·Ⅱ·Ⅲ, 전 37페이지 전체 확인 완료)
+## 0. 출처와 신뢰도
 
-이 문서는 매 세트를 만들 때 참조하는 **형식 기준 자료**다. 시나리오 내용(문항 예시)은
-`used-scenarios.md`에 별도로 기록하며, 여기서는 구조·평가항목·템플릿·표현목록만 다룬다.
-**관제용어(어휘·표현) 자체의 상세 기준은 `reference/atc-terminology.md`를 따로 참고한다**
-(관제용어정리.pdf 기반, 이 문서보다 더 포괄적).
+이 문서는 **실제 EPTA 출제 음성 4세트를 녹음해 자동 음성인식(ASR)으로 받아쓴 자막 4개**
+(`reference/transcripts/test01~04.txt`)를 전수 대조해 다시 쓴 것이다.
+
+| 자막 | 정체 | 소재 |
+|---|---|---|
+| test01 | 공식 샘플세트 **Ⅰ** 의 실제 음성 | Smith Airport / Public Airport |
+| test02 | 공식 샘플세트 **Ⅱ** 의 실제 음성 | Paramount Airport / TCAS |
+| test03 | 공식 샘플세트 **Ⅲ** 의 실제 음성 | DVETO·ASALT 접근 / yaw 조종 곤란 |
+| test04 | **`세트샘플.pdf` 에 없는 신규 세트** | Incheon·Seoul Radio / 낙뢰 피격 |
+
+**신뢰 순위** : 실제 음성 자막 > `세트샘플.pdf` > 추론. PDF 와 음성이 다르면 **음성을 따른다**
+(차이 목록은 §9).
+
+### 0-1. ASR 한계 — 이것만은 믿지 말 것
+
+- **고유명사 철자** : `Frizzo`=FRISO, `Happy`=HAPIE, `Doosan`=DOOSAN, `DeVito` 및
+  `Delta Victo Echo Tango Oscar`=DVETO, `golf stream`=Gulfstream, `soles`=souls,
+  `OSCA`=Oscar, `Hulk 3`·`Thames`·`Robinson`·`Cosmo` 는 철자 미확인
+- **숫자 일부** : test01 Ⅰ-B Q2 는 음성상 `flight level 220`, PDF 는 FL290. test01 Ⅱ-B 의
+  `ceiling 3000` 은 같은 세트 Task C 에서 `ceiling 300` 으로 나옴 → **300 이 맞다**
+- **문장 중복·탈락** : test01 94~101행, test03 48~50행, test04 48·50~53행은 ASR 오류로 같은
+  문장이 반복되거나 깨졌다. 그 구간은 복원 불가로 처리
+- **응답시간은 자막 타임코드로 판단하지 말 것** → §10
 
 ---
 
-## 0. 전체 구성 요약
+## 1. 전체 구성 — 4세트 대조표
 
-| 파트 | 태스크 | 문항/턴 수 | 응답시간 | 진행 |
+| | test01 | test02 | test03 | test04 |
 |---|---|---|---|---|
-| Part Ⅰ | A. Readback and Hearback | 4문항 | 20초 | 관제사 지시 → 응답녹음 |
-| Part Ⅰ | B. Checking, Clarifying, Confirming, Informing | 6문항 | 20초 | 상황정보 제시 → 관제지시 → 응답녹음 |
-| Part Ⅱ | A. Role-play & Follow-up | 약 7~12회 롤플레이 + Follow-up 1~2문항 | 롤플레이 30초 / Follow-up 90초 | Initial Situation → 턴 진행 → Situation Update (2~3회) → Follow-up |
-| Part Ⅱ | B. Extended Role-play (단일 사건) | 약 7~12회 롤플레이 | 30초 | Initial Situation → continued → Situation Update → continued |
-| Part Ⅱ | C. Reporting about Task B | 2문항 | 90초 | Task B의 ATC 교신 재생 → 질문 → 응답 |
+| Ⅰ-A 문항수 | 4 | 4 | 4 | 4 |
+| Ⅰ-B 문항수 | 6 | 6 | 6 | 6 |
+| Ⅱ-A 턴수 | 12 | 8 | 10 | 8 |
+| Ⅱ-A Flight Paths | 3단계 | **2단계** | 3단계 | **박스 없음** |
+| Ⅱ-A Situation Update | 3회 | 3회 | 2회 | 1회 |
+| Ⅱ-A 비상 발생 | 없음 | **있음(비상선포)** | 없음 | 없음 |
+| Ⅱ-A Follow-up | 1문항 2부 | 1문항 2부 | 1문항 3부 | 1문항 3부 |
+| Ⅱ-B 턴수 | 7 | 7 | 9 | 9 |
+| Ⅱ-B MAYDAY 선포 | 없음 | 없음 | **있음** | 없음 |
+| Ⅱ-B fuel/SOB | 없음 | 없음 | **있음** | 없음 |
+| Ⅱ-B ATC 대사수 | 5 | 5 | 7 | 8 |
+| Ⅱ-C 문항수 | 2 | 2 | 2 | 2 |
 
-응시자 콜사인은 항상 **HL123**. 모든 태스크에서 "Say again (=Repeat)"는 문항당 1회만 가능.
-메모(노트필기)는 허용된다.
+**고정된 것** — Ⅰ-A 4문항 · Ⅰ-B 6문항 · Ⅱ-C 2문항 · Ⅱ-C 질문 문구 · 태스크 진입 멘트 ·
+문항 말미 지시문(`Record your full readback.` / `Record your response.`)
+
+**변하는 것** — Ⅱ-A·Ⅱ-B 턴수(7~12), Flight Paths 단계수와 유무, Situation Update 횟수,
+Task A 비상 유무, Task B 의 MAYDAY·fuel/SOB 유무
+
+**태스크 진입 멘트(고정)** — `Task A. Read the directions on the screen to proceed.` /
+`Part 1 Task B. Read the directions on the screen to proceed.` / 이하 Part 2 Task A·B·C 동일.
+문항 시작 전 번호를 읽는다 — test01·02·04 는 `1. 2. 3. 4.`, test03 은 `One. Two. Three. Four.`
 
 ---
 
-## 1. Part Ⅰ Task A. Readback and Hearback
+## 2. Part Ⅰ Task A — Readback and Hearback
 
-### 1-1. Directions (고정 문구, 세트마다 동일하게 유지)
-> You will be listening to 4 ATC instructions. Your callsign will be HL123. Listen carefully
-> and make a correct readback for each of them. "Say again (=Repeat)" available once
-> only. You may take notes while listening.
-> \* Correct / Full readback : necessary for standard operating procedures
-> \* Response time for each question : 20 seconds or less
+문항 끝 지시문은 전 세트 예외 없이 **`Record your full readback.`**
 
-### 1-2. 시험[응답] 요령 표 (고정)
-| 항목 | 내용 |
+### 2-1. 4세트 16문항 원문
+
+**test01**
+1. `Hotel Lima 123, cleared direct ATLAS.`
+2. `Hotel Lima 123, stop climb at flight level 260 due to traffic.`
+3. `Hotel Lima 123, caution wake turbulence, runway 32, cleared for takeoff.`
+4. `Hotel Lima 123, start up and pushback approved, long pushback, tail east, until abeam gate 34.`
+
+**test02**
+1. `Hotel Lima 123, start up and pushback approved, pushback tail east.`
+2. `Hotel Lima 123, backtrack approved, backtrack runway 16, vacate via Delta 2.`
+3. `Hotel Lima 123, runway change in progress to runway 35, continue approach and circle left, circle north for runway 35.`
+4. `Hotel Lima 123, climb to flight level 310 on current heading and reduce speed 20 knots when level.`
+
+**test03**
+1. `Hotel Lima 123, taxi to runway 34L via Bravo, Tango, Charlie, hold short of runway 34L.`
+2. `Hotel Lima 123, climb and maintain flight level 350, expedite climb until passing flight level 280.`
+3. `Hotel Lima 123, winds 220 at 10, cleared for takeoff runway 24.`
+4. `Hotel Lima 123, good morning, cleared to Robinson, HULK THREE departure, JULIA transition, flight level 380, departure runway 24, squawk 3675.`
+
+**test04**
+1. `Hotel Lima 123, descend and maintain flight level 160, report reaching.`
+2. `Hotel Lima 123, Tower, after departure fly heading 260, maintain 6,000 feet, cleared for takeoff runway 22.`
+3. `Hotel Lima 123, Tower, hold for another 3 minutes due to wake turbulence.`
+4. `Hotel Lima 123, Departure, continue on THAMES TWO THREE departure, after reaching THAMES proceed on course.`
+
+### 2-2. 추출된 패턴
+
+**비행단계 분포 — "4단계 각 1개"는 사실이 아니다**
+
+| | Q1 | Q2 | Q3 | Q4 |
+|---|---|---|---|---|
+| test01 | 순항 | 상승 | 이륙 | 지상 |
+| test02 | 지상 | 지상 | 접근 | 상승 |
+| test03 | 지상 | 상승 | 이륙 | 클리어런스 |
+| test04 | 강하 | 이륙 | 지상 | 출발 |
+
+지상이 2개(test02), 순항·상승이 2개(test01)인 세트가 실제로 있다. **"서로 다른 4단계"를
+강제하지 말고 지상·공중을 섞되 같은 단계 중복도 허용**한다.
+
+**요소 수** — 5요소 이상 긴 클리어런스는 **4세트 중 test03-Q4 하나뿐**. 나머지는 2~4요소.
+→ `매 세트 5요소 이상 1문항`은 과도한 규칙. **2세트에 1회** 정도로 완화.
+
+**복창 불필요 정보가 섞인 문항** — test03-Q3 `winds 220 at 10`, test01-Q3 `caution wake
+turbulence`, test01-Q2 `due to traffic`, test04-Q3 `due to wake turbulence`.
+**4세트 모두 1문항 이상 포함** → 매 세트 필수로 유지.
+
+**조건부·시점 지정 지시** — `expedite climb until passing FL280`(test03),
+`reduce speed 20 knots when level`(test02), `after departure fly heading 260`(test04),
+`after reaching THAMES proceed on course`(test04). **세트당 1~2문항.**
+
+**부가 보고 요청** — test04-Q1 `report reaching` (복창 + 향후 보고 약속).
+
+**비표준에 가까운 실무 표현도 그대로 나온다** — `stop climb at FL260`(test01),
+`backtrack approved`(test02), `runway change in progress`(test02),
+`hold for another 3 minutes`(test04).
+
+**관제기관명을 지시 안에 넣는 세트가 있다** — test04 는 Q2·Q3 에 `Tower`, Q4 에 `Departure`
+를 콜사인 직후에 붙인다. 다른 3세트는 안 붙인다. 세트별 스타일 차이로 둘 다 허용.
+
+### 2-2-1. ★ 실측 분량 — 출제 시 반드시 맞출 것
+
+16문항의 콜사인을 뺀 단어 수를 세어본 결과다.
+
+| 세트 | Q1 | Q2 | Q3 | Q4 | 최단 | 최장 |
+|---|---|---|---|---|---|---|
+| test01 | 3 | 9 | 8 | 13 | **3** | 13 |
+| test02 | 8 | 9 | 17 | 15 | **8** | 17 |
+| test03 | 13 | 13 | 9 | **18** | 9 | **18** |
+| test04 | 8 | 14 | 10 | 13 | **8** | 14 |
+
+**전체 범위 3~18단어, 평균 11.2, 중간값 13.** 18단어를 넘는 문항은 하나도 없다.
+
+- **상한 18단어.** 넘기면 20초 안에 복창이 불가능해진다.
+- **매 세트 10단어 이하 1문항** — 네 세트 모두 최단이 3·8·9·8단어다. 쉬운 문항으로
+  호흡을 잡아주는 구조이므로, 이게 없으면 실제보다 어려운 세트가 된다.
+- 4문항 **평균 11~13단어**.
+- 긴 클리어런스도 **요소 5~6개 / 18단어 이내**(최장 사례 test03-Q4 = 18단어·6요소).
+
+Part Ⅱ 는 기준이 다르다 — 구어체 때문에 실제도 30단어대까지 가지만, 응답시간 30초를
+감안해 **40단어를 넘기지 않는다**.
+
+### 2-3. 출제 규칙 (개정)
+
+- 4문항, 각각 `Record your full readback.`
+- 지상 1~2 / 이륙·출발 1 / 상승·강하·순항 1~2 / 접근·착륙 0~1 범위에서 배치, 중복 허용
+- **매 세트 1문항 이상** : 복창 불필요 정보(바람 · wake turbulence · `due to ~`)가 섞인 문항
+- **매 세트 1~2문항** : 조건부·시점 지정(`until passing ~`, `when level`, `after ~`)
+- **2세트에 1회** : 5요소 이상 긴 클리어런스(목적지·SID·transition·FL·활주로·squawk)
+- **가끔** : `report reaching` 처럼 복창 + 향후 보고 약속을 함께 요구하는 부가 요청
+
+---
+
+## 3. Part Ⅰ Task B — Checking, Clarifying, Confirming, Informing
+
+문항 끝 지시문은 전 세트 예외 없이 **`Record your response.`**
+
+### 3-1. ★ 가장 큰 발견 — ATC 대사가 없는 문항이 있다
+
+기존 스펙은 `① 상황설명 → ② ATC 한 줄 → ③ 응답` 3단 고정이었다. **틀렸다.**
+
+- **test04-Q2** — 상황설명만 주고 `Contact approach. Make a confirmation and clarify your
+  intention.` ATC 대사 없음, 조종사가 먼저 발신
+- **test04-Q5** — 상황설명만 주고 `Contact controller. Report your status and make a
+  request.` ATC 대사 없음
+
+Task B 문항은 **두 형태**가 있다.
+- **(가) 응답형** — 상황설명 → ATC 대사 → 응답 (대다수)
+- **(나) 발신형** — 상황설명 → (ATC 대사 없음) → 조종사가 먼저 호출
+
+출제 시 **6문항 중 0~2문항을 발신형**으로 둔다.
+
+### 3-2. 4세트 24문항 전수 기능 분류
+
+| 기능 | 해당 문항 | 합 |
+|---|---|---|
+| **Unable + reason (+대안)** | 01-Q4, 01-Q6, 02-Q3, 02-Q5, 03-Q5, 03-Q6, 04-Q1, 04-Q3 | **8** |
+| Requesting | 02-Q4, 02-Q6, 03-Q4, 04-Q4 | 4 |
+| Acknowledging / Readback | 02-Q1, 02-Q2, 03-Q1, 03-Q2 | 4 |
+| Informing (상태·기상 보고) | 01-Q1, 01-Q3, 04-Q5 | 3 |
+| Correcting own mistake | 01-Q5, 03-Q3 | 2 |
+| Clarifying (confirm · say again) | 04-Q2, 04-Q6 | 2 |
+
+**Unable 계열이 전체의 1/3(8/24), 세트당 평균 2문항.** 기존 규칙은 6기능을 "골고루"라고만
+했는데 실제 분포는 Unable 쪽으로 확실히 치우쳐 있다 → **세트당 Unable+reason 2문항**을
+기본값으로 삼는다.
+
+### 3-3. ★ `Confirm maintaining ~?` 패턴 — 거의 매 세트 출제
+
+| 세트 | ATC 대사 | 함정 |
+|---|---|---|
+| test01-Q5 | `Confirm maintaining 10 degrees to the right of your route.` | 실제로는 좌로 틀었다 → **NEGATIVE + 정정** |
+| test03-Q3 | `Confirm maintaining heading 090.` | 다른 heading 으로 틀었다 → **NEGATIVE + 정정** |
+| test03-Q6 | `Confirm maintaining 300 knots.` | 300kt 에서 난기류 → **AFFIRM/NEGATIVE + unable + 대안** |
+
+4세트 중 3세트, 총 3문항. **매 세트 1문항은 이 패턴으로 낸다.**
+핵심 — `confirm` 질문에 `yes/no` 가 아니라 **AFFIRM / NEGATIVE** 로 답하고, NEGATIVE 면
+반드시 **실제 상태 + 정정 조치 또는 대안**을 붙인다.
+
+### 3-4. 4세트 24문항 상황 소재
+
+**test01** ① 이륙활주 중 조류 활동 목격 → 이륙 후 보고(ATC `Go ahead.`) ② FL310 Mach 0.81,
+FIR 경계 접근 → `descend FL220, contact Tokyo on 121.65, report speed` ③ FL210 순항 중
+moderate turbulence 3분·200ft 고도변화 → ATC `Request flight condition.` ④ 성능상 교차제한
+불가 → ATC 가 먼저 `If unable, maintain FL130 until Johnson VOR` 대안 제시 ⑤ 10도 우선회를
+좌선회로 오인 → `Confirm maintaining 10 degrees to the right` ⑥ FRISO 0100Z 통과 지시,
+최대속도로도 0103Z → `Cross FRISO at or before 0100Z.`
+
+**test02** ① 홀딩 지시 `Hold over DOOSAN VOR as published, expect further clearance at 20.`
+② 택싱 중 ground 가 delivery 메시지 중계 `Your SID has been changed to HIPPO ONE departure,
+rest of the clearance unchanged.` ③ 저시정 절차, RWY09 택싱 중 **적색 정지등이 계속 켜져 있음**
+→ ATC `Taxi to the holding point runway 09, follow the green light.` ④ direct 지시받은 SYT
+주변에 CB → `Proceed direct to Sierra Yankee Tango.` ⑤ 짙은 안개 착륙 후 유도로 유도등이 안
+보여 활주로에 정지 → `Vacate right at the next available taxiway.` ⑥ 20마일 우편차 중 10마일
+추가 필요 → ATC `Say your request.`
+
+**test03** ① 상승 중 주파수 변경 fix 접근 → `When passing FL150, contact Smith Control on
+129.1.` ② 이륙 후 departure 컨택 → `Follow JFK ONE departure, climb via SID.` ③ heading 090
+지시를 다른 heading 으로 잘못 선회 → `Confirm maintaining heading 090.` ④ final approach
+course 상에서 성능상 20kt 감속 필요 → `Maintain 210 knots until established on the final.`
+⑤ RWY19 line up + 이륙허가, 그런데 **다른 항공기가 이륙 활주로를 횡단 중** →
+`Cleared for takeoff runway one niner.` ⑥ 300kt 유지 지시받았으나 300kt 에서 난기류 →
+`Confirm maintaining 300 knots.`
+
+**test04** ① FL290 순항, 성능상 1시간 후 FL310 가능 → `Can you accept FL310 as final? If
+unable now, when can you accept FL310?` ② CB 로 좌선회 heading 060 요청·승인, 부기장은 ATC 가
+우선회를 말한 것 같다고 함 → **ATC 대사 없음**, `Make a confirmation and clarify your
+intention.` ③ FL370 상승 + Mach .80 증속 지시, 성능상 Mach .78 유지 희망 → `Continue climb
+to FL370 and increase speed to Mach .80 for sequence.` ④ 저시정 ILS RWY34L 접근 중 localizer
+신호 과도 흔들림 → `Tower, cleared to land runway 34L.` ⑤ FL380 severe turbulence, 저고도
+난기류 PIREP 원함 → **ATC 대사 없음**, `Report your status and make a request.`
+⑥ Seoul Radio 기상정보 수신 중 **전송 끊김** → `Seoul Radio, Incheon Airport weather
+information, wind 300 at 5 knots, visibility 5 kilometres with haze, clouds...` (끊김)
+
+### 3-5. 지시문 고정구 사전 (Task B)
+
+ASR 원문 그대로. 출제 시 이 문구들을 돌려 쓴다.
+
+```
+Now ATC contacts you. Respond accordingly.
+Acknowledge and respond accordingly.
+Acknowledge and say your intentions accordingly.
+Say your intentions.
+Say your request to ATC.          /  Now make a request to ATC.
+Make a report after airborne to ATC.
+Respond accordingly with a reason.
+Contact approach. Make a confirmation and clarify your intention.
+Contact controller. Report your status and make a request.
+Listen to the controller, make a readback, and a request with a reason.
+Listen to the controller. Explain your situation and request to go around for stable approach.
+Listen to the transmission, and make a request with a reason.
+```
+
+★ **test04 의 지시문은 2~3개 기능을 한 번에 요구한다** — `make a readback, and a request with
+a reason` / `Report your status and make a request` / `Explain your situation and request to
+go around`. **6문항 중 2문항 이상을 이런 복합 지시**로 낸다.
+
+### 3-6. 출제 규칙 (개정)
+
+- 6문항, 각각 `Record your response.`
+- 기능 배분 기본값 — **Unable+reason 2 / Requesting 1 / Informing 1 / Clarifying 1 /
+  Correcting 또는 Acknowledging 1**
+- **매 세트 1문항** — `Confirm maintaining ~?` 함정형
+- **0~2문항** — ATC 대사 없는 발신형
+- **2문항 이상** — 복합 지시(2개 기능 동시 요구)
+- 텍스트 클루(`🖥`)는 화면 요소라 음성 자막에 안 나타난다 — PDF 기준대로 1~2문항에 유지
+
+---
+
+## 4. Part Ⅱ Task A — Role-play & Follow-up
+
+### 4-1. Flight Paths 박스 — 3단계 고정이 아니다
+
+| 세트 | 단계 |
 |---|---|
-| 구성 | 4문항 / 문항 별 응대시간 : 20초 |
-| 평가요소 | 기본적인 교신 능력 평가로 ATC의 지시사항에 맞게 표준교신용어로 readback |
-| 진행 | 관제사 지시 → 응답녹음 |
-| 평가항목 | 표준 교신속도/발음/억양의 사용 여부 · 필요한 정보의 효율적 전달 능력 평가 · 정확한 표준 교신용어의 사용 여부 · 관제 지시 후 교신 응대의 즉시성 여부 |
-| 유의사항 | 올바른 readback : 운항절차에 필요한 필수 사항을 모두 포함한 readback · 필수사항은 아니지만 지시사항을 전체 readback 해도 감점되지 않음 (언어평가 목적이므로, 너무 짧은 readback 시 발음/억양/속도 등을 표준에 맞게 하는 것이 평가자의 이해에 용이할 수 있음) |
+| test01 | `three flight stages. Clearance, Apron, and Taxi.` |
+| test02 | `two flight stages, en route and approach.` ← **2단계** |
+| test03 | `three flight stages. Approach, Landing, and Taxi.` |
+| test04 | **Flight Paths 박스 자체가 없다** — `Initial situation` 으로 바로 시작 |
 
-안내: 시험장 내 마련된 전자패드를 통해 메모 가능 / 문항당 1회의 Say again 기능 사용 가능
+고정 문구 : `In this scenario, you'll be the pilot flying Hotel Lima 123, which goes through
+[two/three] flight stages. [단계명 나열].`
 
-### 1-3. 문항 설계 원칙 (CLAUDE.md §3과 연동)
-- 4문항은 서로 다른 비행 단계에서: 지상(pushback/taxi/backtrack), 이륙(clearance/wake
-  turbulence), 상승·순항(FL 지정/speed/direct), 접근·착륙(runway change/circling).
-- 최소 1문항: readback 필수요소만 복창하고 부가정보(바람 등)는 빼야 하는 문제.
-- 최소 1문항: 요소 5개 이상의 긴 지시(SID/transition/squawk/FL 등).
+→ **2단계도 3단계도 가능하고, 아예 생략하는 세트도 있다.**
 
-### 1-4. 문항 템플릿
-```
-Part Ⅰ TASK A. Readback and Hearback
+### 4-2. ★ Task A 에 비상이 들어가는 세트가 있다
 
-✅ Directions : You will be listening to 4 ATC instructions. Your callsign will be HL123.
-Listen carefully and make a correct readback for each of them. "Say again (=Repeat)"
-available once only. You may take notes while listening.
-  * Correct / Full readback : necessary for standard operating procedures
-  * Response time for each question : 20 seconds or less
+**test02 Task A** — 강하 중 **스로틀 고착**(부기장과 함께 밀어도 안 움직임) → 현 고도 유지 +
+troubleshoot 시간 요청 → divert 요청 → `Do you need any assistance?` → Situation Update 에서
+**`You have declared an emergency and have been handed off to Paramount Approach Control.`**
+→ Paramount Approach 컨택, 고도 보고 → ILS 27R 요청 → **27R ILS 고장, 짧은 27L 만 가용** →
+`Say your intentions.`
 
-✅ 시험[응답] 요령
-(표는 위 1-2 그대로)
+기존 규칙 `비상 선포는 Task A 에 넣지 않는다` 는 **실제와 다르다.**
+→ **4세트 중 1세트는 Task A 에 비정상·비상을 넣는다.** 나머지 3세트는 경미한 변경 수준
+(게이트·디퓨얼링·윙팁 클리어런스 / 웨이포인트 확인·게이트 문의 / B747 이상 발견·PIREP).
 
-안 내 시험장 내 마련된 전자패드를 통해 메모 가능 / 문항당 1회의 Say again 기능 사용 가능
+### 4-3. 4세트 Task A 전개
 
-**P1A-Q1** 🎙 20초
-ATC : HL123, (지시문).
+**test01** (Clearance·Apron·Taxi, 12턴) Clearance Control 에 요청 → route revision 준비 →
+클리어런스 full readback(HAPIE·FL350·squawk 1766) → `hold for release` + 소요시간 문의 →
+Gate Alpha 89 pushback 요청 → pushback 복창 → **연료 과다 → 디퓨얼링/소모 필요** → 소요시간
+답변 → 디퓨얼링 불가, 30분 홀드 → golf 홀드 숏에서 taxi 요청 → taxi 복창(RWY13L, cross 22R,
+Gulfstream 추종) → **Gulfstream 타이어 펑크, 우회 가능한지 질문** → 응답 + **assistance 요청**
 
-[정답]
+**test02** (en route·approach, 8턴) Center 복창 `descend to FL230` → **스로틀 고착** 상황 설명
++ 현 고도 유지·troubleshoot 시간 요청 → divert 요청 → `Do you need any assistance?` 정보 제공
+→ **비상 선포 후** Paramount Approach 컨택·고도 보고 → readback + ILS 27R 요청 →
+`Paramount altimeter 29.83` → **27R ILS 고장, 27L 만 가용** → intentions
 
+**test03** (Approach·Landing·Taxi, 10턴) Approach 컨택 + 통과고도 보고 →
+`Altimeter 3033, Quebec now current, watch your maximum forward speed` 복창 →
+**DVETO 를 차트에서 못 찾음 → 웨이포인트 확인 요청** → ATC 가 `the very first fix outside of
+ASALT, Delta Victor Echo Tango Oscar, nobody seems to find it` → 찾았다는 뜻 전달 + 복창 →
+`cleared for RNAV Visual 13R, contact tower 118.3` 복창 → **ASALT 상공 3,000ft** 에서 tower
+컨택·위치·의도 보고 → `winds 110 at 26 gust 35, cleared to land runway 13R` 복창 + **TCAS
+트래픽 문의** → taxiway Victor 로 이탈, Bravo 홀드 숏 → ground 에 현 위치 통보 →
+`What gate are you going to?` → **Gate B6** → `Any idea when you are going in?`
 
----
+**test04** (Flight Paths 없음, 8턴) delivery 에 ATC 클리어런스 요청 → apron pushback/start up
+승인 `facing north` → `runway 33L, taxi via Romeo, 207 then Alpha, follow Boeing 747 on your
+left` 복창 + **어느 항공기를 따라가야 하는지 문의** → 택싱 중 **앞의 B747 에서 이상 발견** →
+ground 에 상황 설명 → `Roger, thank you for your information. Revise taxi instruction, taxi
+via Bravo then Golf, you are number one.` 복창 → departure 최초 컨택 → `climb to FL270,
+reduce and maintain speed 210 knots until reaching 10,000 feet for spacing` → **negative +
+사유** → 10,000→13,000ft 통과 중 moderate turbulence → **PIREP 제공 + 경로상 PIREP 문의** →
+`previous aircraft offset 30 miles right to avoid weather. Say your intention?` → **앞 항공기와
+같은 요청**
 
-**P1A-Q2** 🎙 20초
-ATC : HL123, (지시문).
+### 4-4. ★ Follow-up 질문 — 2~3부 구성이 고정 패턴이다
 
-[정답]
-
-
----
-(Q3, Q4 동일 형식)
-```
-
----
-
-## 2. Part Ⅰ Task B. Checking, Clarifying, Confirming, Informing
-
-### 2-1. Directions (고정)
-> You will be listening to 6 audio clips, which consist of short situational prompts.
-> Respond to each of them using mainly Standard Phraseology if possible. If not, you may
-> use plain English to help clarify your response. "Say again (=Repeat)" available only
-> once. Your callsign is HL123. You may take notes while listening.
-> \* Response time for each question : 20 seconds or less
-
-### 2-2. 시험[응답] 요령 표 (고정)
-| 항목 | 내용 |
+| 세트 | 질문 |
 |---|---|
-| 구성 | 6문항 / 문항 별 응대시간 : 20초 |
-| 평가요소 | 기본적인 교신 능력 평가로 ATC의 지시사항에 맞게 표준교신용어로 readback |
-| 진행 | 상황정보 제시 → 관제지시 → 응답녹음 |
-| 평가항목 | Task B는 상황정보 이해력 및 해당 교신에 대한 적절한 응대력 평가 · 처음 들려지는 상황정보에 근거하여 이어지는 관제 지시에 적절히 응대 · 상황정보 및 ATC의 교신에 따라 플레인 영어 사용이 요구될 수 있음 · 표준 교신속도/발음/억양의 사용 여부 및 정보의 효율적 전달능력 평가 · 플레인 영어 사용 시 정확한 의미를 효율적으로 전달하였는지 평가 |
-| 유의사항 | 표준교신용어 : 요구되는 교신내용에 맞게 표준 교신용어를 사용하여 전달 · 상황정보(prompt) 음성에는 교신용어가 플레인 영어(발음)로 들려질 수 있음. 이에 대해 응시자는 필요 시 올바른 교신용어(발음)으로 응답해야 함 (예: 음성에서 "B6"를 "bi six"라고 발음하더라도, 응시자는 "bravo six" 응대해야 함) |
+| test01 | `You have just finished Task A as the pilot of Hotel Lima 123. In this situation, what problem did you discover while on the ramp and how did you resolve that problem?` |
+| test02 | `... In this situation, why did you request a specific approach from ATC? In your role as a pilot, how do you troubleshoot or try to solve a mechanical problem with the aircraft?` |
+| test03 | `... In this situation, why did you ask ATC for clarification about the waypoint during your approach? From your own experiences, how common is it for you to ask for this type of clarification? Give an example.` |
+| test04 | `Follow up question. In this situation, why did you give a PIREP to ATC? How can a PIREP benefit other aircraft? Give an example.` |
 
-### 2-3. 문항 구조
-각 문항 = ① 영어 상황설명(2~3문장) → ② ATC 한 줄 교신 → ③ 응시자 응답.
-6문항 안에 기능이 골고루 들어가야 함 (CLAUDE.md §3 Task B 기능 목록 참고):
-Acknowledging / Informing / Unable+reason / Correcting own mistake / Requesting / Clarifying.
-1~2문항은 🖥 텍스트 클루 제공.
+**고정 패턴 — ① 롤플레이에서 왜 그렇게 했는가 → ② 일반적으로/경험상 어떤가 → ③ `Give an
+example.`**
 
-### 2-4. 문항 템플릿
+- `In this situation, ...` 로 1부를 연다 (4세트 전부)
+- 2부는 `In your role as a pilot, ...` / `From your own experiences, ...` /
+  `How can ~ benefit ...` 처럼 **롤플레이 밖의 일반 지식·경험**으로 넘어간다
+- **`Give an example.` 가 4세트 중 2세트에 명시**된다 → 예시를 못 들면 Level 5~6 이 안 나온다
+- 전치구 `You have just finished Task A as the pilot of Hotel Lima 123.` 는 test01·02·03 에
+  있고 **test04 는 `Follow up question.` 만** — 필수가 아니다
+
+기존 규칙은 "경험·의견형 질문"만 요구했고 **2~3부 구성과 `Give an example.` 요구가 빠져
+있었다.** 앞으로는 반드시 3부 구조로 낸다.
+
+### 4-5. ★ ATC 대사에 비표준 구어체가 상당히 섞인다
+
+Comprehension 평가의 핵심이다. 기존에 만든 세트들은 ATC 대사가 너무 교과서적이었다.
+
 ```
-Part Ⅰ TASK B. Checking, Clarifying, Confirming, Informing
-
-✅ Directions : (위 2-1 그대로)
-
-✅ 시험[응답] 요령
-(표는 위 2-2 그대로)
-
-**P1B-Q1** 🎙 20초
-(상황설명 2~3문장, 영어)
-
-ATC : HL123, (한 줄 교신).
-
-[정답]
-
-
----
-(Q2~Q6 동일 형식, 필요 시 🖥 [ 텍스트 클루 ] 삽입)
-```
-
----
-
-## 3. Part Ⅱ Task A. Role-play & Follow-up
-
-### 3-1. Directions (고정)
-> In Part 2 Task A, you will be going through a couple of flight situations of a normal
-> passenger flight. Follow the prompts for providing your response, which you will either
-> hear or see on the screen, or the both. "Say again (=Repeat)" available once only. Your
-> callsign is HL123.
->
-> After finishing Task A Role play, you will be asked one or two follow-up questions. You
-> will have up to 90 seconds to respond to them.
-
-### 3-2. 시험[응답] 요령 표 (고정)
-| 항목 | 내용 |
-|---|---|
-| 구성 | 약 7~12회 롤 플레이 / 응대시간 : 30초, Follow up : 90초 |
-| 평가요소 | 정상상황에서 기본 교신능력과 비정상 발생시 상황보고 또는 요구사항 전달 등에 필요한 언어 구사력(교신용어와 플레인 영어의 복합 사용) |
-| 진행 | 연속적인 비행 단계 또는 복합적인 상황의 롤 플레이. Initial Situation → continued → Situation update → continued |
-| 평가항목 | 음성 또는 화면에 제공되는 Text clue(🖥)를 이용하여 지시대로 응대하는 능력 · 상황정보 및 ATC의 교신에 따라 요구되는 플레인 영어 사용능력 · 표준 교신속도/발음/억양의 사용 여부 및 정보의 효율적 전달능력 평가 · 교신 응대력(Role-play)과 플레인 영어(Follow-up) 능력을 전체적으로 평가 |
-| 유의사항 | 교신상황은 시간제한 및 언어평가 목적에 따라 '인위적'일 수 있고, 상황 전개의 '비약'이 인정되므로 지시사항에 맞게 응답해야 함 · 100% 컴퓨터와 상호작용하게 되므로, Interaction은 응답 내용의 적절성/유창성/이해도 등과 연계하여 평가되며, 응답 직전 '약간의' 준비시간은 용인됨. 다만 평가자가 느끼기에 '매우' 늦은 응답 또는 무응답은 영향을 미침 · 롤 플레이 전체의 응대 내용이 Operational(Level4) 이상으로 판단될 경우, Follow-up에서의 플레인 영어 점수보다 우선하여 평가됨 · 롤 플레이 전체 응대 내용이 Operational(Level4) 이상으로 판단되고, Follow-up에서의 플레인 영어 점수가 Extended(Level5)로 판정되면, 해당 응시자의 Task A 수행력은 Level 5로 평가됨 |
-
-### 3-3. 구조 원칙
-- 서두에 `Flight Paths` 박스로 3개 비행 단계 예고 (예: Clearance/Apron/Taxi, Approach/Landing/Taxi, Cruise/Descent/Approach).
-- `Initial Situation` → 턴 진행(각 턴에 `☞ 지시문`) → `Situation Update` → 턴 진행 → (필요 시 `Situation Update` 1회 더) → Follow-up.
-- **정상 운항 중 경미한 변경/불편** 수준만. 비상 선포는 넣지 않음.
-- 이미지가 필요한 턴은 `(Qn)` 표기 후 SVG 삽입, 세트당 1~2개. 실제 시험은 그림을 15초만 보여줌.
-- 마지막 Follow-up 질문은 항상:
-  `You have just finished Task A, as the pilot of Hotel Lima one two three.`로 시작 +
-  롤플레이에서 겪은 문제에 대한 경험·의견형 질문.
-
-### 3-4. 문항 템플릿
-```
-Part Ⅱ TASK A. Role-play & Follow-up
-
-✅ Directions : (위 3-1 그대로)
-
-✅ 시험[응답] 요령
-(표는 위 3-2 그대로)
-
-※ 15초의 그림 학습 시간이 주어집니다. 15초 동안 그림에서 제시된 상황 및 상태를 확인하십시오.
-   (이미지가 있는 턴에만 적용)
-
-Flight Paths
-In this scenario, you'll be the pilot flying HL123, which goes through 3 flight stages:
-(단계1), (단계2), (단계3).
-
-Initial Situation (상황 설명 1~2문장) 🔔(dingdong)
-
-**P2A-Q1** 🎙 30초
-☞ (지시문)
-(필요 시 ATC : ... 교신 대사)
-
-[정답]
-
-
----
-(Q2 ~ Qn, 중간에 Situation Update 박스 삽입 가능)
-
-**P2A-Qn** 🎙 90초 (Follow-up)
-Follow-up question:
-You have just finished Task A, as the pilot of Hotel Lima one two three.
-(경험·의견형 질문)
-
-[정답]
-
-
-
-
----
+test01  Cleared pushback and startup. And once the tug crew gets you established on lane
+        Alpha, if they can just pull you forward so I can push behind you at gate 87,
+        I'd appreciate it.
+test02  Roger. Do what you need to do.
+        Roger. The traffic is supposed to be leveling off at flight level 210.
+        I'm sorry about that.
+        Give me a call when you get on the ground so that we can get some information
+        from you and we will figure out what happened.
+test03  It's the very first fix outside of ASALT. Delta Victor Echo Tango Oscar.
+        Nobody seems to find it.
+        Any idea when you are going in?
+        Let me know fuel and souls on board, so I can advise tower.
+        Watch your maximum forward speed.
+test04  Roger. Thank you for your information. Revise taxi instruction.
+        I cannot give you that heading anymore. Turn right heading 340 immediately.
+        If able, right turn to heading 340.
+        And I will deliver your message to the tower.
 ```
 
----
+→ **세트당 2~3턴은 이런 구어체 ATC 대사**를 넣는다.
 
-## 4. Part Ⅱ Task B. Extended Role-play : Single Incident/Emergency Related
+### 4-6. 턴 지시문 고정구 사전 (Task A)
 
-### 4-1. Directions (고정)
-> You will be interacting with an Air traffic controller or Ground crew based on short
-> situational prompts. Follow the prompts and respond as necessary. Assume you can
-> accept all the instructions, unless being specified otherwise. "Say again (=Repeat)"
-> available only once. Your callsign is HL123.
-> \* Response time for each question : 30 seconds or less
-
-시험[응답] 요령 표 제목 옆에 붙는 주석: `※ Task B의 교신내용이 Task C의 태스크와 연계되므로, 관련 정보의 메모가 필요`
-
-### 4-2. 시험[응답] 요령 표 (고정)
-| 항목 | 내용 |
-|---|---|
-| 구성 | 약 7~12회 롤 플레이 / 응대시간 : 30초 |
-| 평가요소 | 단일 상황에서 비정상/비상상황에서 문제를 해결과정에서의 상황보고 또는 의사전달능력 등에 필요한 언어 구사력(플레인 영어의 빈도가 높아짐) |
-| 진행 | 비정상 또는 비상 상황이 포함된 '단일'사건의 롤 플레이. Initial Situation → continued → Situation update → continued |
-| 평가항목 | 음성 또는 화면에 제공되는 Text clue(🖥)를 이용하여 지시대로 응대하는 능력 · 상황정보 및 ATC의 내용에 따라 요구되는 교신용어 또는 플레인 영어 사용 능력 · 표준 교신속도/발음/억양의 사용 여부 및 정보의 효율적 전달능력 평가 · 교신 응대력(Role-play)과 플레인 영어능력을 전체적으로 평가 |
-| 유의사항 | 교신상황은 시간제한 및 언어평가 목적에 따라 '인위적'일 수 있고, 상황 전개의 '비약'이 인정되므로 지시사항에 맞게 응답해야 함 · 100% 컴퓨터와 상호작용하게 되므로, Interaction은 응답 내용의 적절성/유창성/이해도 등과 연계하여 평가되며, 응답 직전 '약간의' 준비시간은 용인됨. 다만 평가자가 느끼기에 '매우'늦은 응답 또는 무응답은 영향을 미침 · 플레인 영어 사용 빈도가 다소 높을 수 있고, 응대 내용의 정확도 및 유창도에 따라 Operational(Level4)과 Extended(Level5) 여부가 평가됨 |
-
-### 4-3. 구조 원칙
-- **단일** 비정상/비상 사건만. 사건 두 개 섞지 않음.
-- 전개: 정상 교신 → 사건 발생 → 상황 보고/의도 전달 → 관제 협조 → 해결 또는 착륙 준비.
-- 최소 1턴 fuel/SOB, 최소 1턴 intentions 진술 포함.
-- plain English 비중을 Task A보다 높게.
-- **여기 나오는 ATC 대사 5~7줄은 Task C에서 그대로 재사용**되므로 정확히 기록.
-
-### 4-4. 문항 템플릿
 ```
-Part Ⅱ TASK B. Extended Role-play : Single Incident/Emergency Related
-
-✅ Directions : (위 4-1 그대로)
-
-✅ 시험[응답] 요령 ※ Task B의 교신내용이 Task C의 태스크와 연계되므로, 관련 정보의 메모가 필요
-(표는 위 4-2 그대로)
-
-Initial Situation (상황 설명) 🔔(dingdong)
-
-**P2B-Q1** 🎙 30초
-☞ (지시문)
-ATC : HL123, (교신 대사).
-
-[정답]
-
-
----
-(Q2 ~ Qn, 중간에 Situation Update 삽입, fuel/SOB·intentions 턴 포함)
+Contact Clearance Control and make a request.
+Contact delivery. Request ATC clearance.
+Listen to the controller's message. Advise that you are ready.
+Listen to the controller and give a full readback.
+Listen to the center controller's message and give a full readback.
+Listen to the controller's message. Respond accordingly. And inquire how long it will take.
+Contact Apron and request pushback and startup.
+Listen to the apron. Respond properly. And inquire which aircraft you need to follow.
+Contact ground and request to taxi.
+Contact ground. Explain the situation to ATC.
+Listen to the ground. And give a readback.
+Listen to the controller's message. Respond accordingly and request assistance.
+Contact Approach Control and report your passing altitude.
+Contact Paramount Approach accordingly and report your altitude.
+Listen to the controller's response and question. Give a full readback. Acknowledge positively.
+Listen to the controller's message, then request a verification of the waypoint you're cleared direct to.
+Respond, implying you have found the fix, and give a full readback.
+Contact tower control and report your position and intention.
+Listen to tower and give your full readback. Then, inquire about the traffic on your TCAS screen.
+Contact ground and inform them of your current location.
+Listen to the controller's response, and notify them. Gate B6.
+Listen to ground and respond accordingly.
+Contact the controller explaining the situation and advise you need to maintain current
+  altitude and some time to troubleshoot.
+Listen to the controller's response and request divert.
+Listen to the controller's question and provide the requested information.
+Listen to the controller's response. Give a readback and request ILS approach runway 27R.
+Make an initial contact with departure control. Listen to the departure and respond
+  negatively with a reason.
+Contact departure. Give a PIREP and inquire if there is any PIREP on your route.
+Listen to departure. Make the same request as the previous aircraft.
 ```
 
+**복합 지시 비율이 높다** — `respond accordingly and inquire ~`, `give a full readback then
+inquire ~`, `respond negatively with a reason`, `report your position and intention`.
+세트당 **절반 이상의 턴을 복합 지시**로 낸다.
+
+**음성으로 클루를 주는 경우도 있다** — test03 `Listen to the controller's response, and
+notify them. Gate B6.` (화면 클루가 아니라 지시문에 값을 박아준다)
+
+### 4-7. 출제 규칙 (개정)
+
+- 7~12턴 + Follow-up 1문항
+- Flight Paths 박스는 **2단계 또는 3단계, 혹은 생략**
+- Situation Update 1~3회
+- **4세트에 1번은 Task A 에 비정상·비상**을 넣는다(스로틀 고착처럼 Task A 안에서 비상 선포까지)
+- 세트당 2~3턴은 **구어체 ATC 대사**
+- 턴 지시문 절반 이상을 **복합 지시**로
+- Follow-up 은 **① 롤플레이 회상 → ② 일반 경험·지식 → ③ `Give an example.`** 3부 구조
+- `report your position` 류를 낼 때는 그 직전에 구체적 위치·고도를 먼저 준다
+  (test03 `You are now over ASALT intersection at 3,000 feet.` 가 모범)
+
 ---
 
-## 5. Part Ⅱ Task C. Reporting about Task B
+## 5. Part Ⅱ Task B — Extended Role-play : Single Incident/Emergency
 
-### 5-1. Directions (고정)
-> You have just finished Part 2 Task B. Now you will be listening to the ATC's
-> radiotelephony messages to better recall the events. Afterwards, you will be asked two
-> questions about the situation. You will have 90 seconds for each question.
+### 5-1. 4세트 사건 전개
 
-### 5-2. 시험[응답] 요령 표 (고정)
-| 항목 | 내용 |
-|---|---|
-| 구성 | 2문항 / 응대시간 : 90초 |
-| 평가요소 | Task B에서 수행한 롤 플레이 내용에 대한 리포팅(플레인 영어) 능력 |
-| 진행 | TASK B의 ATC 교신 내용 다시 듣기 → 질문 → 응답하기 |
-| 평가항목 | 구체적인 사건과 상황 전개의 내용을 묻는 질문(Q1)에 대한 사실전달 능력 · 사건에 대한 이해를 바탕으로 의견을 묻는 질문(Q2)에 대한 의견제시 능력 · 질문의 취지를 정확히 파악하고 답변하였는지에 대한 평가(이해력) |
-| 유의사항 | 교신상황은 시간제한 및 언어평가 목적에 따라 '인위적'일 수 있고, 상황 전개의 '비약'이 인정되므로 지시사항에 맞게 응답해야 함 · Interaction에 대한 설명은 TASK B 참고 · 제공시간을 최대한 활용하여 평가항목(유창성, 이해력, 어휘, 발음, 문장구조)에 대한 능력을 충분히 표현 · 경험 사례 또는 관련 지식/보도 등을 활용하여 플레인 영어능력을 최대로 발휘 |
+**test01** (7턴) Public Airport 접근, FL180→11,000, ATIS Oscar → 위치보고 → `descend 6,000,
+reduce speed 210, expect DIXIE ONE arrival runway 23 transition followed by ILS 23` →
+**계기 디스플레이 다수 상실** → `turn right heading 190, descend 4,000 to intercept the
+runway 23 localizer` 에 대해 4,000 레벨오프 통보 + 상황 알림 + **vectors 요청** →
+`fly heading 270, maintain 4,000 and say intentions` → 복창 + **Sovereign·Independent 기상
+요청(VMC 선호)** → 기상 비교 후 **Independent 로 vectors + visual approach 요청** → 계기 일부
+회복 → Public Airport ILS 23 재요청 → `cleared to Public Airport, turn right heading 140,
+maintain 4,000, let me know if anything changes` 복창 + stand by 통보
 
-### 5-3. 구조 원칙 (문구 고정, CLAUDE.md §3 Task C와 동일)
-- `☞ Now listen to the controller's radiotelephony messages.` 아래에 Task B의 ATC 대사만
-  순서대로 나열 (조종사 대사 제외).
-- Q1: `What happened to your aircraft (HL123)? Explain the nature of the incident.`
-- Q2: `How do you think the incident was handled by the air traffic controller? Do you
-  feel the situation could have been handled differently? Make a comment from a
-  pilot's point of view.`
+**test02** (7턴) 13,000→FL200 상승, Center 핸드오프 → 위치보고 → `turn left heading 070,
+traffic 11 o'clock and a mile, MD-80 descending` → `Do you have the traffic in sight? They
+are at FL230 descending.` 긍정 응답 → FL200 레벨오프 시 **TCAS advisory, 상대기가 FL210 에서
+멈출 것 같지 않음** → Center 통보 → `Roger. Do what you need to do.` → 관제사 사과
+`The traffic is supposed to be leveling off at FL210. I'm sorry about that.` → **상대기가
+FL200 까지 내려왔고 지금은 clear of traffic** 통보 → `Give me a call when you get on the
+ground...` **비상선포 없음**
 
-### 5-4. 문항 템플릿
+**test03** (9턴) RWY25L 홀드 숏 → `wind calm, runway 25L, cleared for takeoff` →
+**이륙 후 상승 중 yaw 조종 곤란 → 비상 선포** → `contact departure. Good day.` →
+**비상 선포 + 공항 복귀 vectors 요청** → `make a left downwind for runway 25L and contact
+departure` → departure `radar contact. Say the nature of the emergency.` → yaw 조종 곤란
+진술 + **vectors to troubleshoot 요청** → `say your intentions` → approach configuration
+테스트 필요 + 방법 진술 → 회사 승인 후 복귀 → approach 컨택, 상황·의도 → `turn right heading
+160, maintain 3,000 until established, cleared for ILS 25L` → **`Let me know fuel and souls
+on board, so I can advise tower.`**
+
+**test04** (9턴) Smith Approach 강하 → `descend to 5,000 feet, expect radar vector to COSMO`
+→ ND 에 weather echo → **heading 210 우선회 요청** → `position 20 miles from COSMO, direct to
+COSMO, cleared for RNAV runway 21 approach` → 편차가 부족해 더 큰 편차 필요 →
+`heading 210 is approved. When clear, direct to COSMO.` → 선회 중 **낙뢰 피격 — 전면
+윈드실드 손상 + FMC 전부 blinking** → 현 heading·고도 유지 + troubleshooting 요청 →
+`Understood your situation. If able, right turn to heading 340.` → **negative + 사유** →
+FMC 복구, 선회 가능 → `I cannot give you that heading anymore. Turn right heading 340
+immediately.` → 긍정 응답 + 현 상태 통보 → **윈드실드 손상으로 auto landing RWY21 → ILS
+접근 필요 + 착륙 후 towing assistance 요청** → `turn left heading 090, descend to 4,000, this
+will be radar vector to final approach course of RNAV approach runway 21` →
+`I will vector you to ILS final approach course runway 21. And I will deliver your message
+to the tower. Continue descend to 2,500 feet.`
+
+### 5-2. ★ MAYDAY·fuel/SOB 는 매 세트가 아니다
+
+| | MAYDAY/비상선포 | fuel + souls on board | intentions 진술 |
+|---|---|---|---|
+| test01 | 없음 (계기 상실인데도) | 없음 | 있음 |
+| test02 | 없음 (TCAS 만) | 없음 | 없음 |
+| test03 | **있음** | **있음** | 있음 |
+| test04 | 없음 (낙뢰인데도) | 없음 | 있음 |
+
+기존 규칙 `최소 1턴은 fuel/SOB` 는 **실제는 4세트 중 1세트**. 기존에 만든 세트들은 매번
+MAYDAY + fuel/SOB 를 넣어 **과대 적용**했다.
+
+→ **MAYDAY·fuel/SOB 는 4세트에 1번.** 나머지는 비상 선포 없이 "상황 보고 + 의도 전달 +
+관제 협조"로 끌고 간다. **intentions 진술은 4세트 중 3세트** → 사실상 필수.
+
+### 5-3. Task B 공통 전개 골격
+
 ```
-Part Ⅱ TASK C. Reporting about Task B
-
-✅ Directions : (위 5-1 그대로)
-
-✅ 시험[응답] 요령
-(표는 위 5-2 그대로)
-
-☞ Now listen to the controller's radiotelephony messages.
-ATC: HL123, (Task B에서 쓴 대사 1)
-ATC: HL123, (Task B에서 쓴 대사 2)
-...
-ATC: HL123, (Task B에서 쓴 마지막 대사) 🔔(dingdong)
-
-☞ Now answer the questions.
-
-**P2C-Q1** 🎙 90초
-What happened to your aircraft (HL123)? Explain the nature of the incident.
-
-[정답]
-
-
-
-
----
-
-**P2C-Q2** 🎙 90초
-How do you think the incident was handled by the air traffic controller? Do you feel
-the situation could have been handled differently? Make a comment from a pilot's
-point of view.
-
-[정답]
-
-
-
-
----
+정상 교신 1~2턴
+  → 사건 발생 (Situation Update 또는 지문)
+  → 상황 보고 + 현재 조치(고도·헤딩 유지 등) + 시간·vectors 요청
+  → ATC 가 대안·질문 제시 ("say intentions" / "do you need assistance" / "if able ~")
+  → 조종사 intentions 진술
+  → 상황 변화 (회복 / 악화 / 관제사 변심)
+  → 접근 방식 결정 + 필요한 지원 요청
+  → 최종 클리어런스 복창
 ```
 
----
+**자주 나오는 핵심 표현**
+- `request vectors for troubleshooting` / `request vectors to troubleshoot` (test01·test03)
+- `say the nature of the emergency` (test03)
+- `maintain present heading and altitude for troubleshooting` (test04)
+- `request towing assistance` / `auto landing` (test04)
+- `clear of traffic` (test02)
+- `let me know fuel and souls on board` (test03)
+- `stand by for further information` (test01)
 
-## 6. 표준교신용어 기능별 표현 목록 (샘플Ⅰ·Ⅱ·Ⅲ 실사용 예)
+### 5-4. 출제 규칙 (개정)
 
-새 세트를 만들 때 이 표현들을 변형·재조합해서 쓴다. 문구를 그대로 복사-붙여넣기하지 말고
-숫자·지명·상황을 바꿔서 새로 구성할 것.
-
-### 6-1. Readback (표준 복창)
-- "Cleared direct ATLAS, HL123." (직항 클리어런스)
-- "Stop climb at FL two six zero, HL123." (상승 중지)
-- "Runway three two, cleared for takeoff, HL123." (이륙 허가 — 부가정보인 바람은 복창 제외)
-- "Start up and pushback approved, long pushback, tail east, until abeam gate 34, HL123." (5개 요소 이상 긴 지시)
-- "Backtrack approved, backtrack runway one six, vacate via Delta two, HL123."
-- "Climb to flight level three one zero on current heading and reduce speed two zero knots when level, HL123."
-- "Taxi to runway three four left, via Bravo, Tango, Charlie, hold short of runway three four left, HL123."
-- "Cleared to Robinson, HULKK three departure, JULIA transition, FL380, departure runway 24, squawk 3675, HL123." (SID/transition/FL/squawk 포함 긴 클리어런스)
-
-### 6-2. Unable + reason (거부 + 사유)
-- "Climb and maintain FL210 unable cross Johnson VOR at or above FL150 due to performance, HL123."
-- "Unable to cross FRISO at 0100Z, our ETA over FRISO is 0103Z, HL123." (시간 제약)
-- "HL123, Unable direct Sierra Yankee Tango due to CB on the route." (기상 회피)
-- "Control, HL123, unable, request to reduce speed to 190 knots due to performance."
-- "Control, unable to maintain 300 knots due to turbulence, request 280 knots until out of the turbulence area, HL123."
-
-### 6-3. Requesting (요청)
-- "HL123, request divert to Paramount Airport and request priority."
-- "HL123, request vectors to Gimpo Airport for visual approach."
-- "Apron HL123, We have too much fuel and need to burn some off or defuel. Request spot to assess the problem."
-- "HL123, request deviation 10 miles more to the right side."
-- "Control, HL123, we have a throttle problem. We will be at faster than normal speed."
-
-### 6-4. Reporting (상황/기상/연료 보고)
-- "HL123, Experiencing moderate turbulence at FL210." (기상 상태 보고)
-- "Approach, HL123, we lost a lot of our instruments. We are leveling off at 4,000ft and request radar vectors for troubleshooting." (계기 이상)
-- "We have 3 hours of fuel and 175 souls on board, HL123." (fuel/SOB)
-- "Control, HL123, the traffic descended to our level FL200. We are clear of traffic." (TCAS 해소 보고)
-- "HL123, TCAS RA." (TCAS RA 통보 — 최소한의 plain English)
-
-### 6-5. Clarifying (확인/재확인 요청)
-- "Can you spell the first fix for us? Can't seem to find it on the approach plate, HL123." (웨이포인트 철자 확인)
-- "Cleared to land on 13R, are we following anyone? We see an aircraft about two-three miles in front of us on our TCAS, HL123." (트래픽 확인)
-- "Tower, verify take off clearance? We have an aircraft crossing the runway. We will hold short until the traffic is cleared, HL123." (지시 재확인/거부)
-
-### 6-6. Correcting own mistake (자기 오류 정정)
-- "HL123, my mistake, now turning 10 degrees to the right of the route."
-- "Control, my mistake, we are turning back to heading 090, HL123."
-
-### 6-7. Emergency 선언·취소
-- "Tower, HL123, we are declaring emergency, we need to come back around and land / return to the airport." (비상 선포)
-- "HL123, we are having a little trouble controlling the airplane, we got a yaw problem." (비상 사유 설명)
-- "HL123, now cancelling Mayday. The throttle is now working." (비상 취소)
-
-### 6-8. Informing / Correcting ATC 상황 (지연·중단 통보)
-- "Apron, HL123, de-fueling cannot be done. We need 30 minutes holding to burn fuel."
-- "HL123, we are unsure of wingtip clearance. Hold at present position."
-- "HL123, taxi to the holding point runway 09, but we have a red stop light on and stopping." (저시정 절차 중 정지등 대응)
-- "HL123, we are unable to taxi due to heavy fog. Stopping on the runway."
+- 7~12턴, **단일** 사건
+- MAYDAY 선포와 fuel/SOB 보고는 **4세트에 1번**. 나머지는 비상 선포 없이 전개
+- **intentions 진술은 거의 매 세트** 포함
+- 사건 중간에 **회복 또는 관제사 변심**을 한 번 넣는다 (test01 계기 회복, test04 FMC 회복 +
+  `I cannot give you that heading anymore`)
+- 이 세트의 **ATC 대사 5~8줄은 Task C 에서 그대로 재사용**되므로 정확히 기록
 
 ---
 
-## 7. 숫자·문자 표기 관례 (CLAUDE.md §1-4와 동일, 예시 추가)
+## 6. Part Ⅱ Task C — Reporting about Task B
 
-- Flight Level: `FL350`→"Flight Level three five zero" / `FL260`→"FL two six zero"
-- 활주로: `runway 32`→"runway three two", `runway 09`→"runway zero niner", `13L`→"one three left" 또는 문맥상 "13L"로 표기 후 낭독 시 "one three left"
-- 주파수: `129.1`→"one two nine decimal one", `121.65`→"one two one decimal six five"
-- 스쿼크: `1766`→"one seven six six"
-- 게이트/유도로: `Gate Bravo 6`, `taxiway Golf 2`, `Delta two`
-- 시각(Z): `0100Z`→"zero one zero zero Zulu"
-- 웨이포인트 철자: 필요 시 ICAO 알파벳으로 spell-out (예: "Delta Victor Echo Tango Oscar")
+### 6-1. 구조 (4세트 100% 동일)
 
----
+```
+Now listen to the controller's radio telephony messages.
+  → Task B 의 ATC 대사만 순서대로 (조종사 대사 없음)
+Now answer the questions.
+  → Question 1 / Question 2
+```
 
-## 8. 콜사인(HL123) 위치 관례
+### 6-2. 질문 문구 (고정)
 
-샘플Ⅰ·Ⅱ·Ⅲ의 Pilot 대사를 전수 확인한 결과, 콜사인 위치는 하나로 고정돼 있지 않고 상황별로
-다음과 같은 경향을 보인다. 채점 시 "콜사인 위치 오류"를 지적할 때는 이 경향을 기준으로 삼는다.
+```
+Question 1.  What happened to your aircraft, Hotel Lima 123? Explain the nature of the incident.
+Question 2.  How do you think the incident was handled by the air traffic controller?
+             Do you feel the situation could have been handled differently?
+             Make a comment from a pilot's point of view.
+```
 
-1. **관제사 지시를 그대로 복창(readback)하는 문항 → 거의 항상 문장 끝에 HL123.**
-   Part Ⅰ Task A는 예외 없이 전부 이 패턴. 예: "Cleared direct ATLAS, HL123.",
-   "Runway three two, cleared for takeoff, HL123."
-   → 이 유형에서 HL123을 맨 앞에 쓰면 감점 대상으로 본다.
-2. **새 기관에 처음 컨택(주파수 전환 직후 첫 교신) → 기관명 + HL123을 문장 맨 앞에.**
-   예: "Approach, HL123, descending through FL180 to 11000...", "Delivery HL123, request
-   clearance.", "Apron, HL123, request pushback and startup at Gate Alpha 89."
-   → 이 유형에서 기관명·콜사인을 빼고 본론부터 말하면 감점 대상으로 본다.
-3. **그 외 (이미 잡힌 주파수에서 Informing/Unable/Requesting/Correcting mistake 등 새 내용을
-   전달하는 경우) → 샘플 안에서도 앞/뒤 둘 다 나타난다.**
-   앞에 오는 예: "HL123, my mistake, now turning 10 degrees..." (샘플Ⅰ), "HL123, request
-   deviation 10 miles more to the right side." (샘플Ⅱ)
-   뒤에 오는 예: "Control, my mistake, we are turning back to heading 090, HL123." (샘플Ⅲ),
-   "Control, unable to maintain 300 knots due to turbulence, request 280 knots..., HL123."
-   (샘플Ⅲ)
-   → 이 유형은 앞/뒤 어느 쪽이든 감점하지 않는다. 다만 콜사인이 문장 중간에 끼어 들어가거나
-   아예 빠진 경우만 지적한다.
+- 4세트 전부 이 두 문항. test01 자막이 Q2 를 `Question 2 ... Question 3 ...` 로 쪼갠 것은
+  ASR 오류이고 실제로는 2문항이다
+- Task B ATC 대사를 **거의 그대로** 재사용한다. test02 는 Task C 에서 `I'm sorry about that.`
+  한 문장이 빠졌으나 그 외에는 동일 → **원칙은 100% 동일 재사용**
 
 ---
 
-## 9. ICAO 표준교신 필수어 (Standard Words and Phrases)
+## 7. 숫자·호출 관례 (실제 음성 확인)
 
-> **2026-08-19 갱신**: 관제용어 자체의 더 포괄적이고 1차적인 기준은 이제
-> `reference/atc-terminology.md`다 (관제용어정리.pdf + 세트샘플.pdf + 웹조사 종합).
-> 아래 §9는 **세트샘플.pdf의 실제 문장을 근거로 든 세부 뉘앙스**(REQUEST+명사, ROGER 예외,
-> 관사 생략, 위치보고 형식 등)를 모아둔 것이라 계속 유효하며 서로 충돌하지 않는다. 표준
-> 단어표는 `atc-terminology.md` §3(관제용어정리.pdf 공식 국문 번역 포함)이 더 완전하다.
-
-출처: ICAO Doc 9432 *Manual of Radiotelephony* / PANS-ATM Doc 4444에 기반한 표준 용어표
-(웹 검색으로 교차 확인, 2026-08-18). 채점할 때 "표준교신용어 오류"를 판단하는 1차 기준으로 쓴다.
-
-### 9-1. 표준 단어·구 전체 표
-
-| 표현 | 뜻 |
-|---|---|
-| AFFIRM | Yes. (2007년 ICAO가 "AFFIRMATIVE"에서 "AFFIRM"으로 축약 — affirmative/negative가 어미가 비슷해 무전 잡음 속에서 혼동되던 문제를 줄이기 위함) |
-| NEGATIVE | No, 또는 허가하지 않음. |
-| APPROVED | 제안한 행동에 대한 허가가 났음. |
-| CLEARED | 명시된 조건 하에 진행이 허가됨. |
-| CONFIRM | "I request verification of: (clearance, instruction, action, information)." — 확인을 요청하는 말. |
-| CORRECT | 맞음, 정확함 (원문 발신자에게 확인해 줄 때). |
-| CORRECTION | 방금 송신에 오류가 있었음을 알리고 올바른 내용을 다시 말함. |
-| DISREGARD | 무시하라. |
-| HOW DO YOU READ | 신호 수신 상태를 확인해 달라는 요청 (CONFIRM류와 같은 계열). |
-| READ BACK | 메시지 전체 또는 일부를 그대로 복창하라. |
-| REPORT | "Pass me the following information..." — 관제사가 조종사에게 정보를 요구할 때. |
-| REQUEST | "I should like to know..." / "I wish to obtain..." — 조종사가 무언가를 원할 때. **REQUEST 뒤에는 동사가 아니라 명사(구)가 온다** (request vectors / request priority / request expected delay). |
-| ROGER | 마지막 송신을 모두 수신했다는 뜻일 뿐, 이해했다거나 따르겠다는 뜻이 아니다. **CONFIRM/READ BACK을 요구하는 질문이나 AFFIRM/NEGATIVE로 답해야 하는 질문에는 ROGER를 쓰면 안 된다.** |
-| SAY AGAIN | 마지막 송신 전체(또는 지정 부분)를 반복해 달라. |
-| STANDBY | 기다려라, 곧 다시 부르겠다. |
-| UNABLE | "I cannot comply with your request, instruction, or clearance." |
-| VERIFY | 원문 발신자에게 확인·재확인을 요청. |
-| WILCO | "I understand your message and will comply with it." (Will comply) |
-| WORDS TWICE | 단어/숫자를 두 번씩 반복해서 송신해 달라는 요청 (통신 상태가 나쁠 때). |
-
-### 9-2. 채점에 바로 적용되는 규칙
-
-- **"confirm ~?"류 질문에는 "yes"/"no"가 아니라 반드시 AFFIRM 또는 NEGATIVE로 답한다.**
-  ("yes"/"no"는 ICAO 표준교신용어가 아니다 — CLAUDE.md §6-1의 "표준교신용어 오류" 판정 시 이 기준 적용.)
-- **ROGER가 내용 없이 단독으로 CONFIRM/READ BACK을 대체하면 오류.** ROGER는 "수신했다"는 뜻일
-  뿐 내용에 대한 동의·복창이 아니기 때문. (CLAUDE.md §6-1 예시의 "roger 남용"이 바로 이 경우)
-  단, **"Roger, (실제 지시 내용)"처럼 ROGER 뒤에 바뀐/지시된 값을 실제로 붙여 말하면 정상적인
-  readback으로 인정한다.** 샘플에도 이 패턴이 있다: "Pilot : **Roger** hold for release,
-  HL123."(샘플Ⅰ), "Pilot : HL123, **roger**, change SID HIPPO 1 Departure."(샘플Ⅱ — SID가
-  바뀌고 "rest of the clearance unchanged"라고 알려준 상황. 이때 "rest of the clearance
-  unchanged" 문구 자체를 복창할 필요는 없고, **바뀐 항목만** 확인하면 충분하다).
-- **정보를 원할 때는 REQUEST + 명사(구)** 패턴을 쓴다. "request to know how long..."처럼 동사구를
-  붙이는 건 비표준. 샘플에서도 전부 이 패턴: "request flight condition", "request priority",
-  "request vectors to Gimpo Airport", "request divert to Paramount Airport".
-- **지연 시간을 물을 때**: 관제사가 지연을 알릴 때 쓰는 표현이 "EXPECT FURTHER CLEARANCE (time)" /
-  "ANTICIPATE (n) MINUTE/HOUR DELAY"이므로, 조종사가 되묻는 표준적인 형태는 **"request expected
-  delay"** 계열이 자연스럽다. (참고: FAA 게이트 홀드 절차에서도 "EXPECT ENGINE START/TAXI (time)"
-  형태로 항상 "EXPECT + 시간"을 쓴다.)
-- **"correcting own mistake" 기능**은 예외적으로 AFFIRM/NEGATIVE 없이 "my mistake, now ~"로
-  바로 들어가는 것이 샘플 관례다 (샘플Ⅰ Q5, 샘플Ⅲ Q3 모두 이 형태). 이 기능 유형에서는
-  AFFIRM/NEGATIVE 생략을 감점하지 않는다.
-- **관사(a/the) 생략은 감점하지 않는다.** ATC 표준교신은 전보문(telegraphic) 스타일이라 관사를
-  거의 쓰지 않는 것이 오히려 표준적이다. 샘플에도 관사 없는 문장이 대다수다: "request vectors to
-  Gimpo Airport for visual approach", "request divert to Paramount Airport". "request a low
-  pass" 대신 "request low pass"라고 써도 정확한 표현이다.
-- **"report your position/altitude"에 대한 표준 응답 형태는 두 가지뿐이다.** 샘플 Ⅰ·Ⅱ·Ⅲ
-  전수 확인 결과, "활주로까지 몇 마일" 같은 거리 기반 위치 표현은 한 번도 없었다.
-  1. 픽스가 안 주어진 경우 — **"descending/leaving through X for Y"** (고도 통과 중):
-     "Approach, HL123, descending through FL180 to 11000." (샘플Ⅰ), "Paramount Approach,
-     HL123, leaving FL230 for 13,000 ft." (샘플Ⅱ), "Control, HL123, Climbing FL200, passing
-     13,000ft." (샘플Ⅱ), "Approach, HL123, leaving 6,000ft for 3,000ft." (샘플Ⅲ)
-  2. 픽스가 직전에 명시적으로 주어진 경우 — **"over [픽스] at [고도]"**: "Tower, HL123, over
-     ASALT at 3,000ft for RNAV visual runway 13R approach." (샘플Ⅲ — 직전에 "You are now over
-     ASALT intersection at 3,000ft."라고 픽스+고도가 먼저 주어졌음)
+- 고도 : `flight level 260` → "flight level two six zero" · `6,000 feet` → "six thousand feet"
+- 활주로 : `runway 32` → "runway three two" · `34L` → "three four left" ·
+  `one niner`(test03 Q5 는 음성에서 실제로 "one niner")
+- 주파수 : `121.65` → "one two one decimal six five" · `129.1` → "one two niner decimal one" ·
+  `118.3` → "one one eight decimal three"
+- squawk : `1766` → "one seven six six" · `3675` → "three six seven five"
+- 고도계 : `29.83` → "two niner decimal eight three" · `3033` → "three zero three three"
+- 바람 : `winds 220 at 10` · `winds 110 at 26 gust 35` · `wind calm`
+- 시각 : `0100Z` → "zero one zero zero Zulu"
+- 속도 : `210 knots` · `Mach .80` → "Mach decimal eight zero" / "Mach eight zero"
+- 게이트·유도로 : `Gate Alpha 89` · `Gate B6`(= Bravo six) · `Delta 2` · `Golf 2` ·
+  `taxiway Victor` · `Romeo 207 then Alpha`
+- **★ `tree` = 3** : test04 는 전편에서 `flight level tree 70`, `runway tree 4L`,
+  `wind tree 00`, `heading tree 40`, `runway tree tree left` 로 발음한다. ICAO 권고 발음을
+  그대로 쓰는 세트가 실제로 존재한다 → 출제 시 그렇게 표기해도 되고, 채점 시 `tree`/`three`
+  둘 다 정답으로 본다
 
 ---
 
-## 10. 실제 샘플 음성(오디오) 분석 — 세트샘플.pdf의 보조 자료
+## 8. 가상 지명 목록 (실제 사용 확인)
 
-**출처**: 사용자가 제공한 EPTA 샘플세트Ⅰ 실제 녹음본의 음성인식 자막(SRT, 2026-08-21 확인).
-`세트샘플.pdf` 자체가 언급하는 "한국교통안전공단 홈페이지에서 제공되는 샘플 테스트 프로그램"의
-실제 음성으로 추정됨. **자동 음성인식 자막이라 고유명사·숫자 표기에 오류가 섞여있을 수 있으니
-정확한 워딩보다 "구조·패턴"을 신뢰할 것.** PDF와 내용은 거의 동일(Smith Airport 클리어런스,
-Gate Alpha 89, 연료 과다 버닝/디퓨얼, 골프 유도로, 윙팁 클리어런스 등)하지만 아래 패턴들은
-PDF의 지면 요약만으로는 안 드러나던 것들이다.
+공항 — Smith · Public · Sovereign · Independent · Paramount · Robinson · Incheon
+웨이포인트·VOR — ATLAS · HAPIE · FRISO · Johnson VOR · DOOSAN VOR · Sierra Yankee Tango ·
+DVETO · ASALT · COSMO · THAMES
+SID·절차 — HULK THREE departure / JULIA transition · HIPPO ONE departure · JFK ONE departure ·
+DIXIE ONE arrival · THAMES TWO THREE departure · RNAV Visual 13R
+기관 — Clearance Control · Delivery · Apron · Ground · Tower · Departure · Center ·
+Smith Control · Tokyo Control · Public Approach · Paramount Approach · Smith Approach ·
+Seoul Radio
+타 항공기 — Gulfstream · Boeing 747 · Boeing 757 · MD-80
 
-### 10-1. Task B에 쓸 수 있는 추가 패턴
-- **시차형 Informing**: 한 시점에 목격한 것을 다른(나중) 시점에 보고하는 패턴. 예: "이륙 활주
-  중 활주로 끝에서 조류 활동을 목격 → **이륙 후** ATC에 보고하라."
-  → 지금까지 우리 세트의 Informing은 전부 "즉시 보고"였다. 앞으로 가끔 이 시차형도 활용한다.
+→ 새 세트는 **이 이름들을 재사용하지 말고** 같은 결의 새 이름을 만든다.
 
-### 10-2. Part Ⅰ Task A/B ATC 지시에 요청이 덧붙는 경우
-- 클리어런스 복창 문항 끝에 짧은 plain 요청이 붙기도 한다: "Descend and maintain FL290,
-  contact Tokyo control on 121.65. **Report speed.**" → 이 경우 응답 하나에 **복창 + 요청받은
-  정보(현재 속도 등)를 모두** 담아야 한다. 지금까지는 복창 문항과 정보요청 문항을 항상 분리해서
-  냈는데, 합쳐서 낼 수도 있다.
+---
 
-### 10-3. ATC가 먼저 contingency(대안)를 주는 경우
-- "unable" 상황을 항상 조종사가 스스로 대안을 요청하는 형태로만 만들 필요는 없다. 관제사가
-  먼저 대안을 얹어 줄 수도 있다: "Climb and maintain FL210. Cross Johnson VOR at or above
-  FL150. **If unable, maintain FL130 until Johnson VOR.**" → 이땐 그 contingency 문구까지
-  포함해서 **통째로 복창**하는 게 정답이다. 조종사가 새 숫자를 지어낼 필요가 없다.
-  (참고: 이건 CLAUDE.md §3의 기존 "unable+request" 문항 — 관제사가 대안을 안 주고 조종사가
-  스스로 REQUEST 해야 하는 유형 — 과는 별개의, 추가로 낼 수 있는 유형이다. 둘 다 계속 낸다.)
+## 9. PDF·기존 스펙과 어긋난 점 (정정 목록)
 
-### 10-4. 가상 지명 사용 (기존 관행과 일치, 변경 불필요)
-- 음성에서는 PDF의 실제 지명(Cheong-Ju/Incheon/Gimpo) 대신 "Public Airport", "Sovereign",
-  "Independent" 같은 **가상 지명**이 쓰인 것으로 보인다(ASR 오류일 가능성도 있어 단정은 어려움).
-  이 프로젝트가 처음부터 Baxter/Westgate/Cedar/Fernbrook 같은 완전 가상의 지명을 써온 것과
-  방향이 일치한다 — 계속 이 방식을 유지한다.
+| 항목 | 기존(PDF·구 스펙) | 실제 음성 | 조치 |
+|---|---|---|---|
+| Task A 비행단계 | 4문항 서로 다른 4단계 필수 | 같은 단계 중복 있음 | 규칙 완화 |
+| Task A 긴 지시 | 매 세트 5요소 이상 1문항 | 4세트 중 1문항 | 2세트에 1회 |
+| Task B 구조 | 상황설명 → ATC → 응답 3단 고정 | **ATC 대사 없는 발신형 존재** | 유형 추가 |
+| Task B 기능 | 6기능 골고루 | **Unable 계열이 1/3** | 배분 변경 |
+| Task B confirm | 언급 없음 | **`Confirm maintaining ~?` 3회** | 매 세트 1문항 |
+| Ⅱ-A Flight Paths | 3단계 고정 | 2단계·생략도 있음 | 규칙 완화 |
+| Ⅱ-A 비상 | 비상 금지 | **test02 는 비상 선포까지** | 4세트에 1번 허용 |
+| Ⅱ-A Follow-up | 경험·의견형 1문항 | **2~3부 + `Give an example.`** | 3부 구조 필수 |
+| Ⅱ-B MAYDAY | 사실상 매 세트 | 4세트 중 1세트 | 4세트에 1번 |
+| Ⅱ-B fuel/SOB | 최소 1턴 필수 | 4세트 중 1세트 | 4세트에 1번 |
+| ATC 문체 | 표준교신용어 중심 | **구어체 상당히 섞임** | 세트당 2~3턴 |
+| test01 Ⅰ-B Q2 고도 | FL290 | FL220 | 음성 채택 |
+| test01 Ⅱ-A Q1 기관 | Clearance Delivery | Clearance Control | 둘 다 허용 |
+| test01 Ⅱ-A Q12 지시 | respond accordingly | **+ request assistance** | 음성 채택 |
+| test01 Ⅱ-A Q3 경로 | right turn direct HAPIE | **right turn heading 100 to HAPIE** | 음성 채택 |
+| test01 Ⅱ-B Q3 요청 | vectors for troubleshooting | 음성은 `vectors for holding` | 판단 보류 |
 
-### 10-5. 응답시간 확인
-- Part Ⅰ 문항 간 간격 약 27초, Part Ⅱ 롤플레이 턴 간격 약 30초대로, 각각 "20초/30초 이하"라는
-  공식 기준과 일치함을 확인. 별도 조정 불필요.
+---
+
+## 10. 응답시간 — 자막 타임코드로 판단하지 말 것
+
+자막의 무음 구간은 **응시자(사용자)가 녹음하려고 문항을 일부러 건너뛴 결과**이므로 길이가
+제각각이다. 시험 소프트웨어가 정한 응답 허용시간이 아니다.
+
+- Task A 문항 사이 : 6.5초 / 13.6초 / 7.3초 / 6.6초 (test01)
+- Task A 턴 사이 : 6.8초 ~ 36.4초 (test01)
+- Task C Q1 뒤 : 37.0 ~ 38.3초 (test02·03·04)
+
+→ **응답시간은 `세트샘플.pdf` 의 공식 표기를 따른다** : Ⅰ-A 20초 · Ⅰ-B 20초 ·
+Ⅱ-A 30초(Follow-up 90초) · Ⅱ-B 30초 · Ⅱ-C 90초.
+자막에서 얻을 수 있는 신뢰 정보는 **문항 순서와 발화 내용**이다.

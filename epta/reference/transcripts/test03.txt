@@ -1,0 +1,736 @@
+1
+00:00:00,000 --> 00:00:04,520
+Task A. Read the directions on the screen to proceed.
+
+2
+00:00:20,290 --> 00:00:20,700
+One.
+
+3
+00:00:23,150 --> 00:00:29,100
+Hotel Lima 123, taxi to runway 34L via Bravo, Tango, Charlie.
+
+4
+00:00:29,280 --> 00:00:31,460
+Hold short of runway 34L.
+
+5
+00:00:33,380 --> 00:00:35,280
+Record your full readback.
+
+6
+00:00:45,050 --> 00:00:45,460
+Two.
+
+7
+00:00:47,360 --> 00:00:54,060
+Hotel Lima 123, climb and maintain flight level 350.
+
+8
+00:00:55,780 --> 00:01:00,320
+Expedite climb until passing flight level 280.
+
+9
+00:01:03,780 --> 00:01:05,640
+Record your full readback.
+
+10
+00:01:14,300 --> 00:01:14,920
+Three.
+
+11
+00:01:17,100 --> 00:01:22,020
+Hotel Lima 123, winds 220 at 10.
+
+12
+00:01:22,780 --> 00:01:24,900
+Cleared for takeoff runway 24.
+
+13
+00:01:27,540 --> 00:01:29,780
+Record your full readback.
+
+14
+00:01:38,030 --> 00:01:39,010
+Four.
+
+15
+00:01:40,710 --> 00:01:44,150
+Hotel Lima 123, good morning.
+
+16
+00:01:44,600 --> 00:01:45,670
+Cleared to Robinson.
+
+17
+00:01:46,420 --> 00:01:47,850
+Hulk 3 departure.
+
+18
+00:01:48,900 --> 00:01:50,050
+Julia transition.
+
+19
+00:01:50,800 --> 00:01:52,770
+Flight level 380.
+
+20
+00:01:53,510 --> 00:01:55,610
+Departure runway 24.
+
+21
+00:01:56,070 --> 00:01:58,290
+Squawk 3675.
+
+22
+00:02:01,090 --> 00:02:01,930
+Hold short of runway 34L via Bravo, Tango, Charlie.
+
+23
+00:02:01,930 --> 00:02:03,050
+Record your full readback.
+
+24
+00:02:10,170 --> 00:02:11,670
+Part 1, Task B.
+
+25
+00:02:12,930 --> 00:02:16,090
+Read the directions on the screen to proceed.
+
+26
+00:02:30,610 --> 00:02:31,330
+One.
+
+27
+00:02:33,150 --> 00:02:40,550
+During a climb, you are approaching a fix which requires a frequency change to the next air traffic controller.
+
+28
+00:02:41,110 --> 00:02:43,550
+Now, ATC contacts you.
+
+29
+00:02:44,190 --> 00:02:46,330
+Acknowledge and respond accordingly.
+
+30
+00:02:48,390 --> 00:02:56,890
+Hotel Lima 123, when passing flight level 150, contact Smith Control on 129-1.
+
+31
+00:02:59,390 --> 00:03:00,790
+Record your response.
+
+32
+00:03:09,940 --> 00:03:10,460
+Two.
+
+33
+00:03:11,940 --> 00:03:15,680
+You contact departure frequency after takeoff.
+
+34
+00:03:15,840 --> 00:03:18,120
+Now, ATC contacts you.
+
+35
+00:03:18,240 --> 00:03:20,760
+Acknowledge and respond accordingly.
+
+36
+00:03:22,520 --> 00:03:27,280
+Hotel Lima 123, follow JFK 1 departure.
+
+37
+00:03:27,800 --> 00:03:29,500
+Climb via SID.
+
+38
+00:03:31,580 --> 00:03:32,780
+Record your response.
+
+39
+00:03:46,270 --> 00:03:46,690
+Three.
+
+40
+00:03:48,430 --> 00:03:51,330
+You are being radar vectored for the approach.
+
+41
+00:03:52,130 --> 00:03:55,770
+ATC instructs you to turn to heading 090.
+
+42
+00:03:56,230 --> 00:04:02,530
+But you mistakenly turn to a heading which was different than the ATC instructions.
+
+43
+00:04:02,530 --> 00:04:05,790
+Now, ATC contacts you.
+
+44
+00:04:06,490 --> 00:04:07,810
+Respond accordingly.
+
+45
+00:04:09,870 --> 00:04:15,090
+Hotel Lima 123, confirm maintaining heading 090.
+
+46
+00:04:17,030 --> 00:04:18,970
+Record your response.
+
+47
+00:04:26,820 --> 00:04:27,580
+Five.
+
+48
+00:04:27,720 --> 00:04:32,820
+You try to come to Re Basketrol be the best of your skills.
+
+49
+00:04:32,820 --> 00:04:35,960
+At that moment, your né CAP is turned off until G-P Situation specify.
+
+50
+00:04:36,000 --> 00:04:36,540
+Let's move on.
+
+51
+00:04:36,540 --> 00:04:44,120
+...on the final approach course, but you need to reduce the speed by 20 knots due to a performance reason.
+
+52
+00:04:44,480 --> 00:04:46,960
+Say your request to ATC.
+
+53
+00:04:49,140 --> 00:04:55,900
+Hotel Lima 123, maintain 2-1-0 knots until established on the final.
+
+54
+00:04:58,220 --> 00:04:59,380
+Record your response.
+
+55
+00:05:11,400 --> 00:05:11,820
+5.
+
+56
+00:05:13,460 --> 00:05:19,700
+You are now lining up on runway one-niner and takeoff clearance was given from the tower.
+
+57
+00:05:19,880 --> 00:05:25,040
+While lining up, you saw an aircraft crossing the takeoff runway.
+
+58
+00:05:25,500 --> 00:05:29,800
+Now ATC contacts you. Respond accordingly.
+
+59
+00:05:31,660 --> 00:05:36,340
+Hotel Lima 123, cleared for takeoff runway one-niner.
+
+60
+00:05:38,060 --> 00:05:39,580
+Record your response.
+
+61
+00:05:45,840 --> 00:05:46,680
+6.
+
+62
+00:05:49,000 --> 00:05:57,440
+ATC instructed you to maintain 300 knots for en route separation, but you are now experiencing turbulence at 300 knots.
+
+63
+00:05:58,200 --> 00:06:01,180
+ATC contacts you. Respond accordingly.
+
+64
+00:06:02,740 --> 00:06:08,320
+Hotel Lima 123, confirm maintaining 3-0-0 knots.
+
+65
+00:06:10,340 --> 00:06:11,900
+Record your response.
+
+66
+00:06:20,600 --> 00:06:22,440
+Part 2, Task A.
+
+67
+00:06:23,540 --> 00:06:26,900
+Read the directions on the screen to proceed.
+
+68
+00:07:06,500 --> 00:07:08,080
+Flight Paths
+
+69
+00:07:08,680 --> 00:07:16,620
+In this scenario, you'll be the pilot flying Hotel Lima 123, which goes through three flight stages.
+
+70
+00:07:17,700 --> 00:07:20,900
+Approach, Landing, and Taxi.
+
+71
+00:07:22,740 --> 00:07:23,920
+Initial Situation
+
+72
+00:07:25,400 --> 00:07:30,660
+You have started your descent into your destination airport, and have been handed a flight path.
+
+73
+00:07:30,660 --> 00:07:31,940
+Turn it off to Approach Control.
+
+74
+00:07:32,360 --> 00:07:37,080
+There may be a slight change or altercation to your flight plan.
+
+75
+00:07:42,070 --> 00:07:46,770
+Contact Approach Control and report your passing altitude.
+
+76
+00:07:53,800 --> 00:07:57,100
+Listen to the controller's response and question.
+
+77
+00:07:57,460 --> 00:07:59,380
+Give a full readback.
+
+78
+00:07:59,940 --> 00:08:01,480
+Acknowledge positively.
+
+79
+00:08:03,180 --> 00:08:06,280
+Hotel Lima 123, Approach.
+
+80
+00:08:06,280 --> 00:08:10,560
+Altimeter 3033, Quebec now current.
+
+81
+00:08:10,840 --> 00:08:12,900
+Watch your maximum forward speed.
+
+82
+00:08:21,240 --> 00:08:29,000
+Listen to the controller's message, then request a verification of the waypoint you're cleared direct to.
+
+83
+00:08:29,980 --> 00:08:32,720
+You can't find it on the approach plate.
+
+84
+00:08:34,380 --> 00:08:41,500
+Hotel Lima 123, clear direct DeVito to intercept the course for RNAV Visual.
+
+85
+00:08:41,500 --> 00:08:44,940
+Maintain maximum forward speed unto ASALT.
+
+86
+00:08:45,160 --> 00:08:47,940
+There is a Boeing 757 behind you.
+
+87
+00:08:55,010 --> 00:08:57,270
+Listen to the controller's response.
+
+88
+00:08:58,330 --> 00:09:02,870
+Respond, implying you have found the fix, and give a full readback.
+
+89
+00:09:04,770 --> 00:09:08,010
+It's the very first fix outside of ASALT.
+
+90
+00:09:08,130 --> 00:09:10,510
+Delta Victo Echo Tango Oscar.
+
+91
+00:09:10,970 --> 00:09:12,710
+Nobody seems to find it.
+
+92
+00:09:23,380 --> 00:09:26,400
+Listen to the controller's response, and give a full readback.
+
+93
+00:09:26,400 --> 00:09:27,620
+Listen to the controller's response, and give a full readback.
+
+94
+00:09:28,920 --> 00:09:34,500
+Hotel Lima 123, you are cleared for RNAV Visual 13R.
+
+95
+00:09:34,920 --> 00:09:37,560
+Contact tower 118.3.
+
+96
+00:09:45,000 --> 00:09:46,580
+Situation update.
+
+97
+00:09:47,400 --> 00:09:53,100
+You are now over ASALT intersection at 3000 feet.
+
+98
+00:09:57,770 --> 00:10:03,150
+Contact tower control and report your position and intention.
+
+99
+00:10:03,150 --> 00:10:14,960
+Listen to tower and give your full readback.
+
+100
+00:10:15,220 --> 00:10:19,460
+Then, inquire about the traffic on your TCAS screen.
+
+101
+00:10:21,320 --> 00:10:23,840
+Hotel Lima 123, hello.
+
+102
+00:10:24,060 --> 00:10:28,640
+Winds 110 at 26 gust 35.
+
+103
+00:10:29,000 --> 00:10:29,920
+Cleared to land.
+
+104
+00:10:30,120 --> 00:10:31,100
+Runway 13R.
+
+105
+00:10:40,940 --> 00:10:42,340
+Situation update.
+
+106
+00:10:42,920 --> 00:10:47,240
+You have landed and vacated the runway on taxiway Victor.
+
+107
+00:10:47,240 --> 00:10:50,560
+And holding short of taxiway Bravo.
+
+108
+00:10:51,320 --> 00:10:55,040
+The controller may need some additional information.
+
+109
+00:10:59,880 --> 00:11:03,800
+Contact ground and inform them of your current location.
+
+110
+00:11:10,080 --> 00:11:14,440
+Listen to the controller's response, and notify them.
+
+111
+00:11:14,620 --> 00:11:16,400
+Gate B6.
+
+112
+00:11:18,200 --> 00:11:20,120
+Hotel Lima 123.
+
+113
+00:11:20,120 --> 00:11:22,860
+What gate are you going to?
+
+114
+00:11:30,550 --> 00:11:33,370
+Listen to ground and respond accordingly.
+
+115
+00:11:35,510 --> 00:11:37,110
+Hotel Lima 123.
+
+116
+00:11:37,870 --> 00:11:39,830
+Any idea when you are going in?
+
+117
+00:11:54,400 --> 00:11:59,060
+You have just finished task A, as the pilot of Hotel Lima 123.
+
+118
+00:12:00,300 --> 00:12:07,700
+In this situation, why did you ask ATC for clarification about the waypoint during your approach?
+
+119
+00:12:07,700 --> 00:12:14,200
+From your own experiences, how common is it for you to ask for this type of clarification?
+
+120
+00:12:14,840 --> 00:12:16,120
+Give an example.
+
+121
+00:12:55,150 --> 00:12:57,010
+Part 2, Task B.
+
+122
+00:12:58,330 --> 00:13:01,510
+Read the directions on the screen to proceed.
+
+123
+00:13:25,600 --> 00:13:26,780
+Initial situation.
+
+124
+00:13:27,640 --> 00:13:34,920
+You are the pilot of Hotel Lima 123, and currently holding short of runway 25L.
+
+125
+00:13:39,750 --> 00:13:42,590
+Listen and respond accordingly.
+
+126
+00:13:44,310 --> 00:13:47,590
+Hotel Lima 123, wind calm.
+
+127
+00:13:47,850 --> 00:13:49,390
+Runway 25L.
+
+128
+00:13:49,530 --> 00:13:50,830
+Cleared for takeoff.
+
+129
+00:13:57,920 --> 00:13:59,540
+Situation update.
+
+130
+00:14:00,140 --> 00:14:03,100
+You are now airborne and climbing out.
+
+131
+00:14:03,300 --> 00:14:06,060
+Suddenly you need to declare an emergency.
+
+132
+00:14:06,380 --> 00:14:10,440
+You are having difficulty controlling the aircraft's yawing.
+
+133
+00:14:14,780 --> 00:14:17,720
+The controller contacts you.
+
+134
+00:14:19,320 --> 00:14:22,700
+Hotel Lima 123, contact departure.
+
+135
+00:14:23,140 --> 00:14:23,940
+Good day.
+
+136
+00:14:25,520 --> 00:14:30,280
+Declare an emergency and request vectors back to the airport.
+
+137
+00:14:38,390 --> 00:14:40,990
+Listen to the controller's response.
+
+138
+00:14:41,650 --> 00:14:43,330
+Respond accordingly.
+
+139
+00:14:45,190 --> 00:14:53,270
+Hotel Lima 123, make a left downwind for runway 25L and contact departure, please.
+
+140
+00:15:00,860 --> 00:15:05,620
+You are now on departure frequency and they contact you.
+
+141
+00:15:06,580 --> 00:15:09,500
+Hotel Lima 123, radar contact.
+
+142
+00:15:09,660 --> 00:15:11,380
+Say the nature of the emergency.
+
+143
+00:15:13,620 --> 00:15:20,060
+Respond and state, having difficulty controlling the aircraft's yawing.
+
+144
+00:15:20,740 --> 00:15:23,300
+Request vectors to troubleshoot.
+
+145
+00:15:31,150 --> 00:15:34,190
+Hotel Lima 123, say your intentions.
+
+146
+00:15:36,670 --> 00:15:41,030
+Respond and state approach configuration needs testing.
+
+147
+00:15:41,370 --> 00:15:43,810
+State how you will need to do it.
+
+148
+00:15:51,460 --> 00:15:52,880
+Situation update.
+
+149
+00:15:53,540 --> 00:16:00,800
+You have tested the configuration and have been cleared by the company to head back in for a landing.
+
+150
+00:16:05,440 --> 00:16:06,880
+Contact approach.
+
+151
+00:16:07,280 --> 00:16:11,180
+Explain your situation and say your intentions.
+
+152
+00:16:17,880 --> 00:16:20,820
+Listen to the controller's response.
+
+153
+00:16:21,300 --> 00:16:23,040
+Respond accordingly.
+
+154
+00:16:24,820 --> 00:16:32,520
+Hotel Lima 123, turn right heading 160, maintain 3000 until established.
+
+155
+00:16:32,640 --> 00:16:35,720
+Cleared for ILS 25L.
+
+156
+00:16:42,380 --> 00:16:45,480
+The controller contacts you.
+
+157
+00:16:45,660 --> 00:16:47,520
+Respond accordingly.
+
+158
+00:16:49,120 --> 00:16:51,040
+Hotel Lima 123.
+
+159
+00:16:51,040 --> 00:16:56,780
+Let me know fuel and soles on board, so I can advise tower.
+
+160
+00:17:04,950 --> 00:17:06,870
+Part 2, Task C.
+
+161
+00:17:08,050 --> 00:17:11,230
+Read the directions on the screen to proceed.
+
+162
+00:17:25,060 --> 00:17:28,720
+Now listen to the controller's radio telephony messages.
+
+163
+00:17:31,640 --> 00:17:34,680
+Hotel Lima 123, wind calm.
+
+164
+00:17:34,860 --> 00:17:36,480
+Runway 25L.
+
+165
+00:17:36,620 --> 00:17:37,920
+Cleared for takeoff.
+
+166
+00:17:40,020 --> 00:17:43,320
+Hotel Lima 123, contact departure.
+
+167
+00:17:43,740 --> 00:17:44,540
+Good day.
+
+168
+00:17:46,800 --> 00:17:54,760
+Hotel Lima 123, make a left downwind for runway 25L and contact departure please.
+
+169
+00:17:56,620 --> 00:17:59,520
+Hotel Lima 123, radar contact.
+
+170
+00:17:59,760 --> 00:18:01,440
+Say the nature of the emergency.
+
+171
+00:18:03,400 --> 00:18:06,360
+Hotel Lima 123, say your intentions.
+
+172
+00:18:07,960 --> 00:18:15,520
+Hotel Lima 123, turn right heading 160, maintain 3000 until established.
+
+173
+00:18:16,160 --> 00:18:18,740
+Cleared for ILS 25L.
+
+174
+00:18:20,980 --> 00:18:28,120
+Hotel Lima 123, let me know fuel and soles on board, so I can advise tower.
+
+175
+00:18:33,130 --> 00:18:35,010
+Now answer the questions.
+
+176
+00:18:37,610 --> 00:18:38,790
+Question 1.
+
+177
+00:18:40,840 --> 00:18:42,810
+What happened to your aircraft?
+
+178
+00:18:43,210 --> 00:18:44,530
+Hotel Lima 123.
+
+179
+00:18:45,170 --> 00:18:47,930
+Explain the nature of the incident.
+
+180
+00:19:26,270 --> 00:19:27,080
+Question 2.
+
+181
+00:19:28,080 --> 00:19:32,580
+How do you think the incident was handled by the air traffic controller?
+
+182
+00:19:33,020 --> 00:19:36,560
+Do you feel the situation could have been handled differently?
+
+183
+00:19:36,960 --> 00:19:40,220
+Make a comment from a pilot's point of view.
+
+184
+00:19:40,220 --> 00:19:40,240
+Thank you.
+

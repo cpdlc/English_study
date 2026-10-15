@@ -1,82 +1,111 @@
 # 학습 진행 로그
 
 세트를 채점할 때마다 `CLAUDE.md` §6-5 규칙에 따라 아래 표에 한 줄씩 추가한다.
-(빈칸으로 남은 문항은 무응답=Level 1로 처리된 결과도 그대로 기록한다.)
+(빈칸으로 남은 문항은 무응답 = Level 1 로 처리한 결과도 그대로 기록한다.)
 
 | 날짜 | 세트 | 최종등급(Level) | 약점 태그 | 사용한 시나리오 |
 |---|---|---|---|---|
-| 2026-08-18 | EPTA_01 | Level 2 (불합격) | 기능오수행(clarify·position report·intentions), 사실관계 반전(SOB=lb, low pass 요청주체), 답변미완성, "clear"/"cleared" 혼동 | Baxter Airport 게이트 지연(ⅡA) / Coral City 좌측기어 unsafe(ⅡB) |
-| 2026-08-19 | EPTA_02 | Level 4 (합격) | unable 뒤 대안 누락 반복, 신규 컨택 시 이전정보 반복(position/intentions), 엉뚱한 기관 호출 | Westgate Airport 출발(SID변경/유도로폐쇄/후방압박, ⅡA) / 순항 중 cabin pressurization 상실 → Fenwick 회항(ⅡB) |
-| 2026-08-20 | EPTA_03 | Level 3 (불합격, EPTA_02 대비 하락) | unable 뒤 대안 누락(3세트째), position report 반복(같은 세트에서 2회), 엉뚱한 기관 호출(2세트째), 숫자 값 오류(신규, FL240→FL250), MAYDAY 사유 오전달(신규) | Cedar Airport 출발(Push-back/give-way/hold position, ⅡA) / 순항 중 조종실 연기 → Fairview 회항, "Continue Approach" 함정 통과(ⅡB) |
-| 2026-08-21 | EPTA_04 | Level 3 (불합격, EPTA_03과 동일) | unable 뒤 대안 누락(4세트째), position report 일관성 부족(같은 세트에서 성공 3회+실패 1회), Informing 문항 통째로 누락(신규), Task C 사실 왜곡(신규) — 단, 엉뚱한 기관 호출은 이번엔 0회로 해결 | Fernbrook Airport 도착(Approach/Landing/Taxi, 활주로변경, ⅡA) / Meridian Airport 접근 중 Minimum Fuel→Emergency Fuel 격상(ⅡB) |
-| 2026-09-02 | EPTA_05 ⚠️(예외: 실제 샘플 녹음본 재현) | **Level 1 (불합격, 5세트 중 최저)** | 지시를 반대로 이해(신규·최중대: 윙팁 클리어런스 불확실→홀드 요청을 "roger, taxi to g2"로 답함), 헤딩/고도 혼동(신규), 클리어런스 readback 중 웨이포인트·고도값을 다른 값으로 대체(신규), Informing 없이 Request로 직행(신규), 엉뚱한 관제기관 호출 재발("Control", EPTA_04에서 해결로 봤으나 재발), Task C 무응답 — 단, unable+대안 3단 구조는 P1B-Q6에서 5세트 만에 처음 형태 완성(사유단어는 여전히 부정확), report-speed 부가정보 요청도 정확히 수행(신규 패턴 성공 사례) | Smith Airport 클리어런스/디퓨얼링/윙팁클리어런스(ⅡA, 예외 재사용) / Public Airport 계기 다수 상실(ⅡB, 예외 재사용) |
+| 2026-10-08 | EPTA_01 | **Level 1 (불합격)** | 지시문 요구 행위 미수행(6회+실질 무응답 2회), 들은 값을 다른 값으로 대체(6건), confirm/able 질문에 AFFIRM·NEGATIVE 미사용(3회), 90초 Follow-up 무응답, 복합 지시의 뒷부분 생략, Task C 사건 원인 오인(유압→기어) 및 질문 대상 오독 | Lakeside 도착(Cruise/Descent/Approach, 활주로 09→14 변경) / Clearwater 접근 중 유압 B 저압(비상선포 없음, 관제사 변심) |
+| 2026-10-13 | EPTA_01 **재응시** | **Level 2** (1차 Level 1 → +1) | 복합 지시 뒷부분 누락(8건, 2세트 연속 최우선), 기관 호출 누락(신규 4건), 값을 하나 맞추면 다른 하나를 틀림(Task A 4문항 전부), 주파수 2회 연속 오류, `confirm ~?` 에 AFFIRM 유지(미해결), 접근 허가 복창 누락 반복, Task C 질문 후반부 미응답 반복 | 동일 (EPTA_01 재응시) |
+| 2026-10-15 | EPTA_02 | **Level 3** (EPTA_02 +1, 1→2→3) | 고도 자릿수 혼동(신규 최우선: 2,500ft→FL250, 4,000→14000), NEGATIVE 뒤 실제 값 누락, 지시문의 '물어보라' 미수행(6건, 3세트 연속), `controller` 를 기관명으로 사용(반복), Task C 에서 ILS→RNAV 전개 누락 및 speed→height 오인, `could have been handled differently` 3세트 연속 무응답 — 단 주파수 3회 모두 정확·접근허가 복창 성공·복합지시 4건 성공 | Fairmont 출발(제빙·슬롯지연·교차점 출발) / Thornbury 접근 중 속도계 불일치(비상선포 없음) |
 
 ---
 
-## 채점 기준 정책 (2026-08-18부터 적용)
-이 시험은 원래 구술시험이므로 텍스트 표기 방식은 감점하지 않는다: ① ICAO 알파벳 한 글자 축약
-(G=Golf 등), ② 발음상 문제없는 오탈자(baxtar→Baxter 등), ③ **숫자를 아라비아 숫자로 쓴 것**
-(27→"two seven" 등). "clear"/"cleared"처럼 아예 다른 단어를 쓴 경우와 숫자 값 자체가 틀린 경우는
-계속 감점. Pronunciation 항목은 텍스트로 판단할 근거가 없어 "평가 보류"로 처리하고 등급 계산에서
-제외한다. (자세한 내용은 CLAUDE.md §6-1-1)
+## 채점 기준 정책
+
+`CLAUDE.md` §6-1-1 참조. 이 시험은 원래 구술시험이므로 아래 텍스트 표기 방식은 감점하지 않는다.
+① ICAO 알파벳 한 글자 축약(G=Golf 등) ② 발음상 문제없는 오탈자 ③ 숫자를 아라비아 숫자로 쓴 것.
+단어 자체가 다른 경우("clear" vs "cleared")와 숫자 **값**이 틀린 경우는 그대로 감점한다.
+Pronunciation 항목은 텍스트로 판단할 근거가 없어 "평가 보류"로 처리하고 등급 계산에서 제외한다.
+
+실제 출제 음성에서 `tree`(=3) 발음을 쓰는 세트가 확인되었으므로(`exam-spec.md` §7),
+`tree`/`three` 는 둘 다 정답으로 본다.
+
+---
 
 ## 약점 태그 누적 메모
 
-### 해결됨 (EPTA_02에서 확인)
-- ~~Clarifying 기능을 readback으로 대체~~ → EPTA_02 P1B-Q6에서 정확히 수행, 해결.
-- ~~intentions 진술을 애매한 질문으로 대체~~ → EPTA_02 P2B-Q4에서 정확히 수행, 해결.
-- ~~SOB(탑승인원)를 중량으로 오인~~ → EPTA_02 P2B-Q6에서 정확히 "128 souls on board", 해결.
-- ~~correcting mistake 방향 반전~~ → EPTA_02 P1B-Q4에서 정확한 방향으로 정정, 해결.
-- ~~자유응답 문항 미완성(문장 중간 끊김)~~ → EPTA_02 P2C-Q2는 끝까지 완성함, 해결. (다만 질문의 절반만 다루는 문제는 남음)
+### 해결됨 (EPTA_02 2026-10-15 에서 확인)
 
-### 아직 남은 약점 (EPTA_04까지 계속 반복 — 최우선 개선 대상)
-- **Unable + reason 뒤에 대안(request) 누락** : "unable due to ~"까지만 말하고 대안을 안 붙임. (EPTA_01 P1B-Q3 → EPTA_02 P1B-Q3 → EPTA_03 P1B-Q3 → EPTA_04 P1B-Q3, 4세트 연속 반복. **EPTA_05 P1B-Q6에서 처음으로 3단 구조(unable→due to→request 대안)를 완성** — 단 "due to restriction"이라는 부정확한 사유 단어는 3세트째(03·04·05) 반복 중이고, 같은 세트 P1B-Q4에서는 오히려 unable 자체를 빠뜨림 — 완전히 해결된 건 아니고 "아는데 매번 적용은 못 하는" 단계로 재분류.)
-- **"report your position" 형식이 상황마다 일관되게 안 나옴** : 표준형("descending through X for Y" / "level at X")을 아는 것은 확인됐지만(EPTA_04 P2A-Q1, P2B-Q7, P2B-Q9 성공), 같은 세트 안에서도 다른 턴(P2A-Q5)에서는 여전히 이전 클리어런스를 반복함 — "알지만 매번 적용은 못 하는" 단계. EPTA_05 P2B-Q1에서도 목표고도("for 11,000")를 빠뜨림, 계속 관찰.
+- ~~접근 허가 복창 누락~~ → P2B-Q8 에서 `cleared for the RNAV runway 27 approach` 복창,
+  선회방향·기수·고도·established·주파수까지 6요소 전부. **해결.**
+- ~~주파수 오류 2회 연속~~ → EPTA_02 에서 127.85 · 121.9 · 126.4 **3회 모두 정확.** 해결.
+- ~~`confirm ~?` 에 AFFIRM 으로 시작~~ → P1B-Q3 에서 `Negative` 로 시작. **첫 단어는 해결**
+  (다만 뒤에 실제 값 270 을 넣지 않아 절반만 전달 — 아래 "진전 중" 참고).
+- ~~복합 지시를 하나도 온전히 수행하지 못함~~ → P1B-Q1, P1B-Q2, P2A-Q4, P2A-Q10
+  **4건 온전 수행.** 기관 호출도 4건(P2A-Q1·Q4, P2B-Q1, P1B-Q6).
+- ~~`clear`/`cleared` 혼동~~ → P1A-Q2 에서 정확(단 P2A-Q2·Q8 에서는 아직 `clear`) — 진행 중.
 
-### 해결 → 재발 (EPTA_04에서 해결로 봤으나 EPTA_05에서 다시 나타남)
-- **엉뚱한 관제기관 호출** → EPTA_02·03 2세트 연속 문제였다가 EPTA_04에서 0회로 해결 판단. **EPTA_05 P2A-Q1에서 "Clearance Delivery" 대신 "Control"로 호출하며 재발** — "해결"로 확정 짓기엔 이르다, 계속 관찰 필요.
+### 해결됨 (EPTA_01 재응시 2026-10-13 에서 확인)
 
-### 해결됨 (EPTA_04에서 확인, EPTA_05에서도 유지)
-- ~~MAYDAY 선언에서 사유를 부정확하게 전달~~ → EPTA_04 P2B-Q4에서 "due to emergency fuel"로 정확하고 구체적으로 전달, 해결. (EPTA_05엔 MAYDAY 상황 없어 재검증 보류)
-- ~~"clear" vs "cleared" 혼동~~ : EPTA_01 이후 EPTA_02·03·04·05 모두 재발 없음 — 해결로 최종 판단.
+- ~~직접 질문에 실질 무응답~~ → `rogoer`→`negative`(P2B-Q5), `whatever`→명확한 결정(P2B-Q6),
+  `vacate`→문장(P2B-Q9). **해결.**
+- ~~90초 Follow-up 무응답~~ → P2A-Q11 응답함. 내용은 3부 중 1부만이지만 무응답은 해소.
+- ~~Task C 사건 원인 오인~~ → 유압 계통으로 정확히 짚음(1차는 기어 고장). **해결.**
+- ~~Task C Q2 질문 대상 오독~~ → 관제사를 평가함(1차는 조종사). **해결.**
+- ~~지시 요구 3개 중 1개만 수행(P2B-Q3)~~ → 셋 다 담음. **해결.**
 
-### 신규 (EPTA_04에서 처음 발견)
-- **Informing 문항에서 요구된 상태 보고 자체를 안 함** : "say your status"에 실제 상태(조류충돌 의심 등) 없이 향후 계획만 답함. (EPTA_04 P1B-Q2) — **EPTA_05에서도 같은 유형 반복**: P2A-Q7·Q9, P2B-Q6에서 상황을 알리지 않고 바로 요청/응답으로 건너뜀. 4세트 연속은 아니지만 EPTA_04→05 연속 재발이라 "패턴"으로 격상, 최우선 관찰 대상에 추가.
-- **Task C 요약에서 사건 단순화 + 사실 왜곡** : 핵심 단계가 빠지거나 엉뚱한 단어를 씀. (EPTA_04 P2C-Q1, Q2) — **EPTA_05에서는 아예 무응답/무관한 메모로 후퇴** (Q1 기록 오류, Q2는 ATC 대사 메모를 옮겨적음, 질문에 답하지 않음). 개선이 아니라 악화.
-- **MAYDAY 뒤 관제기관명 누락** : MAYDAY×3 다음에 바로 콜사인으로 넘어가고 기관명을 빠뜨림. (EPTA_04 P2B-Q4) — EPTA_05엔 MAYDAY 상황 없어 재검증 보류.
+### 최우선 (EPTA_03 에서 2문항 이상 겨냥)
 
-### 신규 (EPTA_05에서 처음 발견)
-- **지시를 반대로 이해하고 답하는 comprehension 오류 (최중대)** : P2A-Q12에서 "윙팁 클리어런스 불확실하니 현재 위치 대기 요청"이라는 클루를 무시하고 "roger, taxi to g2"(계속 진행)로 정반대 답변. 안전과 직결되는 가장 심각한 유형의 오류로, 다음 세트에서도 이런 "지시 방향 반전" 패턴이 있는지 최우선으로 확인할 것.
-- **헤딩(heading)과 고도(FL/altitude) 혼동** : P2B-Q4에서 "fly heading 270"을 "maintain FL270"으로 복창. 둘 다 §2 필수 복창 항목이라 중대한 오류.
-- **클리어런스 readback 중 실제 값을 다른 값으로 "지어내서" 대체** : P2A-Q3에서 웨이포인트 HAPIE 대신 존재하지 않는 "heading 122"를, 고도 5,000/FL350 대신 존재하지 않는 "FL250"을 복창. 지금까지의 "누락"형 오류와 달리 "다른 내용으로 대체"하는 새로운 유형.
+- **고도 자릿수를 섞는다 (신규·최중대)** : `2,500 feet` → **`FL250`**(P2A-Q9, 만 피트 이상 차이),
+  `maintain 4,000` → **`14000`**(P1A-Q4). 같은 세트 P2B-Q1 에서는 `fl200` 을 정확히 썼으므로
+  구분을 모르는 게 아니라 **받아적는 방식이 없다.** 네 자리 피트는 `2500`, FL 은 `FL250` 으로
+  모양을 다르게 적는 훈련 필요. → 다음 세트에 **피트 고도와 FL 이 섞인 문항**을 배치할 것.
+- **NEGATIVE 뒤에 실제 값을 넣지 않는다 (진전 중)** : `Negative maintain speed 290`(실제 270).
+  첫 단어는 2세트 만에 해결됐으나 **"그럼 실제로는 무엇인가"** 가 비었다. 화면 클루에 값이
+  떠 있었는데도 못 넣음.
+- **지시문의 "물어보라 / 요청하라" 를 수행하지 않는다 (3세트 연속)** : P2A-Q6
+  `Tell him what you need to know`(묻지 않고 roger 로 수락), P1B-Q4 `a request with a reason`,
+  P2B-Q5 `Request what you need instead`, P2A-Q8 `advise that you are ready`,
+  P1B-Q5 정정 누락, P2A-Q3 앞부분 누락. **4건은 성공했으나 6건은 여전히 뒷부분이 빈다.**
+- **`controller` 를 기관명으로 사용 (반복)** : P2B-Q3 에서 EPTA_01 과 **똑같이** 재발.
+  상황이 복잡해지는 구간에서 기관 호출이 먼저 빠진다(P2B-Q3·Q6).
+- **Task C 전개 누락 + 핵심 단어 오인 (3세트 연속)** : Q1 에서 ILS→RNAV 변경이 통째로 빠지고
+  원인·결과 순서가 뒤집힘. Q2 에서 **speed 를 height 로** 오인. 그리고
+  **`could have been handled differently` 3세트 연속 무응답.**
+  → Task B 를 풀면서 ATC 대사와 전개 순서를 메모하는 훈련이 전제.
+- **`Give an example.` 미수행 (3세트 연속)** : Follow-up 에서 예시를 한 번도 들지 않음.
+  경험이 없으면 가정 예시로 답하면 된다.
 
-### 이전 세트에서 발견 후 해결됨
-- **숫자 값 자체를 잘못 복창** : EPTA_03 P2A-Q2에서 발견 → EPTA_04에는 유사 사례 없음, 재검증 보류.
-- **REQUEST 뒤 전치사구 오용** : EPTA_02 P2B-Q5에서 발견 → EPTA_03에서 해결 확인했으나, **EPTA_04 P2B-Q6에서 "request land"로 유사 오류 재발**("request+동사" 패턴) — 완전히 해결된 건 아님, 계속 관찰.
-- **turn 지시 어순 도치** : EPTA_02 P1A-Q3에서 발견 → EPTA_03·04 모두 해당 유형 문항 없어 재검증 보류.
+### 이전 최우선 (EPTA_01 기준 — 일부 해결)
 
-### 채점 기준 정정 (2026-08-19)
-EPTA_02 최초 채점에서 P2A-Q3·P2B-Q1을 "ROGER를 full readback 요구 문항에 씀"이라는 이유로
-감점했으나, 실제 샘플(샘플Ⅰ "Roger hold for release, HL123.", 샘플Ⅱ "HL123, roger, change SID
-HIPPO 1 Departure.")에 ROGER + 실제 지시 내용을 함께 말하는 동일 패턴이 있어 **정정함(⚠️→✅)**.
-ROGER 금지 규칙은 "ROGER가 내용 없이 복창을 단독으로 대체할 때"만 적용되고, 실제 값을 같이
-말하면 문제없다 — `reference/exam-spec.md` §9-2에도 이 예외를 반영해둘 것.
+- **복합 지시의 뒷부분을 빠뜨린다** : 1차 6건+무응답 2건 → **재응시 8건**
+  (P1B-Q3 대안, P1B-Q6 요청, P2A-Q3 ATIS 요청, P2A-Q6 필요한 것, P2A-Q10 문의,
+  P2B-Q4 intentions, P2B-Q5 요청, P2B-Q7 지원 요청). 실질 무응답은 사라졌으나
+  "복창은 하고 요청·문의는 안 함" 은 그대로. **지시문의 `and`/`then` 뒤가 사각지대.**
+- **기관 호출 누락 (신규, 재응시 4건)** : P2A-Q9, P2B-Q1, P2B-Q3, P2B-Q7.
+  1차에서는 P2B-Q1 에 있었는데 재응시에서 빠짐. 조종사가 먼저 발신하는 턴은
+  예외 없이 `[기관] + [콜사인]` 으로 시작해야 한다.
+- **값을 하나 맞추면 다른 하나를 틀린다 (신규)** : Task A 4문항 전부 이 양상.
+  Q1 활주로27 챙기고 유도로 Kilo→C, Q3 교차고도 맞추고 강하고도 240→250,
+  Q4 squawk 맞추고 주파수 124.35→124.5. **주파수는 2회 연속 오류**(118.5 → 119.75).
+- **접근 허가 복창 누락 반복** : P2B-Q8 에서 `cleared for the ILS runway 09 approach` 를
+  1차·재응시 모두 빠뜨림. P2A-Q8 에서는 `cleared for` 를 `expect` 로 바꿈.
+  필수 복창 중 가장 무거운 항목.
+- **들은 것을 다른 내용으로 대체** : FL260→170, squawk 4512→3512, runway 09→19,
+  118.75→118.5, `altimeter 29.94`→`contact .4`, `TOPAZ ONE arrival`→`cross TOPAZ`.
+  누락보다 위험한 유형. 6건.
+- **`confirm ~?` 에 AFFIRM/NEGATIVE 미사용 (미해결, 계속 관찰)** : 재응시에서도
+  `affirmative 170knots but Request reduce speed 150` — 150kt 와 사유를 덧붙인 것은 진전이지만
+  **첫 단어가 여전히 AFFIRM** 이라 관제사는 170kt 로 계산한다.
+  단 `are you able ~?` 는 P2A-Q7 에서 `Affirm` 으로 **해결**(1차 `roger`),
+  P2B-Q5 도 `negative` 로 **해결**(1차 `rogoer`).
+- **자유응답이 질문의 후반부를 비운다 (2세트 연속)** : P2A-Q11 은 3부 중 1부만
+  (롤플레이에서 한 일·기준·예시 중 가정형만), P2C-Q2 는 `could have been handled
+  differently` 에 1차·재응시 모두 무응답. **분량은 해결, 질문 커버리지가 과제.**
+- **핵심 단어를 틀려 뜻이 바뀐다 (신규 3건)** : `altimeter`(←altitude window),
+  `fixed`(←extended by the alternate system), `due to aircraft`(사유 불명).
+  `clear`/`cleared` 는 재응시에서 3회 반복.
 
-## 외워야 할 표현 누적 목록
+### 확인된 강점 (유지)
 
-전체 목록·표는 `progress/expressions.md`로 이관됨. 여기는 최우선 항목만 압축 표시.
-
-- **"unable [지시] due to [정확한 사유], request [대안]"** — unable만 말하고 끝내지 않는 3단 구조 (EPTA_01~04 **4세트 연속** 감점 → EPTA_05 P1B-Q6에서 처음 형태 완성, 그러나 같은 세트 P1B-Q4에서 unable 자체를 빠뜨림 — 이 프로젝트에서 가장 오래, 가장 안 고쳐지는 약점)
-- **"level at [고도]" / "descending/leaving through [현재고도] for [목표고도]"** — position report 표준 형식. EPTA_04에서 3/4 성공률로 개선됐으나 EPTA_05 P2B-Q1에서 목표고도 누락, 아직 일관성 부족.
-- **지시를 반대로 이해하고 답하지 않기** — EPTA_05 P2A-Q12(홀드 요청을 "taxi to g2"로 답함)에서 처음 확인된 최중대 신규 약점. 다음 세트 최우선 관찰 대상.
-- **헤딩(heading) vs 고도(altitude/FL) 구분** — EPTA_05 P2B-Q4("fly heading 270"→"maintain FL270") 신규.
-- "cleared for takeoff" (o) vs "clear for takeoff" (x) — EPTA_01 이후 재발 없음, 해결.
-- "Souls on board (SOB)" — 탑승 인원수, 중량과 혼동 금지 — EPTA_02·03·04 모두 정확, 해결.
-- "We are going around" — go-around는 통보(inform), 요청 아님 — EPTA_01 이후 재발 없음.
-- "confirm ~ ?" → AFFIRM/NEGATIVE — EPTA_01 이후 재발 없음, 해결.
-- "Mayday, Mayday, Mayday, (관제기관명), (콜사인), (정확한 비상 사유)" — 사유 전달은 EPTA_04에서 확실히 해결됐으나, **관제기관명 위치**는 EPTA_04에서 새로 빠짐 — 계속 관찰.
-- REQUEST + 명사(구) — "request land"(x, EPTA_04 재발) / "request landing"·"landing"(o) — 완전히 해결된 게 아니라 계속 나올 수 있음.
-- ROGER는 **내용 없이 단독으로** 쓸 때만 문제 — 값과 함께면 정상 (EPTA_02에서 정정 확인).
-- "Continue Approach" ≠ "Cleared to Land" — EPTA_03에서 확인, 계속 유지.
-- **"push back"(지상조업 용어) ≠ "hold"(홀딩하다)** — 완전히 다른 뜻이니 혼동 금지 (EPTA_04 신규).
-- **엉뚱한 관제기관 호출** — EPTA_02·03 2세트 연속 문제였다가 EPTA_04에서 해결(0회). 계속 관찰.
+- **긴 복창을 완전히 잡을 수 있다** : 재응시 P2A-Q5 에서 5요소
+  (고도·속도·절차명·활주로·고도계) 전부 정확. 1차에서 활주로 오류+고도계 누락+지어내기였던
+  문항. P2B-Q2 도 3요소 전부 정확(1차 `contact .4` 지어내기).
+- 위치보고 표준형을 쓸 수 있다 : 두 고도값을 담는 것은 됨(P2B-Q1). 단 P2A-Q4 는
+  1차·재응시 모두 통과고도 누락 → **같은 유형에서 2회 연속 실패.**
+- **결정을 내릴 수 있다** : P2B-Q6 에서 두 선택지 중 하나를 고르고 그에 맞는 요청까지
+  수행(1차 `whatever`).
+- 복창 불필요 정보를 걸러낸다 : P1A-Q2 트래픽, P1B-Q1 disabled aircraft, P2A-Q10 바람을
+  모두 복창에서 제외 — 정확한 판단.
+- 고도·기수 복창은 정확 : P2B-Q4 `maintain 7000 heading 270` (둘 다 필수 복창 항목).

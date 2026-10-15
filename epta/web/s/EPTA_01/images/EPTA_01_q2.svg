@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" width="640" height="400" font-family="Arial, Helvetica, sans-serif">
+  <rect width="640" height="400" fill="#ffffff"/>
+  <text x="20" y="36" font-size="22" font-weight="bold" fill="#1d2330">HYDRAULIC</text>
+
+  <!-- column headers -->
+  <text x="190" y="78" font-size="18" fill="#6b7384">PRESS (PSI)</text>
+  <text x="360" y="78" font-size="18" fill="#6b7384">QTY</text>
+
+  <!-- SYSTEM A -->
+  <rect x="20" y="95" width="600" height="80" rx="10" fill="#f1f4f8" stroke="#c9ced6" stroke-width="2"/>
+  <text x="40" y="145" font-size="26" font-weight="bold" fill="#1d2330">SYS A</text>
+  <text x="190" y="145" font-size="28" fill="#1d2330">3000</text>
+  <text x="360" y="145" font-size="28" fill="#1d2330">0.98</text>
+  <text x="470" y="145" font-size="22" font-weight="bold" fill="#2e8b57">NORMAL</text>
+
+  <!-- SYSTEM B -->
+  <rect x="20" y="190" width="600" height="80" rx="10" fill="#fbeee5" stroke="#b4531c" stroke-width="3"/>
+  <text x="40" y="240" font-size="26" font-weight="bold" fill="#b4531c">SYS B</text>
+  <text x="190" y="240" font-size="28" fill="#b4531c">480 ▼</text>
+  <text x="360" y="240" font-size="28" fill="#b4531c">0.31 ▼</text>
+  <text x="470" y="240" font-size="22" font-weight="bold" fill="#b4531c">LOW PRESS</text>
+
+  <!-- standby pump -->
+  <rect x="20" y="285" width="600" height="70" rx="10" fill="#fbeee5" stroke="#b4531c" stroke-width="3"/>
+  <text x="40" y="328" font-size="23" font-weight="bold" fill="#1d2330">STBY PUMP</text>
+  <text x="250" y="328" font-size="24" fill="#1d2330">ON</text>
+  <text x="360" y="328" font-size="22" font-weight="bold" fill="#b4531c">NO PRESSURE</text>
+</svg>

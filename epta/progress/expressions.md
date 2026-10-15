@@ -1,121 +1,61 @@
-# 외워야 할 표현 모음 (Expressions to Study)
+# 외워야 할 표현 모음
 
-채점하면서 고친 표현들을 모아둔 파일. 크게 두 부분이다:
-- **Part 1** : plain English 자유응답(Informing/Follow-up/Task C 등)에서 반복적으로 틀리는
-  문법·표현 패턴. "내 표현 → 고친 표현" 형식으로, 실제 EPTA_XX_feedback.md에서 나온 사례만 담는다.
-- **Part 2** : ATC 표준교신용어 중 꼭 외워야 할 것. 전체 목록은 `reference/atc-terminology.md`에
-  있고, 여기는 실제로 틀렸던 것만 압축해서 반복 노출시키는 용도.
+채점할 때마다 `CLAUDE.md` §6-5 규칙에 따라 "내 표현 → 고친 표현" 형식으로 이어서 추가한다.
+이미 있는 패턴이면 표는 그대로 두고 **사례 칸에 세트 번호만 덧붙인다.**
 
-새 세트를 채점할 때마다, 새로 나온 패턴을 아래에 이어서 추가한다(중복이면 사례만 추가).
+## 1. 내 표현 → 고친 표현
 
----
+| 내가 쓴 표현 | 고친 표현 | 왜 | 나온 세트 |
+|---|---|---|---|
+| `affirmative 170knots` (실제 150kt) | `Negative, maintaining 150 knots due to tailwind.` | `confirm ~?` 는 현재 상태를 묻는 것. 다르면 NEGATIVE + 실제 상태 + 사유. `affirmative` 는 비표준(ICAO 는 AFFIRM) | EPTA_01 P1B-Q4 |
+| `unable to climb fl350 due to ,request fl300` | `Unable flight level 350 due to towering cumulus. Request heading deviation right of track.` | `due to` 뒤 사유 칸이 비었다. unable 은 **사유 + 대안**까지 세 토막 | EPTA_01 P1B-Q3 |
+| `roger short approach able` | `Affirm, able to accept a short approach.` | `are you able ~?` 는 AFFIRM/NEGATIVE 를 **문장 맨 앞**에. roger 로 시작하면 가능 여부가 전달되지 않는다 | EPTA_01 P2A-Q7 |
+| ~~`rogoer`~~ → `negative` **해결(10-13)**. Can you work with that? 에 대한 답 | `Negative. Runway 14 is too short for us. Request the longest runway available.` | ROGER 단독은 AFFIRM/NEGATIVE 를 대체할 수 없다. 이 경우 관제사는 **수락한 것으로 이해한다** | EPTA_01 P2B-Q5 |
+| ~~`whatever`~~ → 명확한 결정 **해결(10-13)**. 관제사가 선택을 요구 | `We will hold for runway 09 — request an estimate of how long until it is clear.` | 결정은 기장의 책임. 판단이 안 서면 `standby` 로 시간을 벌고 결정해서 통보 | EPTA_01 P2B-Q6 |
+| `decent to 11000` (통과고도 누락) | `Descending through flight level 150 for 11,000.` | 위치보고는 **through(통과) + for(목표)** 두 값 | EPTA_01 P2A-Q4 |
+| `ready` (say your intentions 에 대한 답) | `Our intention is to continue for the ILS runway 09, and we will need the longest runway available.` | "준비됐다" 가 아니라 "무엇을 할 생각인가" 를 묻는 것 | EPTA_01 P2B-Q4 |
+| `we have b low indication` | `We have a hydraulic system B low pressure indication.` | 계통 이름을 밝혀야 심각도가 전달된다 | EPTA_01 P2B-Q3 |
+| `clear for take off` / `clear to land` | `cleared for takeoff` / `cleared to land` | 허가를 받았음을 복창하므로 과거분사 | EPTA_01 P1A-Q2, P2A-Q10 |
+| `later use alternate system so we can extend` | `later we used the alternate system, so we could extend` | 과거 사건 서술은 과거시제로 일치 | EPTA_01 P2C-Q1 |
+| `handled by good pilot ... there's no alternation to treat` | `the controller handled it well ... it could have been handled differently` | 질문 대상은 관제사. `alternation` 은 그 뜻으로 쓰지 않는다 | EPTA_01 P2C-Q2 |
+| `controller, hl123` (기관 호출) | `Clearwater Approach, HL123` | `controller` 는 호출부호가 아니다 | EPTA_01 P2B-Q3 |
 
-## Part 1. Plain English 문법·표현 패턴
+| `affirmative 170knots but Request reduce speed 150 due to tailwind` | `Negative, maintaining 150 knots due to tailwind on final.` | 150kt 와 사유를 덧붙인 건 진전이나 **첫 단어가 AFFIRM 이면 관제사는 170kt 로 계산한다.** 허가를 구하는 게 아니라 현재 상태를 통보하는 상황 | EPTA_01 P1B-Q4 (재응시) |
+| ~~`runway09 app`~~ → `cleared for the RNAV runway 27 approach` **해결(10-15)** | `Cleared for the ILS runway 09 approach` | 접근 **허가**는 `cleared for` 가 있어야 허가 확인이 된다. `expect` 로 바꾸면 허가를 못 받은 것이 된다 | EPTA_01 P2B-Q8·P2A-Q8 (재응시) |
+| `we fixed landing gear manually and it function well` | `We extended the landing gear by the alternate system — it indicates down and locked.` | `fixed`(수리) 가 아니다. 대체 시스템으로 내렸다고 해야 소방대·견인이 준비된다 | EPTA_01 P2B-Q7 (재응시) |
+| `request to direct lake side airport` | `Request direct to Lakeside Airport.` | REQUEST 뒤에는 명사구가 바로 온다. `request to ~` 는 동사구 형태가 된다 | EPTA_01 P2B-Q6 (재응시) |
+| `there was a mistakes about setting altimeter request new altimeter` | `We had 18,000 set in the altitude window by mistake. Now climbing back to flight level 200.` | `altimeter`(고도계 기압)와 `altitude window`(고도 선택창)는 다른 것. 틀린 건 고도값 | EPTA_01 P1B-Q5 (재응시) |
+| `negative due to aircraft` | `Negative. Runway 14 is too short for us — our braking will be degraded.` | 거부 방향은 맞았으나 사유가 전달되지 않는다. 사유는 "활주로가 짧다" | EPTA_01 P2B-Q5 (재응시) |
+| `there is large debris in runway` | `we saw a large piece of rubber debris on taxiway Mike` | 파편은 **유도로**에 있었다. 활주로라고 하면 관제사가 활주로를 폐쇄한다 | EPTA_01 P1B-Q2 (재응시) |
+| `after checklist the issues has been solved` | `After the checklist the system was still lost, so we had to extend the gear by the alternate system.` | 유압은 해결되지 않았다. "해결됐다"고 하면 사건의 심각도가 사라진다 | EPTA_01 P2C-Q1 (재응시) |
+| `I don't have any experience similar like this` (예시 요구에 대한 답) | `I don't have experience of a change exactly like this, but for example, if we were given a new runway at five miles, I would go around.` | `Give an example.` 는 경험이 없으면 **가정 예시**로 답한다. 경험 없음으로 닫으면 질문을 비운 것 | EPTA_01 P2A-Q11 (재응시) |
+| `they treat us like as a making safety more` | `he put safety first` | 문장이 성립하지 않는다. 짧고 맞는 문장이 길고 깨진 문장보다 낫다 | EPTA_01 P2C-Q2 (재응시) |
 
-### 1-1. 시제 (Tense)
-| 내 표현 (틀림) | 고친 표현 | 사례 |
+| `climb through fl250` (실제 2,500 feet) | `Climbing through 2,500 feet.` | **네 자리 피트와 FL 은 만 피트 이상 차이.** 피트는 `2500`, FL 은 `FL250` 으로 모양을 다르게 적는다 | EPTA_02 P2A-Q9 |
+| `maintain 14000` (지시는 4,000) | `maintain 4,000` | 같은 뿌리의 자릿수 오류. 앞에 숫자가 더 붙지 않았는지 다시 본다 | EPTA_02 P1A-Q4 |
+| `Negative maintain speed 290` (실제 270) | `Negative, maintaining 270 knots due to buffet margin.` | NEGATIVE 다음은 반드시 **실제 값**. 값이 없으면 "290 이 아니다" 에서 끝난다 | EPTA_02 P1B-Q3 |
+| `decent 4000 cross qualit` (교차 불가 상황) | `Descend to 4,000. Unable to cross QUILL at 4,000 — that would exceed our descent rate. Request descent now.` | `readback of what you can accept` = **할 수 있는 것만** 복창. 못 하는 것까지 복창하면 약속이 된다 | EPTA_02 P1B-Q4 |
+| `quawk 3027` (3207 을 잘못 넣은 상태) | `Correction — we had 3207 set by mistake. Now squawking 3027.` | 정정 문항은 **무엇을 잘못했고 어떻게 바꿨는지**까지 | EPTA_02 P1B-Q5 |
+| `roger request intersection runway` | `Before I can accept — request the runway distance available from Foxtrot.` | 교차점 출발은 **수락 전에 잔여 거리 확인**. `can you work with that?` 에 roger 는 답이 아니다 | EPTA_02 P2A-Q6 |
+| `roger , request landing` (full readback + intentions 요구) | `Heading 240, maintain 8,000, HL123. Our intention is to continue for the ILS runway 27 using your groundspeed.` | ROGER 는 복창을 대신할 수 없다. `request landing` 은 의도가 아니다 | EPTA_02 P2B-Q4 |
+| `unable to speed up 250 due to performance` | `Unable 250 knots — our airspeed indications are unreliable, so we cannot set a speed accurately.` | 사유는 **그 사건에 맞게**. 성능 문제로 들으면 관제사가 다른 판단을 한다 | EPTA_02 P2B-Q5 |
+| `such as heigh indication ... ask the exact height` | `our airspeed indications ... ask for the groundspeed` | 이 사건은 **속도** 문제였다. 핵심 단어를 틀리면 리포팅 전체가 어긋난다 | EPTA_02 P2C-Q2 |
+| `I think we handled it well` (관제사를 묻는 질문) | `I think the controller handled it well.` | Task C Q2 의 주어는 **관제사**. 2세트 연속 `we` 로 시작 | EPTA_02 P2C-Q2 |
+| (3세트 연속 무응답) | `One thing that could have been handled differently is that he could have told us earlier …` | Task C Q2 **후반부**. 이 틀로 한 문장만 붙이면 된다 | EPTA_01·02 P2C-Q2 |
+| (3세트 연속 무응답) | `For example, on a wet runway at high take-off weight, 2,150 metres would not be enough for us.` | Follow-up 의 `Give an example.` — 경험이 없으면 **가정 예시**로 | EPTA_01·02 Follow-up |
+
+## 2. 실제 출제 음성에서 확인된 핵심 표현
+
+`reference/exam-spec.md` §5-3 에서 옮긴 것. 아직 채점 사례는 없지만 미리 외워 둘 것.
+
+| 표현 | 뜻 | 쓰는 상황 |
 |---|---|---|
-| the pilot **think** | the pilot **thought** | EPTA_02 P2C-Q2 |
-| atc **instruct** them | ATC **instructed** them | EPTA_02 P2C-Q1 |
-| i **extend** landing gear manually | i **extended** landing gear manually | EPTA_01 P2B-Q6 |
-| did everything **what** they can | did everything they **could** | EPTA_02 P2C-Q2 |
-| as soon as **received** emergency | as soon as they **received** the emergency call | EPTA_03 P2C-Q2 |
-| i always **prepared** for something / if atc **gave** us | (일반적 습관·상황은 현재시제) I always **prepare**... / if ATC **gives** us | EPTA_04 P2A-Q10 |
-| something **might be happen** | something **might happen** (조동사 뒤엔 be 없이 동사원형) | EPTA_04 P2A-Q10 |
-
-### 1-2. 관사 (a/an/the)
-| 내 표현 (틀림) | 고친 표현 | 사례 |
-|---|---|---|
-| **a** unsafe indication | **an** unsafe indication | EPTA_01 P2B-Q2 |
-| i completed abnormal checklist | i completed **the** abnormal checklist | EPTA_01 P2B-Q6 |
-| do checklist **1more** time | go through **the** checklist **one more** time | EPTA_03 P2A-Q11 |
-| pilot did ... checklist | **the** pilot completed the ... checklist | EPTA_03 P2C-Q2 |
-| there was **a** indication | there was **an** indication | EPTA_04 P2C-Q1 |
-| do all **the** procedure orderly | do all **the procedures** in order (복수형) | EPTA_04 P2A-Q10 |
-
-### 1-3. 품사 오류 (형용사 vs 명사 등)
-| 내 표현 (틀림) | 고친 표현 | 사례 |
-|---|---|---|
-| small **cautious** about fuel | small **caution** about fuel | EPTA_02 P2C-Q2 |
-| few **experience** | **little** experience (불가산명사는 few 아니라 little) | EPTA_02 P2C-Q2 |
-| we **are emergency** now | we **have an emergency** / we **are declaring an emergency** | EPTA_02 P2B-Q8 |
-
-### 1-4. 어순·구문 (Word order / Sentence structure)
-| 내 표현 (틀림) | 고친 표현 | 사례 |
-|---|---|---|
-| why **should i go** | why **I should go** (간접의문문은 평서문 어순) | EPTA_01 P2A-Q10 |
-| would rather **to go** first | would rather **go** first (would rather + 동사원형, to 없음) | EPTA_02 P2A-Q10 |
-| ask to land the nearest suitable airport **to atc** | **asked ATC** to let us land at the nearest suitable airport | EPTA_03 P2C-Q1 |
-| atc gave us **to vector** | ATC gave us **vectors** | EPTA_03 P2C-Q1 |
-| there are few things to do handle differently | there **is** very **little that could have been** handled differently | EPTA_03 P2C-Q2 |
-| which the pilots choice | **that was** the pilot's choice | EPTA_02 P2C-Q2 |
-
-### 1-5. 전치사 누락/오용
-| 내 표현 (틀림) | 고친 표현 | 사례 |
-|---|---|---|
-| i wanted to go **the** fairview airport | go **to** Fairview Airport | EPTA_03 P2C-Q1 |
-| request **to** the nearest airport | request **diversion to** the nearest airport (REQUEST는 명사 바로 결합) | EPTA_02 P2B-Q5 |
-| gave the pilots **to** direct, descend and vector | gave us a direct routing, a descent, and vectors | EPTA_02 P2C-Q2 |
-
-### 1-6. 뜻이 안 통하는 표현 → 자연스러운 표현으로
-| 내 표현 (뜻이 불명확/부정확) | 고친 표현 | 사례 |
-|---|---|---|
-| because any issues **should come out** | **in case any other issues came up** | EPTA_03 P2C-Q1 |
-| **prepare by delay** | **because of a delay like this** | EPTA_03 P2A-Q11 |
-| go **rightly** | go **properly** | EPTA_01 P2A-Q10 |
-| how should i do | **how long it would take** | EPTA_01 P2A-Q10 |
-| refuse to **give the order** | **decline the request** | EPTA_02 P2A-Q10 |
-| have abnormal pressure **on passenger** | had abnormal **cabin** pressure (승객 개인이 아니라 객실) | EPTA_02 P2C-Q1 |
-| due to **natural** problem | we have **smoke in the cockpit** (실제 사유를 구체적으로) | EPTA_03 P2B-Q2 |
-| it is excellent ways what they did | it **was an excellent way to handle** what they did | EPTA_02 P2C-Q2 |
-| we could not **push back** more | we could not **hold** any longer (push back은 게이트 지상조업 용어, 전혀 다른 뜻) | EPTA_04 P2C-Q1 |
-| due to **restriction** (사유가 상황과 안 맞음) | due to **rate of descent** / due to **performance** / due to **maximum speed limitation** | EPTA_03·04·05 P1B-Q3/Q4/Q6 (**3세트 연속** 같은 실수) |
-| **unable** to go ahead due to bird | (be advised) we observed bird activity... ("unable"은 지시를 거부할 때만 씀, 정보요청 허가엔 안 씀) | EPTA_05 P1B-Q1 |
-| it will **takes** 20min | it will **take** 20min (will+동사원형) | EPTA_05 P2A-Q8 |
-| **can ils approach** request ils approach | request to return for the ILS approach | EPTA_05 P2B-Q6 |
-| ill let you know if something **happen** | ill let you know if anything **changes** | EPTA_05 P2B-Q7 |
-
-### 1-7. 콜사인을 3인칭으로 지칭하는 습관
-Follow-up·Task C에서 자기 자신을 "hl123"이나 "the pilot"으로 3인칭 지칭하는 경우가 반복됨.
-> "why **hl123** wait" → "why **we** might have to wait" (EPTA_03 P2A-Q11)
-
-1인칭(I/we)으로 쓰는 게 자연스럽다 — 실제 시험에서도 본인이 곧 HL123이므로 "the pilot did..."
-보다 "I did..."가 더 자연스러운 구술 답변.
-
----
-
-## Part 2. ATC 표준교신용어 — 반복 확인용
-
-전체 근거·표는 `reference/atc-terminology.md` 참고. 여기는 실제로 틀렸던 것만 압축.
-
-| 표현 | 요점 | 확정 상태 |
-|---|---|---|
-| "unable [지시] due to [정확한 사유], request [대안]" | unable만 말하고 끝내지 말 것 — 3단 구조 | EPTA_01~04 4세트 연속 감점 → **EPTA_05 P1B-Q6에서 처음 3단 완성**, 그러나 같은 세트 P1B-Q4에서 unable 자체 누락 — 이 프로젝트 최우선 과제 유지 |
-| "level at [고도]" / "descending/leaving through [현재고도] for [목표고도]" | 위치보고 표준 형식. 이미 값이 주어졌으면 "maintain" 대신 "level at"으로 | 아는 건 확인됨(EPTA_04 3/4 성공)이나 **EPTA_05 P2B-Q1에서 목표고도 누락 — 일관성 부족 지속** |
-| "cleared for takeoff" (o) / "clear for takeoff" (x) | clear ≠ cleared | EPTA_01 이후 EPTA_05까지 재발 없음, 해결 |
-| "Souls on board (SOB)" | 탑승 인원수, 중량(lb/kg) 아님 | EPTA_02·03·04 모두 정확, 해결 (EPTA_05엔 해당 문항 없음) |
-| "We are going around" | go-around는 request가 아니라 통보 | EPTA_01 이후 재발 없음, 해결 |
-| "confirm ~?" → AFFIRM/NEGATIVE | yes/no 대신 표준 용어 | EPTA_02·03·04 정확 → **EPTA_05 P1B-Q5에서 재발**(AFFIRM/NEGATIVE 자체를 아예 안 씀) — 계속 관찰 |
-| "Mayday, Mayday, Mayday, (기관명), (콜사인), (정확한 사유)" | 사유는 구체적으로("smoke in the cockpit", "emergency fuel") | 사유 전달은 EPTA_04에서 해결. 관제기관명 위치는 EPTA_04에서 새로 빠짐 — EPTA_05엔 MAYDAY 문항 없어 재검증 보류 |
-| REQUEST + 명사(구) | 동사구 붙이지 않기 ("request land"(x) → "landing"(o)) | EPTA_02 발견 → EPTA_03 해결 → EPTA_04 재발 — EPTA_05엔 대표 사례 없음, 계속 관찰 |
-| ROGER는 **내용 없이 단독으로** 쓸 때만 오류 | "Roger, [실제 내용]"은 정상 | 정책 확정(2026-08-19) |
-| "give way to / follow / hold position" 등은 필수 복창 목록에 없음 | 세부사항(누구·어느 방향) 생략해도 감점 아님 | 정책 확정(2026-08-20) |
-| "Continue Approach" ≠ "Cleared to Land" | 착륙허가 아님 | EPTA_03에서 정확히 구분함 |
-| 엉뚱한 관제기관 호출 금지 (Delivery/Ground/Ramp/Tower/Center 구분) | 지시문에 적힌 기관명 그대로 | EPTA_02·03 2세트 연속 반복 → EPTA_04 0회 해결 판단 → **EPTA_05 P2A-Q1에서 재발("Control")** — 해결 아님, 계속 관찰 |
-| 숫자 **값** 자체가 틀리면 감점 (표기 방식과 별개) | FL240을 FL250으로 잘못 복창한 사례 | EPTA_03에서 발견 → **EPTA_05에서 다수 재발**(FL260→FL230, 활주로 23→32 2회, DME 1.5→5, FL350/5000→FL250) — 이번 세트 가장 빈번한 오류 유형 |
-| "Minimum Fuel" ≠ "Emergency Fuel" | Minimum Fuel은 우선순위 보장 아님, 위험 단계면 Emergency Fuel로 명확히 격상 선언 | EPTA_04에서 처음 출제, 개념은 맞게 사용함 |
-| holding 지시 전체 형식: hold [방향] of [지점], as published/ON[radial], maintain[고도], EFC[시각] | 전 요소 복창 필요 | EPTA_04에서 처음 출제, 완벽하게 복창함 |
-| 지시를 **반대로** 이해하고 답하지 않기 (예: 대기 요청 지시를 진행 승인으로 답함) | 클루/지시의 방향(진행 vs 대기·거부)을 답하기 전 재확인 | **EPTA_05 P2A-Q12 신규, 최중대 — 다음 세트 최우선 관찰** |
-| heading(기수) vs FL/altitude(고도) 구분 | "fly heading 270"을 "maintain FL270"으로 바꿔 쓰지 않기 | EPTA_05 P2B-Q4 신규 |
-| "report speed"/"report ready" 같은 부가 요청은 복창과 함께 실제 값으로 답하기 | 복창만 하고 요청 정보를 빼먹지 않기 | **EPTA_05 P1B-Q2에서 정확히 수행 — 신규 패턴 첫 성공 사례** |
-
----
-
-## 갱신 이력
-- 2026-08-20 : EPTA_01·02·03 채점 결과 기반으로 최초 작성.
-- 2026-08-21 : EPTA_04 채점 결과 반영. Unable+대안 누락이 4세트 연속으로 최우선 과제 확정,
-  엉뚱한 관제기관 호출은 해결로 판단, "push back"/"restriction" 오용 등 신규 사례 추가.
-- 2026-09-02 : EPTA_05(실제 샘플 녹음본 재현 세트) 채점 결과 반영. Unable+대안 구조 첫 완성
-  사례(P1B-Q6) 및 report-speed 패턴 첫 성공 사례(P1B-Q2) 기록. 엉뚱한 관제기관 호출·숫자값
-  오류 재발, "지시를 반대로 이해"(신규·최중대)와 "heading/FL 혼동"(신규) 추가. Level 1로 5세트
-  중 최저 등급.
+| request vectors for troubleshooting | 문제 파악을 위한 벡터 요청 | 기체 이상 발생 후 시간이 필요할 때 |
+| maintain present heading and altitude for troubleshooting | 문제 파악 위해 현 기수·고도 유지 | 같은 상황에서 ATC 지시를 보류시킬 때 |
+| say the nature of the emergency | 비상의 성격을 말하라 | 관제사가 조종사에게 묻는 말 |
+| souls on board | 탑승 총인원 | fuel 과 함께 보고 |
+| clear of traffic | 트래픽 회피 완료 | TCAS 회피 종료 보고 |
+| stand by for further information | 추가 정보는 잠시 후에 | 당장 답할 수 없을 때 |
+| request towing assistance | 견인 지원 요청 | 착륙 후 자력 이동 불가 시 |
+| offset (거리) right/left to avoid weather | 기상 회피를 위해 ~마일 측면 이탈 | 편차 요청 |
+| unable due to performance, request (대안) | 성능상 불가, 대안 요청 | **unable 은 반드시 사유 + 대안 3단 구조** |

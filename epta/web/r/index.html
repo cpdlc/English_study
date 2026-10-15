@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>내 답안 보기</title>
+<style>
+  :root { --bg:#f4f5f7; --card:#fff; --text:#1d2330; --muted:#6b7384; --line:#e2e5ea;
+          --accent:#2459d6; --accent-soft:#e6edfc; --ok:#2e8b57; --warn:#b4531c;
+          --atc:#0f7a55; --atc-soft:#e3f4ec; --screen:#111827; --screen-text:#7df9c1; }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+    --bg:#12151b; --card:#1b2029; --text:#e6e9ef; --muted:#939bab; --line:#2c3340;
+    --accent:#6d9bff; --accent-soft:#1f2a44; --ok:#5fcf8c; --warn:#f09a62;
+    --atc:#4fd19a; --atc-soft:#183229; --screen:#0a0d12; --screen-text:#7df9c1; } }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--text); padding:0 16px;
+         font:16px/1.6 system-ui,-apple-system,"Segoe UI","Malgun Gothic",sans-serif; }
+  main { max-width:660px; margin:24px auto 60px; }
+  h1 { font-size:21px; margin:0 0 4px; }
+  p.sub { color:var(--muted); font-size:14px; margin:0 0 20px; }
+  a.back { color:var(--accent); font-size:14px; text-decoration:none; }
+  .note { margin-top:24px; font-size:13px; color:var(--muted); }
+  .lock { margin-top:20px; font-size:13px; color:var(--muted); background:none; border:0;
+          padding:0; cursor:pointer; text-decoration:underline; font-family:inherit; }
+  button.btn { border:1px solid var(--line); background:var(--card); color:var(--text);
+               padding:6px 12px; border-radius:8px; cursor:pointer; font:inherit;
+               font-size:13px; }
+  button.btn.primary { background:var(--accent); border-color:var(--accent); color:#fff; }
+  button.btn:disabled { opacity:.45; cursor:default; }
+
+  header { display:flex; align-items:baseline; gap:12px; flex-wrap:wrap; margin-bottom:6px; }
+  select { font:inherit; background:var(--card); color:var(--text); border:1px solid var(--line);
+           border-radius:8px; padding:7px 10px; }
+  .meta { font-size:13px; color:var(--muted); margin:10px 0 18px; }
+  .q { background:var(--card); border:1px solid var(--line); border-radius:12px;
+       padding:14px 16px; margin:12px 0; }
+  .q h2 { font-size:15px; margin:0 0 10px; display:flex; align-items:center; gap:8px;
+          flex-wrap:wrap; }
+  .q h2 .v { font-size:17px; }
+  .q h2 .t { font-size:12px; color:var(--muted); font-weight:400; }
+  .q h2 .sp { margin-left:auto; display:flex; gap:6px; }
+  .lab { font-size:11px; font-weight:700; color:var(--muted); letter-spacing:.04em;
+         margin-top:12px; }
+  .val { white-space:pre-wrap; word-break:break-word; }
+  .seg { padding:7px 11px; border-radius:8px; margin:5px 0; font-size:14px; }
+  .seg.narr { background:var(--bg); }
+  .seg.inst { background:var(--accent-soft); font-weight:600; }
+  .seg.atc { background:var(--atc-soft); }
+  .seg.atc b { color:var(--atc); }
+  .seg.playing { outline:2px solid var(--accent); }
+  .seg.chime { color:var(--muted); padding:2px 11px; font-size:13px; }
+  .screen { background:var(--screen); color:var(--screen-text); padding:8px 12px;
+            border-radius:8px; margin:6px 0; font:13px ui-monospace,Consolas,monospace; }
+  img.fig { max-width:100%; border-radius:8px; border:1px solid var(--line); background:#fff;
+            margin:6px 0; }
+  .mine { background:var(--accent-soft); border-radius:8px; padding:9px 12px; }
+  .model { background:var(--atc-soft); border-radius:8px; padding:9px 12px; }
+  .heard { color:var(--muted); font-size:14px; }
+  .none { color:var(--muted); font-style:italic; }
+  ul.notes { margin:8px 0 0; padding-left:20px; font-size:14px; }
+  ul.notes li { margin:3px 0; }
+  .grade { background:var(--card); border:1px solid var(--line); border-radius:12px;
+           padding:14px 16px; margin:12px 0; }
+  .grade .lv { font-size:18px; font-weight:700; }
+  audio { width:100%; margin-top:6px; height:36px; }
+</style>
+</head>
+<body>
+<main>
+  <a class="back" href="/">← 세트 목록</a>
+  <header>
+    <h1 id="title">내 답안 보기</h1>
+    <select id="sess" hidden></select>
+  </header>
+  <div class="meta" id="meta">불러오는 중…</div>
+  <div id="grade"></div>
+  <div id="list"></div>
+</main>
+<script src="/gate.js"></script>
+<script>
+(() => {
+  const set = new URLSearchParams(location.search).get('set') || '';
+  const $ = (id) => document.getElementById(id);
+  const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) =>
+    ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+
+  document.title = set ? set + ' 내 답안' : '내 답안 보기';
+  $('title').textContent = set || '내 답안 보기';
+  if (!set) { $('meta').textContent = '세트를 지정하지 않았습니다.'; return; }
+
+  let sessions = [], grade = null, head = null, qmap = {};
+
+  /* ── 문제 음성 재생 ── */
+  const player = new Audio();
+  let token = 0;
+
+  function stop() {
+    token++;
+    player.pause();
+    document.querySelectorAll('.seg.playing').forEach((e) => e.classList.remove('playing'));
+    document.querySelectorAll('button[data-play]').forEach((b) => { b.textContent = '▶ 문제 듣기'; });
+  }
+
+  async function playQuestion(qid, btn) {
+    const q = qmap[qid];
+    if (!q) return;
+    const wasPlaying = btn.dataset.on === '1';
+    stop();
+    if (wasPlaying) { btn.dataset.on = '0'; return; }
+
+    const my = token;
+    btn.dataset.on = '1';
+    btn.textContent = '■ 멈춤';
+    const segs = [...(q.pre || []), ...(q.body || [])].filter((s) => s.src);
+    for (const seg of segs) {
+      if (my !== token) return;
+      const el = document.querySelector(`[data-src="${seg.src}"]`);
+      el?.classList.add('playing');
+      try {
+        await new Promise((ok, no) => {
+          player.src = seg.src;
+          player.onended = ok;
+          player.onerror = () => no(new Error('음성을 열 수 없습니다'));
+          player.play().catch(no);
+        });
+      } catch (e) {
+        el?.classList.remove('playing');
+        btn.textContent = '재생 실패';
+        btn.dataset.on = '0';
+        return;
+      }
+      el?.classList.remove('playing');
+      if (my !== token) return;
+      await new Promise((r) => setTimeout(r, 500));
+    }
+    if (my === token) { btn.textContent = '▶ 문제 듣기'; btn.dataset.on = '0'; }
+  }
+
+  /* ── 내 녹음 재생 (비공개 Blob → /api/audio) ── */
+  async function loadRecording(path, box, btn) {
+    btn.disabled = true;
+    btn.textContent = '불러오는 중…';
+    try {
+      const r = await fetch('/api/audio?path=' + encodeURIComponent(path), { headers: head });
+      if (!r.ok) {
+        const j = await r.json().catch(() => ({}));
+        btn.textContent = '녹음 없음 (' + (j.error || r.status) + ')';
+        return;
+      }
+      const url = URL.createObjectURL(await r.blob());
+      box.innerHTML = `<audio controls src="${url}"></audio>`;
+      btn.remove();
+    } catch (e) {
+      btn.disabled = false;
+      btn.textContent = '🔊 내 녹음 듣기';
+    }
+  }
+
+  /* ── 문제 본문 그리기 ── */
+  function segHtml(seg) {
+    if (seg.type === 'chime') return `<div class="seg chime">🔔 dingdong</div>`;
+    if (seg.type === 'screen') return `<div class="screen">🖥 [ ${esc(seg.text)} ]</div>`;
+    if (seg.type === 'image') return `<img class="fig" src="${esc(seg.src)}" alt="">`;
+    if (seg.kind === 'instruction')
+      return `<div class="seg inst" data-src="${esc(seg.src)}">☞ ${esc(seg.text)}</div>`;
+    if (seg.voice === 'atc')
+      return `<div class="seg atc" data-src="${esc(seg.src)}"><b>${esc(seg.label)} :</b> ${esc(seg.text)}</div>`;
+    return `<div class="seg narr" data-src="${esc(seg.src)}">${esc(seg.text)}</div>`;
+  }
+
+  /* ── 불러오기 ── */
+  async function load() {
+    try {
+      const [rq, r1, r2] = await Promise.all([
+        fetch(`/q/${encodeURIComponent(set)}.json`, { cache: 'no-store' }),
+        fetch(`/api/results?set=${encodeURIComponent(set)}`, { headers: head }),
+        fetch(`/api/feedback?set=${encodeURIComponent(set)}`, { headers: head }),
+      ]);
+
+      if (rq.ok) {
+        const qd = await rq.json();
+        for (const sec of qd.sections || [])
+          for (const q of sec.questions || []) qmap[q.id] = q;
+      }
+
+      if (!r1.ok) {
+        const j = await r1.json().catch(() => ({}));
+        $('meta').textContent = `불러오지 못했습니다 — ${j.error || r1.status}`;
+        return;
+      }
+      sessions = (await r1.json()).sessions || [];
+      grade = r2.ok ? await r2.json().catch(() => null) : null;
+      if (grade && !grade.items) grade = null;
+    } catch (e) {
+      $('meta').textContent = '서버에 연결할 수 없습니다.';
+      return;
+    }
+
+    if (!sessions.length) { $('meta').textContent = '아직 저장된 응시 기록이 없습니다.'; return; }
+
+    if (sessions.length > 1) {
+      $('sess').hidden = false;
+      $('sess').innerHTML = sessions
+        .map((s, i) => `<option value="${i}">${esc(s.session)}</option>`).join('');
+      $('sess').addEventListener('change', (e) => show(+e.target.value));
+    }
+    show(0);
+  }
+
+  function show(i) {
+    stop();
+    const s = sessions[i];
+    const done = s.answers.filter((a) => (a.answer || a.transcript || '').trim()).length;
+    $('meta').textContent = `응시 ${s.session} · ${done}/${s.answers.length} 문항 응답`
+      + (grade ? ` · 채점 ${grade.gradedAt || ''}` : ' · 아직 채점 전');
+
+    $('grade').innerHTML = grade && grade.level
+      ? `<div class="grade"><div class="lv">최종 ${esc(grade.level)}</div>`
+        + (grade.summary ? `<div class="val" style="margin-top:6px">${esc(grade.summary)}</div>` : '')
+        + `</div>`
+      : '';
+
+    $('list').innerHTML = s.answers.map((a) => {
+      const g = grade?.items?.[a.qid];
+      const q = qmap[a.qid];
+      const mine = (a.answer || '').trim();
+      const heard = (a.transcript || '').trim();
+      const segs = q ? [...(q.pre || []), ...(q.body || [])] : [];
+      const hasAudio = segs.some((x) => x.src);
+      return `<div class="q" id="q-${esc(a.qid)}">
+        <h2>${g?.verdict ? `<span class="v">${esc(g.verdict)}</span>` : ''}${esc(a.qid)}
+          ${q ? `<span class="t">🎙 ${q.seconds}초</span>` : ''}
+          <span class="sp">
+            ${hasAudio ? `<button class="btn primary" data-play="${esc(a.qid)}">▶ 문제 듣기</button>` : ''}
+          </span>
+        </h2>
+        ${segs.length ? `<div class="lab">문제</div>${segs.map(segHtml).join('')}` : ''}
+        <div class="lab">내 답안</div>
+        <div class="val mine">${mine ? esc(mine) : '<span class="none">(무응답)</span>'}</div>
+        ${heard && heard !== mine ? `<div class="lab">음성 전사본 (서버)</div><div class="val heard">${esc(heard)}</div>` : ''}
+        ${a.sttError ? `<div class="lab">전사 오류</div><div class="val heard">${esc(a.sttError)}</div>` : ''}
+        ${a.audioPath ? `<div class="lab">내 녹음</div><div id="rec-${esc(a.qid)}">
+          <button class="btn" data-rec="${esc(a.audioPath)}" data-qid="${esc(a.qid)}">🔊 내 녹음 듣기</button>
+        </div>` : ''}
+        ${g?.model ? `<div class="lab">정답 / 교정 답안</div><div class="val model">${esc(g.model)}</div>` : ''}
+        ${g?.notes?.length ? `<ul class="notes">${g.notes.map((n) => `<li>${esc(n)}</li>`).join('')}</ul>` : ''}
+      </div>`;
+    }).join('');
+
+    $('list').querySelectorAll('button[data-play]').forEach((b) =>
+      b.addEventListener('click', () => playQuestion(b.dataset.play, b)));
+    $('list').querySelectorAll('button[data-rec]').forEach((b) =>
+      b.addEventListener('click', () =>
+        loadRecording(b.dataset.rec, $('rec-' + b.dataset.qid), b)));
+  }
+
+  window.eptaGate((tok) => {
+    head = { 'x-epta-token': tok };
+    load();
+  });
+})();
+</script>
+</body>
+</html>

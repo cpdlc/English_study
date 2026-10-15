@@ -1,29 +1,42 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
-  <rect x="0" y="0" width="400" height="300" fill="#e9edf1"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 360" width="660" height="360" font-family="Arial, Helvetica, sans-serif">
+  <rect width="660" height="360" fill="#ffffff"/>
+  <text x="20" y="34" font-size="20" font-weight="bold" fill="#1d2330">FAIRMONT — RUNWAY 09</text>
 
-  <!-- taxiway Alpha -->
-  <rect x="0" y="60" width="400" height="24" fill="#b9bec4"/>
-  <text x="10" y="56" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#333">Taxiway Alpha</text>
+  <!-- runway -->
+  <rect x="60" y="150" width="560" height="56" fill="#3a4150"/>
+  <line x1="60" y1="178" x2="620" y2="178" stroke="#ffffff" stroke-width="3" stroke-dasharray="26 20"/>
+  <text x="66" y="142" font-size="20" font-weight="bold" fill="#1d2330">09</text>
+  <text x="596" y="142" font-size="20" font-weight="bold" fill="#1d2330">27</text>
 
-  <!-- taxiway Charlie - closed -->
-  <rect x="150" y="84" width="24" height="120" fill="#f6c6c6"/>
-  <text x="184" y="150" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#b23030">Taxiway Charlie</text>
-  <text x="184" y="172" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#b23030">CLOSED</text>
-  <line x1="150" y1="84" x2="174" y2="204" stroke="#b23030" stroke-width="4"/>
-  <line x1="174" y1="84" x2="150" y2="204" stroke="#b23030" stroke-width="4"/>
+  <!-- full length -->
+  <line x1="60" y1="240" x2="620" y2="240" stroke="#6b7384" stroke-width="2"/>
+  <line x1="60" y1="232" x2="60" y2="248" stroke="#6b7384" stroke-width="2"/>
+  <line x1="620" y1="232" x2="620" y2="248" stroke="#6b7384" stroke-width="2"/>
+  <text x="280" y="264" font-size="18" fill="#6b7384">full length 3,100 m</text>
 
-  <!-- taxiway Delta - open, alternate -->
-  <rect x="260" y="84" width="24" height="120" fill="#cdeccd"/>
-  <text x="294" y="150" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#2f7d32">Taxiway Delta</text>
-  <text x="294" y="172" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#2f7d32">USE THIS</text>
+  <!-- taxiway Delta (threshold end) -->
+  <rect x="86" y="206" width="22" height="70" fill="#c9ced6"/>
+  <text x="80" y="296" font-size="19" font-weight="bold" fill="#1d2330">DELTA</text>
 
-  <!-- runway 18 -->
-  <rect x="0" y="204" width="400" height="30" fill="#8a8f95"/>
-  <text x="10" y="248" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#333">Runway 18</text>
+  <!-- taxiway Foxtrot (intersection) -->
+  <rect x="246" y="206" width="22" height="70" fill="#c9ced6"/>
+  <text x="228" y="296" font-size="19" font-weight="bold" fill="#b4531c">FOXTROT</text>
 
-  <!-- HL123 position on Alpha -->
-  <rect x="60" y="40" width="70" height="18" fill="#274b8f"/>
-  <text x="95" y="54" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#fff">HL123</text>
-  <line x1="95" y1="60" x2="95" y2="84" stroke="#274b8f" stroke-width="4"/>
-  <polygon points="95,98 86,80 104,80" fill="#274b8f"/>
+  <!-- remaining from Foxtrot -->
+  <line x1="257" y1="112" x2="620" y2="112" stroke="#b4531c" stroke-width="3"/>
+  <line x1="257" y1="104" x2="257" y2="120" stroke="#b4531c" stroke-width="3"/>
+  <line x1="620" y1="104" x2="620" y2="120" stroke="#b4531c" stroke-width="3"/>
+  <text x="330" y="100" font-size="20" font-weight="bold" fill="#b4531c">remaining 2,150 m</text>
+
+  <!-- CRJ holding at Delta -->
+  <g transform="translate(97,320)">
+    <path d="M 0 -14 L 11 12 L 0 6 L -11 12 Z" fill="#6b7384"/>
+  </g>
+  <text x="116" y="330" font-size="17" fill="#6b7384">CRJ</text>
+
+  <!-- own aircraft at Foxtrot -->
+  <g transform="translate(257,320)">
+    <path d="M 0 -16 L 13 14 L 0 7 L -13 14 Z" fill="#1d2330"/>
+  </g>
+  <text x="278" y="330" font-size="18" font-weight="bold" fill="#1d2330">HL123</text>
 </svg>

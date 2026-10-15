@@ -609,3 +609,95 @@ ATC   – HL1101, Seoul approach Radar contact, 20miles South of GIMPO,
 `관제용어정리.pdf` p.26 원문("남은 연료량을 비행거리 및 비행 시간의 단위로 설명") 교차검증.
 [^4]: TCAS RA 표준 문구 — SKYbrary "RTF Phraseology associated with TCAS RAs" (ICAO Doc
 4444/8168 근거) 웹조사, 2026-08-19.
+
+---
+
+# 12. 실제 출제 음성에서 수집한 표현 (test01~04)
+
+`reference/transcripts/test01~04.txt` 4세트 전수에서 뽑은 것. §1~§11 은 `관제용어정리.pdf`
+기반이고, 이 절은 **실제 EPTA 출제 음성에서 확인된 것**이므로 출제·채점 시 이쪽을 우선한다.
+
+## 12-1. ATC 가 조종사에게 쓰는 표현
+
+| 표현 | 뜻 / 쓰임 |
+|---|---|
+| `stop climb at flight level 260 due to traffic` | 상승 중단 지시 (ICAO 표준은 아니지만 실제 출제됨) |
+| `backtrack approved, backtrack runway 16, vacate via Delta 2` | 활주로 역주행 승인 |
+| `runway change in progress to runway 35` | 활주로 변경 진행 중 |
+| `continue approach and circle left, circle north for runway 35` | 접근 계속 + 선회 방향·방위 지정 |
+| `expedite climb until passing flight level 280` | 지정 고도 통과까지 신속 상승 |
+| `reduce speed 20 knots when level` | 레벨오프 시점에 감속 |
+| `report reaching` | 지정 고도 도달 시 보고하라 |
+| `hold for another 3 minutes due to wake turbulence` | 추가 대기 |
+| `hold for release` | 출발 허가 대기 (이륙시각 미정) |
+| `after reaching THAMES proceed on course` | 픽스 통과 후 항로 진입 |
+| `when passing flight level 150, contact Smith Control on 129.1` | 통과고도 기준 주파수 변경 |
+| `climb via SID` | SID 고도제약에 따라 상승 |
+| `maintain 210 knots until established on the final` | final 안착까지 속도 유지 |
+| `maintain maximum forward speed until ASALT` / `watch your maximum forward speed` | 최대 전진속도 유지·주의 |
+| `hold over DOOSAN VOR as published, expect further clearance at 20` | 공표 홀딩 + EFC |
+| `taxi to the holding point runway 09, follow the green light` | 저시정 유도등 추종 |
+| `vacate right at the next available taxiway` | 다음 가용 유도로로 우측 이탈 |
+| `follow the Gulfstream passing left to right` | 좌→우로 통과하는 항공기 추종 |
+| `you are number one` | 출발 순서 1번 |
+| `radar contact` | 레이더 식별됨 |
+| `say the nature of the emergency` | 비상의 성격을 말하라 |
+| `say your intentions` / `what are your intentions?` | 의도를 말하라 |
+| `do you need any assistance?` | 지원 필요 여부 |
+| `do you have the traffic in sight?` | 트래픽 육안 확인 여부 |
+| `let me know fuel and souls on board, so I can advise tower` | 연료·탑승인원 보고 요구 |
+| `maintain 3,000 until established, cleared for ILS 25L` | established 까지 고도 유지 + 접근허가 |
+| `this will be radar vector to final approach course of ~` | 최종접근코스로 벡터 예고 |
+| `if able, right turn to heading 340` | 가능하면 ~ (조종사 재량 여지) |
+| `I cannot give you that heading anymore. Turn right heading 340 immediately.` | 앞선 재량 철회 + 즉시 지시 |
+| `rest of the clearance unchanged` | 나머지 허가사항 변경 없음 |
+| `if unable, maintain flight level 130 until Johnson VOR` | ATC 가 먼저 주는 대안 |
+| `can you accept flight level 310 as final? if unable now, when can you accept?` | 수용 가능 여부 + 시점 질문 |
+| `expect radar vector to COSMO` | 벡터 예고 |
+| `position 20 miles from COSMO` | 관제사가 위치를 알려주는 형태 |
+| `heading 210 is approved. when clear, direct to COSMO.` | 편차 승인 + 복귀 조건 |
+| `I will deliver your message to the tower` | 메시지 중계 약속 |
+
+## 12-2. ★ ATC 가 쓰는 비표준 구어체 (Comprehension 평가의 핵심)
+
+실제 출제 음성의 ATC 는 표준 교신용어만 쓰지 않는다. 아래는 모두 실제 대사다.
+
+```
+Cleared pushback and startup. And once the tug crew gets you established on lane Alpha,
+  if they can just pull you forward so I can push behind you at gate 87, I'd appreciate it.
+Roger. Do what you need to do.
+The traffic is supposed to be leveling off at flight level 210. I'm sorry about that.
+Give me a call when you get on the ground so that we can get some information from you
+  and we will figure out what happened.
+It's the very first fix outside of ASALT. Delta Victor Echo Tango Oscar.
+  Nobody seems to find it.
+Any idea when you are going in?
+What gate are you going to?
+Roger. Thank you for your information. Revise taxi instruction.
+Hotel Lima 123, good morning. / Good afternoon. / Hello. / Good day.
+```
+
+→ 이런 대사가 나오면 **표준 복창으로 되받을 수 없다.** plain English 로 내용을 이해해
+응답해야 한다. 채점 시 이 턴은 Comprehension·Interactions 항목의 주요 근거가 된다.
+
+## 12-3. 조종사가 써야 하는 핵심 표현 (출제 지시문이 요구하는 기능별)
+
+| 기능 | 출제 지시문 | 답에 반드시 들어가야 할 것 |
+|---|---|---|
+| Unable | `respond negatively with a reason` | `unable` + `due to ~` + **대안 request** (3단 구조) |
+| Requesting | `make a request with a reason` | `request` + **명사(구)** + `due to ~` |
+| Informing | `report your status` | 현재 상태를 **상태 보고 동사**로 (`experiencing ~`, `we have ~`) |
+| Clarifying | `make a confirmation and clarify your intention` | `confirm ~?` / `say again` / `verify ~` |
+| Correcting | `confirm maintaining ~?` 에 대한 응답 | **NEGATIVE** + 실제 상태 + 정정 조치 |
+| Intentions | `say your intentions` | `we intend to ~` / `request ~` + 구체적 계획 |
+| 위치보고 | `report your position` / `report your passing altitude` | `descending through X for Y` 또는 `over [픽스] at [고도]` |
+
+**`confirm ~?` 질문에는 `yes`/`no` 가 아니라 `AFFIRM`/`NEGATIVE`** — 실제 출제 음성에
+`Confirm maintaining ~?` 가 3회 나왔고, 전부 **실제 상태가 질문과 다르거나 유지 불가**한
+함정이었다. NEGATIVE 만 말하고 끝내면 안 되고 반드시 실제 상태와 조치를 붙인다.
+
+## 12-4. `tree` = 3
+
+test04 는 전편에서 ICAO 권고 발음을 그대로 쓴다 — `flight level tree 70`, `runway tree 4L`,
+`wind tree 00 at 5 knots`, `heading tree 40`, `runway tree tree left`.
+→ 출제 시 `tree` 표기도 가능하고, **채점 시 `tree`/`three` 둘 다 정답**으로 본다.

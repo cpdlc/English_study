@@ -1,27 +1,44 @@
 # CLAUDE.md — EPTA 항공영어구술능력시험(조종사용) 연습 프로젝트
 
 ## 0. 목적
-매일 EPTA 실전 모의 세트를 1개씩 생성하고, 사용자가 푼 답을 채점·피드백한다.
-기준 자료는 두 가지다:
-- `세트샘플.pdf` (한국교통안전공단 공식 샘플세트 Ⅰ·Ⅱ·Ⅲ) — 시험의 **형식·구조·템플릿** 기준
-- `관제용어정리.pdf` (서울지방항공청 관제통신국 관제과) — 실제 **관제용어·표현** 기준
+EPTA 실전 모의 세트를 생성하고, 사용자가 푼 답을 채점·피드백한다.
 
-이 두 PDF를 분석해서 정리한 결과가 각각 `reference/exam-spec.md`(형식)와
-`reference/atc-terminology.md`(용어)에 들어 있다. **세트를 만들 때도, 채점할 때도 이 두
-문서를 먼저 읽고 그 기준을 따른다** — PDF를 매번 다시 읽을 필요 없이 이 정리본을 우선
-참고하되, 애매하거나 새로운 상황이 나오면 원본 PDF를 다시 확인한다.
+기준 자료는 **신뢰 순위**가 있다. 위쪽이 이긴다.
+
+1. **`reference/transcripts/test01~04.txt`** — 실제 EPTA 출제 음성 4세트를 녹음해 받아쓴
+   자막. 형식·문항 분포·지시문 문구·ATC 문체의 **최종 기준**. test01~03 은 공식 샘플
+   Ⅰ·Ⅱ·Ⅲ 의 실제 음성이고, **test04 는 `세트샘플.pdf` 에 없는 신규 세트**다.
+2. `세트샘플.pdf` (한국교통안전공단 공식 샘플세트 Ⅰ·Ⅱ·Ⅲ) — 안내문·요령 표·응답시간 등
+   음성에서 알 수 없는 **화면 요소**의 기준
+3. `관제용어정리.pdf` (서울지방항공청 관제통신국 관제과) — **관제용어·표현** 기준
+
+이것들을 분석해 정리한 결과가 `reference/exam-spec.md`(형식·분포·고정구),
+`reference/atc-terminology.md`(용어 — §12 가 실제 음성 수집분),
+`reference/used-scenarios.md`(재사용 금지 소재)에 들어 있다.
+**세트를 만들 때도, 채점할 때도 이 세 문서를 먼저 읽고 그 기준을 따른다.**
+원본을 매번 다시 읽을 필요는 없지만, 애매하거나 새로운 상황이면 자막·PDF 를 다시 확인한다.
+
+PDF 와 음성이 어긋나는 지점은 `exam-spec.md` §9 에 정리돼 있다 — **그때는 음성을 따른다.**
 
 ---
 
 ## 1. 절대 규칙 (위반 금지)
 
-1. `세트샘플.pdf`의 **형식·분량·난이도·문체를 그대로** 따른다. 단, **시나리오 내용은 매번 새로 창작**한다. 샘플 3세트에 나온 상황(과다 연료/디퓨얼링, 계기 상실, 스로틀 고착, TCAS RA, 웨이포인트 DVETO, yaw 조종 곤란)은 재사용하지 않는다.
+1. **형식·분량·난이도·문체는 실제 출제 음성 4세트를 그대로** 따른다 (`reference/exam-spec.md`).
+   단, **시나리오 내용은 매번 새로 창작**한다. 실제 4세트에 나온 상황·공항명·웨이포인트명은
+   재사용하지 않는다 — 금지 목록 전체는 `reference/used-scenarios.md` §A 에 있고, **세트를
+   만들기 전 반드시 그 문서를 먼저 읽는다.** (과다연료/디퓨얼링, 계기 다수 상실, 스로틀 고착,
+   TCAS advisory, DVETO 웨이포인트 미발견, yaw 조종 곤란, 낙뢰 피격/윈드실드+FMC,
+   B747 외부 이상 발견 등)
 2. 응시자 콜사인은 **항상 HL123**.
 3. `sets/EPTA_XX.md`에는 **정답·모범답안·힌트를 절대 포함하지 않는다.** 대신 모든 문항 아래에 `[정답]` 기입란을 비워 두어 사용자가 직접 채워 넣게 한다. 모범답안은 미리 별도 파일로 저장해두지 않고, 사용자가 채점을 요청했을 때 `EPTA_XX_feedback.md`를 만들면서 그 안에만 쓴다. 문제를 만들 때 채팅 응답으로도 정답을 미리 말하지 않는다.
 4. 교신은 **ICAO 표준교신용어(Doc 9432 / PANS-ATM Doc 4444)** 기준. 숫자는 샘플과 동일한 관례로 표기한다.
    - FL260 → `FL two six zero`, RWY 32 → `runway three two`, 09 → `zero niner`
    - 주파수: `121.65` = "one two one decimal six five"
    - 게이트/유도로 문자: `Gate Bravo 6`, `taxiway Golf 2`
+   - **`tree` = 3** : 실제 출제 음성 한 세트(test04)는 전편에서 `flight level tree 70`,
+     `runway tree 4L`, `heading tree 40` 처럼 ICAO 권고 발음을 그대로 쓴다. 출제 시 그렇게
+     표기해도 되고, **채점 시 `tree`/`three` 는 둘 다 정답**으로 본다.
    - **표준 필수어·관제용어는 `reference/atc-terminology.md`를 최우선 기준으로 따른다**
      (`reference/exam-spec.md` §8·§9는 그 요약/보조). 특히: "confirm ~?"에는 yes/no가 아니라
      **AFFIRM/NEGATIVE**로 답한다. ROGER는 CONFIRM·READ BACK 요구나 AFFIRM/NEGATIVE로
@@ -33,7 +50,14 @@
      적용한다.
 5. **Part 2 Task C는 Task B의 ATC 교신을 그대로 재사용**한다. 따라서 세트는 반드시 **통째로 한 번에** 생성한다. 파트 단위로 쪼개서 만들지 않는다.
 6. 안내문·시험 요령 표 등 한국어 부분은 샘플의 문구를 유지하고, 문제 본문(Directions, 상황설명, ATC 대사)은 **영어**로 쓴다.
-7. 이미 만든 세트와 시나리오가 겹치지 않도록, 새 세트를 만들기 전 `progress/log.md`(누적 약점·최근 등급)와 `progress/expressions.md`(반복 지적된 표현 상세)를 읽고 최소 2문항 이상 최우선 약점을 겨냥한다. 기존 `sets/` 폴더도 먼저 읽는다. 문항에 쓸 관제용어가 애매하면 `reference/atc-terminology.md`를 먼저 확인하고, 거기에도 없으면 원본 `관제용어정리.pdf`나 `세트샘플.pdf`를 다시 찾아본다.
+7. 새 세트를 만들기 전 **순서대로 네 문서를 먼저 읽는다.**
+   ① `reference/exam-spec.md` — 형식·문항 분포·지시문 고정구
+   ② `reference/used-scenarios.md` — 재사용 금지 소재와 고유명사
+   ③ `progress/log.md` — 누적 약점·최근 등급 → **최소 2문항 이상 최우선 약점을 겨냥**
+   ④ `progress/expressions.md` — 반복 지적된 표현 상세
+   기존 `sets/` 폴더도 확인해 다음 세트 번호를 정한다. 문항에 쓸 관제용어가 애매하면
+   `reference/atc-terminology.md`(특히 실제 음성에서 수집한 §12)를 먼저 확인하고, 거기에도
+   없으면 원본 `관제용어정리.pdf` 나 음성 자막 `reference/transcripts/` 를 다시 찾아본다.
 
 ---
 
@@ -51,66 +75,150 @@
 
 ## 3. 태스크별 출제 세칙
 
-**`sets/EPTA_05.md`는 실제 EPTA 샘플 녹음본을 그대로 재현한 세트로, 아래 세칙에 반영된 신규
-패턴(bundled request-in-readback, ATC-supplied contingency, 시차형 Informing 등)의 실제 출제
-사례다. 시나리오 자체는 재사용 금지 목록에 남아있지만(`reference/used-scenarios.md` 참고),
-문항 스타일·패턴의 기준으로 앞으로 계속 참고한다.** 자세한 분석은 `reference/exam-spec.md` §10.
+**모든 세칙은 `reference/exam-spec.md` 의 4세트 전수 분석을 근거로 한다.** 실제 출제 음성
+4세트(test01~04)를 대조해 얻은 분포이므로, 애매하면 그 문서의 해당 절을 먼저 확인한다.
+문항 말미 지시문은 고정이다 — Task A 는 `Record your full readback.`, Task B 는
+`Record your response.`
+
+### 세트 스타일 — 4세트에 1번은 test04 계열로
+
+실제 출제 음성 4세트 중 **test04 는 나머지 3세트와 결이 뚜렷하게 다르다.** 공식 EPTA 문제로
+실제 출제된 것이므로 배제하지 말고, **4세트에 1번 정도** 이 스타일로 낸다.
+
+| | test01~03 계열 (기본) | **test04 계열 (4세트에 1번)** |
+|---|---|---|
+| 숫자 발음 | `three` | **`tree` = 3** 을 전편에 일관되게 |
+| 배경 | 가상 영어권 지명 | **한국 배경 혼용** (Incheon, Seoul Radio 등 실제 지명 가능) |
+| 지시문 | 기능 1~2개 | **기능 2~3개를 한 문장에** (`make a readback, and a request with a reason`) |
+| Ⅰ-B 발신형 | 거의 없음 | **ATC 대사 없는 문항 2개** |
+| Flight Paths | 2~3단계 박스 | **박스 생략** |
+| 소재 | 일반 항로·접근 | **PIREP, offset, 선행기 이상 발견** 등 실무형 |
+
+이 스타일로 낼 때도 **문항 수·응답시간·Task C 문구는 똑같이 고정**이다. 바뀌는 것은 위 표의
+항목뿐이다. 어느 계열로 낼지는 `reference/used-scenarios.md` §B 의 기록을 보고 결정한다 —
+직전 3세트가 모두 기본 계열이었으면 다음은 test04 계열로 낸다.
 
 ### Part Ⅰ Task A (4문항)
 - ATC 한 줄 지시 → 응시자가 full readback.
-- 4문항은 서로 다른 비행 단계에서 뽑는다: 지상(pushback/taxi/backtrack), 이륙(clearance/wake turbulence), 상승·순항(FL 지정, speed, direct), 접근·착륙(runway change, circling).
-- 최소 1문항은 **readback 필수요소만 복창하고 부가정보는 빼야 하는 문제**로 만든다.
-  (예: "winds 220 at 10, cleared for takeoff runway 24" → 바람은 복창 불필요)
-- 최소 1문항은 요소가 5개 이상인 긴 지시(SID/transition/squawk/FL 등)로 만든다.
-- **(표준 반영, EPTA_05 실제 샘플 음성 확인, 2026-08-21/22)** 아래 두 패턴은 이제 "가끔"이 아니라
-  **매 세트 Task A 4문항 중 최소 1문항에 반드시 포함**한다 (둘 다 넣어도 되고, 세트마다 번갈아도 됨):
-  - ATC 지시 끝에 **"report speed"/"report ready" 같은 짧은 요청을 덧붙여, 복창과 함께 그
-    정보까지 한 응답에 담아야 하는 문항**. 정답에는 복창 + 요청받은 정보(예: 현재 속도)가
-    둘 다 있어야 한다.
-  - climb/cross 제약에 **"if unable, maintain (대안고도) until (지점)"처럼 관제사가 먼저
-    contingency를 주는 문항**. 이때는 그 contingency 문구까지 통째로 복창해야 한다 —
-    "unable+request" 문항(부가정보 없이 조종사가 스스로 대안을 요청)과는 다른 유형이니
-    혼동하지 말 것.
+- **★ 분량 상한 (실측 기준, 반드시 지킨다)** — 실제 출제 4세트 16문항을 세어본 결과
+  **콜사인을 뺀 ATC 지시는 3~18단어, 평균 11.2단어**다. 따라서:
+  - **18단어를 넘기지 않는다.** 20초 안에 복창할 수 없는 양이 된다.
+  - **4문항 중 1문항은 10단어 이하로 짧게** 만든다. 실제 세트의 최단은 3·8·9·8단어로,
+    매 세트 호흡을 잡아주는 쉬운 문항이 하나씩 있다. 이게 없으면 처음부터 끝까지
+    전력이 되어 실제보다 어려운 세트가 된다.
+  - 4문항 평균을 **11~13단어**에 맞춘다.
+  - 긴 클리어런스 문항도 **요소 5~6개 / 18단어 이내**로 끝낸다 (실제 최장은 test03-Q4 의
+    18단어·6요소). 요소를 8개까지 넣으면 30단어를 넘겨 실제와 전혀 달라진다.
+  - 세트를 만든 뒤 반드시 단어 수를 세어 확인한다.
+- 비행단계는 지상 1~2 / 이륙·출발 1 / 상승·강하·순항 1~2 / 접근·착륙 0~1 범위에서 배치한다.
+  **"서로 다른 4단계"를 강제하지 않는다** — 실제로 지상 2문항, 상승 2문항인 세트가 있다.
+- **매 세트 1문항 이상** : readback 필수요소만 복창하고 부가정보는 빼야 하는 문항
+  (`winds 220 at 10, cleared for takeoff runway 24` / `caution wake turbulence` / `due to ~`)
+- **매 세트 1~2문항** : 조건부·시점 지정 지시
+  (`expedite climb until passing FL280`, `reduce speed 20 knots when level`,
+  `after departure fly heading 260`, `after reaching THAMES proceed on course`)
+- **2세트에 1회** : 5요소 이상 긴 클리어런스(목적지·SID·transition·FL·활주로·squawk).
+  매 세트 넣지 않는다 — 실제로는 4세트 중 1문항뿐이었다.
+- **가끔** : `report reaching` 처럼 복창 + 향후 보고 약속을 함께 요구하는 부가 요청,
+  또는 ATC 가 먼저 `if unable, maintain (대안) until (지점)` contingency 를 주는 문항.
+  후자는 조종사가 스스로 대안을 요청하는 "unable+request" 유형과 다르니 혼동하지 말 것.
 
 ### Part Ⅰ Task B (6문항)
-각 문항 = ① 영어 상황설명(2~3문장) → ② ATC 한 줄 교신 → ③ 응시자 응답.
-6문항 안에 다음 기능이 골고루 들어가야 한다.
-- **Acknowledging**: 지시를 그대로 수용
-- **Informing**: 기상/상태 보고 (turbulence, icing, flight condition). **(표준 반영, EPTA_05 실제
-  샘플 음성 확인, 2026-08-21/22)** 2세트에 한 번 이상은 이 Informing 문항을 **"지금 목격한 것을
-  나중 시점에 보고"하는 시차형**으로 만든다 (예: "이륙 활주 중 조류 활동을 목격 → 이륙 후 ATC에
-  보고").
-- **Unable + reason**: 성능·기상·장비 사유로 거부
-- **Correcting own mistake**: 자신의 오류 정정 ("my mistake, now turning...")
-- **Requesting**: 편차·속도·고도 변경 요청
-- **Clarifying**: confirm / say again / verify
+문항은 **두 형태**가 있다. 하나로 고정하지 않는다.
+- **(가) 응답형** : ① 영어 상황설명(2~3문장) → ② ATC 한 줄 교신 → ③ 응시자 응답
+- **(나) 발신형** : ① 상황설명 → **ATC 대사 없이** → ② 조종사가 먼저 호출
+  (`Contact approach. Make a confirmation and clarify your intention.`)
+  → **6문항 중 0~2문항**을 발신형으로 둔다.
+
+기능 배분 기본값 (실제 4세트 24문항 분포 반영 — Unable 계열이 전체의 1/3) :
+- **Unable + reason (+대안) 2문항** ← 가장 많이 나오는 기능
+- **Requesting 1문항** (REQUEST + 명사구)
+- **Informing 1문항** (기상·상태 보고). 2세트에 한 번 이상은 "지금 목격한 것을 나중 시점에
+  보고"하는 시차형으로 만든다.
+- **Clarifying 1문항** (confirm / say again / verify)
+- **Correcting own mistake 또는 Acknowledging 1문항**
+
+추가 필수 사항 :
+- **매 세트 1문항은 `Confirm maintaining ~?` 함정형**으로 낸다. 실제 상태가 질문과 다르거나
+  유지 불가인 상황을 깔고, 정답은 **NEGATIVE + 실제 상태 + 정정/대안**이 되게 한다.
+  (4세트 중 3세트에 등장한 핵심 패턴)
+- **2문항 이상은 복합 지시**로 낸다 — 한 지시문이 2~3개 기능을 동시에 요구하는 형태.
+  (`make a readback, and a request with a reason` / `Report your status and make a request`
+  / `Explain your situation and request to go around`)
 - 1~2문항은 `🖥 [ ... ]` 텍스트 클루를 준다.
+- 지시문은 `reference/exam-spec.md` §3-5 의 고정구 사전에서 골라 쓴다.
 
 ### Part Ⅱ Task A (7~12턴 + Follow-up)
-- 서두에 `Flight Paths` 박스로 3개 비행 단계를 예고한다. (예: Clearance / Apron / Taxi, 또는 Approach / Landing / Taxi, 또는 Cruise / Descent / Approach)
-- `Initial Situation` → 턴 진행 → `Situation Update` → 턴 진행 → `Situation Update` 형태로 2~3회 상황 전환.
-- **정상 운항 중 경미한 변경/불편** 수준을 유지한다. 비상 선포는 Task A에 넣지 않는다.
-  (적합 예: 게이트 점유, 지상조업 지연, ATIS 변경, SID 변경, 유도로 폐쇄, 후방 항공기 압박, 활주로 변경)
-- 각 턴은 `☞ 지시문` 한 줄로 응시자가 무엇을 말해야 하는지 알려준다.
-- 이미지가 필요한 턴에는 `(Qn)` 표기 후 SVG를 삽입한다. 세트당 이미지 1~2개.
-- **"report your position" 류 지시를 낼 때는 그 직전에 반드시 구체적 위치·고도·거리(픽스명, 마일, 고도 등)를 `Situation Update`나 지문에 먼저 준다.** (샘플 예: "You are now over ASALT intersection at 3,000ft." 처럼) 위치를 안 준 채 "report your position"만 던지면 응시자가 근거 없이 답해야 하는 결함 있는 문항이 된다.
-  채점 시 정답 형태도 이 관례를 따른다: 픽스가 없으면 **"descending/leaving through X for Y"**(고도
-  통과 중), 픽스가 주어졌으면 **"over [픽스] at [고도]"** — 샘플 Ⅰ·Ⅱ·Ⅲ 전체에서 "활주로까지 몇
-  마일" 같은 거리 기반 위치 표현은 한 번도 안 나온다.
-- 마지막 Follow-up 질문은 반드시 `You have just finished Task A, as the pilot of Hotel Lima one two three.`로 시작하고, 롤플레이에서 겪은 문제에 대한 **경험·의견형** 질문을 던진다.
+- `Flight Paths` 박스는 **2단계 또는 3단계로 예고하거나, 아예 생략한다.** 3단계 고정이 아니다.
+  고정 문구 : `In this scenario, you'll be the pilot flying Hotel Lima 123, which goes
+  through [two/three] flight stages. [단계명 나열].`
+- `Initial Situation` → 턴 진행 → `Situation Update` 를 **1~3회** 넣는다.
+- 난이도 : 기본은 **정상 운항 중 경미한 변경·불편** 수준(게이트 점유, 지상조업 지연, ATIS
+  변경, SID 변경, 유도로 폐쇄, 후방 항공기 압박, 활주로 변경, 웨이포인트 확인 요청).
+  단 **4세트에 1번은 Task A 에도 비정상·비상을 넣는다** — 실제 test02 는 Task A 안에서
+  스로틀 고착 → troubleshoot 시간 요청 → divert → **비상 선포 → approach 핸드오프**까지 갔다.
+- 각 턴은 `☞ 지시문` 한 줄로 응시자가 무엇을 말해야 하는지 알려준다. **절반 이상의 턴을
+  복합 지시**로 쓴다 (`respond accordingly and inquire how long it will take`,
+  `give your full readback. Then, inquire about the traffic on your TCAS screen`,
+  `respond negatively with a reason`). 지시문은 `exam-spec.md` §4-6 사전에서 고른다.
+- **세트당 2~3턴은 ATC 가 비표준 구어체로 말하게 한다.** 실제 출제 음성의 ATC 는
+  `Do what you need to do.` / `Any idea when you are going in?` / `I'm sorry about that.` /
+  `once the tug crew gets you established on lane Alpha, if they can just pull you forward
+  so I can push behind you at gate 87, I'd appreciate it.` 처럼 말한다. 교과서적 대사만
+  쓰면 Comprehension 을 평가할 수 없다. (`atc-terminology.md` §12-2)
+- 이미지가 필요한 턴에는 `(Qn)` 표기 후 SVG 를 삽입한다. 세트당 이미지 1~2개.
+- **`report your position` 류 지시를 낼 때는 그 직전에 반드시 구체적 위치·고도·거리를
+  `Situation Update` 나 지문에 먼저 준다.** (모범 예 : `You are now over ASALT intersection
+  at 3,000 feet.`) 위치를 안 준 채 던지면 응시자가 근거 없이 답해야 하는 결함 문항이 된다.
+  채점 시 정답 형태도 이 관례를 따른다 — 픽스가 없으면 **`descending through X for Y`**,
+  픽스가 주어졌으면 **`over [픽스] at [고도]`**. 거리 기반("활주로까지 몇 마일")은 실제
+  4세트에서 조종사 위치보고로 한 번도 안 나왔다.
+- **Follow-up 질문은 반드시 2~3부 구조로 낸다.**
+  ① `In this situation, ...` 로 롤플레이에서 왜 그렇게 했는지 묻고
+  ② `In your role as a pilot, ...` / `From your own experiences, ...` / `How can ~ benefit
+  other aircraft?` 로 일반 경험·지식으로 넘어가고
+  ③ 가능하면 **`Give an example.`** 로 닫는다.
+  전치구 `You have just finished Task A, as the pilot of Hotel Lima one two three.` 는
+  붙여도 되고(test01·02·03) `Follow up question.` 만 써도 된다(test04).
 
 ### Part Ⅱ Task B (7~12턴)
 - **단일** 비정상/비상 사건. 사건을 두 개 섞지 않는다.
-- 전개: 정상 교신 → 사건 발생 → 상황 보고/의도 전달 → 관제 협조 → 해결 또는 착륙 준비.
-- 최소 1턴은 fuel/SOB, 최소 1턴은 intentions 진술을 포함한다.
-- plain English 비중을 Task A보다 높게 잡는다.
-- **여기 나오는 ATC 대사 5~7줄은 Task C에서 그대로 다시 쓰이므로 정확히 기록해 둔다.**
+- 전개 : 정상 교신 1~2턴 → 사건 발생 → 상황 보고 + 현재 조치 + 시간·vectors 요청 → ATC 가
+  대안·질문 제시 → intentions 진술 → **상황 변화(회복 또는 관제사 변심)** → 접근 방식 결정 +
+  필요한 지원 요청 → 최종 클리어런스 복창.
+- **intentions 진술은 거의 매 세트 포함**한다 (4세트 중 3세트).
+- **MAYDAY/PAN-PAN 선포와 fuel/SOB 보고는 4세트에 1번만 넣는다.** 실제 4세트 중 비상 선포와
+  fuel/souls on board 가 나온 것은 test03 하나뿐이다 — 계기 다수 상실(test01)도, 낙뢰
+  피격(test04)도 비상 선포 없이 전개했다. 매 세트 MAYDAY 를 넣는 것은 실제와 다르다.
+- 사건 중간에 **회복 또는 관제사 변심**을 한 번 넣는다
+  (test01 계기 일부 회복 / test04 FMC 회복 + `I cannot give you that heading anymore`).
+- plain English 비중을 Task A 보다 높게 잡는다.
+- **분량** : Part Ⅱ 의 ATC 대사는 Task A(Ⅰ-A)보다 길어도 된다 — 실제 출제 음성도 구어체로
+  30단어대까지 간다(test01 의 pushback 안내, test02 의 `give me a call when you get on the
+  ground…`). 다만 **40단어를 넘기지 않는다.** 응답시간이 30초라 그 이상은 받아 적을 수 없다.
+- **여기 나오는 ATC 대사 5~8줄은 Task C 에서 그대로 다시 쓰이므로 정확히 기록해 둔다.**
 
 ### Part Ⅱ Task C (2문항)
-- `☞ Now listen to the controller's radiotelephony messages.` 아래에 Task B의 ATC 대사만 순서대로 나열한다. (조종사 대사는 넣지 않는다)
-- Q1: `What happened to your aircraft (HL123)? Explain the nature of the incident.`
-- Q2: `How do you think the incident was handled by the air traffic controller? Do you feel the situation could have been handled differently? Make a comment from a pilot's point of view.`
-- 이 두 문항은 문구를 고정한다.
+- `☞ Now listen to the controller's radiotelephony messages.` 아래에 Task B 의 ATC 대사만
+  순서대로 나열한다. (조종사 대사는 넣지 않는다)
+- Q1 : `What happened to your aircraft (HL123)? Explain the nature of the incident.`
+- Q2 : `How do you think the incident was handled by the air traffic controller? Do you feel
+  the situation could have been handled differently? Make a comment from a pilot's point of
+  view.`
+- 이 두 문항은 문구를 고정한다. 4세트 전부 동일했다.
+
+---
+
+## 3-1. 세트를 만든 뒤 반드시 검사한다 (필수)
+
+세트를 만들거나 고친 직후 **`python practice/check.py EPTA_XX`** 를 돌린다.
+자막 4세트에서 실측한 기준으로 21개 항목을 기계가 대조한다 — 문항 수·응답시간·문항 ID 중복·
+정답 유출·Task A 단어수(상한 18, 10단어 이하 1문항, 평균 10~14)·Part 2 ATC 40단어 상한·
+금지 고유명사·Task C 가 Task B 대사를 그대로 담았는지·말미 지시문·`Confirm maintaining` 함정형·
+발신형 개수·Follow-up 구조·Task C 고정 문구.
+
+**✗ 가 하나라도 나오면 사용자에게 세트를 주지 않는다.** 고치고 다시 돌려 전부 ✓ 가 된 뒤에
+빌드·배포한다. 검사기가 틀렸다고 판단되면 검사기를 고치되, 기준 자체를 느슨하게 바꾸지 않는다.
 
 ---
 
@@ -138,10 +246,17 @@
     **P1A-Q1** 🎙 20초
     ATC : HL123, cleared direct ATLAS.
 
+    Record your full readback.
+
     [정답]
 
 
     ---
+
+**★ 문항 말미 지시문은 반드시 넣는다.** 자막 4세트 모두 예외 없이 ATC 지시 뒤에 이 문구를
+읽어준다 — Part Ⅰ A 는 `Record your full readback.`, Part Ⅰ B 는 `Record your response.`
+음성으로도 나와야 실제와 같은 연습이 되므로 md 에 한 줄로 써 둔다 (내레이터 목소리로 TTS 됨).
+Part Ⅱ 는 `☞ 지시문` 이 그 역할을 하므로 따로 넣지 않는다.
 
 - Part Ⅱ Task A·B의 롤플레이 턴도 동일하게 `[정답]` 란을 넣는다. (30초 표기)
 - Part Ⅱ Task A Follow-up과 Task C는 90초 문항이므로 `[정답]` 아래 빈 줄을 4개 둔다.
@@ -156,9 +271,12 @@
     관제용어정리.pdf
     CLAUDE.md
     reference/
-      exam-spec.md           ← 시험 형식·구조·템플릿 (세트샘플.pdf 기반)
-      atc-terminology.md     ← 관제용어·표현 (관제용어정리.pdf + 세트샘플.pdf + 웹조사 기반)
-      used-scenarios.md
+      transcripts/           ← 실제 출제 음성 4세트 자막 (최우선 기준)
+        test01.txt ~ test04.txt
+      exam-spec.md           ← 시험 형식·분포·지시문 고정구 (자막 4세트 전수 분석)
+      atc-terminology.md     ← 관제용어·표현 (§12 = 실제 음성 수집분)
+      used-scenarios.md      ← 재사용 금지 소재·고유명사
+      note-taking.md         ← 받아적기·복창 기법 (기호·CRAFT·한장요약)
     sets/
       EPTA_01.md            ← 문제 + [정답] 빈칸. 사용자가 여기에 직접 작성
       EPTA_01_feedback.md   ← 채점 요청 시에만 생성. 문항별 "내 답안 ** 정답/교정 답안" + 등급
@@ -167,6 +285,21 @@
       images/
         EPTA_01_q1.svg
         EPTA_02_q1.svg
+    practice/
+      build.py              ← md → mp3 + 배포용 HTML (web/ 아래로 출력)
+      pages.py              ← 세트 목록·내 답안 보기 페이지 틀
+      pull.py               ← 서버에 저장된 응답 내려받기 (채점 입력)
+      push.py               ← 채점 결과 올리기 (폰에서 정답 확인)
+      template.html         ← 풀이 화면 틀 (음성 인식·타이머·서버 전송)
+      results/              ← pull.py 가 내려받은 응답 기록
+    web/                    ← Vercel 배포 루트
+      index.html            ← 세트 목록 (Test 1, Test 2 … 자동 갱신)
+      r/index.html          ← 내 답안 보기
+      s/EPTA_01/index.html  ← 풀이 화면
+      audio/EPTA_01/*.mp3   ← TTS 음성
+      api/submit.js         ← 문항별 응답 저장
+      api/results.js        ← 응답 조회
+      api/feedback.js       ← 채점 결과 저장·조회
     progress/
       log.md                ← 누적 성적·약점·사용한 시나리오 목록
       expressions.md         ← 외워야 할 표현 모음 (plain English 문법 패턴 + ATC 표준교신용어)
@@ -284,6 +417,12 @@ Part Ⅰ A/B, Part Ⅱ A/B/C 각각 한 문단.
 새로 나온 문법·표현 교정 사례(§6-4의 "외워야 할 표현" 포함)는 `progress/expressions.md`에도
 "내 표현 → 고친 표현" 형식으로 이어서 추가한다 — 이미 있는 패턴이면 표는 그대로 두고 사례
 칸에 세트 번호만 덧붙인다.
+
+### 6-5-1. 채점 결과를 폰으로 올리기
+`EPTA_XX_feedback.md` 를 쓴 뒤 **`python practice/push.py EPTA_XX`** 를 돌린다. 문항별
+판정(✅⚠️❌)·정답/교정 답안·지적사항과 최종 등급이 서버에 올라가고, 배포 페이지의
+**내 답안 보기**(`/r/?set=EPTA_XX`) 화면에서 "내 답안 ↔ 정답" 이 나란히 보인다.
+모범답안은 배포 HTML 에 들어가지 않으므로 비밀키(`#k=...`)를 가진 사람만 볼 수 있다.
 
 ### 6-6. 파일 보호
 채점 중 `EPTA_XX.md`를 **절대 덮어쓰거나 정리하지 않는다.** 사용자의 답안이 들어 있다.
