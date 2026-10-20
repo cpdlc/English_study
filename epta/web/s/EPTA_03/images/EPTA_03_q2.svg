@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 340" width="660" height="340" font-family="Arial, Helvetica, sans-serif">
+  <rect width="660" height="340" fill="#ffffff"/>
+  <text x="20" y="36" font-size="22" font-weight="bold" fill="#1d2330">ENGINE</text>
+
+  <!-- column headers -->
+  <text x="215" y="76" font-size="17" fill="#6b7384" text-anchor="middle">N1 %</text>
+  <text x="360" y="76" font-size="17" fill="#6b7384" text-anchor="middle">EGT °C</text>
+  <text x="505" y="76" font-size="17" fill="#6b7384" text-anchor="middle">FUEL FLOW</text>
+
+  <!-- ENG 1 -->
+  <rect x="20" y="92" width="620" height="92" rx="10" fill="#fbeee5" stroke="#b4531c" stroke-width="3"/>
+  <text x="44" y="148" font-size="26" font-weight="bold" fill="#b4531c">ENG 1</text>
+  <text x="215" y="148" font-size="30" fill="#b4531c" text-anchor="middle">0</text>
+  <text x="360" y="148" font-size="30" fill="#b4531c" text-anchor="middle">210</text>
+  <text x="505" y="148" font-size="30" fill="#b4531c" text-anchor="middle">0</text>
+  <text x="595" y="124" font-size="17" font-weight="bold" fill="#b4531c" text-anchor="middle">SHUT</text>
+  <text x="595" y="150" font-size="17" font-weight="bold" fill="#b4531c" text-anchor="middle">DOWN</text>
+
+  <!-- ENG 2 -->
+  <rect x="20" y="198" width="620" height="92" rx="10" fill="#f1f4f8" stroke="#c9ced6" stroke-width="2"/>
+  <text x="44" y="254" font-size="26" font-weight="bold" fill="#1d2330">ENG 2</text>
+  <text x="215" y="254" font-size="30" fill="#1d2330" text-anchor="middle">92</text>
+  <text x="360" y="254" font-size="30" fill="#1d2330" text-anchor="middle">640</text>
+  <text x="505" y="254" font-size="30" fill="#1d2330" text-anchor="middle">2850</text>
+  <text x="595" y="262" font-size="18" font-weight="bold" fill="#2e8b57" text-anchor="middle">NORMAL</text>
+
+  <text x="20" y="322" font-size="18" font-weight="bold" fill="#b4531c">ENG 1 FIRE — bottle 1 discharged, warning out</text>
+</svg>

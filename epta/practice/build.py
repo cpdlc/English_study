@@ -54,6 +54,10 @@ DIGIT = {"0": "zero", "1": "one", "2": "two", "3": "three", "4": "four",
          "5": "five", "6": "six", "7": "seven", "8": "eight", "9": "niner"}
 SIDE = {"L": " left", "R": " right", "C": " center", "": ""}
 
+# test04 계열 세트는 숫자 3 을 "tree" 로 발음한다. main() 이 md 를 보고 켠다.
+TREE_STYLE = False
+_T = "\x01"                                   # tree 자리를 잠시 표시해 두는 문자
+
 
 def spell(digits):
     return " ".join(DIGIT[c] for c in digits)
@@ -65,6 +69,17 @@ def speech(text):
     for mark in ("🎙", "🖥", "☞", DING, "🔔"):
         t = t.replace(mark, "")
     t = re.sub(r"^(Initial Situation|Situation Update|Flight Paths)\s+", r"\1. ", t)
+
+    # tree 를 숫자 3 으로 되돌린다. `2 tree 0` 처럼 흩어진 자릿수는 한 덩어리로 합쳐야
+    # 아래 숫자 규칙들이 걸린다 (`flight level tree 50` → `flight level 350`).
+    t = re.sub(r"\btree\b", _T, t, flags=re.I)
+
+    def _merge(m):
+        s = m.group(0)
+        return s.replace(" ", "").replace(_T, "3") if _T in s else s
+
+    t = re.sub(r"[\d" + _T + r"]+(?: +[\d" + _T + r"]+)*", _merge, t)
+    t = t.replace(_T, "3")
 
     t = re.sub(r"\bHL\s?123\b", "Hotel Lima one two three", t, flags=re.I)
     t = re.sub(r"\bFL\s?(\d{2,3})\b", lambda m: "flight level " + spell(m[1]), t)
@@ -80,8 +95,12 @@ def speech(text):
     t = re.sub(r"\b(speed(?: to)?|reduce to)\s(\d{3})\b", lambda m: m[1] + " " + spell(m[2]), t, flags=re.I)
     t = re.sub(r"\b(\d{3}) (knots|kts)\b", lambda m: spell(m[1]) + " knots", t, flags=re.I)
     t = re.sub(r"\b(\d{1,2}),?000\b", lambda m: spell(m[1]) + " thousand", t)
+    t = re.sub(r"\b(\d{1,2}) thousand\b", lambda m: spell(m[1]) + " thousand", t)
     t = re.sub(r"\b(\d{1,2}),?(\d)00\b", lambda m: spell(m[1]) + " thousand " + spell(m[2]) + " hundred", t)
     t = re.sub(r"\b([1-9])00\b", lambda m: spell(m[1]) + " hundred", t)
+
+    if TREE_STYLE:
+        t = re.sub(r"\bthree\b", "tree", t, flags=re.I)
 
     return re.sub(r"\s+", " ", t).strip()
 
@@ -306,6 +325,13 @@ def main():
 
     md_path = SETS / f"{set_name}.md"
     md = md_path.read_text(encoding="utf-8")
+
+    # 세트가 tree 표기를 쓰면 TTS 도 3 을 "tree" 로 발음하게 한다 (test04 계열)
+    global TREE_STYLE
+    TREE_STYLE = bool(re.search(r"\btree\b", md, re.I))
+    if TREE_STYLE:
+        print("test04 계열 — 숫자 3 을 'tree' 로 발음합니다")
+
     data = parse_set(md)
     data["set"] = set_name
     data["raw"] = md

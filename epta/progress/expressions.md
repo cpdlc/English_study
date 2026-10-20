@@ -33,9 +33,9 @@
 
 | `climb through fl250` (실제 2,500 feet) | `Climbing through 2,500 feet.` | **네 자리 피트와 FL 은 만 피트 이상 차이.** 피트는 `2500`, FL 은 `FL250` 으로 모양을 다르게 적는다 | EPTA_02 P2A-Q9 |
 | `maintain 14000` (지시는 4,000) | `maintain 4,000` | 같은 뿌리의 자릿수 오류. 앞에 숫자가 더 붙지 않았는지 다시 본다 | EPTA_02 P1A-Q4 |
-| `Negative maintain speed 290` (실제 270) | `Negative, maintaining 270 knots due to buffet margin.` | NEGATIVE 다음은 반드시 **실제 값**. 값이 없으면 "290 이 아니다" 에서 끝난다 | EPTA_02 P1B-Q3 |
+| ~~`Negative maintain speed 290`~~ → `.74` 로 **해결(10-19)**. 실제 270 | `Negative, maintaining 270 knots due to buffet margin.` | NEGATIVE 다음은 반드시 **실제 값**. 값이 없으면 "290 이 아니다" 에서 끝난다 | EPTA_02 P1B-Q3 |
 | `decent 4000 cross qualit` (교차 불가 상황) | `Descend to 4,000. Unable to cross QUILL at 4,000 — that would exceed our descent rate. Request descent now.` | `readback of what you can accept` = **할 수 있는 것만** 복창. 못 하는 것까지 복창하면 약속이 된다 | EPTA_02 P1B-Q4 |
-| `quawk 3027` (3207 을 잘못 넣은 상태) | `Correction — we had 3207 set by mistake. Now squawking 3027.` | 정정 문항은 **무엇을 잘못했고 어떻게 바꿨는지**까지 | EPTA_02 P1B-Q5 |
+| ~~`quawk 3027`~~ → 정정 3단 **해결(10-19)**. 3207 을 잘못 넣은 상태 | `Correction — we had 3207 set by mistake. Now squawking 3027.` | 정정 문항은 **무엇을 잘못했고 어떻게 바꿨는지**까지 | EPTA_02 P1B-Q5 |
 | `roger request intersection runway` | `Before I can accept — request the runway distance available from Foxtrot.` | 교차점 출발은 **수락 전에 잔여 거리 확인**. `can you work with that?` 에 roger 는 답이 아니다 | EPTA_02 P2A-Q6 |
 | `roger , request landing` (full readback + intentions 요구) | `Heading 240, maintain 8,000, HL123. Our intention is to continue for the ILS runway 27 using your groundspeed.` | ROGER 는 복창을 대신할 수 없다. `request landing` 은 의도가 아니다 | EPTA_02 P2B-Q4 |
 | `unable to speed up 250 due to performance` | `Unable 250 knots — our airspeed indications are unreliable, so we cannot set a speed accurately.` | 사유는 **그 사건에 맞게**. 성능 문제로 들으면 관제사가 다른 판단을 한다 | EPTA_02 P2B-Q5 |
@@ -43,6 +43,18 @@
 | `I think we handled it well` (관제사를 묻는 질문) | `I think the controller handled it well.` | Task C Q2 의 주어는 **관제사**. 2세트 연속 `we` 로 시작 | EPTA_02 P2C-Q2 |
 | (3세트 연속 무응답) | `One thing that could have been handled differently is that he could have told us earlier …` | Task C Q2 **후반부**. 이 틀로 한 문장만 붙이면 된다 | EPTA_01·02 P2C-Q2 |
 | (3세트 연속 무응답) | `For example, on a wet runway at high take-off weight, 2,150 metres would not be enough for us.` | Follow-up 의 `Give an example.` — 경험이 없으면 **가정 예시**로 | EPTA_01·02 Follow-up |
+
+| `expect ils runway 36` / `ils 36 approached` | `Cleared for the ILS runway 36 approach.` | **3세트 연속 누락.** `cleared for` 가 있어야 허가를 받았다는 확인이 된다 | EPTA_03 P2A-Q8 · P2B-Q8 |
+| `mayday mayday mayday hl123 …` | `Mayday, mayday, mayday, Sejong Control, HL123, engine number one fire, engine shut down.` | MAYDAY×3 다음은 **기관명 → 콜사인 → 사건** 순 (`atc-terminology.md` §8-1) | EPTA_03 P2B-Q3 |
+| `turn off the engine` | `engine shut down` | 엔진 정지의 표준 표현 | EPTA_03 P2B-Q3 |
+| `we have 2hurs fuel on board` (실제 2시간 50분 + 164명) | `Fuel endurance two hours 50 minutes, 164 souls on board.` | 두 가지를 물으면 **둘 다**. 숫자는 분 단위까지 | EPTA_03 P2B-Q5 |
+| `deagu is available` | `We will divert to Daegu — with one engine out we want the calm wind and the longer runway.` | `is available` 은 의도가 아니다. **가겠다 + 이유** | EPTA_03 P2B-Q6 |
+| `contineue and request reduce speed 190` | `Before we decide — request the runway length available and how recent that report is.` | 지시문이 "결정 전에 물어보라"고 할 때. **3세트 연속 못 함** | EPTA_03 P2A-Q7 |
+| `cleared direct topla … we cannot use rnp1 approach` | `Unable direct TOPLA — we are not RNP 1 capable. Request to remain on the airway.` | **할 수 있는 것만 복창.** 못 하는 것까지 복창하면 수락이 된다 | EPTA_03 P1B-Q4 |
+| `decent fl130` (지시는 1 tree thousand feet) | `descend to 13,000 feet` | 13,000 피트와 FL130 은 **기압 설정이 다른 별개 고도** | EPTA_03 P2A-Q4 |
+| `maintaining 9000` (실제는 통과 상승 중) | `climbing through 9,000 feet for flight level 180` | `maintaining` 은 유지, `climbing through` 는 통과. 상태 동사를 구분 | EPTA_03 P1B-Q1 |
+| `before reaching` (지시는 report reaching) | `wilco report reaching` | "도달하면 보고하라" 를 "도달 전에" 로 바꾸면 뜻이 달라진다 | EPTA_03 P1B-Q2 |
+| `during approach phase` (실제는 이륙 후 상승 중) | `during the climb out, passing flight level 150` | Task C 는 **비행 단계부터** 정확히 | EPTA_03 P2C-Q1 |
 
 ## 2. 실제 출제 음성에서 확인된 핵심 표현
 

@@ -87,6 +87,33 @@ Smith Approach · Seoul Radio
 |---|---|---|---|---|
 | 2026-10-01 | sets/EPTA_01.md | 기본(test01~03) | Lakeside Airport 도착 (Cruise/Descent/Approach). ATIS 미수신으로 착륙정보 요청, 측풍 증가로 **활주로 09→14 변경 + RNAV 접근**, 시퀀스 지연·short approach 제안, 선행 Embraer 활주로 이탈 지연 | Clearwater Airport 접근 중 **유압 B 계통 저압** (비상 선포 없음) → 체크리스트 시간 요청 → intentions → **관제사 변심: RWY09 폐쇄, 2,400m RWY14 만 제시** → 대안 협의(Lakeside 회항 vs 10분 대기) → 대체 기어 전개·소방대 standby·towing 요청 → ILS 09 |
 | 2026-10-14 | sets/EPTA_02.md | 기본(test01~03) | Fairmont 출발 (Clearance/Taxi/Departure). **결빙으로 제빙(de-icing) 필요 + 출발 슬롯 지연**, 선행 CRJ 지연으로 **Foxtrot 교차점 출발(intersection departure)** 수락, SELDO 교차고도 확인 요청 | Thornbury Airport 접근 중 **속도계 불일치(unreliable airspeed)** — 기장/부기장/예비계기 3개가 전부 다름 (비상선포 없음) → 레이더 groundspeed 요청 → 증속 unable → 계기 회복하되 수동접근·autoland 불가 → **관제사 변심: ILS 27 글라이드패스 교정작업으로 RNAV 27 만 가능** → 착륙 |
+| 2026-10-16 | sets/EPTA_03.md | **test04 계열** | Muan 도착 (Flight Paths 박스 없음). **군 훈련공역 활성화로 KARBU 경유 우회 → 연료 빠듯 → 직항 요청**, 선행 A321 의 **braking action medium** 보고와 우천 활주로, Daegu 로의 전환 제안 | Gimhae 이륙 후 상승 중 **ENGINE 1 FIRE → 엔진 정지·소화 → 단발 운항** — **이 프로젝트 첫 MAYDAY 선포 + fuel endurance / souls on board 보고** → Gimhae 측풍 20kt vs Daegu 장거리 활주로 선택 → ILS 복귀 → **비상 취소 여부 판단** |
+
+### 2026-10-16 EPTA_03 상세 (향후 중복 방지용)
+
+- **계열** : **test04 계열** (EPTA_01·02 는 기본 계열). `tree`=3 전편 일관, 한국 배경,
+  Flight Paths 박스 생략, Ⅰ-B 발신형 2문항, 지시문 2~3기능.
+  → 다음 2~3세트는 다시 기본 계열로.
+- **고유명사** (앞으로 재사용 금지) : 공항 Gimhae · Muan · Daegu /
+  웨이포인트 PALDA · NOSOK · KARBU · TOPLA / 절차 PALDA ONE departure · NOSOK TWO arrival /
+  기관 Sejong Control · Muan Approach · Muan Tower · Gimhae Approach/Tower/Ground/Delivery /
+  타 항공기 Airbus A321
+- **Part ⅠA** : 지상 taxi(9단어, 호흡용) / 이륙 straight ahead **2,000 feet** + 이륙허가
+  (wind calm 복창불필요) / 상승 **FL tree 50** + 주파수 / 4요소 클리어런스 **5,000 feet** +
+  squawk — 단어수 9·16·12·14, 평균 12.8
+- **Part ⅠB** : ① **발신형** 호출+현재고도(9,000 feet→FL180)+cleared level 확인(복합 3기능)
+  ② PALDA 난기류 **시차형 보고**(복합 2기능) ③ `Confirm maintaining Mach .78?` 함정
+  (실제 .74) ④ **RNP 1 미충족**으로 direct 불가 → 복창가능분+unable+사유(복합 3기능)
+  ⑤ heading 2 tree 0 을 **2 0 tree 로 뒤집어** 선회 → 정정 ⑥ **발신형** 연료상태 보고 +
+  직항 요청(복합 2기능)
+- **Part ⅡA** : 9턴+Follow-up. 발신 턴 4개, 복합 지시 5턴. 이미지 항로도(훈련공역·우회).
+  Follow-up 3부 + `Give an example.`
+- **Part ⅡB** : 9턴. **MAYDAY + fuel endurance/souls on board (프로젝트 첫 출제)**.
+  이미지 엔진 계기. ATC 대사 6줄 → Task C 재사용
+- **겨냥한 약점** (EPTA_02 채점 결과) : **피트↔FL 혼동**(Ⅰ-A Q2·Q3·Q4, Ⅰ-B Q1,
+  Ⅱ-A Q4·Q5, Ⅱ-B 전체에 두 단위를 섞어 배치), NEGATIVE 뒤 실제 값(Ⅰ-B Q3, 클루에 값 명시),
+  "물어보라/요청하라" 미수행(Ⅱ-A Q2·Q3·Q7·Q9, Ⅱ-B Q7), 기관 호출(발신 턴 6개),
+  숫자 뒤집기(Ⅰ-B Q5 — squawk 3027→3207 과 같은 유형), `Give an example.`(Follow-up 명시)
 
 ### 2026-10-14 EPTA_02 상세 (향후 중복 방지용)
 

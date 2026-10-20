@@ -8,6 +8,7 @@
 | 2026-10-08 | EPTA_01 | **Level 1 (불합격)** | 지시문 요구 행위 미수행(6회+실질 무응답 2회), 들은 값을 다른 값으로 대체(6건), confirm/able 질문에 AFFIRM·NEGATIVE 미사용(3회), 90초 Follow-up 무응답, 복합 지시의 뒷부분 생략, Task C 사건 원인 오인(유압→기어) 및 질문 대상 오독 | Lakeside 도착(Cruise/Descent/Approach, 활주로 09→14 변경) / Clearwater 접근 중 유압 B 저압(비상선포 없음, 관제사 변심) |
 | 2026-10-13 | EPTA_01 **재응시** | **Level 2** (1차 Level 1 → +1) | 복합 지시 뒷부분 누락(8건, 2세트 연속 최우선), 기관 호출 누락(신규 4건), 값을 하나 맞추면 다른 하나를 틀림(Task A 4문항 전부), 주파수 2회 연속 오류, `confirm ~?` 에 AFFIRM 유지(미해결), 접근 허가 복창 누락 반복, Task C 질문 후반부 미응답 반복 | 동일 (EPTA_01 재응시) |
 | 2026-10-15 | EPTA_02 | **Level 3** (EPTA_02 +1, 1→2→3) | 고도 자릿수 혼동(신규 최우선: 2,500ft→FL250, 4,000→14000), NEGATIVE 뒤 실제 값 누락, 지시문의 '물어보라' 미수행(6건, 3세트 연속), `controller` 를 기관명으로 사용(반복), Task C 에서 ILS→RNAV 전개 누락 및 speed→height 오인, `could have been handled differently` 3세트 연속 무응답 — 단 주파수 3회 모두 정확·접근허가 복창 성공·복합지시 4건 성공 | Fairmont 출발(제빙·슬롯지연·교차점 출발) / Thornbury 접근 중 속도계 불일치(비상선포 없음) |
+| 2026-10-19 | EPTA_03 (test04 계열 + 첫 MAYDAY) | **Level 3 (유지)** | 접근 허가 복창 누락 3세트 연속(P2A-Q8 `expect` 로 대체, P2B-Q8 통째 누락), 지시문의 '물어보라/이유 대기' 미수행 3세트 연속(P2A-Q7, P2B-Q6, P1B-Q4), 질문이 둘이면 하나만 답함(P2B-Q5 souls on board 누락), 피트→FL 변환 재발(P2A-Q4, 단 4회 중 3회는 정확), heading 020→202 뒤집기, Task C 비행단계 오인(상승중→approach) 및 자기 선택과 모순 — 단 `tree` 4회 전부 정확 해석, confirm 3단 완성, 정정 3단 완성, MAYDAY 거의 완성, `could have been handled differently` 4세트 만에 응답 | Muan 도착(훈련공역 우회·braking action) / Gimhae 이륙 후 ENGINE 1 FIRE, MAYDAY·fuel/SOB |
 
 ---
 
@@ -24,6 +25,19 @@ Pronunciation 항목은 텍스트로 판단할 근거가 없어 "평가 보류"�
 ---
 
 ## 약점 태그 누적 메모
+
+### 해결됨 (EPTA_03 2026-10-19 에서 확인)
+
+- ~~`confirm ~?` 에 NEGATIVE 만 하고 실제 값 누락~~ → P1B-Q3 `negative maintaining .74 due to
+  turbulence` — **NEGATIVE + 실제 값 + 사유 3단 완성.** 세 세트 만에 해결.
+- ~~자기 오류 정정에서 정정 조치 누락~~ → P1B-Q5 `hd203, we had set 203 by mistake, left
+  heading 230` — **현재상태 + 오류 + 정정 3단 완성.** 두 세트 만에 해결.
+- ~~Task C Q2 의 `could have been handled differently` 무응답~~ → P2C-Q2 에서 처음 응답.
+  **4세트 만에 해결.**
+- ~~착륙에 필요한 지원 요청 누락~~ → P2B-Q7 소방대 대기 요청. 두 세트 만에 해결.
+- **신규 확인된 강점** : `tree`(=3) 표기를 **4회 전부 정확히 해석**(runway 36, FL350, FL230,
+  13,000). 처음 접한 표기인데 한 번도 틀리지 않음. 기관 호출 **7건**, 복합 지시 **6건** 성공
+  (EPTA_02 4·4 에서 증가).
 
 ### 해결됨 (EPTA_02 2026-10-15 에서 확인)
 
@@ -45,7 +59,30 @@ Pronunciation 항목은 텍스트로 판단할 근거가 없어 "평가 보류"�
 - ~~Task C Q2 질문 대상 오독~~ → 관제사를 평가함(1차는 조종사). **해결.**
 - ~~지시 요구 3개 중 1개만 수행(P2B-Q3)~~ → 셋 다 담음. **해결.**
 
-### 최우선 (EPTA_03 에서 2문항 이상 겨냥)
+### 최우선 (EPTA_04 에서 2문항 이상 겨냥)
+
+- **접근 허가를 복창하지 않는다 (3세트 연속·최우선)** : EPTA_01 1차·재응시 → EPTA_02 P2A-Q8
+  (`cleared for`→`expect`) → EPTA_03 **두 번**(P2A-Q8 `expect`, P2B-Q8 통째 누락).
+  EPTA_02 P2B-Q8 에서 한 번 성공했으므로 "할 수 있는데 매번 하지는 못하는" 단계.
+  필수 복창 7항목 중 가장 무겁다.
+- **지시문의 "물어보라 / 이유를 붙이라" 를 수행하지 않는다 (3세트 연속)** :
+  P2A-Q7 `Tell him what you need to know before you decide`(묻지 않고 continue),
+  P2B-Q6 `with a reason`(사유 없이 `deagu is available`),
+  P1B-Q4 `a request with a reason`(요청 없음).
+  **복합 지시 전체는 6건 성공으로 늘었는데 "묻기"와 "이유 대기"만 유독 빠진다.**
+- **질문이 두 가지면 하나만 답한다 (신규)** : P2B-Q5 `fuel endurance and souls on board`
+  → 연료만, 그것도 2시간 50분을 "2시간"으로. P2B-Q9 두 선택지에 두 단어.
+  **비상 상황의 정보는 숫자와 단위를 끝까지.**
+- **피트↔FL 혼동 (진전 중)** : P2A-Q4 에서 `1 tree thousand feet`→`fl130` 재발.
+  다만 P2A-Q5·P2B-Q1·P2B-Q4 에서는 정확 → **4회 중 3회 성공.** 계속 관찰.
+- **숫자 뒤집기 (반복)** : heading 020→202. squawk 3027→3207(EPTA_02)과 같은 유형.
+  같은 세트 P1B-Q5 가 바로 그 상황을 정정하는 문항이었는데도 실제로 또 뒤집었다.
+- **Task C 사실 오류 (3세트 연속, 유형만 바뀜)** : 이번엔 비행단계를 "상승 중"이 아니라
+  `approach phase` 로, 그리고 본인이 P2B-Q6 에서 고른 Daegu 가 아니라 Gimhae 로 갔다고 씀
+  — **자기 답과 모순.** Task B 를 풀면서 전개를 메모하는 훈련이 전제.
+- **`Give an example.` 미수행 (4세트 연속)** : Follow-up 에서 예시를 한 번도 들지 않음.
+
+### 이전 최우선 (EPTA_02 기준 — 일부 해결)
 
 - **고도 자릿수를 섞는다 (신규·최중대)** : `2,500 feet` → **`FL250`**(P2A-Q9, 만 피트 이상 차이),
   `maintain 4,000` → **`14000`**(P1A-Q4). 같은 세트 P2B-Q1 에서는 `fl200` 을 정확히 썼으므로
