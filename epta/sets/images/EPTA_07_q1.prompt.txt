@@ -1,0 +1,32 @@
+EPTA_07 P2A-Q3 — Gimpo 지상도 (위성 배경판)
+
+SVG 로 그린 도면판(EPTA_07_q1.svg)이 이미 들어가 있다. 실제 시험처럼 위성사진 배경으로
+바꾸고 싶으면 아래 프롬프트로 이미지를 만든 뒤 같은 폴더에 다음 이름으로 저장하고
+`python practice/build.py EPTA_07` 을 다시 돌린다. md 의 `![](images/EPTA_07_q1.svg)` 도
+`.png` 로 바꿀 것.
+
+    sets/images/EPTA_07_q1.png
+
+--- 프롬프트 (ChatGPT / Gemini 등에 그대로 붙여넣기) ---
+
+Create a flat, top-down airport ground chart illustration in the style of an aviation
+English test diagram. Requirements:
+
+- Black-and-white satellite-style airport layout: dark grey/black terminal buildings,
+  mid-grey taxiways, darker grey runways with white dashed centrelines. No colour in the
+  background at all.
+- Two runways: one on the LEFT labelled "RWY 34", one on the RIGHT labelled "RWY 32R",
+  both running roughly top-to-bottom.
+- Taxiway letters in black bold: "P" and "G" leading to RWY 34 (with a holding point
+  marked "G3"), and "H" leading to RWY 32R.
+- Two aircraft drawn as simple LIGHT BLUE silhouettes seen from above (no other colour
+  on the aircraft).
+- The aircraft near the G3 holding point has a white rectangular label box with a thin
+  black border reading "A350 U/S", connected to it by a RED arrow, and that aircraft is
+  circled with a RED circle.
+- The second aircraft, further back on taxiway G, has a white rectangular label box
+  reading "HL123" connected by a RED arrow.
+- In the upper-right empty area, bold RED text on two lines:
+  "RWY 32R ??" and "Distance available ??"
+- No other text, no legend, no compass rose, no watermark, no photo-realistic detail.
+- Clean, high contrast, readable at a glance in 15 seconds. Landscape, about 680x400.

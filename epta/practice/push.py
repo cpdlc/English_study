@@ -22,7 +22,10 @@ ROOT = Path(__file__).resolve().parent.parent
 SETS = ROOT / "sets"
 
 QID = re.compile(r"^\*\*(P\d[ABC]-Q\d+)\*\*\s*(.*)$")
-MODEL = re.compile(r"^\*\*\s*(정답|교정 답안|정답/교정 답안)\s*:\s*(.*)$")
+# 키워드 뒤에 `(참고용 ...)` 같은 괄호 주석이 붙어도 읽는다.
+MODEL = re.compile(
+    r"^\*\*\s*(정답|교정 답안|정답/교정 답안)\s*(?:\([^)]*\))?\s*[:\u2014-]\s*(.*)$"
+)
 LEVEL = re.compile(r"최종\s*등급.*?(Level\s*\d)", re.I)
 
 
@@ -44,7 +47,7 @@ def env():
 
 def parse(md):
     """feedback md → {qid: {verdict, model, notes[]}} 와 최종 등급."""
-    items, cur = {}, None
+    items, cur, in_model = {}, None, False
     for raw in md.splitlines():
         line = raw.strip()
 
@@ -53,6 +56,7 @@ def parse(md):
             cur = m[1]
             verdict = next((c for c in "✅⚠️❌" if c in m[2]), "")
             items[cur] = {"verdict": verdict, "model": "", "notes": []}
+            in_model = False
             continue
 
         if not cur:
@@ -62,7 +66,14 @@ def parse(md):
         if m:
             if not items[cur]["model"]:
                 items[cur]["model"] = m[2].strip()
+                in_model = True
             continue
+
+        # 정답이 여러 줄로 이어지는 경우를 이어 붙인다 (3부 모범답안 등).
+        if in_model and line and not line.startswith(("- ", "**", "---", "## ")):
+            items[cur]["model"] = (items[cur]["model"] + "\n" + line).strip()
+            continue
+        in_model = False
 
         if line.startswith("- ") and items[cur]["model"]:
             items[cur]["notes"].append(line[2:].strip())

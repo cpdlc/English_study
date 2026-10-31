@@ -55,6 +55,15 @@
   .seg.hidden { color: var(--muted); font-style: italic; }
   .seg.playing { outline: 2px solid var(--accent); }
   .seg.chime { background: transparent; color: var(--muted); padding: 2px 12px; }
+  /* 실제 응시 화면의 상단 하늘색 띠 */
+  .cuebar { background: #e8f4fb; border: 1px solid #b9d9ee; border-bottom-width: 3px;
+            border-radius: 6px; padding: 10px 14px; margin: 0 0 14px; }
+  .cuebar .cue { color: #1a5fa8; font-weight: 700; }
+  .cuebar .cue + .cue { margin-top: 4px; }
+  .cuebar .tag { color: #c02626; font-weight: 700; }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .cuebar { background: #10212e; border-color: #1f4a66; }
+  }
   .screen { background: var(--screen); color: var(--screen-text); font-family: ui-monospace, Consolas, monospace;
             padding: 10px 14px; border-radius: 8px; margin: 8px 0; }
   .pre-label { font-size: 12px; color: var(--muted); font-weight: 600; margin-top: 4px; }
@@ -552,7 +561,7 @@
   function segHtml(seg) {
     const show = opts.script || revealed;
     if (seg.type === 'chime') return `<div class="seg chime">🔔 dingdong</div>`;
-    if (seg.type === 'screen') return `<div class="screen">🖥 [ ${esc(seg.text)} ]</div>`;
+    if (seg.type === 'screen') return `<div class="cue">☞ ${esc(seg.text)}</div>`;
     if (seg.type === 'image') return `<img class="fig" src="${esc(seg.src)}" alt="">`;
     if (seg.kind === 'instruction') return `<div class="seg instruction" data-src="${seg.src}">☞ ${esc(seg.text)}</div>`;
     if (seg.voice === 'atc') {
@@ -560,8 +569,11 @@
         ? `<div class="seg atc" data-src="${seg.src}"><b>${esc(seg.label)} :</b> ${esc(seg.text)}</div>`
         : `<div class="seg atc hidden" data-src="${seg.src}"><b>${esc(seg.label)} :</b> 🔊 (음성)</div>`;
     }
+    const tag = /^(Flight Paths|Initial Situation|Situation Update)\.?\s*/.exec(seg.text || '');
+    const body = tag ? seg.text.slice(tag[0].length) : (seg.text || '');
+    const head = tag ? `<span class="tag">[${esc(tag[1])}]</span> ` : '';
     return show
-      ? `<div class="seg narration" data-src="${seg.src}">${esc(seg.text)}</div>`
+      ? `<div class="seg narration" data-src="${seg.src}">${head}${esc(body)}</div>`
       : `<div class="seg narration hidden" data-src="${seg.src}">🔊 상황 설명 (음성)</div>`;
   }
 
@@ -573,12 +585,19 @@
     $('title').textContent = DATA.set;
     $('progress').textContent = `${idx + 1} / ${flat.length}`;
 
+    // 실제 시험처럼 화면 클루(☞)는 본문에서 빼서 맨 위 띠에 모아 보여준다
+    const isCue = (s) => s.type === 'screen';
+    const cues = [...q.pre, ...q.body].filter(isCue);
+    const pre = q.pre.filter((s) => !isCue(s));
+    const body = q.body.filter((s) => !isCue(s));
+
     $('card').innerHTML = `
       <div class="sec-title">${esc(sec.title)}</div>
       ${q.first && sec.directions ? `<details class="dir"${phase === 'idle' ? ' open' : ''}><summary>Directions</summary>${esc(sec.directions)}</details>` : ''}
-      ${q.pre.length ? `<div class="pre-label">SITUATION</div><div class="block">${q.pre.map(segHtml).join('')}</div>` : ''}
+      ${cues.length ? `<div class="cuebar">${cues.map(segHtml).join('')}</div>` : ''}
+      ${pre.length ? `<div class="pre-label">SITUATION</div><div class="block">${pre.map(segHtml).join('')}</div>` : ''}
       <div class="qhead"><h2>${esc(q.id)}</h2><span class="time">🎙 ${q.seconds}초 ${esc(q.note)}</span></div>
-      <div class="block">${q.body.map(segHtml).join('')}</div>
+      <div class="block">${body.map(segHtml).join('')}</div>
 
       <div class="controls">
         ${phase === 'playing' || phase === 'answering'

@@ -40,6 +40,18 @@ VOICES = {
     "narrator": "en-US-Chirp3-HD-Kore",
 }
 
+# 발화 속도 (reference/exam-spec.md §10-1 실측 참고)
+#   기본 속도 1.0 → 174 WPM (실제의 1.4배, 너무 빠름)
+#   실제 출제 음성 → 124 WPM
+#   0.64/0.75 → 129 WPM 으로 맞춰봤으나 **연습용으로는 너무 느리다는 판단**(2026-10-23)
+#   → 그 중간보다 조금 빠른 **155 WPM** 을 목표로 조정.
+#     실제보다 1.25배 빠르므로 듣기 부담은 실제보다 크다 — 의도된 설정이다.
+#   ATC 를 내레이션보다 느리게 두는 실제 관례는 유지 (비율 0.85)
+RATES = {
+    "atc": 0.81,
+    "narrator": 0.94,
+}
+
 SPEAKER = re.compile(
     r"^(ATC|Center|Approach|Apron|Ground|Tower|Departure|Delivery|Clearance|Radar|Control)\s*:\s*(.*)$")
 Q_HEADER = re.compile(r"^\*\*(P\d[ABC]-Q\d+)\*\*\s*🎙\s*(\d+)초\s*(.*)$")
@@ -140,7 +152,9 @@ def segments(lines):
             continue
         img = IMAGE.search(text)
         if img:
-            out.append({"type": "image", "src": "../sets/" + img[1]})
+            # 이미지는 web/s/<SET>/images/ 로 복사되므로 페이지 기준 상대경로로 둔다.
+            # ("../sets/..." 로 두면 배포 주소에서 /s/sets/... 를 찾아 404 가 났다)
+            out.append({"type": "image", "src": img[1]})
             continue
 
         ding = DING in text
@@ -275,11 +289,11 @@ def load_key():
     raise SystemExit(".env 에 API_KEY 가 없습니다.")
 
 
-def synthesize(key, voice, text, path):
+def synthesize(key, voice, text, path, rate):
     body = {
         "input": {"text": text},
         "voice": {"languageCode": "en-US", "name": voice},
-        "audioConfig": {"audioEncoding": "MP3"},
+        "audioConfig": {"audioEncoding": "MP3", "speakingRate": rate},
     }
     r = requests.post(TTS_URL, json=body, headers={"X-Goog-Api-Key": key}, timeout=60)
     if r.status_code != 200:
@@ -299,16 +313,19 @@ def attach_audio(data, set_name):
                 if seg["type"] != "say":
                     continue
                 voice = VOICES[seg["voice"]]
+                rate = RATES[seg["voice"]]
                 said = speech(seg["text"])
-                name = hashlib.sha1(f"{voice}|{said}".encode()).hexdigest()[:16] + ".mp3"
+                # 속도가 바뀌면 같은 문장이라도 다른 음성이므로 해시에 함께 넣는다
+                name = hashlib.sha1(f"{voice}|{rate}|{said}".encode()).hexdigest()[:16] + ".mp3"
                 seg["src"] = f"/audio/{set_name}/{name}"
                 script.append(f"[{q['id']}] {seg['voice']:8} {said}")
                 if not (audio_dir / name).exists():
-                    jobs.append((voice, said, audio_dir / name))
+                    jobs.append((voice, said, audio_dir / name, rate))
 
     unique = {j[2]: j for j in jobs}.values()
     chars = sum(len(j[1]) for j in unique)
-    print(f"새로 만들 음성 {len(unique)}개 ({chars}자), 기존 재사용 {len(script) - len(jobs)}개")
+    print(f"새로 만들 음성 {len(unique)}개 ({chars}자), 기존 재사용 {len(script) - len(jobs)}개"
+          f" · 속도 ATC {RATES['atc']} / 내레이션 {RATES['narrator']}")
 
     with ThreadPoolExecutor(max_workers=4) as pool:
         list(pool.map(lambda j: synthesize(key, *j), unique))
@@ -358,7 +375,10 @@ def main():
     if src_img.exists():
         dst_img = out.parent / "images"
         dst_img.mkdir(exist_ok=True)
-        for f in src_img.glob(f"{set_name}_*.svg"):
+        # 실제 시험은 위성사진 위에 표기하므로 png/jpg 도 받는다
+        shots = [f for ext in ("svg", "png", "jpg", "jpeg", "webp")
+                 for f in src_img.glob(f"{set_name}_*.{ext}")]
+        for f in shots:
             dst_img.joinpath(f.name).write_bytes(f.read_bytes())
 
     # '내 답안 보기' 화면이 문제 본문·음성을 가져갈 수 있게 따로 내보낸다 (정답 없음)
@@ -393,17 +413,30 @@ def main():
 
     total = sum(len(s["questions"]) for s in data["sections"])
     print(f"{out} 생성 — {len(data['sections'])}개 파트, {total}문항")
-    print(f"목록 갱신 — Test 1~{len(sets)} ({', '.join(sets)})")
+    print(f"목록 갱신 — {len(sets)}개 세트 ({', '.join(sets)})")
     print("배포: npx vercel deploy --prod web")
 
 
 def write_index():
     """web/index.html 과 web/r/index.html 을 다시 쓴다 — 목록은 늘 최신으로."""
     root = WEB / "s"
-    sets = sorted(d.name for d in root.iterdir() if (d / "index.html").exists()) if root.exists() else []
+    found = sorted(d.name for d in root.iterdir() if (d / "index.html").exists()) if root.exists() else []
 
-    cards = "\n".join(pages.card(n, s) for n, s in enumerate(sets, 1)) \
-        or '    <p class="empty">아직 세트가 없습니다.</p>'
+    # EPTA 세트를 먼저, 실제 출제 샘플세트(SAMPLE_xx)를 그 아래에 둔다.
+    epta = [s for s in found if s.startswith("EPTA_")]
+    other = [s for s in found if not s.startswith("EPTA_")]
+    sets = epta + other
+
+    def label_for(set_name, n):
+        """EPTA 세트는 Test 순번, 그 밖은 접두어를 그대로 보여준다."""
+        if set_name.startswith("EPTA_"):
+            return f"Test {n}"
+        kind, _, num = set_name.partition("_")
+        return f"{kind.capitalize()} {num}" if num else kind.capitalize()
+
+    cards = "\n".join(
+        pages.card(label_for(s, i + 1), s) for i, s in enumerate(sets)
+    ) or '    <p class="empty">아직 세트가 없습니다.</p>'
 
     (WEB / "index.html").write_text(pages.index_html(cards), encoding="utf-8")
 

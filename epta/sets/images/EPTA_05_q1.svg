@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 340" width="660" height="340" font-family="Arial, Helvetica, sans-serif">
+  <rect width="660" height="340" fill="#ffffff"/>
+  <text x="20" y="34" font-size="20" font-weight="bold" fill="#1d2330">LARKIN — GROUND</text>
+
+  <!-- runway 09/27 -->
+  <rect x="50" y="110" width="560" height="48" fill="#3a4150"/>
+  <line x1="50" y1="134" x2="610" y2="134" stroke="#ffffff" stroke-width="3" stroke-dasharray="24 18"/>
+  <text x="56" y="102" font-size="19" font-weight="bold" fill="#1d2330">09</text>
+  <text x="586" y="102" font-size="19" font-weight="bold" fill="#1d2330">27</text>
+
+  <!-- taxiway Golf (closed) -->
+  <rect x="190" y="158" width="22" height="92" fill="#f1f4f8" stroke="#b4531c" stroke-width="3"/>
+  <line x1="190" y1="158" x2="212" y2="250" stroke="#b4531c" stroke-width="4"/>
+  <line x1="212" y1="158" x2="190" y2="250" stroke="#b4531c" stroke-width="4"/>
+  <text x="150" y="272" font-size="19" font-weight="bold" fill="#b4531c">GOLF</text>
+  <text x="140" y="294" font-size="17" font-weight="bold" fill="#b4531c">CLOSED</text>
+
+  <!-- taxiway Kilo -->
+  <rect x="470" y="158" width="22" height="92" fill="#c9ced6"/>
+  <text x="456" y="272" font-size="19" font-weight="bold" fill="#2459d6">KILO</text>
+
+  <!-- apron / stands -->
+  <rect x="120" y="250" width="420" height="40" fill="#e8ebef" stroke="#c9ced6" stroke-width="2"/>
+  <text x="330" y="276" font-size="18" fill="#6b7384" text-anchor="middle">APRON — STANDS</text>
+
+  <!-- taxi route via Kilo -->
+  <path d="M 560 134 L 560 210 L 481 210 L 481 250" fill="none" stroke="#2459d6" stroke-width="4"
+        stroke-dasharray="12 8"/>
+
+  <!-- own aircraft just landed -->
+  <g transform="translate(560,134) rotate(-90)">
+    <path d="M 0 -15 L 12 13 L 0 6 L -12 13 Z" fill="#1d2330"/>
+  </g>
+  <text x="572" y="188" font-size="18" font-weight="bold" fill="#1d2330">HL123</text>
+</svg>

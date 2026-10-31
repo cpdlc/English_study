@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 400" width="680" height="400" font-family="Arial, Helvetica, sans-serif">
+  <rect width="680" height="400" fill="#ffffff"/>
+  <rect x="0" y="0" width="680" height="400" fill="#e9e9e9"/>
+
+  <!-- 터미널 / 건물 (흑백 지상도) -->
+  <polygon points="40,40 230,40 230,120 150,120 150,170 40,170" fill="#1b1b1b"/>
+  <rect x="470" y="40" width="170" height="70" fill="#1b1b1b"/>
+  <rect x="300" y="300" width="120" height="70" fill="#1b1b1b"/>
+
+  <!-- 활주로 34 (왼쪽, 멀리) -->
+  <rect x="70" y="200" width="36" height="180" fill="#3a3a3a"/>
+  <line x1="88" y1="200" x2="88" y2="380" stroke="#ffffff" stroke-width="3" stroke-dasharray="18 14"/>
+  <text x="62" y="194" font-size="19" font-weight="bold" fill="#1b1b1b">RWY 34</text>
+
+  <!-- 활주로 32R (오른쪽, 가까이) -->
+  <rect x="560" y="150" width="36" height="230" fill="#3a3a3a"/>
+  <line x1="578" y1="150" x2="578" y2="380" stroke="#ffffff" stroke-width="3" stroke-dasharray="18 14"/>
+  <text x="540" y="144" font-size="19" font-weight="bold" fill="#1b1b1b">RWY 32R</text>
+
+  <!-- 유도로 Papa / Golf (34 쪽) -->
+  <rect x="106" y="236" width="150" height="20" fill="#cfcfcf"/>
+  <text x="150" y="230" font-size="17" font-weight="bold" fill="#1b1b1b">P</text>
+  <rect x="236" y="236" width="20" height="120" fill="#cfcfcf"/>
+  <text x="262" y="300" font-size="17" font-weight="bold" fill="#1b1b1b">G</text>
+  <text x="208" y="252" font-size="15" font-weight="bold" fill="#1b1b1b">G3</text>
+
+  <!-- 유도로 Hotel (32R 쪽) -->
+  <rect x="420" y="236" width="140" height="20" fill="#cfcfcf"/>
+  <text x="470" y="230" font-size="17" font-weight="bold" fill="#1b1b1b">H</text>
+
+  <!-- 멈춘 A350 (하늘색) -->
+  <polygon points="190,246 170,236 170,256" fill="#6fb7e3"/>
+  <circle cx="178" cy="246" r="26" fill="none" stroke="#c02626" stroke-width="4"/>
+  <rect x="120" y="176" width="110" height="26" fill="#ffffff" stroke="#1b1b1b" stroke-width="2"/>
+  <text x="128" y="195" font-size="16" font-weight="bold" fill="#1b1b1b">A350 U/S</text>
+  <line x1="175" y1="202" x2="178" y2="220" stroke="#c02626" stroke-width="3"/>
+  <polygon points="178,224 173,212 183,212" fill="#c02626"/>
+
+  <!-- 자기 항공기 HL123 (하늘색) -->
+  <polygon points="330,246 310,236 310,256" fill="#6fb7e3"/>
+  <rect x="268" y="296" width="94" height="28" fill="#ffffff" stroke="#1b1b1b" stroke-width="2"/>
+  <text x="278" y="316" font-size="18" font-weight="bold" fill="#1b1b1b">HL123</text>
+  <line x1="315" y1="296" x2="320" y2="264" stroke="#c02626" stroke-width="3"/>
+  <polygon points="321,258 315,270 326,270" fill="#c02626"/>
+
+  <!-- 묻는 지점 -->
+  <text x="398" y="110" font-size="23" font-weight="bold" fill="#c02626">RWY 32R ??</text>
+  <text x="398" y="136" font-size="18" font-weight="bold" fill="#c02626">Distance available ??</text>
+</svg>

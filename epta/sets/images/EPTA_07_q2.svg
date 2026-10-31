@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 330" width="660" height="330" font-family="Arial, Helvetica, sans-serif">
+  <rect width="660" height="330" fill="#ffffff"/>
+  <text x="20" y="34" font-size="20" font-weight="bold" fill="#1d2330">FIRE PROTECTION PANEL</text>
+
+  <!-- CARGO SMOKE 경고 -->
+  <rect x="40" y="60" width="290" height="66" rx="6" fill="#c02626"/>
+  <text x="185" y="102" font-size="25" font-weight="bold" fill="#ffffff" text-anchor="middle">CARGO SMOKE</text>
+  <text x="185" y="146" font-size="18" font-weight="bold" fill="#c02626" text-anchor="middle">AFT HOLD</text>
+
+  <!-- 소화병 상태 -->
+  <rect x="370" y="60" width="250" height="66" rx="6" fill="#3a4150"/>
+  <text x="495" y="102" font-size="22" font-weight="bold" fill="#ffffff" text-anchor="middle">BOTTLES DISCHARGED</text>
+
+  <!-- 잔여 시간 -->
+  <rect x="40" y="178" width="250" height="100" rx="6" fill="#f1f4f8" stroke="#c9ced6" stroke-width="2"/>
+  <text x="56" y="206" font-size="17" fill="#6b7384">SUPPRESSANT REMAINING</text>
+  <text x="56" y="252" font-size="36" font-weight="bold" fill="#1d2330">60</text>
+  <text x="112" y="252" font-size="19" fill="#6b7384">MIN</text>
+
+  <!-- 객실 상태 -->
+  <rect x="320" y="178" width="140" height="100" rx="6" fill="#f1f4f8" stroke="#c9ced6" stroke-width="2"/>
+  <text x="336" y="206" font-size="17" fill="#6b7384">CABIN</text>
+  <text x="336" y="250" font-size="26" font-weight="bold" fill="#2e8b57">CLEAR</text>
+
+  <!-- 착륙거리 요건 -->
+  <rect x="480" y="178" width="140" height="100" rx="6" fill="#f1f4f8" stroke="#c9ced6" stroke-width="2"/>
+  <text x="496" y="206" font-size="17" fill="#6b7384">LDG DIST REQD</text>
+  <text x="496" y="250" font-size="26" font-weight="bold" fill="#1d2330">2,900 m</text>
+
+  <text x="20" y="310" font-size="18" font-weight="bold" fill="#c02626">Nearest suitable field ??</text>
+</svg>

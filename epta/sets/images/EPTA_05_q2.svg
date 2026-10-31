@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 320" width="660" height="320" font-family="Arial, Helvetica, sans-serif">
+  <rect width="660" height="320" fill="#ffffff"/>
+  <text x="20" y="36" font-size="22" font-weight="bold" fill="#1d2330">LANDING GEAR</text>
+
+  <!-- NOSE -->
+  <rect x="20" y="70" width="620" height="76" rx="10" fill="#fbeee5" stroke="#b4531c" stroke-width="3"/>
+  <text x="46" y="118" font-size="26" font-weight="bold" fill="#b4531c">NOSE</text>
+  <circle cx="300" cy="108" r="22" fill="#b4531c"/>
+  <text x="360" y="117" font-size="24" font-weight="bold" fill="#b4531c">UNSAFE</text>
+
+  <!-- LEFT MAIN -->
+  <rect x="20" y="158" width="620" height="60" rx="10" fill="#f1f4f8" stroke="#c9ced6" stroke-width="2"/>
+  <text x="46" y="196" font-size="22" font-weight="bold" fill="#1d2330">LEFT MAIN</text>
+  <circle cx="300" cy="188" r="18" fill="#2e8b57"/>
+  <text x="360" y="196" font-size="20" font-weight="bold" fill="#2e8b57">DOWN &amp; LOCKED</text>
+
+  <!-- RIGHT MAIN -->
+  <rect x="20" y="228" width="620" height="60" rx="10" fill="#f1f4f8" stroke="#c9ced6" stroke-width="2"/>
+  <text x="46" y="266" font-size="22" font-weight="bold" fill="#1d2330">RIGHT MAIN</text>
+  <circle cx="300" cy="258" r="18" fill="#2e8b57"/>
+  <text x="360" y="266" font-size="20" font-weight="bold" fill="#2e8b57">DOWN &amp; LOCKED</text>
+
+  <text x="20" y="310" font-size="17" fill="#6b7384">gear recycled &#183; alternate extension used &#183; no change</text>
+</svg>

@@ -330,11 +330,11 @@ def result_html():
     return RESULT_HTML.replace("__CSS__", COMMON_CSS)
 
 
-def card(n, set_name):
-    """세트 하나의 카드. n 은 1부터."""
+def card(label, set_name):
+    """세트 하나의 카드. label 은 화면에 보이는 이름(Test 1 / Sample 01)."""
     return (
         f'    <div class="set">\n'
-        f'      <div class="row"><span class="name">Test {n}</span>'
+        f'      <div class="row"><span class="name">{label}</span>'
         f'<span class="id">{set_name}</span></div>\n'
         f'      <div class="acts">\n'
         f'        <a class="go" href="/s/{set_name}/">풀기</a>\n'

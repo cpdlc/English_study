@@ -1,0 +1,20 @@
+EPTA_07 P2B-Q3 — 화재방호 패널 (사진 배경판)
+
+SVG 로 그린 계기판(EPTA_07_q2.svg)이 이미 들어가 있다. 사진 느낌으로 바꾸고 싶으면 아래
+프롬프트로 만든 뒤 `sets/images/EPTA_07_q2.png` 로 저장하고 다시 빌드한다.
+
+--- 프롬프트 ---
+
+Create a clean, flat illustration of an airliner overhead FIRE PROTECTION panel as it
+would appear in an aviation English test. Requirements:
+
+- Dark cockpit panel background, viewed straight on.
+- A large illuminated warning light in RED reading "CARGO SMOKE", with a smaller
+  caption under it reading "AFT HOLD".
+- Next to it, an illuminated amber/white indicator reading "BOTTLES DISCHARGED".
+- Below, three simple rectangular readout boxes with labels and values:
+  "SUPPRESSANT REMAINING  60 MIN", "CABIN  CLEAR" (in green),
+  "LDG DIST REQD  2,900 m".
+- At the bottom, bold RED text: "Nearest suitable field ??"
+- No switches, no extra knobs, no clutter, no watermark, no brand names.
+- High contrast, large labels, readable at a glance in 15 seconds. Landscape, 660x330.

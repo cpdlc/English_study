@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 330" width="660" height="330" font-family="Arial, Helvetica, sans-serif">
+  <rect width="660" height="330" fill="#ffffff"/>
+  <text x="20" y="34" font-size="20" font-weight="bold" fill="#1d2330">CABIN PRESSURIZATION PANEL</text>
+
+  <!-- warning light -->
+  <rect x="40" y="60" width="250" height="62" rx="6" fill="#b4531c"/>
+  <text x="165" y="100" font-size="24" font-weight="bold" fill="#ffffff" text-anchor="middle">CABIN ALTITUDE</text>
+
+  <!-- cabin altitude gauge -->
+  <rect x="40" y="150" width="250" height="110" rx="6" fill="#f1f4f8" stroke="#c9ced6" stroke-width="2"/>
+  <text x="56" y="178" font-size="17" fill="#6b7384">CABIN ALT</text>
+  <text x="56" y="222" font-size="34" font-weight="bold" fill="#b4531c">10,200</text>
+  <text x="200" y="222" font-size="19" fill="#6b7384">FT</text>
+  <polygon points="248,196 262,172 276,196" fill="#b4531c"/>
+  <text x="56" y="248" font-size="17" font-weight="bold" fill="#b4531c">RISING</text>
+
+  <!-- differential pressure gauge -->
+  <rect x="330" y="150" width="130" height="110" rx="6" fill="#f1f4f8" stroke="#c9ced6" stroke-width="2"/>
+  <text x="346" y="178" font-size="17" fill="#6b7384">DIFF PRESS</text>
+  <text x="346" y="222" font-size="30" font-weight="bold" fill="#b4531c">0.2</text>
+  <text x="414" y="222" font-size="17" fill="#6b7384">PSI</text>
+
+  <!-- outflow valve -->
+  <rect x="490" y="150" width="130" height="110" rx="6" fill="#f1f4f8" stroke="#c9ced6" stroke-width="2"/>
+  <text x="506" y="178" font-size="17" fill="#6b7384">OUTFLOW VLV</text>
+  <text x="506" y="222" font-size="26" font-weight="bold" fill="#1d2330">CLOSED</text>
+
+  <!-- masks -->
+  <rect x="330" y="60" width="290" height="62" rx="6" fill="#3a4150"/>
+  <text x="475" y="100" font-size="22" font-weight="bold" fill="#ffffff" text-anchor="middle">PAX OXYGEN — ON</text>
+
+  <text x="20" y="300" font-size="17" fill="#6b7384">AIRCRAFT ALT FL280 · DESCENDING 4,000 FT/MIN</text>
+</svg>

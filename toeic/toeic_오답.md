@@ -810,13 +810,378 @@
 - 해설: "your firm would require **complete descriptions of all products that we sell** ... I have **enclosed a list of all our goods, including the ingredients**" + 하단 "Enclosure: Product list" → 판매 중인 제품 설명 = Descriptions of items for sale (products that we sell ↔ items for sale 패러프레이즈). (B) upcoming(출시 예정) 제품이 아니라 현재 판매 중인 제품. (C) 계약은 아직 회의도 안 잡힌 단계라 없음. (D) 설문지 언급 없음.
 - 유형: 매칭
 
+## 2026-10-22 (개인 교재)
+
+### Part 5
+
+#### Q118 (Frye Systems). ------- considered the leader in computing innovation, Frye Systems has not had a new product in years.
+(A) Necessarily (B) Formerly (C) Eventually (D) Wisely
+- 정답: B / 내 답: C (사진의 체크 표시 기준)
+- 해석: 한때 컴퓨터 혁신의 선두주자로 여겨졌던 Frye Systems는 몇 년째 신제품을 내놓지 못하고 있다.
+- 해설: 앞(선두주자로 여겨짐)과 뒤(몇 년째 신제품 없음)가 대조 → "예전엔 그랬지만 지금은 아니다"라는 과거 상태를 나타내는 formerly(이전에, 한때 = once, previously). eventually(결국, 마침내)는 시간이 흘러 어떤 결과에 도달했다는 뜻이라 "결국 선두로 여겨졌다"가 되어 뒷문장의 부진과 충돌. necessarily(반드시)·wisely(현명하게)는 considered를 꾸미기에 의미가 맞지 않음. 구조: (Being) Formerly considered ~, 주절 → 분사구문 앞의 부사.
+- 유형: 어휘
+
+#### Q121 (Era Bank). Users of Era Bank ------- to change their passwords after their data was accessed by hackers.
+(A) instruct (B) will instruct (C) was instructed (D) are being instructed
+- 정답: D / 내 답: C (사진의 체크 표시 기준)
+- 해석: Era Bank 이용자들은 해커에게 데이터가 접근당한 뒤 비밀번호를 변경하라는 안내를 받고 있다.
+- 해설: ① 태: instruct + 사람 + to do(~에게 ~하라고 지시하다). 빈칸 뒤에 목적어(사람) 없이 바로 to change가 오므로 수동태 be instructed to do → (A)(B) 능동 탈락. ② 수일치: 주어는 Users(복수)이고 of Era Bank는 수식어. 바로 앞의 Bank(단수)에 끌려 was를 고르면 함정 → 단수 was instructed (C) 탈락 → 복수 수동 are being instructed. 시제: 해킹은 과거(was accessed)에 일어났고 그 결과로 지금 안내가 진행 중이므로 현재진행 수동이 자연스러움.
+- 유형: 문법
+
+#### Q127 (Apex Gas). Apex Gas agreed to ------- its rate increase at the request of the Fairfax city council.
+(A) obtain (B) delay (C) compare (D) recognize
+- 정답: B / 내 답: A (사진의 체크 표시 기준)
+- 해석: Apex Gas는 Fairfax 시의회의 요청에 따라 요금 인상을 연기하기로 동의했다.
+- 해설: 단서는 "agreed to"(동의했다)와 "at the request of the city council"(시의회의 요청으로). 시의회가 가스 회사에 요청하는 건 주민 부담을 줄이는 쪽이므로 회사가 "양보"한 내용 = 요금 인상을 미루다(delay). rate increase(요금 인상)는 회사가 스스로 결정해서 하는 것이지 얻는(obtain) 대상이 아님 — obtain은 허가·승인처럼 남에게서 받아내는 것에 씀(obtain approval for a rate increase는 가능). compare/recognize는 문맥상 무의미.
+- 유형: 어휘
+
+#### Q110 (gym 등록 양식). If you are interested in a personalized program, please ------- your preferences on the gym's membership registration form.
+(A) authorize (B) initiate (C) state (D) tolerate
+- 정답: C / 내 답: B (사진의 체크 표시 기준)
+- 해석: 맞춤형 프로그램에 관심이 있으시면, 체육관 회원 등록 양식에 선호 사항을 기재해 주세요.
+- 해설: state(동사) = 진술하다, (서류에) 명시·기재하다. "state your preferences/reason/name on the form"은 양식 작성 문맥의 단골 표현(= indicate, specify). initiate는 절차·프로그램 등을 "개시하다, 착수하다"(initiate a process/project)라 preferences(선호 사항)를 목적어로 받지 못함. authorize(승인하다), tolerate(참다)도 의미 불일치.
+- 유형: 어휘
+
+#### Q112 (Ms. Olsen caffeine). Ms. Olsen ------- caffeine from her diet until next week based on her doctor's recommendations.
+(A) was removed (B) removing (C) has removed (D) will be removing
+- 정답: D / 내 답: C (사진의 체크 표시 기준)
+- 해석: Olsen 씨는 의사의 권고에 따라 다음 주까지 식단에서 카페인을 빼고 있을 것이다.
+- 해설: 시제 단서 "until next week"(다음 주까지) = 지금부터 미래의 한 시점까지 계속되는 동작 → 미래진행 will be removing. 현재완료 has removed는 "과거에 시작해 지금까지(완료·결과)"를 나타내므로 next week 같은 미래 시점 표현과 함께 쓸 수 없음. (A) 빈칸 뒤에 목적어 caffeine이 있으니 수동태 불가. (B) -ing 단독은 본동사가 될 수 없음.
+- 유형: 문법
+
+#### Q114 (Braxco 합병 보도). Though it has yet to be confirmed, news reports ------- that Braxco and Haskill are considering a merger.
+(A) implement (B) respond (C) acquire (D) indicate
+- 정답: D / 내 답: C (사진의 체크 표시 기준)
+- 해석: 아직 확인되지는 않았지만, 뉴스 보도에 따르면 Braxco와 Haskill이 합병을 고려하고 있는 것으로 보인다.
+- 해설: 빈칸 뒤에 that절(that + S + V)이 바로 옴 → that절을 목적어로 받는 "전달·보고" 동사가 필요. indicate that ~ = ~임을 나타내다·시사하다 (주어가 reports/studies/data/survey일 때 단골). acquire(인수하다)는 merger(합병)와 의미가 연관돼 보이는 함정이지만, 주어가 news reports라 "보도가 인수하다"는 불가하고 that절도 목적어로 못 받음. implement(시행하다)도 that절 불가, respond는 자동사(respond to)라 that절 바로 못 옴.
+- 유형: 어휘
+
+#### Q115 (Donald's Doughnuts). At Donald's Doughnuts anniversary event, ------- have bought a coffee to obtain a free muffin.
+(A) many (B) either (C) little (D) anyone
+- 정답: A / 내 답: (질문으로 물어봄, 정확한 원래 선택 미상)
+- 해석: Donald's Doughnuts 기념 행사에서 많은 사람들이 무료 머핀을 받으려고 커피를 구매했다.
+- 해설: 빈칸은 주어 자리(대명사)이고 동사가 복수형 have bought → 복수 취급 대명사 many(= many people). either·anyone은 단수 취급이라 has bought가 되어야 하고, little은 불가산(양) 대명사라 단수 취급 + 사람을 가리킬 수 없음. 동사의 수(have/has)가 대명사 선택의 결정적 단서.
+- 유형: 문법
+
+#### Q123 (employee orientation manual). Producing a standard employee orientation manual would be of ------- help to staff.
+(A) customary (B) extravagant (C) intelligent (D) immense
+- 정답: D / 내 답: B (사진의 체크 표시 기준)
+- 해석: 표준 신입 직원 오리엔테이션 매뉴얼을 만드는 것은 직원들에게 엄청난 도움이 될 것이다.
+- 해설: "be of + 추상명사 = 형용사"(be of help = helpful, be of use = useful, be of importance = important). 빈칸은 help의 "정도"를 꾸미는 형용사 → of immense/great/considerable help = 매우 도움이 되는. extravagant는 "(돈·행동이) 사치스러운, 지나친"이라 부정적 뉘앙스이고 정도를 강조하는 말이 아님. customary(관례적인), intelligent(지적인, 사람·생물에 씀)도 help와 어울리지 않음.
+- 유형: 어휘
+
+#### Q125 (Ms. Lee 육상 대회). Ms. Lee showed her athletic ------- by qualifying for the prestigious Valley River Running Competition.
+(A) potential (B) authority (C) property (D) acquisition
+- 정답: A / 내 답: C로 보임 (사진의 체크 표시가 B/C 사이라 확실하지 않음)
+- 해석: Lee 씨는 권위 있는 Valley River 달리기 대회 출전 자격을 얻으며 운동선수로서의 잠재력을 보여 주었다.
+- 해설: "show (one's) potential" = 잠재력·가능성을 보여 주다. 큰 대회 출전 자격을 얻은 것(by qualifying ~)이 운동 잠재력을 보여 준 근거. potential은 형용사(잠재적인)로 더 익숙하지만 명사(잠재력)로도 토익 빈출. property(재산, 부동산 / 특성·속성 — 물질의 성질에 씀), authority(권한, 권위자), acquisition(인수, 습득)은 athletic과 결합해 사람의 능력을 나타내지 못함.
+- 유형: 어휘
+
+#### Q107 (CK Logistics). The salary paid to the top ------- at CK Logistics is one of the highest in the industry.
+(A) execute (B) execution (C) executive (D) executing
+- 정답: C / 내 답: C (✅ 정답이지만 B/C 사이에서 헷갈려 설명 요청)
+- 해석: CK Logistics의 최고 경영진에게 지급되는 급여는 업계 최고 수준 중 하나다.
+- 해설: the top ------- → 관사 + 형용사(top) 뒤 명사 자리. 명사 후보는 execution과 executive 둘. 급여(salary)를 "지급받는" 대상은 사람이어야 하므로 사람 명사 executive(임원, 경영진). execution은 "실행, 수행"(행위 명사)이라 급여를 받을 수 없음. executive는 -ive로 끝나 형용사처럼 보이지만 명사(임원)로 쓰이는 대표 단어 — 같은 부류: representative(직원, 대표), objective(목표), alternative(대안), initiative(계획, 진취성).
+- 유형: 문법
+
+#### Q128 (제품 회수). The product was taken from store shelves ------- concerns that it might be defective.
+(A) along with (B) because of (C) whenever (D) in observance of
+- 정답: B / 내 답: A (사진의 체크 표시 기준)
+- 해석: 제품에 결함이 있을 수 있다는 우려 때문에 그 제품은 매장 진열대에서 철수되었다.
+- 해설: 빈칸 뒤는 명사구(concerns that ~ 동격절)라 전치사 필요 → 접속사 whenever 탈락. 앞(진열대에서 철수)과 뒤(결함 우려)는 결과 ← 원인 관계 → because of(~ 때문에, = due to, owing to, on account of). along with는 "~와 함께, ~에 더하여"라는 첨가 의미라 "우려와 함께 철수되었다"가 되어 인과가 성립하지 않음. in observance of는 "(기념일·법규를) 기념하여·준수하여"(in observance of the holiday).
+- 유형: 문법
+
+### Part 6
+
+#### Q131 (Staff Required 광고). A design agency that consists of -------, highly competitive staff is seeking individuals to join its team in Bangkok.
+(A) creative (B) creativity (C) create (D) creatively
+- 정답: A / 내 답: B (사진의 체크 표시 기준)
+- 해석: 창의적이고 경쟁력이 뛰어난 직원들로 구성된 디자인 회사가 방콕 팀에 합류할 인재를 찾고 있다.
+- 해설: 빈칸 뒤 콤마는 "형용사, 형용사 + 명사" 나열 구조 → creative, highly competitive가 나란히 명사 staff를 수식. consists of 바로 뒤라 명사(creativity)가 와야 할 것 같지만, 그러면 "creativity, highly competitive staff"가 되어 뒤의 형용사구가 꾸밀 명사와 나열 구조가 깨짐(창의성과 직원이 병렬이 되려면 and가 필요). 콤마 앞뒤가 같은 품사(형용사)로 짝을 이뤄 staff 하나를 꾸민다는 게 핵심.
+- 유형: 문법
+
+#### Q133 (Staff Required 광고). Please apply ------- sending an e-mail to staff@bkrecruit.com.
+(A) to (B) for (C) by (D) in
+- 정답: C / 내 답: B (사진의 체크 표시 기준)
+- 해석: staff@bkrecruit.com으로 이메일을 보내서 지원해 주세요.
+- 해설: "by + -ing" = ~함으로써(수단·방법). 이메일을 보내는 것은 지원하는 "방법". apply for는 뒤에 지원 대상(apply for a position/job)이 와야 하므로 동작(sending)이 오면 안 됨. apply to는 지원처(apply to a company).
+- 유형: 문법
+
+#### Q135 (Silver Shore Community Center 편지). I especially appreciate that you went into a more detailed ------- compared to last time.
+(A) procedure (B) statement (C) discussion (D) characteristic
+- 정답: C / 내 답: B (사진의 체크 표시 기준)
+- 해석: 지난번에 비해 더 자세한 논의(설명)를 해 주신 점에 특히 감사드립니다.
+- 해설: 문맥은 "20세기 발명품에 관한 강연(talk)" → 강연 내용을 지난번보다 더 깊이 다뤘다는 뜻. "go into (a) detailed discussion / go into detail" = 자세히 다루다·파고들다가 고정 콜로케이션. statement는 공식 발표문·진술(짧고 단정적인 말 한마디)이라 강연 내용을 깊이 파고든다는 의미와 맞지 않고 go into와도 어울리지 않음. procedure(절차), characteristic(특징)은 문맥상 무의미.
+- 유형: 어휘
+
+#### Q141 (O'Toole's Gym 광고). All members receive full access to our workout equipment during normal hours of operation. -------. Fees must be paid per session for personal training and classes.
+(A) Keep in mind that some services cost extra, though.
+(B) Present the card to the front desk staff at any of our branches.
+(C) You'd better act fast because we will be closing soon.
+(D) Many people take advantage of these savings in the summer.
+- 정답: A / 내 답: B (사진의 체크 표시 기준)
+- 해석: 다만, 일부 서비스는 추가 요금이 든다는 점을 유의하세요.
+- 해설: 앞 문장(운동기구는 회원 전원 무료 이용) ↔ 뒤 문장(PT·수업은 회당 요금 별도)을 잇는 다리 문장. "though"(그렇지만)가 앞 내용과의 대조를, "some services cost extra"가 뒤 문장의 "Fees must be paid per session"을 예고함. (B) the card는 앞에 언급된 적 없는 대상인데 정관사 the로 지칭 → 근거 없음. 게다가 지점은 "our location at 81 Juniper Road" 하나뿐이라 any of our branches와도 충돌. (C) 폐업 언급 없음. (D) 겨울 프로모션(Winter has arrived)이라 summer와 모순.
+- 유형: 매칭
+
+## 2026-10-24 (개인 교재)
+
+### Part 5
+
+#### Q112 (store credit 환불). Customers can only be ------- with store credit if they don't have a purchase receipt.
+(A) refunds (B) refunded (C) refunding (D) refundable
+- 정답: B / 내 답: D
+- 내가 고른 이유: refundable = "환불 가능한"이라 자연스러워 보였고, be refunded는 "손님이 환불되어진다"는 이상한 뜻 같아서 제외
+- 해석: 구매 영수증이 없는 고객은 스토어 크레딧(매장 적립금)으로만 환불받을 수 있다.
+- 해설: refund는 "사람"을 목적어로 받는 동사(refund the customer = 고객에게 환불해 주다) → 수동 the customer is refunded = 고객이 환불을 "받다". "사람이 환불되어진다"가 아님. 같은 패턴: be paid(돈을 받다), be reimbursed(비용을 돌려받다), be compensated(보상받다), be charged(요금을 청구받다). 뒤의 "with store credit"(무엇으로 환불받는지)도 refund + 사람 + with 수단 구조의 단서. refundable(환불 가능한)은 물건·요금을 꾸미는 형용사(a refundable ticket/deposit)라 주어가 사람(Customers)이면 "손님이 환불 가능한 물건"이 되어 불가. can + -able(가능)도 중복 느낌.
+- 유형: 문법
+
+#### Q119 (비밀번호 보안 조치). This ------- precaution causes users to lose access to online accounts if they enter the wrong password three times.
+(A) secured (B) securely (C) secures (D) security
+- 정답: D / 내 답: A (사용자가 복합명사인지 확인 질문)
+- 해석: 이 보안 예방 조치는 사용자가 비밀번호를 세 번 틀리면 온라인 계정에 접속할 수 없게 만든다.
+- 해설: 한정사(This) + ------- + 명사(precaution) → 형용사 자리처럼 보이지만, 의미상 "보안을 위한 조치" = 복합명사 security precaution. secured(과거분사 형용사)는 "보호된, 잠긴, 담보가 있는"이라 secured precaution = "(누군가에 의해) 보호받는 조치"가 되어 어색 — 보호받는 건 계정이지 조치가 아님(a secured account/loan은 가능). 토익 빈출 security 복합명사: security measure / precaution / guard / check / system / badge / camera / deposit.
+- 유형: 문법
+
+#### Q121 (30% 할인 기간). Shoppers can get a 30 percent discount on all items ------- the promotional period.
+(A) among (B) throughout (C) between (D) to
+- 정답: B / 내 답: A
+- 내가 고른 이유: among을 "(기간) ~내에", throughout을 "~를 통해서"로 생각함
+- 해석: 쇼핑객들은 프로모션 기간 내내 모든 품목을 30% 할인받을 수 있다.
+- 해설: 빈칸 뒤 "the promotional period"(기간) → 기간을 받는 전치사 필요. throughout + 기간 = ~ 내내(처음부터 끝까지), throughout + 장소 = ~ 곳곳에. among은 시간 의미가 없고 "(셋 이상의 사람·사물) 사이에, ~ 중에"(among the employees). "~를 통해서"는 through(수단·경로)인데, through도 기간과 쓰면 "~ 내내"(through the night). "기간 내에"는 within/during. between은 between A and B(두 시점·대상), to는 from A to B 짝으로 씀.
+- 유형: 문법
+
+#### Q123 (oil spill 뉴스). News of the oil spill got ------- attention before videos about it were spread on the internet.
+(A) few (B) little (C) many (D) each
+- 정답: B / 내 답: A
+- 내가 고른 이유: "거의 없다"를 few로 생각함 (few/little 둘 다 "거의 없는" 뜻이라는 건 앎)
+- 해석: 기름 유출 뉴스는 관련 영상이 인터넷에 퍼지기 전까지는 관심을 거의 받지 못했다.
+- 해설: few와 little은 둘 다 "거의 없는"이지만 수식 대상이 다름 — few + 복수 가산명사(few people/options), little + 불가산명사(little time/money/attention). attention은 불가산명사(an attention, attentions 불가) → little. many(가산 복수), each(가산 단수)도 attention과 결합 불가. 의미상으로도 "영상이 퍼지기 전에는 관심이 적었다"는 대조라 부정 뉘앙스의 little이 맞음. a few / a little은 "조금 있는"(긍정).
+- 유형: 문법
+
+#### Q129 (Ms. Hansen 규칙). Ms. Hansen is often strict about rules but is willing to exercise ------- with new staff members.
+(A) flexibly (B) flexible (C) flex (D) flexibility
+- 정답: D / 내 답: A
+- 내가 고른 이유: "exercise with"를 하나의 짝으로 보고, 그 사이에 끼는 부사 자리라고 생각함
+- 해석: Hansen 씨는 종종 규칙에 엄격하지만, 신입 직원들에게는 기꺼이 융통성을 발휘한다.
+- 해설: 여기서 exercise는 "운동하다"(자동사)가 아니라 "(능력·권리·주의 등을) 발휘하다, 행사하다"라는 타동사 → 뒤에 목적어(명사) 필요 → flexibility. "with new staff members"는 exercise와 짝이 아니라 "누구에게/누구를 대할 때" 발휘하는지 나타내는 별도의 전치사구. exercise flexibility / caution / discretion / judgment / patience / one's right는 토익 빈출 콜로케이션. 부사 flexibly를 넣으면 exercise의 목적어가 없어 문장 불완전.
+- 유형: 문법
+
+#### Q130 (CEO 주주). The CEO tried to keep the majority of shareholders ------- about the financial situation.
+(A) knowledgeable (B) knowledge (C) know (D) known
+- 정답: A / 내 답: C
+- 내가 고른 이유: keep + O + OC(5형식)로 보고 "주주들이 재무 상황을 알게"라고 해석해서 동사원형 know를 고름
+- 해석: CEO는 대다수 주주들이 재무 상황을 잘 알고 있도록(계속 파악하고 있도록) 하려고 했다.
+- 해설: 5형식 판단은 맞음. 하지만 keep의 목적격 보어(OC)는 형용사/분사(상태)만 가능하고 동사원형은 불가 — 동사원형을 OC로 받는 건 사역동사 make/let/have(+ 지각동사)뿐. keep O 형용사 = O를 ~한 상태로 유지하다 → knowledgeable(잘 아는, 정통한) about ~. (D) known은 "주주가 (남에게) 알려진 상태"라 의미 반대(주주가 아는 주체). (B) 명사 knowledge는 O=OC 관계(주주=지식)가 성립 안 함. 같은 의미: keep shareholders informed / updated about ~ (토익 빈출).
+- 유형: 문법
+
+## 2026-10-27 (개인 교재)
+
+### Part 5
+
+#### Q108 (Oakville 식당 위생 기준). Oakville's local restaurants need to ------- with cleanliness standards and undergo annual inspections.
+(A) associate (B) discuss (C) comply (D) meet
+- 정답: C / 내 답: D
+- 내가 고른 이유: "meet with standards" = 기준을 충족하다라고 생각함
+- 해석: Oakville의 지역 식당들은 위생 기준을 준수하고 연례 점검을 받아야 한다.
+- 해설: 의미(기준을 충족하다)는 맞았지만 전치사 짝이 틀림. meet은 타동사라 전치사 없이 meet standards / requirements / deadlines / expectations. meet with는 "(사람)과 만나다"(meet with the client) 또는 "(반응·저항 등에) 부딪히다"(meet with resistance)라는 다른 뜻. 빈칸 뒤 with와 짝이 되는 건 comply with(~을 준수하다). 같은 의미 그룹: comply with / adhere to / conform to / abide by + 규칙·기준. associate with는 "~와 연관 짓다/어울리다", discuss는 타동사라 with 불필요(discuss with 사람은 가능하지만 standards와는 의미 불일치).
+- 유형: 어휘
+
+#### Q107 (Ms. Jensen 일정 충돌). Ms. Jensen believed her assistant was able to resolve her scheduling conflict in a ------- manner.
+(A) satisfied (B) satisfactory (C) satisfaction (D) satisfactorily
+- 정답: B / 내 답: B (✅ 정답이지만 근거가 흔들려 설명 요청)
+- 내가 고른 이유: "in a timely manner"의 timely를 부사로 알고 있어서 -ly인 satisfactorily로 가려다가, 어색해서 satisfactory로 바꿈
+- 해석: Jensen 씨는 비서가 일정 충돌을 만족스러운 방식으로 해결할 수 있었다고 생각했다.
+- 해설: a + ------- + 명사(manner) → 명사를 꾸미는 형용사 자리. timely는 -ly로 끝나지만 형용사(시기적절한)라서 "in a timely manner"도 a + 형용사 + 명사 구조 그대로임. 형용사 후보 중 satisfied는 "(사람이) 만족한"이라는 감정 상태라 사람을 꾸밈(satisfied customers), satisfactory는 "(결과·방식이) 만족스러운"이라 사물·방식을 꾸밈 → manner에는 satisfactory. in a(n) ------- manner 패턴: in a timely / efficient / professional / orderly / courteous manner.
+- 유형: 문법
+
+#### Q113 (Nelson Station 동창). Mr. Ingleby ran into a former university classmate at Nelson Station ------- he was waiting for his train to arrive.
+(A) while (B) during (C) in order for (D) since
+- 정답: A / 내 답: D
+- 내가 고른 이유: 빈칸 뒤에 절(주어+동사)이 와서 접속사인 since를 고름 (during, in order for는 전치사라 제외) / 나중에 확인: ran into(우연히 마주치다) 뜻을 몰라서 문장 의미를 못 잡은 게 근본 원인
+- 해석: Ingleby 씨는 기차가 도착하기를 기다리는 동안 Nelson 역에서 대학 동창을 우연히 만났다.
+- 해설: 접속사 자리라는 판단은 맞음(during·in order for 탈락). 남은 while vs since는 의미로 구분. while = ~하는 동안(동시 진행) — 종속절의 과거진행형(was waiting)과 찰떡. since는 ① ~이래로(시간): 주절이 완료시제여야 함(have known him since ~) — 주절 ran into는 단순과거라 불가 ② ~이기 때문에(이유): "기차를 기다리고 있었기 때문에 동창을 우연히 만났다"는 인과가 부자연스러움(우연한 만남에는 이유가 없음). 단서: ran into(우연히 마주치다) + was waiting(진행 중) → 배경 동작 중에 일어난 일 → while.
+- 유형: 문법
+
+#### Q120 (NeoTek 케이스). NeoTek has developed a more durable case to maximize the ------- of its devices.
+(A) reality (B) probability (C) authority (D) longevity
+- 정답: D / 내 답: D (✅ 정답이지만 B/D 사이에서 감으로 골라 설명 요청)
+- 내가 고른 이유: probability와 longevity 중 고민하다가 longevity가 "오래가는" 느낌이라 고름
+- 해석: NeoTek은 기기의 수명을 최대화하기 위해 더 튼튼한 케이스를 개발했다.
+- 해설: longevity = 수명, 오래 지속됨(long + -evity). 단서는 durable(내구성 있는) case → 기기를 오래 쓰게 함 → maximize the longevity(수명을 최대화). probability(확률, 가능성)는 "무엇이 일어날" 확률인지 대상 사건이 있어야 하는데(the probability of success), "기기의 확률"은 의미가 없음. reality(현실), authority(권한)도 불가. durable ↔ longevity / lifespan / life 짝으로 기억.
+- 유형: 어휘
+
+## 2026-10-28 (개인 교재)
+
+### Part 5
+
+#### Q103 (Meicum Auto 보고서). The consumer trend report issued by Meicum Auto ------- that people are highly interested in electric cars.
+(A) persuades (B) discovers (C) recommends (D) suggests
+- 정답: D / 내 답: B
+- 내가 고른 이유: recommend/suggest는 that절에 should가 숨어 있어 동사원형 be가 와야 하는데 are가 왔으니 제외. discover는 "알게 됐다"로 해석해서 고름
+- 해석: Meicum Auto가 발표한 소비자 동향 보고서는 사람들이 전기차에 매우 관심이 많다는 것을 시사한다.
+- 해설: suggest는 뜻이 두 개 — ① 제안하다(주어가 주로 사람): that + (should) 동사원형 ② 시사하다·암시하다(주어가 report/study/data/survey/evidence 등): that + 일반 시제(직설법). 이 문장은 주어가 report라 ② → "suggests that people are"가 정상. recommend는 "권고하다" 뜻만 있어서 항상 (should) 동사원형 → are와 충돌(정확히 제외함). discover는 "사람이 발견하다"라 사물 주어 report와 어울리지 않음(보고서는 발견하는 주체가 아니라 결과를 보여주는 것). persuade는 persuade + 사람 + that/to 구조라 사람 목적어 없이 that절 바로 불가. 같은 계열 "보고서가 ~임을 보여주다" 동사: indicate / show / reveal / suggest + that (Q114 indicate와 연결).
+- 유형: 문법
+
+#### Q108 (Asia Pacific Airlines). Asia Pacific Airlines is committed to ------- a convenient check-in experience and a high level of comfort on its flights.
+(A) providers (B) provide (C) provision (D) providing
+- 정답: D / 내 답: B
+- 내가 고른 이유: be committed to 뒤에 동사원형(to부정사)이 온다고 생각함
+- 해석: Asia Pacific Airlines는 편리한 체크인 경험과 높은 수준의 기내 편안함을 제공하는 데 전념하고 있다.
+- 해설: be committed to의 to는 to부정사가 아니라 전치사 → 뒤에 명사/동명사(-ing). 빈칸 뒤에 목적어(a convenient check-in experience)가 있으므로 목적어를 받을 수 있는 동명사 providing. (C) provision은 명사라 to 뒤에 올 수는 있지만 뒤에 목적어를 바로 받지 못함(provision of ~ 필요). 판별법: to 뒤에 명사를 넣어 말이 되면 전치사 to → committed to excellence(O) → -ing.
+- 유형: 문법
+
+#### Q112 (N350 자동 업데이트). The software of the N350 smartphone will update automatically ------- the settings are changed to prevent it.
+(A) unless (B) now that (C) almost (D) whereas
+- 정답: A / 내 답: B
+- 내가 고른 이유: unless = "뒤의 일이 안 했을 때"로 알고 있었는데, 문장에 대입했을 때 의미가 헷갈림
+- 해석: N350 스마트폰의 소프트웨어는 업데이트를 막도록 설정을 바꾸지 않는 한 자동으로 업데이트된다.
+- 해설: unless = if ~ not(~하지 않는다면). unless 뒤 절은 긍정문(the settings are changed)으로 쓰고, unless가 그걸 부정해 줌 → "설정이 (업데이트를 막도록) 바뀌지 않으면 → 자동 업데이트" = 기본값은 자동 업데이트, 예외는 설정 변경. 뒤의 prevent(막다)가 부정 느낌을 하나 더 줘서 헷갈리기 쉬움. now that = "이제 ~했으니까"(이미 일어난 사실 + 이유) → "막도록 설정을 바꿨으니 자동 업데이트된다"는 모순. whereas(반면에)는 대조할 두 대상이 필요, almost는 부사라 절을 연결 못 함.
+- 유형: 문법
+
+#### Q116 (customer invoices 수정). The ------- made to customer invoices were a result of a pricing error discovered by the manager.
+(A) roles (B) setbacks (C) clues (D) adjustments
+- 정답: D / 내 답: C
+- 내가 고른 이유: clue = 실마리, "인보이스의 실마리가 에러의 결과다"로 해석함
+- 해석: 고객 송장(인보이스)에 가해진 수정 사항들은 관리자가 발견한 가격 책정 오류 때문이었다.
+- 해설: 핵심 단서는 빈칸 뒤 "made to" — make + 명사 + to ~ (~에 …을 하다) 구조가 수동으로 뒤에서 꾸밈: the adjustments (which were) made to invoices. make adjustments / changes / modifications / improvements / revisions to ~ = ~을 수정·변경하다(토익 빈출 콜로케이션). 의미도 "가격 오류 발견 → 인보이스 수정"이라는 원인→결과가 자연스러움. clue는 "make a clue"라는 조합이 없고, 실마리는 오류를 "찾아내는 단서"(원인 쪽)이지 오류의 "결과"가 아님. setbacks(차질)도 make와 결합 X, roles(역할)는 의미 불일치.
+- 유형: 어휘
+
+#### Q118 (Radford Clinic 의료 기록). Radford Clinic is ------- for the security and integrity of its patients' medical records.
+(A) eligible (B) interactive (C) accountable (D) subject
+- 정답: C / 내 답: A (사진의 체크 표시 기준)
+- 내가 고른 이유: accountable 뜻을 몰라서 제외하고 for와 어울리는 eligible을 고름
+- 해석: Radford 클리닉은 환자 의료 기록의 보안과 무결성에 대한 책임이 있다.
+- 해설: be accountable for ~ = ~에 대해 책임이 있다(= be responsible for). 클리닉이 환자 기록의 보안을 "책임진다"는 의미. eligible for ~ = ~할 자격이 있는(eligible for a discount/promotion) → 혜택·자격을 "받는" 쪽이라 "클리닉이 기록 보안을 받을 자격이 있다"는 의미 불일치. subject to ~ = ~의 대상이 되는/~을 받기 쉬운(전치사 to 짝이라 for와 안 맞음). interactive(상호작용하는)는 의미 불일치.
+- 유형: 어휘
+
+#### Q124 (Cyon Apparel 기자회견). Cyon Apparel will hold a press conference to address ------- concerns about the company's financial health.
+(A) deliberate (B) accurate (C) lingering (D) versatile
+- 정답: C / 내 답: A
+- 내가 고른 이유: deliberate를 "숙고된"으로 보고 "숙고된 걱정"이라고 해석함
+- 해석: Cyon Apparel은 회사의 재무 건전성에 대해 계속 남아 있는 우려를 해소하기 위해 기자회견을 열 예정이다.
+- 해설: lingering = 오래 남아 있는, 가시지 않는 → lingering concerns / doubts / questions(가시지 않는 우려·의문)는 고정 콜로케이션. 기자회견까지 열어 해명(address)해야 할 만큼 우려가 계속되고 있다는 문맥. deliberate는 ① 고의적인, 의도적인(a deliberate attempt/decision) ② 신중한(동작·말투)이라 사람의 "행동·결정"을 꾸밈 — 우려(concerns)는 의도해서 만드는 게 아니므로 불가. accurate(정확한)는 "정확한 우려"로 어색, versatile(다재다능한, 다용도의)은 무관.
+- 유형: 어휘
+
+#### Q125 (Kassandra Parker 승진). For ------- coverage of unfair transactions, Kassandra Parker received a promotion at The Chicago Slate newspaper.
+(A) except (B) exceptional (C) excepting (D) exception
+- 정답: B / 내 답: C
+- 내가 고른 이유: 전치사 for 뒤니까 동명사(for + -ing)로 봄
+- 해석: 불공정 거래에 대한 탁월한 보도로 Kassandra Parker는 The Chicago Slate 신문사에서 승진했다.
+- 해설: 전치사 뒤에 동명사가 올 수 있는 건 맞지만, 빈칸 바로 뒤에 이미 명사 coverage가 있음 → for + [------- + coverage] = 명사구에서 명사를 꾸미는 형용사 자리 → exceptional(탁월한, 뛰어난). 동명사 excepting으로 보면 coverage가 그 목적어가 되어 "보도를 제외하는 것 때문에 승진"이라는 의미가 되어 불가(게다가 excepting은 주로 "~을 제외하고"라는 전치사로 쓰임). 판별 순서: 전치사 뒤 빈칸 → 빈칸 뒤에 명사가 있는지 확인 → 있으면 형용사(꾸밈) vs 동명사(목적어) 중 의미로 결정. coverage = (언론) 보도, 취재 / (보험) 보장 범위.
+- 유형: 문법
+
+#### Q130 (소규모 사업주 과제). Attracting talented applicants and retaining skilled workers are ------- challenging tasks for small business owners.
+(A) often (B) well (C) far (D) hard
+- 정답: A / 내 답: B
+- 내가 고른 이유: well challenging을 "꽤 도전적인"으로 해석함
+- 해석: 유능한 지원자를 끌어들이고 숙련된 직원을 유지하는 것은 소규모 사업주들에게 종종 어려운 과제이다.
+- 해설: well은 일반 형용사 앞에서 "꽤, 매우"라는 정도 부사로 쓰이지 않음 → "꽤"는 quite / fairly / rather / pretty. well이 형용사 앞에 오는 건 과거분사 복합어(well-known, well-prepared)나 well worth / well above(훨씬, 충분히) 같은 고정 표현뿐. often(종종, 흔히)은 빈도부사로 be동사 뒤·형용사 앞에 자연스럽게 위치 → "종종 어려운 과제". far는 비교급 강조(far more challenging)라 원급 앞 불가, hard는 형용사·부사(열심히)로 형용사를 꾸미지 못함.
+- 유형: 어휘
+
+## 2026-10-29 (개인 교재)
+
+### Part 5
+
+#### Q128 (Nova Medical Supplies 방문객). Visitors to Nova Medical Supplies are allowed ------- as long as they have a valid guest pass.
+(A) enter (B) entry (C) entering (D) enters
+- 정답: B / 내 답: C (사진의 체크 표시 기준)
+- 내가 고른 이유: allowed 다음에는 to부정사 아니면 동명사가 온다고 생각함
+- 해석: Nova Medical Supplies 방문객은 유효한 방문증을 소지하고 있는 한 입장이 허용된다.
+- 해설: allow는 구조가 3개 — ① allow + 사람 + to do → 수동: 사람 be allowed to do ② allow + -ing(사람 목적어 없을 때: allow smoking) ③ allow + 사람 + 명사(4형식, ~에게 …을 허락해 주다: allow visitors entry) → 수동: 사람 be allowed + 명사. 보기에 to enter가 없으므로 ①은 불가(enter 단독은 to 없는 원형이라 X). ②의 동명사는 "사람이 주어인 수동태" 뒤에는 못 옴(Visitors are allowed entering X). → ③ 4형식 수동 "Visitors are allowed entry"(입장을 허락받다). 같은 패턴: be given/granted/denied access/entry.
+- 유형: 문법
+
+## 2026-10-30 (개인 교재)
+
+### Part 5
+
+#### Q105 (Alan Elwood 감독 선임). Alan Elwood was ------- the new manager of the football club and will be moving to Germany this fall.
+(A) hired (B) named (C) accompanied (D) encouraged
+- 정답: B / 내 답: A (사진의 체크 표시 기준)
+- 내가 고른 이유: hired가 "고용되다"라 의미가 맞아 보였음 (hire는 as가 필요한지, named가 "지명되다"인지 확인 질문)
+- 해석: Alan Elwood는 그 축구 클럽의 새 감독으로 임명되었으며 올가을 독일로 이주할 예정이다.
+- 해설: 빈칸 뒤에 전치사 없이 바로 명사(the new manager)가 옴 → 명사를 목적격 보어로 바로 받는 5형식 동사의 수동태 필요. name + 사람 + 직책(name him the new manager) → 수동: be named + 직책(~로 임명·지명되다). hire는 직책을 바로 받지 못하고 as가 필요(hire him as manager → be hired as manager). 명사 보어를 as 없이 받는 동사: name, appoint, elect, make, call, consider. accompanied(동행받다), encouraged(격려받다, + to do)는 의미·구조 불일치.
+- 유형: 문법
+
+#### Q103 (Starworks Electronics 수요). Starworks Electronics plans to set up more assembly lines to meet the ------- demand for its medical devices.
+(A) inspired (B) rough (C) convenient (D) heightened
+- 정답: D / 내 답: D (✅ 정답이지만 heightened demand의 정확한 뜻 설명 요청)
+- 내가 고른 이유: inspired는 "열망된 요구"처럼 어색해서 제외, heightened를 고름
+- 해석: Starworks Electronics는 자사 의료기기에 대한 높아진 수요를 충족하기 위해 조립 라인을 추가로 설치할 계획이다.
+- 해설: heighten(높이다, 고조시키다 ← height) → heightened = 높아진, 고조된. heightened demand = 증가한 수요(= increased / growing / rising demand). 조립 라인을 늘린다는 건 수요가 늘었다는 뜻이라 문맥 일치. meet the demand = 수요를 충족하다(meet + 기준·수요, 전치사 X). inspired는 "영감을 받은; (생각·선택이) 기발한"으로 사람·작품·결정을 꾸밈(an inspired choice) — 수요와 결합 X. rough(대략적인, 거친), convenient(편리한)도 demand와 의미 불일치.
+- 유형: 어휘
+
+#### Q108 (Fashueng Industries 브로셔). Fashueng Industries has published a corporate brochure ------- of its achievements.
+(A) consistently (B) consisted (C) consisting (D) consistent
+- 정답: C / 내 답: (B/C에 체크 표시, 정확한 최종 선택 미상)
+- 내가 고른 이유: consistent를 content(내용)처럼 읽어서 "브로셔의 업적에 관한 콘텐츠"로 헷갈림
+- 해석: Fashueng Industries는 자사의 업적들로 구성된 회사 브로셔를 발간했다.
+- 해설: 문장은 이미 완전(has published a brochure) → 빈칸 ~ achievements는 brochure를 뒤에서 꾸미는 분사구. consist of(~로 구성되다)는 자동사라 수동태·과거분사 수식 불가 → 항상 능동 -ing: a brochure consisting of ~ (= which consists of ~). consisted는 과거분사로 명사를 꾸밀 수 없음(자동사). consistent는 "일관된, 한결같은"(consistent with ~ = ~와 일치하는)으로 content(내용)와 전혀 다른 단어. consistently는 부사. 같은 자동사 + -ing 후치 수식: a team consisting of / a period lasting / prices ranging from A to B / a policy applying to.
+- 유형: 문법
+
+#### Q110 (Arctic 빙하 이동). The researchers are monitoring the ------- glacier movement in the Arctic to assess its impact on sea levels.
+(A) activity (B) actively (C) active (D) activates
+- 정답: C / 내 답: A로 보임 (사진의 체크 표시 기준, 확인 필요)
+- 내가 고른 이유: "움직이는(활동 중인) glacier"라고 해석함
+- 해석: 연구진은 해수면에 미치는 영향을 평가하기 위해 북극의 활발한 빙하 이동을 관찰하고 있다.
+- 해설: the + ------- + glacier movement(복합명사) → 관사와 명사 사이 = 명사를 꾸미는 형용사 자리 → active(활발한, 활동 중인). "움직이는 빙하"라는 해석 자체는 맞음 — 그 뜻을 내는 품사가 형용사 active. activity(명사)를 넣으면 "activity glacier movement"라는 명사 3개 나열이 되는데, 이런 복합명사는 존재하지 않음(복합명사는 정해진 짝만 가능: glacier movement는 O). actively는 부사라 명사 수식 불가, activates는 동사.
+- 유형: 문법
+
+#### Q112 (일본 파트너사 임원 방문). The executives from our Japanese partner company will be in town ------- for a few days before returning to Japan.
+(A) quite (B) ever (C) only (D) while
+- 정답: C / 내 답: D
+- 내가 고른 이유: while과 for가 둘 다 "~동안"이라 while for를 "며칠 동안"으로 생각함
+- 해석: 일본 파트너사 임원들은 일본으로 돌아가기 전에 며칠 동안만 이 도시에 머물 예정이다.
+- 해설: while은 접속사라 뒤에 주어+동사(절)나 분사(while staying)가 와야 하고, 전치사구(for a few days) 앞에는 못 옴. 게다가 for가 이미 "~동안"이라 while을 또 붙이면 의미 중복. only는 부사로 전치사구 앞에서 "~만, 겨우"로 범위를 한정 → only for a few days = 며칠 동안만(짧게 머문다는 뉘앙스, before returning과 자연스럽게 연결). quite는 quite a few days(꽤 많은 날)처럼 a 앞에 쓰므로 quite for 불가, ever는 의미 불일치.
+- 유형: 문법
+
+#### Q118 (Connel 스마트폰). The main ------- of the latest Connel smartphone model is the high-resolution camera.
+(A) appeal (B) appeals (C) appealing (D) appealed
+- 정답: A / 내 답: C
+- 내가 고른 이유: appeal을 동사로만 알고 있어서 형용사 appealing을 고름 (appeal이 명사도 되는지 질문)
+- 해석: 최신 Connel 스마트폰 모델의 가장 큰 매력은 고해상도 카메라다.
+- 해설: The main ------- of ~ is → 관사 + 형용사(main) 뒤 + of 앞 = 주어 명사 자리. appeal은 명사로 "매력, 호소, 항소" → the main appeal = 주된 매력. 동사 is가 단수라 복수 appeals는 수일치 X. appealing은 형용사(매력적인)라 main(형용사) 뒤에 또 형용사만 오면 꾸밀 명사가 없음. appealed는 동사 과거/과거분사.
+- 유형: 문법
+
+#### Q126 (MealFresh 신흥시장). ------- the potential for profit, MealFresh is going to allocate a significant portion of its budget to expanding into emerging markets.
+(A) Except (B) Though (C) Given (D) Provided that
+- 정답: C / 내 답: C (✅ 정답이지만 given vs given that, provided that 차이 설명 요청)
+- 내가 고른 이유: "~을 고려해서"라는 의미로 골랐는데, 보통 given that으로 나오지 않나 헷갈림
+- 해석: 수익 가능성을 고려하여, MealFresh는 예산의 상당 부분을 신흥 시장 진출에 배정할 예정이다.
+- 해설: given은 둘 다 가능 — ① given + 명사(전치사) ② given that + 주어+동사(접속사), 뜻은 "~을 고려하면". 빈칸 뒤가 명사구(the potential for profit)라 전치사 given. provided (that)는 "~라는 조건으로, 만약 ~라면"(= if, only if)이라 의미도 다르고 뒤에 절이 와야 함(명사구 불가). though는 접속사라 절 필요. except(~을 제외하고)는 명사 앞에 올 수 있지만 "수익 가능성을 제외하고 예산을 배정한다"는 의미 불일치. 같은 계열: considering + 명사 / considering that + 절, in light of + 명사.
+- 유형: 문법
+
+#### Q129 (designer handbags 비교). The designer handbags sold on this Web site are as expensive as ------- sold at most major department stores.
+(A) other (B) whose (C) one (D) those
+- 정답: D / 내 답: C
+- 내가 고른 이유: those는 가리킬 명사(지칭 대상)가 있어야 하는데 없다고 보고 one을 고름. 다만 뒤가 stores(복수)라 one이 애매하다고 느낌
+- 해석: 이 웹사이트에서 판매되는 디자이너 핸드백은 대부분의 주요 백화점에서 판매되는 핸드백만큼 비싸다.
+- 해설: 비교 구문(as ~ as)에서 반복되는 앞 명사를 대명사로 받음 → 가리키는 대상은 stores가 아니라 문장 맨 앞 주어 The designer handbags(복수) → 복수 지시대명사 those(= the handbags). those sold at ~ = those (which are) sold at ~ (과거분사 후치 수식). 같은 구조로 앞이 "The designer handbags sold on this Web site"(명사 + p.p. 수식)라 병렬도 딱 맞음. one은 단수라 handbags와 수 불일치(게다가 수식어가 붙으면 the one 필요). other는 단독 대명사로 못 씀(others는 가능하나 "다른 것들"이라 비교 대상 불명확), whose는 관계사라 선행사+명사 필요.
+- 유형: 문법
+
+### Part 7
+
+#### Q177 (Palm Flight 에어택시 기사 + 이메일). In the article, the word "backed" in paragraph 1, line 3, is closest in meaning to
+(A) reversed (B) supported (C) organized (D) represented
+- 정답: B / 내 답: D
+- 해석: 원문 "The company, backed by the results of these tests, secured a short-term contract with the government." → 회사는 이 테스트 결과에 힘입어(뒷받침되어) 정부와 단기 계약을 따냈다.
+- 해설: back(동사)은 ① 지지하다, 후원하다, 뒷받침하다(= support) ② 후진하다(back up a car) 두 뜻. 문장 속에서 "be backed by + 결과/근거"는 "~에 의해 뒷받침되다" → supported. 테스트를 성공적으로 끝낸 결과가 계약 수주의 근거가 됐다는 흐름. represented(대표된, 대변된)는 "회사가 테스트 결과로 대표·대변되었다"처럼 그럴듯하게 읽히지만, represent는 "~을 대신해 나타내다/대표하다"라서 결과가 회사를 뒷받침(지지)한다는 의미와 다름. reversed(뒤집힌)는 "back = 뒤로"라는 기본 이미지에서 온 함정. 동의어 문제는 단어 뜻이 아니라 "문장 속 의미"로 바꿔 넣어 확인해야 함 → "supported by the results"는 자연스럽고 "represented / reversed by the results"는 의미 불일치.
+- 유형: 어휘
+
+#### Q192 (Memphis 영화제 이메일 + 일정표 + 양식, 삼중 지문). What can be concluded about The US News Standard?
+(A) It only covers events happening in America. (B) It downsized a delegation to a festival. (C) It no longer publishes a print edition. (D) It merged with another media outlet.
+- 정답: B / 내 답: A
+- 해석: The US News Standard에 대해 결론 내릴 수 있는 것은? → 영화제 파견 인원을 줄였다.
+- 해설: 연계 문제. 이메일(4/22) "you and three other reporters from your newspaper plan to attend" → Frank 씨 포함 4명 예정. 이후 제출한 등록 양식에는 Deborah Frank + 추가 인원 Hendrick Stevenson, Pamela Consuelo(사진기자) → 3명. 4명 → 3명으로 줄었으므로 "대표단(파견 인원)을 축소했다". downsize a delegation = 파견단 규모를 줄이다. (A) 미국 내 행사만 다룬다는 근거 없음(Memphis가 미국이라는 사실만으로는 "only"를 단정 못 함 — only/exclusively 보기는 근거가 확실해야 함). (C)(D) 언급 없음.
+- 유형: 매칭
+
 ---
 
 ## 누적 통계
 
 | 유형 | 횟수 |
 |---|---|
-| 어휘 | 17 |
-| 문법 | 55 |
-| 매칭 | 23 |
+| 어휘 | 32 |
+| 문법 | 82 |
+| 매칭 | 25 |
 | 시간 | 0 |

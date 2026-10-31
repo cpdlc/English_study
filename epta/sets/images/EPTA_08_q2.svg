@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 340" width="660" height="340" font-family="Arial, Helvetica, sans-serif">
+  <rect width="660" height="340" fill="#ffffff"/>
+  <text x="20" y="34" font-size="20" font-weight="bold" fill="#1d2330">ENGINE INDICATIONS</text>
+
+  <!-- ENG 1 정상 -->
+  <rect x="40" y="62" width="270" height="200" rx="6" fill="#f1f4f8" stroke="#c9ced6" stroke-width="2"/>
+  <text x="56" y="92" font-size="19" font-weight="bold" fill="#1d2330">ENG 1</text>
+  <text x="56" y="132" font-size="16" fill="#6b7384">VIB</text>
+  <text x="150" y="132" font-size="26" font-weight="bold" fill="#2e8b57">0.3</text>
+  <text x="56" y="180" font-size="16" fill="#6b7384">N1</text>
+  <text x="150" y="180" font-size="26" font-weight="bold" fill="#1d2330">88 %</text>
+  <text x="56" y="228" font-size="16" fill="#6b7384">THRUST</text>
+  <text x="150" y="228" font-size="22" font-weight="bold" fill="#2e8b57">NORMAL</text>
+
+  <!-- ENG 2 진동 -->
+  <rect x="350" y="62" width="270" height="200" rx="6" fill="#fbeee5" stroke="#b4531c" stroke-width="3"/>
+  <text x="366" y="92" font-size="19" font-weight="bold" fill="#b4531c">ENG 2</text>
+  <text x="366" y="132" font-size="16" fill="#6b7384">VIB</text>
+  <text x="460" y="132" font-size="26" font-weight="bold" fill="#b4531c">4.1</text>
+  <text x="366" y="180" font-size="16" fill="#6b7384">N1</text>
+  <text x="460" y="180" font-size="26" font-weight="bold" fill="#1d2330">52 %</text>
+  <text x="366" y="228" font-size="16" fill="#6b7384">THRUST</text>
+  <text x="460" y="228" font-size="22" font-weight="bold" fill="#b4531c">REDUCED</text>
+
+  <!-- 상태 요약 -->
+  <text x="40" y="296" font-size="18" font-weight="bold" fill="#1d2330">NO FIRE · ENGINE RUNNING · SPEED 230 KT OR LESS</text>
+  <text x="40" y="324" font-size="19" font-weight="bold" fill="#c02626">Bird strike ??</text>
+</svg>
