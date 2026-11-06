@@ -280,8 +280,9 @@ ILS runway two seven. Be advised, there is work in progress at the far end of th
 
 Situation Update Passing one three thousand feet you get a STABILIZER TRIM JAM caption. The trim is
 stuck and your flaps are now limited to one five. Your approach speed goes up, so **your required
-landing distance is now 2,900 metres** and **your maximum speed with the flaps limited is now one
-niner zero knots.** You want to keep your present speed until you are closer in. 🔔(dingdong)
+landing distance is now 2,900 metres**, and with the trim in this condition **you must not exceed
+one niner zero knots from now on.** You want to level off at one one thousand and you want a long
+final so that you can fly it slowly. 🔔(dingdong)
 
 **P2A-Q3** 🎙 30초
 ☞ Report your problem to the controller, tell him both things that have changed, and make a request

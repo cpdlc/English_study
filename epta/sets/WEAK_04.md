@@ -261,7 +261,9 @@ Situation Update Passing one two thousand feet you get a GEN 1 FAULT caption, an
 unavailable, so you are on a single generator. **Your autoland is no longer available**, so you
 need to fly it by hand and **your minimum visibility is now 1,200 metres.** If the second generator
 fails you have **tree zero minutes on batteries**, so you want to be on the ground inside tree zero
-minutes, and you have decided you will not hold for more than one zero minutes. 🔔(dingdong)
+minutes, and you have decided you will not hold for more than one zero minutes. The remaining
+generator is working normally, so **you do not want to declare an emergency** — but you do want the
+fire service standing by, and the shortest taxi in after landing. 🔔(dingdong)
 
 **P2A-Q3** 🎙 30초
 ☞ Report your problem to the controller, tell him both things that have changed, and make a request
