@@ -1,0 +1,284 @@
+{
+  "set": "WEAK_01",
+  "level": "",
+  "summary": "",
+  "gradedAt": "2026-11-03",
+  "items": {
+    "P1A-Q1": {
+      "verdict": "",
+      "model": "HL123, descend to 7,000 feet, expect one zero minutes of holding at VARDO. Request our revised estimated time of arrival at Rothbury — our slot closes at 1150Z and it is now 1131Z.",
+      "notes": [
+        "필수 복창은 고도(7,000) 하나다. holding 예고는 복창해도 되고 빼도 된다.",
+        "α 는 \"도착시각이 어떻게 되는지\" → `request our revised estimated time of arrival`. REQUEST 뒤는 명사구다. `request to know when we arrive` 처럼 동사구를 붙이면 안 된다.",
+        "이유(슬롯 1150Z)를 반드시 붙인다. 이유 없는 요청은 관제사가 우선순위를 못 매긴다."
+      ]
+    },
+    "P1A-Q2": {
+      "verdict": "",
+      "model": "HL123, cross VARDO at or above one one thousand. Unable one one thousand at VARDO — our present rate of climb gives us one zero thousand two hundred. Request cross VARDO at or above one zero thousand.",
+      "notes": [
+        "복창을 먼저 하고 그다음에 UNABLE 이다. 복창을 건너뛰고 바로 거절하면 고도 제한 복창 누락이다.",
+        "`UNABLE + 이유 + 내가 할 수 있는 값`. 세 번째 칸(10,000)을 빼면 이 문항의 α 를 안 한 것이다.",
+        "질문형이 아니므로 `NEGATIVE` 로 시작하지 않는다. NEGATIVE 는 `confirm ~?` 에 쓴다."
+      ]
+    },
+    "P1A-Q3": {
+      "verdict": "",
+      "model": "HL123, climb to flight level three five zero, increase speed to Mach decimal eight two. Unable Mach decimal eight two due to our present weight. Request Mach decimal seven eight — that is the best speed we can maintain.",
+      "notes": [
+        "필수 복창 2개 : 고도(FL350)·속도(M.82). `for sequence` 는 이유라서 복창 대상이 아니다.",
+        "`with a reason` 이 지시문에 있으면 **이유를 문장으로** 말해야 한다. `unable` 만 말하고 끝내는 것이 누적 최다 실점이다."
+      ]
+    },
+    "P1A-Q4": {
+      "verdict": "",
+      "model": "HL123, line up and wait runway two four. Be advised, on the taxi out we saw a large flock of birds on the grass beside the runway two four threshold.",
+      "notes": [
+        "활주로 관련 지시이므로 활주로 번호까지 전부 복창한다. `Lining up runway two four` 도 가능하다.",
+        "시차형 보고다 — **본 것 전체**를 말한다. \"새를 봤다\"만 말하고 **어디서**(two four threshold 옆 풀밭) 를 빼면 관제사가 쓸 수 없는 정보가 된다.",
+        "조종사가 자기 쪽에서 정보를 줄 때는 `Be advised` 로 연다."
+      ]
+    },
+    "P1A-Q5": {
+      "verdict": "",
+      "model": "HL123, taxi to holding point Kilo two via Golf, hold short of runway one six. Request the status of the de-icing bay on taxiway Golf — we need de-icing before departure.",
+      "notes": [
+        "`hold short of runway one six` 는 활주로 관련 지시라 **반드시** 복창한다. 여기를 빼는 것이 가장 흔한 누락이다.",
+        "`request the status of ~` / `request information on ~` — 명사구로 끝낸다."
+      ]
+    },
+    "P1A-Q6": {
+      "verdict": "",
+      "model": "HL123, turn left heading zero niner zero, descend to 5,000 feet. Our intentions — we have a passenger with chest pain in row one four, we request an ambulance to meet us at the stand, and we request the shortest taxi route in after landing.",
+      "notes": [
+        "필수 복창 2개 : 기수(090)·고도(5,000). `vectors for Rothbury` 는 복창 대상이 아니다.",
+        "`say your intentions` 는 **내가 할 것 + 내가 필요한 것** 두 가지다. 상황만 말하고(환자가 있다) 요청을 빼면 절반만 한 것이다.",
+        "`Our intentions are to ~` 또는 `Our intentions —` 로 명시해서 연다. 요청만 나열하면 intentions 진술로 안 들린다."
+      ]
+    },
+    "P1A-Q7": {
+      "verdict": "",
+      "model": "HL123, holding position, wilco, we will report when we are ready to taxi. Understood you have two inbounds for the stand next to us. We need one five minutes — the cabin crew are still re-seating passengers away from the overwing exits.",
+      "notes": [
+        "지시문이 세 가지를 요구한다 : 복창 / 그의 사정 인지 / 소요시간. 세 번째(one five minutes)를 빼는 것이 이 유형의 전형적 실점이다.",
+        "`Report when ~` 에 대한 응답은 `WILCO` 다. `ROGER` 단독으로 대신할 수 없다.",
+        "시간은 **숫자로** 준다. `a few minutes` 는 관제사가 두 대의 inbound 를 배치할 근거가 못 된다."
+      ]
+    },
+    "P1A-Q8": {
+      "verdict": "",
+      "model": "HL123, descend to 4,000 feet. Negative icing at present — we are in light rain at zero degrees, anti-ice has been on for two zero minutes and the airframe is clear. Negative, we do not require a higher approach speed, normal approach speed.",
+      "notes": [
+        "질문이 두 개면 **두 개 다** 답한다. 하나만 답하고 넘어간 것이 누적 실패의 핵심이다.",
+        "두 번째 질문은 가부 질문이므로 `NEGATIVE` 로 답한다. `no` 로 답하면 표준교신용어 오류다.",
+        "복창(4,000)을 맨 앞에 둔다."
+      ]
+    },
+    "P1B-Q1": {
+      "verdict": "",
+      "model": "HL123, we would like Caldon. Our required landing distance is 2,300 metres, so both runways are sufficient, but we have a passenger with chest pain on board and Caldon is one one minutes sooner. Request routing to Caldon and an ambulance to meet us on arrival.",
+      "notes": [
+        "거리는 **양쪽 다 충족**한다(2,600 · 3,400 ≥ 2,300). 따라서 거리가 아니라 **시간**이 판단 근거다. \"거리가 충분하다\"까지 말하고 시간을 근거로 못 대면 이유가 빈다.",
+        "차이를 숫자로 말한다 — `one one minutes sooner`(18 − 7).",
+        "의료 상황이면 구급차 요청을 같이 붙인다."
+      ]
+    },
+    "P1B-Q2": {
+      "verdict": "",
+      "model": "HL123, we will take runway one six. Our required landing distance is 2,450 metres and the 2,700 metres available from the displaced threshold is sufficient, so we do not need the delay for runway three four. Request the ILS runway one six.",
+      "notes": [
+        "함정은 \"3,100 이 더 길다\"에 끌려 긴 쪽을 고르는 것이다. **필요값을 넘으면 충분하다** — 여유가 더 있다고 10분을 쓸 이유가 없다.",
+        "판단의 근거는 `2,700 ≥ 2,450` 이라는 **두 숫자의 비교**다. 둘 다 말해야 이유가 성립한다."
+      ]
+    },
+    "P1B-Q3": {
+      "verdict": "",
+      "model": "HL123, unable Penhale — we require 3,100 metres and runway two seven has only 2,800 metres available. Request Minsterly: 3,600 metres is sufficient and we accept the two two minutes.",
+      "notes": [
+        "여기는 **가까운 쪽이 못 쓰는** 경우다. 2,800 < 3,100 이므로 5분이 짧다는 것은 고려 대상이 아니다.",
+        "거부는 `unable + 공항/활주로` 로 명시한다. 어느 쪽을 거부하는지 말하지 않으면 관제사가 되묻는다.",
+        "늘어나는 시간을 **수락한다고** 말한다(`we accept the two two minutes`)."
+      ]
+    },
+    "P1B-Q4": {
+      "verdict": "",
+      "model": "Negative, HL123. Unable one niner zero knots — at our present weight and flap setting the slowest speed we can maintain is two two zero knots. We can maintain two two zero knots until six miles.",
+      "notes": [
+        "`Can you do that?` 는 가부 질문이다 → **첫 단어가 NEGATIVE** 다.",
+        "함정은 **최저속도**다. 220 이 \"하한\"이므로 190 은 불가다. 이것을 \"최대 220 까지 가능\"으로 읽어 `affirm` 하는 것이 누적 최다 오답이다.",
+        "내가 줄 수 있는 값(220)을 숫자로 준다."
+      ]
+    },
+    "P1B-Q5": {
+      "verdict": "",
+      "model": "HL123, unable runway two four. The runway is wet and our maximum crosswind on a wet runway is two five knots — with the wind one eight zero at three zero gusting three five the crosswind component is above our limit. Our intentions are runway one six: it is dry and the crosswind is within limits. Request taxi back for runway one six, we accept the eight minutes.",
+      "notes": [
+        "여기는 **최대**다 — 25 가 상한이므로 30 gusting 35 는 초과다. Q4 와 방향이 반대라는 점이 이 세트의 핵심이다.",
+        "활주로 24 는 기수 240, 풍향 180 이므로 60° 측풍이다. 성분이 한계를 넘는다는 것만 말하면 되고 삼각함수를 말할 필요는 없다.",
+        "`Say your intentions` 이므로 **거부 + 내가 할 것** 둘 다 필요하다. 거부만 하면 절반이다."
+      ]
+    },
+    "P1B-Q6": {
+      "verdict": "",
+      "model": "HL123, we would like to come down. We have had moderate turbulence at flight level three three zero for the last one five minutes and the aircraft ahead reported it smooth at flight level two niner zero. Request descent to flight level two niner zero.",
+      "notes": [
+        "**선택 질문에는 AFFIRM/NEGATIVE 를 쓰지 않는다.** 둘 중 어느 쪽인지 말해야 한다. `Negative` 로 답하면 관제사는 어느 쪽을 거부했는지 모른다.",
+        "선택만 말하고 **목표 고도를 안 주는** 것이 흔한 실점이다. `request descent to FL two niner zero` 까지 간다.",
+        "이유에 선행기 보고를 넣는다 — 관제사가 다른 항공기에 쓸 수 있는 정보다."
+      ]
+    },
+    "P2A-Q1": {
+      "verdict": "",
+      "model": "Rothbury Approach, HL123, descending through flight level one niner zero for one three thousand, 45 miles from KELSO, inbound Rothbury.",
+      "notes": [
+        "위치보고의 동사는 **현재 상태**다 — `descending through X for Y`. `maintain` 이나 `descend` 로 말하면 지시 복창처럼 들린다.",
+        "기관명 → 콜사인 → 고도 → 위치 순서. 기관을 부르지 않고 바로 시작하면 발신 문항의 첫 감점이다."
+      ]
+    },
+    "P2A-Q2": {
+      "verdict": "",
+      "model": "HL123, descend to one one thousand, expect the KELSO TWO arrival, ILS runway two four. Request the braking action on runway two four.",
+      "notes": [
+        "필수 복창 3개 : 고도(11,000)·arrival(KELSO TWO)·활주로(two four). `runway is wet` 은 정보라서 복창 의무가 없다.",
+        "`request the braking action` — 명사구다. `request to know the braking action` 은 틀린 형태다."
+      ]
+    },
+    "P2A-Q3": {
+      "verdict": "",
+      "model": "HL123, we have a TIRE PRESSURE LOW caption on the left main gear. Our brakes and anti-skid are normal, but with one wheel unserviceable our required landing distance is now 3,100 metres instead of 2,450. Request the landing distance available on runway two four.",
+      "notes": [
+        "지시문이 세 가지를 요구한다 : 문제 / **무엇이 바뀌었는지** / 요청. 두 번째가 이 세트 전체의 축이다 — `2,450 → 3,100` 두 숫자를 같이 말하면 관제사도 바뀐 것을 안다.",
+        "정상인 것(브레이크·안티스키드)을 같이 말해야 관제사가 비상으로 오판하지 않는다."
+      ]
+    },
+    "P2A-Q4": {
+      "verdict": "",
+      "model": "HL123, unable Rothbury — we now require 3,100 metres and runway two four gives us only 2,600 metres. Request diversion to Caldon: 3,400 metres is sufficient and we accept the one four minutes.",
+      "notes": [
+        "**갱신된 값 3,100 으로 비교**해야 한다. 처음 적어 둔 2,450 으로 비교하면 2,600 이 충분해 보이고 판단이 뒤집힌다 — 이 세트가 노리는 바로 그 지점이다.",
+        "거부 대상(Rothbury)과 필요값(3,100)을 둘 다 말한다."
+      ]
+    },
+    "P2A-Q5": {
+      "verdict": "",
+      "model": "HL123, fuel endurance two hours zero five minutes, one eight four persons on board.",
+      "notes": [
+        "네 턴 전 Initial Situation 의 값이다. 짐작해서 바꿔 말하면 안 된다 — 2시간 05분 · 184명.",
+        "묻지 않은 것을 덧붙이지 않는다. 두 값만 짧게 준다."
+      ]
+    },
+    "P2A-Q6": {
+      "verdict": "",
+      "model": "HL123, turn right heading three two zero, descend to 8,000 feet. Our intentions are to divert to Caldon and make a normal ILS approach to the longer runway. We request the fire service standing by for the left main gear, and a full-length landing.",
+      "notes": [
+        "필수 복창 2개 : 기수(320)·고도(8,000).",
+        "intentions 는 **내가 할 것**(Caldon 으로 divert, ILS) + **필요한 지원**(소방대, full length) 이다. 요청만 말하면 intentions 진술이 아니다."
+      ]
+    },
+    "P2A-Q7": {
+      "verdict": "",
+      "model": "HL123, the landing distance we require is 3,100 metres, and our fuel endurance is two hours zero five minutes.",
+      "notes": [
+        "**되묻기 함정.** 필요 착륙거리는 중간에 2,450 → 3,100 으로 바뀌었다. 여기서 2,450 을 말하면 Caldon 의 브리핑이 틀어진다.",
+        "연료는 **바뀌지 않았다** — Initial 값 그대로 2시간 05분. 바뀐 값은 바꿔 말하고, 안 바뀐 값은 그대로 말하는 것을 구분하는 문항이다.",
+        "두 값을 한 문장에 묶어 짧게 준다."
+      ]
+    },
+    "P2A-Q8": {
+      "verdict": "",
+      "model": "HL123, turn left heading two six zero, descend to 2,500 feet until established, cleared for the ILS runway one eight approach, contact Caldon Tower on 120.9. We will need the fire service standing by at the runway, and we will stop on the runway for a brake and tire inspection — request a tow to the stand.",
+      "notes": [
+        "필수 복창 4개 : 기수·고도·`until established`·접근 허가·주파수. `until established` 를 빼면 조건을 지운 복창이다.",
+        "활주로에서 필요한 것 : 소방대 대기 / 활주로 정지 / 견인. \"소방대\"만 말하고 **활주로에서 멈춘다는 의도**를 빼면 관제사가 다음 착륙기를 그대로 들여보낸다."
+      ]
+    },
+    "P2B-Q1": {
+      "verdict": "",
+      "model": "Caldon Control, HL123, flight level three one zero. Request direct OBREN due to a stronger headwind than planned.",
+      "notes": [
+        "20초 문항이다. 기관 → 콜사인 → 현재 고도 → REQUEST + 명사구 + 이유로 끝낸다.",
+        "`request direct OBREN` 이 명사구 형태다. `request to go direct` 는 틀린 형태다."
+      ]
+    },
+    "P2B-Q2": {
+      "verdict": "",
+      "model": "Rothbury Delivery, HL123. Our flight plan level is flight level three seven zero, but at today's weight we cannot reach it until one hour after departure. Request flight level three three zero initially, with a step climb to three seven zero later.",
+      "notes": [
+        "지시문이 둘이다 : 상황 보고 + 요청. 상황(무게 때문에 1시간)을 빼고 요청만 하면 관제사가 왜인지 모른다.",
+        "`initially` 와 `step climb` 을 붙여야 \"처음만 330\" 이라는 뜻이 전달된다."
+      ]
+    },
+    "P2B-Q3": {
+      "verdict": "",
+      "model": "Minsterly Departure, HL123, correction — we are level at nine thousand feet in error. We were cleared to one one thousand and we set nine thousand by mistake. Request climb to one one thousand.",
+      "notes": [
+        "정정은 **3단**이다 : 현재 상태(level nine thousand) → 받은 허가(one one thousand) → 요청(climb). 하나라도 빠지면 관제사가 지금 내 고도를 모른다.",
+        "현재 상태의 동사는 `level at` / `levelling off at` 이다. `maintain nine thousand` 으로 말하면 지시를 복창한 것처럼 들린다.",
+        "`correction` 또는 `we are level ... in error` 로 실수임을 먼저 밝힌다."
+      ]
+    },
+    "P2B-Q4": {
+      "verdict": "",
+      "model": "Caldon Control, HL123, one two miles from TAMLYN. Request a one five mile offset left of track due to thunderstorms on our track, rejoining at TAMLYN.",
+      "notes": [
+        "offset 요청은 **거리 + 좌/우 + 복귀 지점** 세 가지가 다 있어야 한다. `request left turn` 만으로는 관제사가 분리를 잡을 수 없다.",
+        "이유는 `due to thunderstorms` 로 짧게."
+      ]
+    },
+    "P2B-Q5": {
+      "verdict": "",
+      "model": "HL123, holding at OBREN with one hour one zero minutes of fuel remaining. Our diversion to Penhale requires three five minutes. Request our expected approach time.",
+      "notes": [
+        "`request our expected approach time` — EAT 는 정해진 명사다. `request when we can leave the hold` 로 바꾸지 않는다.",
+        "연료와 교체공항 소요시간을 **둘 다** 주는 것이 핵심이다. 그 차이(1시간 10분 − 35분)가 관제사의 판단 근거다.",
+        "아직 비상이 아니므로 MAYDAY·PAN-PAN 을 쓰지 않는다. `MINIMUM FUEL` 도 여기서는 이르다."
+      ]
+    },
+    "P2B-Q6": {
+      "verdict": "",
+      "model": "Rothbury Ground, HL123. Be advised, one zero minutes ago on the taxi out we saw fuel leaking from a parked Airbus A321 at stand two eight. We did not report it at the time.",
+      "notes": [
+        "시차형 보고다. **본 것 · 어디서 · 언제** 세 가지가 다 있어야 한다. 기종(A321)과 스탠드(two eight) 중 하나라도 빠지면 지상관제사가 찾아갈 수 없다.",
+        "`Be advised` 로 열고, 요청이 아니라 보고로 닫는다. 내가 할 일을 묻지 않는다."
+      ]
+    },
+    "P2C-Q1": {
+      "verdict": "",
+      "model": "In that situation I compared two figures. The first was the landing distance I required, which had changed from 2,450 metres to 3,100 metres after the tire pressure caption, because with one wheel unserviceable my stopping performance was degraded. The second was the landing distance available on the runway the controller offered me, which was 2,600 metres at Rothbury. Because the distance available was five hundred metres less than the distance I required, I could not accept that runway, so I asked for Caldon, where 3,400 metres was available and the extra time was only one four minutes.\nIn my role as a pilot, I keep the numbers on one sheet of paper in a fixed order, so that every figure always has the same place and I never have to search for it. I write the clearance items in the CRAFT order — clearance limit, route, altitude, frequency and transponder — and I keep the performance figures in a separate box on the right of the page: fuel endurance, persons on board, and required landing distance. When a figure changes I do not erase the old one. I cross it out and write the new one beside it, so that I can see both that it changed and what it changed from.\nAn example is the landing distance in this flight. The controller asked me for it a second time when he handed us over to Caldon for their brief. The figure I had written first was 2,450 metres and the live figure was 3,100 metres, and because the old one was crossed out rather than rubbed out I could give him the correct figure immediately instead of working it out again.",
+      "notes": [
+        "3부 구조를 지킨다 : ① 비교한 두 숫자 ② 일반적인 숫자 관리법 ③ 예시. 셋 중 하나를 빼면 질문의 일부를 답하지 않은 것이다.",
+        "① 에서는 **두 숫자와 그 차이**를 말한다. \"거리가 부족했다\"로 뭉개지 않는다.",
+        "③ 은 `Give an example.` 에 대한 답이므로 반드시 구체적인 한 사례로 닫는다.",
+        "90초를 다 쓰려 하지 않는다. 60~75초 분량으로 끝내고 세 부분을 다 채우는 쪽이 낫다."
+      ]
+    },
+    "P2C-Q2": {
+      "verdict": "",
+      "model": "In that situation the controller asked me to reduce to one niner zero knots until six miles. At my weight and with the flap setting I had out, the slowest speed I could hold was two two zero knots, so I answered negative first, then said unable one niner zero knots with the reason, and then gave him two two zero knots as the speed I could maintain.\nIt matters that I gave him a figure because the word unable on its own leaves him with nothing to work with. He is sequencing other traffic behind me, and if he knows my number is two two zero knots he can adjust the spacing or turn me out himself, instead of asking me a second time while I am busy on the approach.\nFrom my own experience, the way I keep a minimum and a maximum from getting mixed up is to write the word next to the number and never the number alone — min two two zero, max crosswind two five — and to write the limits down during the approach briefing, before the controller asks for anything. I also turn the controller's request into a question to myself before I answer: is he asking me to go lower, or higher, than my limit? That is the part that gets reversed under pressure, not the number itself.\nAn example of a limit I have had to refuse is a crosswind. The tower offered me a wet runway with the wind thirty knots, gusting thirty-five, about sixty degrees off the runway heading, and my maximum crosswind on a wet runway is two five knots. I was unable that runway, so I told the tower my limit, requested the dry runway instead, and accepted the eight minutes of taxi back.",
+      "notes": [
+        "질문이 네 부분이다 : 어떻게 말했는지 / 숫자를 준 것이 왜 중요한지 / 최저·최대를 섞지 않는 방법 / 거부한 예. 두 번째를 빼기 쉽다.",
+        "\"왜 중요한가\"는 **관제사 입장**에서 답한다(분리·순서 배치). 내 입장만 말하면 답이 절반이다.",
+        "세 번째는 자기 방법을 구체적으로 말한다. `I am careful` 류는 답이 아니다."
+      ]
+    },
+    "P2C-Q3": {
+      "verdict": "",
+      "model": "We were HL123, descending through flight level one niner zero for one three thousand, 45 miles from KELSO and inbound to Rothbury. Our fuel endurance was two hours zero five minutes, we had one eight four persons on board, and our required landing distance was 2,450 metres.\nPassing one two thousand feet we got a TIRE PRESSURE LOW caption on the left main gear. The brakes and the anti-skid system were both normal, so this was not a loss of braking in flight and the aircraft was fully controllable. The nature of the incident was a performance problem rather than a system failure: with one wheel unserviceable the landing distance we required went up from 2,450 metres to 3,100 metres.\nThe consequence was that our destination was no longer usable. Runway two four at Rothbury gave us only 2,600 metres, which was five hundred metres less than we needed, so we were unable Rothbury and requested a diversion to Caldon, which had 3,400 metres available and was one four minutes away.\nFrom there it was handled as a normal diversion. We were turned right heading three two zero and descended to 8,000 feet for vectors to Caldon, we passed our fuel endurance and the number of persons on board for the diversion, and we repeated the landing distance we required for the Caldon brief. We were then vectored onto the ILS for runway one eight and landed with the fire service standing by. We did not declare an emergency, because the aircraft was controllable and we had enough fuel to reach a suitable runway.",
+      "notes": [
+        "Task C Q1 은 **시간 순서**로 말한다 : 초기 상태 → 사건 → 영향 → 조치 → 결말.",
+        "`the nature of the incident` 을 한 문장으로 못 박는다 — \"시스템 고장이 아니라 착륙성능 문제\".",
+        "비상을 선포하지 않았다면 **왜 안 했는지**까지 말한다. 이것이 pilot's judgement 로 평가되는 부분이다.",
+        "숫자를 빼고 서술만 하면 Task B 를 들은 증거가 없다. 2,450 · 3,100 · 2,600 · 3,400 을 넣는다."
+      ]
+    },
+    "P2C-Q4": {
+      "verdict": "",
+      "model": "Overall I think the controller handled it well. As soon as I reported the caption and the new landing distance, he gave me the figures that mattered — the distance available at Rothbury, the distance available at Caldon, and the time to Caldon — instead of telling me which airport to use. That is the right way round, because the landing performance calculation is mine and only I know what the aircraft needs.\nHe was also efficient with the handover. He passed the diversion to Caldon himself, asked for my fuel endurance and the number of persons on board once, and then asked for Caldon's two figures together for their brief, so I was not answering the same question piece by piece on a busy frequency.\nThere are two things I would have done differently. The first is the timing of the second request for figures. He asked me to say the landing distance and the fuel again while I was being vectored and descending, which is our highest workload. If he had asked while we were still steady in the descent, or let Caldon take the figures from his first coordination, the request would have cost us less. The second is the runway condition. He told me the distance available at Caldon but not the braking action or the surface condition, and on a contaminated or wet runway the distance alone does not tell me whether I can stop with one wheel unserviceable.\nFrom a pilot's point of view, what helped most was that he never pressed me for a decision. He gave information and waited, which gave me the time to run the landing performance again before I committed to a runway.",
+      "notes": [
+        "Q2 는 **칭찬 → 개선점 → 조종사 관점** 세 부분이다. \"잘했다\"로만 끝내면 질문의 두 번째·세 번째를 버린 것이다.",
+        "개선점은 **구체적 행동**으로 말한다(되묻는 시점, 활주로 상태 미제공). \"더 빨랐으면 좋겠다\" 류는 근거가 없다.",
+        "관제사를 비난하지 않는다. 역할 분담(정보는 관제사, 판단은 조종사)의 언어로 말한다."
+      ]
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "set": "SAMPLE_01",
+  "session": "restored",
+  "qid": "P1B-Q4",
+  "answer": "Unable to climb and maintain, flight level 210 due to aircraft performance. Request, climb, climb to flight level 130 until Johnson VOR, hotel amount 123.",
+  "transcript": "",
+  "sttError": null,
+  "audioPath": null,
+  "seconds": null,
+  "at": "2026-11-03T06:10:36+00:00",
+  "restoredFrom": "sets\\SAMPLE_01_feedback.md"
+}

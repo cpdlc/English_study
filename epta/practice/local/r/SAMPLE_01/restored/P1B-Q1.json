@@ -1,0 +1,12 @@
+{
+  "set": "SAMPLE_01",
+  "session": "restored",
+  "qid": "P1B-Q1",
+  "answer": "Control, hotel amount 123. Be advised, birds on the runway. Correction, birds on the end of the runway, hotel amount 123.",
+  "transcript": "",
+  "sttError": null,
+  "audioPath": null,
+  "seconds": null,
+  "at": "2026-11-03T06:10:36+00:00",
+  "restoredFrom": "sets\\SAMPLE_01_feedback.md"
+}

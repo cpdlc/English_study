@@ -1,0 +1,12 @@
+{
+  "set": "SAMPLE_01",
+  "session": "restored",
+  "qid": "P2B-Q3",
+  "answer": "Turn right. Heading 190. Descent and maintain 4000. Intercept runway 23. Localizer. After maintain 4000. Recast holding due to loss of intersection display.",
+  "transcript": "",
+  "sttError": null,
+  "audioPath": null,
+  "seconds": null,
+  "at": "2026-11-03T06:10:36+00:00",
+  "restoredFrom": "sets\\SAMPLE_01_feedback.md"
+}

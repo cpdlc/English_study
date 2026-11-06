@@ -1,0 +1,302 @@
+{
+  "set": "EPTA_11",
+  "level": "Level 2",
+  "summary": "",
+  "gradedAt": "2026-11-03",
+  "items": {
+    "P1A-Q1": {
+      "verdict": "✅",
+      "model": "Cross runway two seven, report vacated, Hotel Lima one two three.",
+      "notes": [
+        "활주로 횡단 허가는 필수 복창 7항목 중 하나다 — 활주로 번호까지 정확.",
+        "`report vacate` → `report vacated`. 발음 차이가 작아 감점하지 않는다."
+      ]
+    },
+    "P1A-Q2": {
+      "verdict": "✅",
+      "model": "After passing ZORIN, descend to flight level one niner zero, reduce speed two five\nzero knots, Hotel Lima one two three.",
+      "notes": [
+        "조건절(`after passing ZORIN`) + 고도 + 속도 **3요소 전부 정확.** 조건절 유지는 5세트 연속.",
+        "`reduced` → `reduce`. 복창은 지시받은 원형 그대로 되돌린다."
+      ]
+    },
+    "P1A-Q3": {
+      "verdict": "⚠",
+      "model": "Climb to one five thousand feet, expedite until passing one two thousand, Hotel\nLima one two three.",
+      "notes": [
+        "고도 두 개(15,000 / 12,000) 모두 정확.",
+        "**`until` 누락** — 두 모델 모두 없다. `expedite passing one two thousand` 은 \"통과를"
+      ]
+    },
+    "P1A-Q4": {
+      "verdict": "⚠",
+      "model": "Cleared for the ILS runway one four approach, maintain one six zero knots to the\nmarker, Hotel Lima one two three.",
+      "notes": [
+        "접근 허가·활주로·속도·시점 전부 정확. 내용 누락 없음.",
+        "**`clear` ← `cleared`, 6세트 연속.** `clear`(비었다/장애물 없다)와 `cleared`(허가받았다)는"
+      ]
+    },
+    "P1B-Q1": {
+      "verdict": "❌",
+      "model": "Negative, Hotel Lima one two three. We have lost sight of the Airbus A340 —\nhe has entered cloud. Request radar separation.",
+      "notes": [
+        "**`Confirm ~?` 에 NEGATIVE 로 시작했다 — 정확.** SAMPLE_01 과 EPTA_10 에서 틀렸던 항목이다.",
+        "**지시문의 `make a request` 미수행 — 10세트 연속 최우선 약점.** \"시계 분리를 유지할 수",
+        "`our condition is not visual VMC` 는 사유를 잘못 짚었다. 문제는 내 기상이 아니라",
+        "고친 것 : 문법(동사 없는 `we cannot`)과 **빠진 기능(요청)** 두 가지다. 문장 구조는 그대로 뒀다."
+      ]
+    },
+    "P1B-Q2": {
+      "verdict": "❌",
+      "model": "Negative, Hotel Lima one two three. We are heavy today, and the slowest we\ncan hold with our present flaps is two one zero knots. We can maintain two one zero knots\nuntil four miles.",
+      "notes": [
+        "**판단이 거꾸로다.** 유지할 수 있는 **최저**속도가 210kt 인데 180kt 를 수락했다. `Affirm` 을",
+        "한 답 안에서 `we can maintain one eight zero` 와 `our limit ~ is two one zero` 가",
+        "`flap up speed limit` 은 \"플랩을 올릴 수 있는 최대속도\"로 읽혀 뜻이 반대가 된다. 지문은"
+      ]
+    },
+    "P1B-Q3": {
+      "verdict": "❌",
+      "model": "Hartwell Control, Hotel Lima one two three, request descent to flight level\nthree one zero due to moderate turbulence — we have been in it for one zero minutes. Can\nyou tell me what the ride is like at three one zero?",
+      "notes": [
+        "기관명 + 콜사인은 정확하다.",
+        "**요청의 목표값(FL310)이 없다.** `request descend` 만으로는 관제사가 어느 고도를 줄지",
+        "**사유가 없다.** `moderate turbulence for one zero minutes` 가 지문에 있었다.",
+        "**`inquire about the conditions` 미수행.** 클루의 `ride conditions` 가 그걸 가리켰다.",
+        "`request descend` 는 **REQUEST + 동사**다. 표준은 **REQUEST + 명사(구)** → `request",
+        "`we are on the right condition` 은 뜻을 읽을 수 없는 문장이다. 지시문 세 요구 중"
+      ]
+    },
+    "P1B-Q4": {
+      "verdict": "⚠",
+      "model": "Taxi to holding point Charlie via Alpha and Delta, Hotel Lima one two three.\nBe advised, during pushback we saw a ground vehicle drive away leaving a spill of fuel on\nthe apron beside stand one two.",
+      "notes": [
+        "유도 지시 복창 완전 — 홀딩포인트와 유도로 두 개 모두 정확. **`be advised` 로 보고 방향을",
+        "**보고의 내용물이 빠졌다 — 연료 유출.** \"차량이 떠났다\"만 들은 관제사는 아무 조치도 할 수",
+        "고친 것 : 빠진 내용(연료 유출) 하나다. 문장 구조와 `be advised` 는 그대로 살렸다."
+      ]
+    },
+    "P1B-Q5": {
+      "verdict": "⚠",
+      "model": "Hotel Lima one two three, confirm turn left heading two seven zero? We are\npresently established on heading two seven zero.",
+      "notes": [
+        "**확인 + 실제 상태 제시 2단 구조**가 들어갔다. \"그대로 복창하지 않고 되묻는다\"는 판단이",
+        "`We already heading` 에 동사가 없다 → `We are presently on heading two seven zero`.",
+        "콜사인은 되묻기 **앞**에 두는 것이 관례다(§10)."
+      ]
+    },
+    "P1B-Q6": {
+      "verdict": "❌",
+      "model": "Ellesmere Departure, Hotel Lima one two three. We have levelled off at six\nthousand feet in error — we were cleared to eight thousand. Request climb to eight thousand\nfeet.",
+      "notes": [
+        "기관명 + 콜사인 ✓, `in error` 로 자기 실수를 밝힌 것 ✓, 요청까지 간 것 ✓ —",
+        "**그 안의 숫자가 전부 다르다.** 지문은 `six thousand feet`, 허가는 `eight thousand feet`",
+        "`request further climb` 에 **목표 고도가 없다.** 실수를 정정하는 교신은 \"원래 받은 값\"을"
+      ]
+    },
+    "P2A-Q1": {
+      "verdict": "❌",
+      "model": "Thatcham Approach, Hotel Lima one two three, descending through flight level two\nzero zero for one one thousand, six zero miles from TREBO, inbound Thatcham, information\nDelta.",
+      "notes": [
+        "`descending through X for Y` **표준형 사용 — 3세트 연속.** 기관 호출도 정확하다.",
+        "**값 두 개가 틀렸다** : FL200 → **FL220**, 60마일 → **6마일**. 둘 다 Initial Situation 의",
+        "`request inbounds` — REQUEST 뒤에 동사/부사가 붙었다. 위치보고에는 요청이 아니라",
+        "`information Delta` 누락."
+      ]
+    },
+    "P2A-Q2": {
+      "verdict": "✅",
+      "model": "(동일 — 고칠 것이 없다)",
+      "notes": [
+        "**5요소 복창 완전 — 8세트 연속.** 고도·속도·절차명·활주로·고도계 전부 정확하고 순서도"
+      ]
+    },
+    "P2A-Q3": {
+      "verdict": "⚠",
+      "model": "Descend to five thousand feet, Hotel Lima one two three. Request the landing\ndistance available on runway two seven — our required landing distance today is 1,750 metres.",
+      "notes": [
+        "복창 ✓, **묻기 수행 ✓** — `inquire` 지시 수행은 3세트 연속이다.",
+        "**필요 착륙거리 1,750 → 1,700.** Initial Situation 에 있던 값이다. 50m 차이지만 이 값으로",
+        "`the runway two seven full distance` → 묻는 대상의 정식 명칭은 **`landing distance"
+      ]
+    },
+    "P2A-Q4": {
+      "verdict": "❌",
+      "model": "Hotel Lima one two three, we require 1,750 metres, so 1,900 metres on runway\ntwo seven is enough for us. We will take runway two seven — we do not want the one two\nminute delay behind the A340.",
+      "notes": [
+        "**이 세트 Part Ⅱ A 의 중심 문항이다.** 직전 Q3 에서 본인이 물어서 받은 1,900m 와 필요값",
+        "그런데 Q8 에서는 `was 1,900 metres enough for you` 에 `it is enough to land` 라고 정확히"
+      ]
+    },
+    "P2A-Q5": {
+      "verdict": "❌",
+      "model": "Turn left heading one eight zero, descend to four thousand feet, Hotel Lima one two\nthree. Request an estimate of how long the delay will be.",
+      "notes": [
+        "묻기 수행 ✓. 고도 4,000 정확.",
+        "**선회 방향이 뒤집혔다 — `left` → `right`.** 기수는 필수 복창 7항목이고 **방향은 그 값의",
+        "`for the ahead of aircraft` → `the aircraft ahead`, 또는 그냥 `how long the delay will be`."
+      ]
+    },
+    "P2A-Q6": {
+      "verdict": "⚠",
+      "model": "Turn right heading two four zero, descend to three thousand feet until established,\ncleared for the ILS runway two seven approach, contact Thatcham Tower on one one eight\ndecimal three, Hotel Lima one two three.",
+      "notes": [
+        "기수·고도+조건절·접근 허가·주파수 **4요소 전부 정확.** 주파수 118.3 정확(이 세트 2/3),",
+        "`clear` ← `cleared` (이 세트 2회째)."
+      ]
+    },
+    "P2A-Q7": {
+      "verdict": "✅",
+      "model": "Runway two seven, cleared to land, Hotel Lima one two three.",
+      "notes": [
+        "착륙 허가 + 활주로 정확하고, **여기서는 `cleared` 를 바르게 썼다.** 바람은 복창 불필요 —",
+        "`caution ~` 은 복창 의무가 없으나 붙여도 감점하지 않는다(§11). `Roger` 가 내용과 함께"
+      ]
+    },
+    "P2A-Q8": {
+      "verdict": "⚠",
+      "model": "Hotel Lima one two three, affirm. We need 1,750 metres, and 1,900 metres was\nenough for us today.",
+      "notes": [
+        "**두 질문 모두 답했다** — 되묻기 장치 2세트 연속 성공(EPTA_09·10 에 이어). \"충분했다\"는",
+        "값은 또 **1,700 (←1,750).** Q3 에서 틀린 값을 다섯 턴 뒤에도 그대로 들고 있었다 —",
+        "`Yeah` / `yes` → **AFFIRM**. `if on we are enough to land on the runway` 는 문장이",
+        "고친 것 : 문법(성립하지 않는 조건절)과 값, 그리고 `Yeah`→`affirm` 세 가지다."
+      ]
+    },
+    "P2A-Q9": {
+      "verdict": "⚠",
+      "model": "Hotel Lima one two three, we will hold for stand one two — our ground handling\nand steps are arranged there, so we would rather wait than taxi eight minutes. Request an\nestimate of how long the A340 will be.",
+      "notes": [
+        "선택 ✓ + 소요시간 묻기 ✓ — 두 기능 모두 수행했다.",
+        "**`with a reason` 미수행** (이 세트 두 번째). 8분 추가 유도와 대기를 **왜** 그렇게",
+        "`hold short` 는 **활주로 앞에서 정지**를 뜻하는 고정 표현이므로 주기장 대기에 쓰면 뜻이",
+        "콜사인 누락."
+      ]
+    },
+    "P2A-Q10": {
+      "verdict": "⚠",
+      "model": "Hotel Lima one two three, we are stopped on taxiway Kilo, short of taxiway\nJuliet, behind the hangar.",
+      "notes": [
+        "유도로 Kilo 는 정확하다.",
+        "**기준점이 없다.** `short of Juliet` 는 Situation Update 와 그림에 **두 번** 나왔다.",
+        "30초에 **8단어.** EPTA_09 P2A-Q9(9단어)와 같은 양상으로, Fluency 와 Interactions 를"
+      ]
+    },
+    "P2A-Q11": {
+      "verdict": "⚠",
+      "model": "In this situation I compared the landing distance available, 1,900 metres,\nwith our required landing distance of 1,750 metres, and because 1,900 was more than we\nneeded, I accepted it. As a pilot, in the briefing we prepare a checklist for a short\nlanding approach, and in flight we have more to do for a short approach — we use a higher\nflap setting, or reduce speed earlier, or something else. And we check the performance\ndisplay to decide whether we can land or not, so it depends on our aircraft performance.\nFor example, on one flight the runway was changed at short notice, and I had to re-check the\nrequired landing distance for a wet runway before I accepted it.",
+      "notes": [
+        "**② 부분(사전 브리핑 / 당일 조치)은 들어 있다.** 플랩·감속·성능 확인까지 구체적이고,",
+        "**① 미수행** — \"무엇을 비교했는가\"에 **숫자가 하나도 없다.** 1,900 과 1,750 을 나란히",
+        "**③ `Give an example.` 미수행 — 10세트 연속.** 경험이 없으면 가정 예시로 답해도 된다.",
+        "고친 것 : 문법(`if briefing`→`in the briefing`, `we have to make many happening`→`we have"
+      ]
+    },
+    "P2B-Q1": {
+      "verdict": "✅",
+      "model": "Stapleton Departure, Hotel Lima one two three, climbing through niner thousand feet\nfor flight level three one zero, two five miles south of Stapleton.",
+      "notes": [
+        "기관 호출 + 통과고도 + 목표고도 + 위치 **전부 정확.** 네 자리 피트와 FL 을 섞어 쓰면서",
+        "`through 9,000 to FL310` → 표준은 **`for`** 다. 뜻은 통하지만 `through X for Y` 로"
+      ]
+    },
+    "P2B-Q2": {
+      "verdict": "❌",
+      "model": "Climb to flight level three one zero, turn right heading one two zero, contact\nHartwell Control on one three two decimal four when passing one eight thousand, Hotel Lima\none two three.",
+      "notes": [
+        "고도·기수·조건절(`when passing one eight thousand`) 정확.",
+        "**주파수 132.4 → 123.4.** 세 자리를 다 들었는데 **앞 두 자리가 뒤집혔다.** 주파수는 필수",
+        "**기관명 `Hartwell Control` → `tower control`.** 18,000ft 로 상승 중인데 tower 로"
+      ]
+    },
+    "P2B-Q3": {
+      "verdict": "✅",
+      "model": "Mayday, Mayday, Mayday, Stapleton Departure, Hotel Lima one two three. We have\nsmoke in the cabin from the aft galley. Galley power is isolated and there is no fire\nindication. Request immediate return to Stapleton.",
+      "notes": [
+        "**세 기능 전부 수행** — 선포 ✓ 사건명 ✓ 현재 조치 ✓ 요청 ✓. **이 세트에서 가장 잘 된",
+        "MAYDAY×3 뒤에 **기관명**이 빠졌다(§11 비상선언 순서 : MAYDAY×3 → 기관명 → 콜사인 → 유형",
+        "`and ~ and ~ so` 로 네 가지가 한 문장에 붙었다. 비상 교신은 짧게 끊는다."
+      ]
+    },
+    "P2B-Q4": {
+      "verdict": "❌",
+      "model": "Hotel Lima one two three, fuel endurance one hour five zero minutes, one four seven\npersons on board.",
+      "notes": [
+        "두 항목 모두 답한 것 ✓ (EPTA_04·05 에서 고친 항목이 유지됐다).",
+        "**두 값 모두 틀렸다.** 1시간 **50**분 → 1시간 **15**분, **147**명 → **170**명. 둘 다",
+        "**50 ↔ 15 는 EPTA_09 의 55분→15분과 같은 오류**다. `one hour five zero minutes` 를 듣고",
+        "147 → 170 도 자릿수를 뒤로 미룬 형태다(`one four seven` → `one seven zero`)."
+      ]
+    },
+    "P2B-Q5": {
+      "verdict": "❌",
+      "model": "Hotel Lima one two three, our required landing distance is 2,200 metres, so\nboth runways are long enough. We have smoke in the cabin, so we want the quicker one —\nrequest Brindle, niner minutes, 3,000 metres.",
+      "notes": [
+        "**필요 착륙거리 2,200m 정확.** Initial Situation 의 값을 네 턴 뒤에 그대로 꺼냈다 —",
+        "**어느 공항인지 말하지 않았다.** `we can accept the runway` 로는 관제사가 벡터를 줄 수",
+        "**판단의 기준을 잘못 잡았다.** 2,400m 와 3,000m 는 **둘 다** 2,200m 보다 길다 →",
+        "`Our limit, our distance limit` / `the stable airport is, we will expect wait from` —"
+      ]
+    },
+    "P2B-Q6": {
+      "verdict": "⚠",
+      "model": "Turn left heading two seven zero, descend to eight thousand feet, vectors for\nBrindle, Hotel Lima one two three. Our intention is to land at Brindle as soon as possible\nand stop on the runway for a cabin inspection. We request the fire service standing by.",
+      "notes": [
+        "복창 3요소 정확(기수·고도·벡터 목적지). **`our intention is to ~` 5세트 연속 사용** —",
+        "**`intentions` 의 내용이 요청이다.** intentions 는 **내가 무엇을 할 것인지**(어디에 어떻게"
+      ]
+    },
+    "P2B-Q7": {
+      "verdict": "❌",
+      "model": "Hotel Lima one two three, affirm, the smoke is still in the cabin. And affirm,\nwe request the fire service to meet us on the runway.",
+      "notes": [
+        "**소방대 질문에 `affirm`** — EPTA_09(연료 누출 중 거부)·EPTA_10(제동 저하 중 거부)의",
+        "**첫 답이 사실과 반대다.** 이 턴에서 연기는 **아직 남아 있다.** 연기가 멈춘 것은 Q9 직전의",
+        "`There's no nothing smoke` 는 이중부정이다. 부정 답은 **NEGATIVE** 로 시작한다.",
+        "`the fire service following us in the runway` → 관제사가 쓴 말 그대로 **`to meet us on"
+      ]
+    },
+    "P2B-Q8": {
+      "verdict": "❌",
+      "model": "Hotel Lima one two three, fuel endurance one hour five zero minutes, one four seven\npersons on board.",
+      "notes": [
+        "두 항목 모두 답함 ✓.",
+        "**두 값 모두 틀렸고, 자기가 Q4 에서 말한 값과도 다르다** — Q4 는 1시간 **15**분, Q8 은",
+        "인원도 170 유지(실제 147).",
+        "**되묻기 턴의 목적이 바로 이것이다** — 처음 적은 값이 끝까지 같아야 한다. 연료와 SOB 는"
+      ]
+    },
+    "P2B-Q9": {
+      "verdict": "⚠",
+      "model": "Hotel Lima one two three, the smoke has stopped and the cabin is clear — the\nsource was the galley oven and it is isolated. We will keep the emergency in, because we\nstill want the aircraft checked after landing. Request the fire service standing by on the\nrunway.",
+      "notes": [
+        "**판단이 맞다** — 연기가 멈췄어도 비상을 유지하는 쪽. 상황 업데이트 ✓, 결정 ✓, 활주로에서",
+        "**`with a reason` 미수행** (이 세트 세 번째). `because the source has not been confirmed`",
+        "콜사인 누락. `The smoke is stopped` → `the smoke has stopped`. 되돌아가는 말(`the smoke,"
+      ]
+    },
+    "P2B-Q10": {
+      "verdict": "⚠",
+      "model": "Turn right heading three five zero, descend to two thousand five hundred feet until\nestablished, cleared for the ILS runway one four approach, contact Brindle Tower on one one\nniner decimal one, Hotel Lima one two three.",
+      "notes": [
+        "기수·고도·조건절·접근 허가·주파수 **5요소 전부 정확.** 주파수 119.1 정확(이 세트 2/3),",
+        "`clear` ← `cleared` (이 세트 4회째)."
+      ]
+    },
+    "P2C-Q1": {
+      "verdict": "❌",
+      "model": "We were climbing through one three thousand feet out of Stapleton for flight\nlevel three one zero when the cabin crew reported smoke coming from the rear galley. I\nisolated the galley power, but the smoke did not clear, and there was no fire indication on\nthe flight deck, so I declared a MAYDAY and requested an immediate return. The controller\nasked for my fuel endurance and persons on board — one hour five zero minutes and one four\nseven persons — and then offered me Stapleton with 2,400 metres but one five minutes to\ntouchdown, or Brindle with 3,000 metres and niner minutes away. Both were longer than the\n2,200 metres I needed, so I chose Brindle because it was quicker. He gave me vectors, and I\nasked for the fire service to meet us. Later the smoke stopped and the cabin crew found the\ngalley oven was the source, but I kept the emergency in, and landed on the ILS runway one\nfour at Brindle.",
+      "notes": [
+        "Part Ⅱ Task C **두 문항 모두 녹음이 없다.** Task B Q10 까지 풀고 중단한 것으로 보인다.",
+        "이 두 문항은 **90초 × 2 = 전체 응답시간의 약 1/3** 이다. 여기가 비면 Fluency·Interactions"
+      ]
+    },
+    "P2C-Q2": {
+      "verdict": "❌",
+      "model": "I think the controller handled it well. He accepted my MAYDAY immediately,\ngave me radar contact, and asked for my fuel endurance and persons on board straight away,\nwhich is what the airport needs for the emergency brief. He also gave me both options with\nthe figures — the runway length and the time to touchdown — so I could make the decision\nmyself instead of just being told where to go. One thing that could have been handled\ndifferently is that he asked for my fuel and souls on board twice. I understand Brindle\nneeded it for their own brief, but in a cabin smoke situation the crew is busy, so it would\nhave been better if he had passed the figures on himself. Other than that, I have no comment.",
+      "notes": [
+        "`one thing that could have been handled differently` 는 EPTA_08 에서 처음 정확한 문구로"
+      ]
+    }
+  }
+}

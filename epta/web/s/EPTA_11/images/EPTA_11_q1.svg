@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" width="760" height="420" font-family="Arial, Helvetica, sans-serif">
+  <rect width="760" height="420" fill="#f2f2f2"/>
+
+  <!-- 활주로 27 (상단, 이미 이탈함) -->
+  <rect x="40" y="34" width="680" height="46" fill="#3c3c3c"/>
+  <text x="54" y="65" font-size="18" font-weight="bold" fill="#ffffff">RWY 27</text>
+  <line x1="150" y1="57" x2="660" y2="57" stroke="#ffffff" stroke-width="3" stroke-dasharray="30 22"/>
+
+  <!-- 유도로 Kilo (활주로와 평행) -->
+  <rect x="40" y="140" width="680" height="38" fill="#8d8d8d"/>
+  <text x="50" y="166" font-size="18" font-weight="bold" fill="#1d2330">KILO</text>
+
+  <!-- 유도로 Juliet (Kilo 를 가로지르는 교차 유도로) -->
+  <rect x="356" y="80" width="38" height="240" fill="#8d8d8d"/>
+  <text x="330" y="338" font-size="18" font-weight="bold" fill="#1d2330">JULIET</text>
+
+  <!-- 격납고 — 시야를 가리는 구조물 -->
+  <rect x="150" y="214" width="150" height="86" rx="4" fill="#5b6472"/>
+  <text x="166" y="252" font-size="16" font-weight="bold" fill="#ffffff">HANGAR</text>
+  <text x="166" y="276" font-size="13" fill="#d7dbe2">(blocks view)</text>
+
+  <!-- 주기장 12 — A340 점유 -->
+  <rect x="430" y="214" width="120" height="86" rx="4" fill="#e8eaee" stroke="#c9ced6" stroke-width="2"/>
+  <text x="444" y="238" font-size="14" font-weight="bold" fill="#6b7384">STAND 12</text>
+  <g fill="#6b7384">
+    <path d="M490 288 l0 -30 l-26 -11 l0 -9 l26 6 l0 -18 l-8 -8 l0 -6 l16 5 l16 -5 l0 6 l-8 8 l0 18 l26 -6 l0 9 l-26 11 l0 30 z"/>
+  </g>
+  <rect x="436" y="302" width="118" height="24" rx="4" fill="#ffffff" stroke="#1d2330" stroke-width="2"/>
+  <text x="444" y="319" font-size="13" font-weight="bold" fill="#1d2330">A340 · TECH</text>
+
+  <!-- 주기장 20 — 먼 쪽 -->
+  <rect x="600" y="214" width="120" height="86" rx="4" fill="#e8eaee" stroke="#c9ced6" stroke-width="2"/>
+  <text x="614" y="238" font-size="14" font-weight="bold" fill="#6b7384">STAND 20</text>
+  <text x="614" y="262" font-size="13" fill="#6b7384">(far side)</text>
+
+  <!-- HL123 — Kilo 위, Juliet 직전에 정지 -->
+  <g fill="#7ec8f2" stroke="#2459d6" stroke-width="2">
+    <path d="M300 159 l34 0 l14 -11 l7 11 l24 0 l-24 9 l-7 11 l-14 -11 l-34 0 z" transform="translate(-20,0)"/>
+  </g>
+  <rect x="196" y="100" width="104" height="30" rx="4" fill="#ffffff" stroke="#1d2330" stroke-width="2"/>
+  <text x="208" y="122" font-size="18" font-weight="bold" fill="#1d2330">HL123</text>
+  <line x1="268" y1="130" x2="292" y2="152" stroke="#c02626" stroke-width="4"/>
+  <path d="M292 152 l-13 -4 l6 12 z" fill="#c02626"/>
+
+  <!-- 묻는 지점 -->
+  <circle cx="330" cy="159" r="32" fill="none" stroke="#c02626" stroke-width="4"/>
+  <text x="430" y="130" font-size="20" font-weight="bold" fill="#c02626">Position ??</text>
+  <text x="430" y="158" font-size="20" font-weight="bold" fill="#c02626">Kilo / Juliet ??</text>
+</svg>

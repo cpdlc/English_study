@@ -1,0 +1,12 @@
+{
+  "set": "EPTA_02",
+  "session": "20261014-215141",
+  "qid": "P2B-Q3",
+  "answer": "controller hl123 we have different speed at indication each , so request ground spped in radar",
+  "transcript": "",
+  "sttError": null,
+  "audioPath": "r/EPTA_02/20261014-215141/P2B-Q3.webm",
+  "seconds": null,
+  "at": "2026-11-03T06:09:08+00:00",
+  "restoredFrom": "practice\\results\\EPTA_02.md"
+}

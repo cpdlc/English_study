@@ -1,0 +1,297 @@
+{
+  "set": "EPTA_10",
+  "level": "Level 2",
+  "summary": "",
+  "gradedAt": "2026-11-03",
+  "items": {
+    "P1A-Q1": {
+      "verdict": "✅",
+      "model": "Squawk 4162, ident. Hotel Lima one two three.",
+      "notes": [
+        "표준교신용어 오류 : `identify` → **`ident`**. ident 는 그 자체로 명령어이고 동사 변화를 주지",
+        "코멘트 : squawk 값 정확, **네 자리를 하나씩 끊어**(`four one six two`) 말했다. 콜사인 위치도"
+      ]
+    },
+    "P1A-Q2": {
+      "verdict": "✅",
+      "model": "Cleared to Pohang via MIRYA TWO departure, HARAN transition, climb to 5,000 feet,\ndeparture runway tree four. Hotel Lima one two three.",
+      "notes": [
+        "표준교신용어 오류 : `Clear to` → **`Cleared to`**. 허가를 받았음을 복창하는 것이므로 과거분사.",
+        "코멘트 : **5요소(목적지·SID·transition·고도·활주로) 전부 정확. 7세트 연속 성공.** 이 세트의"
+      ]
+    },
+    "P1A-Q3": {
+      "verdict": "✅",
+      "model": "Climb to flight level tree tree zero, maintain two eight zero knots until level.\nHotel Lima one two three.",
+      "notes": [
+        "코멘트 : **완전 정답이다.** 고도·속도·조건 세 요소 전부 정확하고, **숫자를 자릿수별로",
+        "재채점 메모 : **⚠️ → ✅.** 구글 STT 가 `Time to fly level 3300 ... until later` 로 받아써서"
+      ]
+    },
+    "P1A-Q4": {
+      "verdict": "✅",
+      "model": "Descend to 2,500 feet, cleared for the ILS runway one niner approach. Hotel Lima\none two three.",
+      "notes": [
+        "표준교신용어 오류 : `clear` → **`cleared for the`**. 접근 허가는 `cleared for` 가 있어야",
+        "코멘트 : **강하고도 2,500 · `ILS` · 활주로 `one niner` 세 요소 전부 정확하다.** 접근 방식",
+        "재채점 메모 : **⚠️ → ✅.** 구글이 `Clear Iration Runway. 190 approach` 로 받아써서"
+      ]
+    },
+    "P1B-Q1": {
+      "verdict": "❌",
+      "model": "Negative, HL123. We turned right heading zero four zero at 2,000 feet to stay\nclear of a build-up, and we are still on zero four zero. Request to maintain this heading\nuntil clear of the weather.",
+      "notes": [
+        "표준교신용어 오류 (중대) : **`Affirm` 으로 시작했다가 그 뒤에 `negative` 를 붙였다.**",
+        "값 오류 : 기수가 **040 인데 090 으로 말했다.** 지문에 두 번 나온 값이다.",
+        "지시문 미수행 : `with a reason` — **build-up(적란운) 회피라는 사유가 없다.** 사유가 없으면",
+        "코멘트 : 세 가지(첫 단어·실제 값·사유)가 모두 비었다. `Confirm maintaining ~?` 함정형은",
+        "재채점 메모 : 구글은 앞부분을 `Mmm.` 으로 흘렸는데 재전사에서 **`Affirm` 이 드러났다** —"
+      ]
+    },
+    "P1B-Q2": {
+      "verdict": "⚠",
+      "model": "Affirm, HL123. We can accept runway one four — our wet runway crosswind limit is\ntwo five knots and the crosswind is one eight knots.",
+      "notes": [
+        "표준교신용어 오류 : `are you able ~?` 의 첫 단어는 **`AFFIRM`** 이다. 첫 낱말이 두 전사기",
+        "문법 : `so we can accept land` → **`so we can accept runway one four`** 또는",
+        "코멘트 : **판단 방향이 정확하고(18 < 25) 자기 한계값 25kt 를 말했다.** EPTA_08 의 최우선"
+      ]
+    },
+    "P1B-Q3": {
+      "verdict": "❌",
+      "model": "Gangneung Control, HL123, maintaining\nflight level one six zero. Request descent due to light icing — we have been in it for one\nfive minutes with anti-ice on.",
+      "notes": [
+        "지시문 미수행 : **세 요구 중 둘이 비었다.** ① 기관 호출 `Gangneung Control` 은 **정확하다**",
+        "표준교신용어 오류 : **`Request present level` 은 \"내 현재 고도를 알려달라\"는 뜻이 된다.**",
+        "코멘트 : **이 세트에서 가장 심각한 문항이다.** 20초가 주어졌는데 10단어로 끝냈고, 화면에",
+        "재채점 메모 : 구글이 `Control Hotel Lima 123` 으로 잘라 \"기관명이 `Control` 뿐\"이라고",
+        "**★ 출제 쪽 결함 (2026-11-03 정정)** : 이 문항은 **결함 문항이었다.** 실제 출제 4세트는",
+        "**그래도 ❌ 는 유지한다** — 지문에 **주어진** 값(FL160)과 사유(착빙)를 말하지 않았고,"
+      ]
+    },
+    "P1B-Q4": {
+      "verdict": "⚠",
+      "model": "Cleared for takeoff runway tree four, HL123. Be advised, while taxiing we saw a\nlarge piece of rubber on taxiway Sierra.",
+      "notes": [
+        "표준교신용어 오류 : `Clear for` → **`Cleared for takeoff`** (이번 세트 3회째).",
+        "코멘트 : ① **두 기능 모두 수행했다** — 복창 + 목격 보고. **시차형**(아까 본 것을 지금",
+        "재채점 메모 : 구글이 `and be able to buy it` 으로 받아써서 \"뜻이 잡히지 않는다 — 말이"
+      ]
+    },
+    "P1B-Q5": {
+      "verdict": "❌",
+      "model": "Negative, unable 2,500 feet per minute due to our weight. The best we can give is\n1,500 feet per minute.",
+      "notes": [
+        "값 오류 2건 (두 전사기 일치) : ① 관제사가 요구한 값은 **2,500** 인데 `250` ② 자기 능력치는",
+        "표준교신용어 오류 : `unable to descend 250 feet per minute` — 강하율은 `descend`(고도 이동)",
+        "코멘트 : **구조는 완성됐다** — unable + 사유(due to weight) + 대안(our limit is ~) 세 토막이"
+      ]
+    },
+    "P1B-Q6": {
+      "verdict": "❌",
+      "model": "Approach, HL123. Confirm landing runway one niner? Our arrival information says\nrunway one niner, but we heard the aircraft ahead cleared for runway zero one. We are\nplanning for runway one niner.",
+      "notes": [
+        "지시문 미수행 : ① `Make a confirmation` — **`Confirm ~?` 질문 형태가 없다.** 사실을 늘어놓는",
+        "표준교신용어 오류 : 기관 호출을 `Arrival` 로 했다. 지시문은 **approach** 를 지정했다.",
+        "코멘트 : **두 활주로(19 와 01)의 불일치를 정확하고 알아듣게 전달했다** — 상황 이해는 됐다.",
+        "재채점 메모 : 구글 전사(`Know we heard one-nighter running in use but at least told us he"
+      ]
+    },
+    "P2A-Q1": {
+      "verdict": "✅",
+      "model": "Gwangju Delivery, HL123, information Hotel. Request ATC clearance to Ulsan, and\nwe are ready to start.",
+      "notes": [
+        "코멘트 : **지시문 세 요구를 모두 수행했다** — ① 기관 호출 `Gwangju Delivery` **정확**(지명",
+        "문법 : `we will advise you we are ready to start` 는 \"알려드리겠다\"와 \"준비됐다\"가 섞여",
+        "코멘트 : 화면 클루의 `information Hotel` 을 말하지 않았다. ATIS 문자를 같이 주면 관제사가",
+        "재채점 메모 : **⚠️ → ✅.** 구글이 `Delivery Hotel Lima` 로 받아써서 \"기관명이 `Delivery`"
+      ]
+    },
+    "P2A-Q2": {
+      "verdict": "✅",
+      "model": "Cleared to Ulsan as filed, NAKDO TWO departure, climb to 5,000 feet, squawk 2607,\nstart up approved. Hotel Lima one two three.",
+      "notes": [
+        "표준교신용어 오류 : `Clear to` → **`Cleared to`** (이번 세트 4회째).",
+        "코멘트 : **5요소(목적지·SID·고도·squawk·start up) 전부 정확 — 7세트 연속.** squawk 2607 도",
+        "발음 관찰 : 목적지가 turbo 에서 `Osan`, 구글에서 `usan` 으로 잡혔다. **Ulsan(울산)과"
+      ]
+    },
+    "P2A-Q3": {
+      "verdict": "⚠",
+      "model": "Taxi to holding point Delta two via Mike and Sierra, HL123. Request an estimate\nof how long we will be held for the Boeing 767.",
+      "notes": [
+        "지시문 미수행 : `inquire how long it will take` — **묻지 않았다.** `we will expect to wait` 는",
+        "코멘트 : 복창 자체는 정확하다 — holding point Delta two, via Mike and Sierra 세 요소 모두."
+      ]
+    },
+    "P2A-Q4": {
+      "verdict": "❌",
+      "model": "HL123, we are stopped on Mike, holding short of Sierra.",
+      "notes": [
+        "상황 오독 (두 전사기 일치) : 지문은 **\"정지해 있다\"**(You have stopped on Mike)인데",
+        "표준교신용어 오류 : `Negative` 가 부적절하다. 이 질문은 **\"A 냐 B 냐\"**(선택 질문)이고",
+        "코멘트 : 위치보고 자체도 반쪽이다 — `on Mike` 는 맞지만 관제사가 알고 싶은 핵심인"
+      ]
+    },
+    "P2A-Q5": {
+      "verdict": "✅",
+      "model": "Unable 2,400 metres — we need 2,600 metres for takeoff today. We will wait the\neight minutes for Sierra and Delta two. HL123.",
+      "notes": [
+        "코멘트 : **이 세트에서 가장 잘한 문항이다.** ① 판단 방향 정확(2,400 < 2,600 → 거부)",
+        "코멘트 : 다만 대기 시간이 `a minute` 으로 나왔다 — 관제사가 말한 값은 **eight minutes** 다."
+      ]
+    },
+    "P2A-Q6": {
+      "verdict": "✅",
+      "model": "Taxi to holding point Delta two via Sierra, contact Gwangju Tower 122.2 when\nready. Hotel Lima one two three.",
+      "notes": [
+        "코멘트 : **4요소 전부 정확 — holding point·경로·주파수·조건.** 특히 ① **주파수를 자릿수별로"
+      ]
+    },
+    "P2A-Q7": {
+      "verdict": "✅",
+      "model": "Behind the landing A320, line up and wait runway tree four, behind. Hotel Lima one\ntwo three.",
+      "notes": [
+        "코멘트 : **조건부 지시의 조건을 정확히 살렸다** — `Behind the landing A320`. EPTA_07",
+        "코멘트 : ICAO 관례상 조건부 지시 복창은 조건을 **앞뒤로 두 번** 말한다 —",
+        "재채점 메모 : 구글이 `Beyond The Landing` 으로 받아써서 \"`behind` 와 `beyond` 는 뜻이"
+      ]
+    },
+    "P2A-Q8": {
+      "verdict": "⚠",
+      "model": "HL123, our slot time is 0640 Zulu. Affirm, we can be airborne in the next tree\nminutes — we are ready now.",
+      "notes": [
+        "값 오류 (확정) : 슬롯시각은 **0640Z** 인데 **`zero six zero six`(0606)** 라고 말했다. 끊어",
+        "지시문 미수행 : 두 번째 질문(`whether you can be airborne in the next tree minutes`)에",
+        "코멘트 : **이 문항은 이번 세트의 핵심 장치였다** — 슬롯시각을 Initial Situation 에서 주고"
+      ]
+    },
+    "P2A-Q9": {
+      "verdict": "✅",
+      "model": "Cleared for takeoff runway tree four, after departure climb to 5,000 feet, wilco\nreport passing tree thousand. Hotel Lima one two three.",
+      "notes": [
+        "코멘트 : **4요소 전부 정확한 완전 정답이다** — `cleared for takeoff`(과거분사까지 정확) ·",
+        "재채점 메모 : **❌ → ✅.** 구글이 `Runway 34 after departure, climbed to 5000 ...` 로"
+      ]
+    },
+    "P2A-Q10": {
+      "verdict": "✅",
+      "model": "Gwangju Departure, HL123, climbing through tree thousand for 5,000 feet. Request\nfurther climb.",
+      "notes": [
+        "코멘트 : **지시문 세 요구를 모두 수행했다.** ① 기관 호출 `Gwangju Departure` **정확**",
+        "표준교신용어 오류 : `to 5,000` 보다 **`for 5,000`** 이 관례다(through = 통과, for = 목표).",
+        "재채점 메모 : 구글이 `Departure Hotel Lima` / `requests for the climb` 로 받아써서"
+      ]
+    },
+    "P2A-Q11": {
+      "verdict": "❌",
+      "model": "In this situation, I compared the runway length available from Delta one,\n2,400 metres, with the takeoff distance we needed today, 2,600 metres. Delta one was\n2,400 metres, so it was too short for us even though it was faster, and that is why I\nchose to wait eight minutes for Sierra.\nAs a pilot, we have to **pay attention to** the slot time, the runway length, and the\nfuel. **For the slot time**, we have to get out before it expires. **For the runway\nlength**, our takeoff distance required may be longer than what is available. **For the\nfuel**, if we stand on the taxiway it burns fuel we cannot use in flight. **I write these\nthree figures on my notepad before start-up and cross them off as they change.**\nFor example, I once had to ask a controller to repeat a **squawk code**, because the\nfirst two digits were masked by another transmission.",
+      "notes": [
+        "지시문 미수행 : 3부 중 **①과 ③이 비었다.** ① `What did you compare before you answered,",
+        "문법 : `attend attention on` → **`pay attention to`**(두 전사기 일치, 3회 반복).",
+        "코멘트 : ② 만 답했는데 그 내용도 \"왜 중요한가\"에 머물렀고 질문인 **\"어떻게 관리하는가\"**",
+        "코멘트 : 녹음 뒷부분에서 같은 낱말을 길게 되풀이한 구간이 있다 — 말이 막혔을 때"
+      ]
+    },
+    "P2B-Q1": {
+      "verdict": "⚠",
+      "model": "Yeosu Approach, HL123, descending through flight level one niner zero for one one\nthousand, 70 miles from SOBAEK, inbound Yeosu, information Kilo.",
+      "notes": [
+        "값 오류 (두 전사기 일치) : **70 마일인데 `seven miles` 로 말했다.** EPTA_09 에서 똑같이",
+        "코멘트 : **기관 호출 `Yeosu Approach` 정확**(지시문 지정 기관과 일치, 2세트 연속 유지).",
+        "표준교신용어 오류 : `through FL190 **to** 11,000` → **`for` one one thousand**. 목표고도는"
+      ]
+    },
+    "P2B-Q2": {
+      "verdict": "✅",
+      "model": "Descend to 9,000 feet, reduce speed two five zero knots, expect the SOBAEK ONE\narrival, ILS runway one seven, Yeosu altimeter two niner niner four. Hotel Lima one two\nthree.",
+      "notes": [
+        "코멘트 : **5요소 전부 정확한 완전 복창이다** — 강하 9,000 · 감속 250 · SOBAEK ONE arrival ·",
+        "재채점 메모 : **⚠️ → ✅.** 구글이 `This in 9000 900,000 reduced speed, 250. As will be e,"
+      ]
+    },
+    "P2B-Q3": {
+      "verdict": "⚠",
+      "model": "Yeosu Approach, HL123, passing one two thousand. We have a BRAKE SYSTEM 1 FAULT\nwith ANTI-SKID INOP. The alternate brake system is working but our braking is degraded, so\nour required landing distance is now tree,100 metres instead of 1,900. No smoke and nothing\nelse is affected. Request priority handling.",
+      "notes": [
+        "표준교신용어 오류 : 기관명이 **`Departure`** 다 — 지금 교신 상대는 **Yeosu Approach** 이고",
+        "지시문 미수행 : `request priority` — **요청이 없다.** 네 요구 중 세 개만 수행.",
+        "코멘트 : **사건 보고 자체는 정확하다** — ① 계통명(brake system one is failed) ②",
+        "문법 : `anti-brake normally degraded` → **`the alternate brake system is normal but",
+        "재채점 메모 : 구글이 `anti-skid is in operating` 으로 받아써서 \"`inoperative`(작동 불가)와"
+      ]
+    },
+    "P2B-Q4": {
+      "verdict": "✅",
+      "model": "We need tree,100 metres, and Yeosu has only 2,800. Request diversion to Sacheon —\ntree,200 metres is enough for us, even though it is one eight minutes away. HL123.",
+      "notes": [
+        "코멘트 : **판단·근거·숫자 세 가지 모두 정확하다.** 2,800 < 3,100 ≤ 3,200 이라는 비교를",
+        "값 오류 : `takes more one minute` — 사천까지는 **one eight(18)분** 이다(두 전사기 일치).",
+        "코멘트 : `we will take Sacheon airport` 보다 **`Request diversion to Sacheon`** 이 표준이다."
+      ]
+    },
+    "P2B-Q5": {
+      "verdict": "✅",
+      "model": "Turn left heading one zero zero, descend to 6,000 feet, vectors for Sacheon.\nOur intention is **to make a priority landing** at Sacheon, and we will need the fire\nservices standing by on the runway. HL123.",
+      "notes": [
+        "코멘트 : **복창 3요소(기수 100·강하 6,000·vectors for Sacheon) 전부 정확 + intentions +",
+        "문법 : `Our intention is to priority landing` → **`to make a priority landing`**."
+      ]
+    },
+    "P2B-Q6": {
+      "verdict": "❌",
+      "model": "Negative, HL123, no smoke and no burning smell from the wheels. **Affirm**, we",
+      "notes": [
+        "판단 오류 (중대, 두 전사기 일치) : 두 번째 질문에 **소방대 대기를 거부했다.** BRAKE",
+        "**더 무거운 점 : 두 턴 전 P2B-Q5 에서 본인이 `fire services standing by on the runway` 를",
+        "**이 오류는 EPTA_09 P2B-Q7 에서 \"연료 누출 중 소방대 거부\"로 이미 지적된 것이고, 이번",
+        "코멘트 : ① **두 질문 모두에 답한 것 자체는 진전**이다 — \"두 질문 중 하나만 답함\"은"
+      ]
+    },
+    "P2B-Q7": {
+      "verdict": "⚠",
+      "model": "HL123, we need tree,100 metres landing distance — 1,900 metres before the brake\nmalfunction. And we need one eight minutes before we are on the ground.",
+      "notes": [
+        "코멘트 : **핵심 값 3,100m 을 네 턴 전(P2B-Q3)에서 그대로 들고 왔다.** 이번 세트가 겨냥한",
+        "값 오류 : 고장 전 필요 착륙거리는 **1,900m** 인데 `1,600` 으로 말했다(두 전사기 일치).",
+        "지시문 미수행 : **두 번째 질문(몇 분 필요한가)에 답하지 않았다.** 18분이라는 값은 바로 앞",
+        "문법 : `before braking function` → **`before the brake malfunction`**. `function` 은"
+      ]
+    },
+    "P2B-Q8": {
+      "verdict": "⚠",
+      "model": "**Affirm**, HL123. The alternate system is giving us normal braking now and our\nrequired landing distance is back to 2,300 metres, so Yeosu runway one seven with 2,800\nmetres **is suitable** for us. Request Yeosu runway one seven. **We would still like the\nfire service standing by on the runway.**",
+      "notes": [
+        "코멘트 : **판단·근거·새 값 세 가지가 정확하다.** ① 첫 단어 **`Affirm`** ② 상태 업데이트",
+        "지시문 미수행 : `say what you will need on the runway` — **마지막 토막이 비었다.** 제동이",
+        "문법 : `we use alternate system and system backed up` → **`we are using the alternate"
+      ]
+    },
+    "P2B-Q9": {
+      "verdict": "✅",
+      "model": "Turn right heading two two zero, descend to 2,500 feet until established, cleared\nfor the ILS runway one seven approach, contact Yeosu Tower 118.7. Hotel Lima one two three.",
+      "notes": [
+        "코멘트 : **5요소 전부 정확 — 기수 220 · 강하 2,500 · `until established` 조건절 ·",
+        "표준교신용어 오류 : `cleared ILS` → **`cleared for the ILS`**. 전치사가 빠졌을 뿐 허가"
+      ]
+    },
+    "P2C-Q1": {
+      "verdict": "⚠",
+      "model": "During **the descent** we **were flying** as we planned at first, but a few\nminutes after that we **got a BRAKE SYSTEM 1 FAULT with ANTI-SKID INOP** on the display.\nSo we **advised the controller** that the system **was inoperative** and that our required\nlanding distance **was now tree,100 metres instead of 1,900**. The ATC **offered us**\nanother airport, **Sacheon, with tree,200 metres, one eight minutes away, because Yeosu\nhad only 2,800** — so we **decided to divert**. We **were using** the alternate brake\nsystem, and **then the fault cleared** — the braking **came back** to normal **and our\nrequired distance went back to 2,300 metres**. There **was** no smoke, so we **continued\nto Yeosu** again and **landed on the ILS runway one seven** as we planned.",
+      "notes": [
+        "코멘트 : **전개 순서가 처음으로 정확하다.** 정상 강하 → 제동 계통 고장 → 보고 → 관제사가",
+        "누락된 내용 : ① **사건명에 `anti-skid` 가 없다** — 제동 저하의 원인이다. P2B-Q3 에서는",
+        "문법 : 시제가 현재·과거로 섞인다(`we have the braking system ...`, `the function is come"
+      ]
+    },
+    "P2C-Q2": {
+      "verdict": "⚠",
+      "model": "I think the ATC handled it well. First, when we informed **him** of our\nsituation about the braking system, the ATC **gave** us some options and detailed\ninformation about the landing **distances available** and the fire services. We **were**\nreally **grateful** for **that**. Also, the ATC gave us the expected **flight time to\nSacheon, one eight minutes**, **which helped us run our checklists and decide**.\nFortunately, we **were using** the alternate system and the braking **came back**, so we",
+      "notes": [
+        "코멘트 : **구조는 완성형이다.** ① **평가 대상이 관제사 — 4세트 연속 유지** ② 근거 두 개",
+        "내용 오류 : **\"소방대 준비를 묻지 말았어야 한다\"는 제안은 틀렸다.** 관제사가 제동 저하",
+        "문법 : `we could have been handled` → **`it could have been handled`**(주어는 상황)"
+      ]
+    }
+  }
+}

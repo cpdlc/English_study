@@ -1,0 +1,12 @@
+{
+  "set": "EPTA_02",
+  "session": "20261014-215141",
+  "qid": "P2B-Q8",
+  "answer": "trun right hd 300 decend 3000 until established cleared rnav runway 27 contact tower 118.1 hl123",
+  "transcript": "",
+  "sttError": null,
+  "audioPath": null,
+  "seconds": null,
+  "at": "2026-11-03T06:09:08+00:00",
+  "restoredFrom": "practice\\results\\EPTA_02.md"
+}

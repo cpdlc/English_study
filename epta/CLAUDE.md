@@ -249,6 +249,17 @@ md 에는 지금까지대로 `🖥 [ ... ]` 로 적는다. 빌드하면 실제 �
   (지금까지 만든 세트에서 `🖥 [ 50 on board / alternate 30 / holding 20 ]` 처럼 숫자를
   띄운 적이 있는데, **그건 실제와 다르다.** 앞으로는 숫자를 지문·ATC 대사에만 둔다.)
 - 정답이 되는 표현, 해야 할 말 자체.
+- **지시문의 기능 라벨을 그대로 옮기지 않는다** (`request with a reason` · `report your
+  status` 등). 실제 7건의 슬래시 칸은 전부 **내용어**다 — `possibility of defuel &
+  duration` · `hold position / towing`. 기능 라벨을 띄우면 음성을 되풀이할 뿐이다.
+  EPTA_10-P1B-Q3 의 `🖥 [ Gangneung Control / request with a reason / present level ]` 가
+  그 잘못이다.
+- **기능 나열 클루는 Ⅱ-A 에만 쓴다.** 실제 Ⅰ-B 클루는 `FRISO` 고유명사 하나였다.
+
+**★ 발신형·응답형 모두 상황설명 끝에 '의도 문장'을 반드시 넣는다** (`exam-spec.md`
+§3-1-1). 실제 4세트는 예외 없이 `You want to ~` / `You can ~` / `You are unsure ~` 로
+조종사가 원하는 것을 못 박고, **요청의 목표값까지 지문에 준다.** 이것이 없으면 응시자는
+무엇을 말할지 추측해야 하고 채점자도 정답을 확정할 수 없다.
 
 **빈도** : 세트당 **6~8문항(약 22%)**. Ⅰ-A 1개 / Ⅰ-B 1개 / Ⅱ-A 2~3개 / Ⅱ-B 1~2개 /
 **Task C 는 0개**.
@@ -332,7 +343,15 @@ Part Ⅱ 는 `☞ 지시문` 이 그 역할을 하므로 따로 넣지 않는다
     practice/
       build.py              ← md → mp3 + 배포용 HTML (web/ 아래로 출력)
       pages.py              ← 세트 목록·내 답안 보기 페이지 틀
+      serve.py              ← **로컬 서버** (Vercel 대체). 정적 파일 + API 5개
       pull.py               ← 서버에 저장된 응답 내려받기 (채점 입력)
+      transcribe.py         ← 녹음을 로컬 faster-whisper 로 전사 (§6-0, 채점 전 필수)
+      backup.py             ← 응시 기록·녹음을 로컬로 백업. 받은 것은 건너뛴다
+      restore.py            ← 로컬 기록으로 저장소 되살리기 (backup.py 의 반대)
+      recordings/           ← backup.py 가 받아 둔 녹음 원본 (git 제외, 유일한 사본)
+      local/                ← 로컬 서버의 저장소 (git 제외)
+        r/<SET>/<세션>/<문항>.json·webm
+        f/<SET>.json
       push.py               ← 채점 결과 올리기 (폰에서 정답 확인)
       template.html         ← 풀이 화면 틀 (음성 인식·타이머·서버 전송)
       results/              ← pull.py 가 내려받은 응답 기록
@@ -348,6 +367,7 @@ Part Ⅱ 는 `☞ 지시문` 이 그 역할을 하므로 따로 넣지 않는다
       log.md                ← 누적 성적·약점·사용한 시나리오 목록
       expressions.md         ← 외워야 할 표현 모음 (plain English 문법 패턴 + ATC 표준교신용어)
       templates-90s.md       ← 90초 자유응답 템플릿 (Follow-up·Task C Q1/Q2 뼈대 + 빈칸 후보)
+      drills.md              ← 자주 틀리는 유형 드릴 (실패율 순, 문제 → 정답 예시)
 
 날짜 폴더를 만들지 않는다. 세트 번호는 `EPTA_01`, `EPTA_02`, ... 순서로 두 자리 일련번호를 매긴다.
 새 세트를 만들기 전 `sets/` 폴더를 확인해 다음 번호를 정한다.
@@ -361,6 +381,38 @@ Part Ⅱ 는 `☞ 지시문` 이 그 역할을 하므로 따로 넣지 않는다
 - 각 파트 시작마다 Directions + 시험[응답] 요령 표
 
 ---
+
+## 5-1. 실행 환경 — 로컬 서버 (2026-11-03 전환)
+
+**Vercel 을 쓰지 않는다.** Blob 의 Advanced Operations 무료 한도(월 2,000회)가 소진돼
+스토어가 정지됐다 — 답안 하나당 `put` 이 두 번이라 세트 한 번에 64회를 썼다. 전사는 이미
+로컬(§6-0)로 옮겼으므로 서버가 하는 일은 파일 저장뿐이고, 거기에 클라우드 한도를 쓸 이유가
+없다.
+
+    python practice/serve.py              # http://127.0.0.1:8000
+    python practice/serve.py --host 0.0.0.0   # 같은 와이파이의 폰에서 (EPTA_PIN 필수)
+
+Vercel 의 API 다섯 개(`login`·`submit`·`results`·`audio`·`feedback`)를 같은 모양으로
+구현하므로 **풀이 화면·답안 보기 페이지와 pull/push/transcribe/backup 을 고치지 않는다.**
+`.env` 의 `EPTA_URL` 이 로컬을 가리키고, 옛 배포 주소는 `EPTA_URL_VERCEL` 에 남겨 뒀다.
+
+- **세트를 추가하면** 전처럼 `python practice/build.py EPTA_XX` 만 돌린다. **배포는 없다** —
+  서버가 `web/` 를 그대로 읽는다.
+- **폰에서 녹음하려면 https 가 필요하다.** 브라우저는 보안 컨텍스트가 아니면 마이크를 막으므로
+  `http://192.168.x.x:8000` 으로는 **화면만 보이고 녹음이 안 된다.** 터널을 쓴다 :
+  `cloudflared tunnel --url http://127.0.0.1:8000` — 진짜 https 주소가 나오고 **데이터는
+  이 PC 에만 쌓인다.** PC 에서 풀 때는 localhost 라 그냥 된다.
+- **저장소가 비면** `python practice/restore.py` 로 `practice/results/*.md` 와
+  `sets/*_feedback.md` 에서 되살린다. 채점 결과는 `push.py` 가 따로 올린다.
+
+**정답만은 Vercel 에서도 볼 수 있다 (2026-11-03 추가).** PC 를 켜 두지 않고 폰에서 답을
+외우기 위한 길이다. `python practice/push.py --static` 이 모든 `sets/*_feedback.md` 를
+`web/api/_lib/answers.js` 로 구워 넣고, `cd web && vercel deploy --prod` 로 올린다.
+`/api/feedback` 함수가 Blob 대신 그 모듈을 읽으므로 **Blob 작업을 한 번도 쓰지 않는다.**
+`api/` 아래 밑줄로 시작하는 경로는 Vercel 이 함수로도 정적 파일로도 내보내지 않아 주소로
+닿을 수 없고(404 확인), 토큰을 통과한 함수만 읽는다 — 규칙 3 은 그대로다.
+녹음·응답 기록(`/api/results`·`/api/audio`)은 여전히 Blob 이라 Vercel 에서 안 된다.
+**내 답안까지 나란히 보려면 로컬 서버**를 쓴다. 채점·응시는 전부 로컬이 기준이다.
 
 ## 6. 채점 규칙
 
@@ -412,6 +464,46 @@ Part Ⅱ 는 `☞ 지시문` 이 그 역할을 하므로 따로 넣지 않는다
     상태를 보고하는 동사**로 바꿔야 위치보고가 된다. 위치를 몰라서 헤매는 게 아니라 동사
     선택이 문제인 경우가 많으니, 채점 코멘트에서 이 둘을 구분해서 짚어준다.
 - 빈칸으로 남은 문항도 형식을 유지하되 `내 답안 : (무응답)`으로 표시하고 Level 1 처리한다.
+
+### 6-0. 채점 전 — 녹음을 로컬 whisper 로 다시 전사한다 (필수)
+
+음성 응시 세트는 **채점을 시작하기 전에 반드시** 아래 순서를 돌린다.
+
+    python practice/pull.py EPTA_XX          # 서버 응답 내려받기
+    python practice/transcribe.py EPTA_XX --all   # 로컬 faster-whisper 전수 재전사
+
+**서버 전사(`/api/submit` 의 Google STT)를 채점 근거로 쓰지 않는다.** 그것은 폰에서 바로
+자기 발화를 확인하는 용도이고, 정확도가 채점에 쓸 수준이 못 된다. EPTA_10 에서 구글 전사를
+근거로 채점했다가 **다섯 문항을 틀리게 채점**했다 — `cleared for takeoff`(P2A-Q9)와
+`altimeter 2994`(P2B-Q2)를 "필수 복창 누락"으로 지적했는데 실제로는 정확히 복창했고,
+`clear ILS runway` → `Clear Iration Runway`, `until established` → `until Easter list`,
+`is acceptable for us` → `is a set of verb` 처럼 발음 소견까지 엉뚱하게 쌓였다.
+
+- 모델은 **`large-v3-turbo`**. large-v3 보다 이 용도에 맞는 이유는 **숫자를 말한 대로
+  적기 때문**이다(`three three zero`). large-v3 는 `330` 으로 정규화해 **자릿수를 어떻게
+  끊어 말했는지**를 지운다 — 그건 채점 대상이다.
+- turbo 는 한국 지명을 한글로 적는 약점이 있어, 그런 문항만 자동으로 large-v3 로 교차
+  확인하고 `practice/results/EPTA_XX_cross.md` 에 나란히 남긴다. **지명·고유명사가 의심스러우면
+  그 파일을 본다.**
+- 전사기도 틀릴 수 있다. **값 하나로 판정이 갈리는 문항**(숫자 오류, 필수 복창 누락)은
+  `--cross` 로 두 모델을 대조하고, 두 모델이 어긋나면 **낮은 쪽으로 단정하지 말고** 피드백에
+  "확정 불가"로 적는다. 두 모델이 일치하면 그대로 채점한다.
+- 무음 녹음에서는 두 모델 모두 빈 결과를 낸다(VAD·환각 억제 켜 둠). **빈 결과는 무응답이
+  맞으므로 Level 1 로 처리**한다.
+- 긴 녹음 끝에서 같은 낱말이 반복되는 것은 Whisper 의 환각 루프다. `transcribe.py` 가 잘라
+  `…(이후 같은 말 반복)` 으로 표시한다 — **그 구간을 응답 분량으로 세지 않는다.**
+
+### 6-0-1. 녹음은 채점 후 반드시 로컬로 백업한다
+
+채점이 끝나면 **`python practice/backup.py EPTA_XX`** 를 돌린다. 녹음(webm)은 서버 Blob 에만
+있고, 2026-11-03 에 Vercel Blob 스토어가 Advanced Operations 한도 소진으로 정지되어 약 80 MB
+전체에 손이 닿지 않게 된 일이 있었다. 그 녹음은 **채점을 뒤집는 근거**다 — EPTA_10 은 구글
+전사를 믿고 채점했다가 재전사로 다섯 문항을 바로잡았고, 음성이 남아 있어서 가능했다.
+
+- 답안 원문은 `sets/EPTA_XX_feedback.md` 의 `내 답안 :` 줄로 **git 에 남는다.**
+  `practice/results/` 는 git 제외이므로 그것만 믿지 않는다.
+- `practice/recordings/` 도 git 제외다(용량). **그게 녹음의 유일한 사본**이므로 지우지 않고,
+  가끔 외부 저장소에도 한 벌 복사해 둔다.
 
 ### 6-1-1. 채점 시 감점하지 않는 것 (원래 구술시험이라는 점 반영)
 이 시험은 원래 **말하기(구술)** 시험이고 사용자는 텍스트로 답을 입력한다. 따라서 아래는
@@ -468,6 +560,10 @@ Part Ⅰ A/B, Part Ⅱ A/B/C 각각 한 문단.
 판정(✅⚠️❌)·정답/교정 답안·지적사항과 최종 등급이 서버에 올라가고, 배포 페이지의
 **내 답안 보기**(`/r/?set=EPTA_XX`) 화면에서 "내 답안 ↔ 정답" 이 나란히 보인다.
 모범답안은 배포 HTML 에 들어가지 않으므로 비밀키(`#k=...`)를 가진 사람만 볼 수 있다.
+폰에서 PC 없이 정답만 보려면 `--static` 을 붙여 Vercel 에도 구워 올린다 (§5-1).
+
+`/r/` 화면은 **응답이 없는 문항도** 문제와 정답을 보여준다. 세트를 끝까지 풀지 않았거나
+아예 풀지 않았어도 "문제 → 정답"으로 외울 수 있다.
 
 ### 6-6. 파일 보호
 채점 중 `EPTA_XX.md`를 **절대 덮어쓰거나 정리하지 않는다.** 사용자의 답안이 들어 있다.

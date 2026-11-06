@@ -1,0 +1,297 @@
+{
+  "set": "EPTA_09",
+  "level": "Level 2",
+  "summary": "",
+  "gradedAt": "2026-11-03",
+  "items": {
+    "P1A-Q1": {
+      "verdict": "⚠",
+      "model": "Line up and wait runway 16, HL123.",
+      "notes": [
+        "활주로 16 정확합니다. `number two for departure` 는 교통정보라 복창 불필요이고, 복창해도",
+        "전사에 `line up` 이 잡히지 않고 `By weight`(= and wait)만 남았습니다. **`line up and wait`",
+        "코멘트 : `I'm Number Two` 의 `I'm` 은 비표준입니다. 복창은 지시받은 말 그대로"
+      ]
+    },
+    "P1A-Q2": {
+      "verdict": "✅",
+      "model": "After departure turn left heading 130, climb to 11,000 feet, contact Departure on\n125.75, HL123.",
+      "notes": [
+        "**다섯 자리 고도 11,000 정확.** EPTA_08 에서 10,000→`1000`, 15,000→`1,500` 으로 0 이",
+        "조건부 `after departure`, heading 130, 주파수 125.75 — 네 요소 전부 정확합니다.",
+        "코멘트 : `turn` 이 `tone` 으로 전사됐습니다. 발음 항목에서 다시 다룹니다."
+      ]
+    },
+    "P1A-Q3": {
+      "verdict": "❌",
+      "model": "When 30 miles from BRIMO descend to 10,000 feet, reduce speed to 250 knots, HL123.",
+      "notes": [
+        "누락된 필수 readback 요소 : **`when 30 miles from BRIMO` 조건 전체.** 이 지시는 \"지금",
+        "거리 숫자 `30` 도 함께 빠졌습니다 — EPTA_08 에서 90마일·80마일을 통째로 빠뜨린 것과",
+        "코멘트 : `reduced` → `reduce` 또는 `reducing`. 지시를 그대로 되돌릴 때는 과거형을 쓰지"
+      ]
+    },
+    "P1A-Q4": {
+      "verdict": "⚠",
+      "model": "Descend to 2,500 feet, cleared for the ILS runway 16 approach, wilco report\nestablished, HL123.",
+      "notes": [
+        "표준교신용어 오류 : **`Clear` → `Cleared`.** 접근 허가는 **필수 복창 중 가장 무거운",
+        "`runway 160` 으로 전사됐습니다. 활주로 16 은 **`runway one six`** 이고 거기서 끊어야",
+        "2,500 과 `report established` 는 정확합니다."
+      ]
+    },
+    "P1B-Q1": {
+      "verdict": "❌",
+      "model": "Affirm, HL123 — the reported visibility is 8,000 metres and our company\nminimum is 5,000, and the cloud base is 4,000 feet against 2,500 required, so we can accept\nthe visual approach to runway 21.",
+      "notes": [
+        "표준교신용어 오류 : **`are you able ~?` 의 첫 단어는 AFFIRM**. 수락한다는 말이 문장",
+        "**값의 역할이 바뀌었습니다.** `Our company restriction, visibility is 8,000 metre` —",
+        "지시문이 `tell him both the reported visibility and the figure your company requires`",
+        "코멘트 : 고친 것은 ① `restriction` → `minimum` ② 8,000 과 5,000 을 분리 ③ `Affirm` 을"
+      ]
+    },
+    "P1B-Q2": {
+      "verdict": "⚠",
+      "model": "Negative, HL123 — we are maintaining 300 knots. You cancelled the speed\nrestriction and told us to resume normal speed. Say again if you want 250 knots.",
+      "notes": [
+        "**`NEGATIVE` 가 첫 단어입니다 — 해결된 항목입니다.** SAMPLE_01 에서 두 번 빠졌던",
+        "**동사 선택이 틀렸습니다.** `Increase speed 300` 은 **지시를 복창하는 동사**입니다. 지금",
+        "코멘트 : 고친 것은 ① 동사(`increase` → `are maintaining`) ② `After restriction, normal"
+      ]
+    },
+    "P1B-Q3": {
+      "verdict": "⚠",
+      "model": "Turn right heading 240 for vectors to the ILS, HL123. And be advised,\ndescending through 7,000 feet we lost about 15 knots of airspeed very suddenly and the\naircraft sank — windshear, a few seconds only.",
+      "notes": [
+        "복창(heading 240)은 정확합니다.",
+        "**`and be advised` 로 시작한 것은 정확한 선택입니다.** EPTA_08 P1B-Q3 에서 \"본 것을",
+        "그런데 **문장이 끝나지 않았습니다.** `We saw` 에서 끊겼고, 무엇을 만났는지(**windshear**),",
+        "코멘트 : 보고 틀은 **`And be advised, [어디서] we [무엇을 겪었다]`** 입니다. 복창을"
+      ]
+    },
+    "P1B-Q4": {
+      "verdict": "⚠",
+      "model": "HL123, level 6,000 feet. We had set 29.87 by mistake — correction, altimeter\n29.78 now set.",
+      "notes": [
+        "**정정 3단이 완성됐습니다** — 틀린 값(29.87) + `Correction` + 올바른 값(29.78). EPTA_08",
+        "그런데 **관제사가 물은 것은 고도입니다.** `say your altitude` 에 대한 답, 즉 **`level",
+        "코멘트 : 고친 것은 ① 맨 앞에 `level 6,000 feet` 추가(누락 내용) ② `We said altitude to`"
+      ]
+    },
+    "P1B-Q5": {
+      "verdict": "✅",
+      "model": "Unable to increase speed to 320 knots, HL123 — our turbulence penetration speed\nis 280 knots and we are at 280 now. Request vectors for spacing with the traffic behind.",
+      "notes": [
+        "**이 세트 전체에서 가장 잘된 문항입니다.** `unable` + 사유 + 대안 3단이 완성됐고,",
+        "`request vectors for spacing` — **REQUEST + 명사구** 정확합니다.",
+        "코멘트 : `Vector for another spacing` 을 한 번 더 반복하셨습니다. 한 번 말하면 됩니다."
+      ]
+    },
+    "P1B-Q6": {
+      "verdict": "❌",
+      "model": "Weyland Departure, HL123, passing 9,000. Confirm transition altitude\none zero thousand? Our charts show one zero thousand, our briefing sheet says one eight\nthousand.",
+      "notes": [
+        "기관 호출은 정확합니다.",
+        "**`say what you have` 를 하지 않았습니다.** 내가 가진 두 값(10,000 / 18,000)이 없으면",
+        "기능도 어긋났습니다 : 지시문은 **confirmation** 인데 `Request transition altitude` 는",
+        "코멘트 : 전이고도는 **필수 복창 7항목** 중 하나입니다(`atc-terminology.md` §2). 이",
+        "**출제 쪽 문제 (2026-11-02 정정)** : 지시문의 `say what you have` 는 제가 만든 표현으로"
+      ]
+    },
+    "P2A-Q1": {
+      "verdict": "✅",
+      "model": "Weyland Delivery, HL123, request ATC clearance.",
+      "notes": [
+        "기관 호출 → 콜사인 → `REQUEST + 명사구` 순서가 정확합니다."
+      ]
+    },
+    "P2A-Q2": {
+      "verdict": "✅",
+      "model": "Cleared to Ferndale via the TULAN TWO departure, BRIMO transition, climb to 7,000\nfeet, squawk 2514, HL123.",
+      "notes": [
+        "**5요소 전부 담겼습니다** — 목적지·SID·transition·고도·squawk. 긴 클리어런스 복창은",
+        "코멘트 : `BRIMO` 가 `Primo` 로 전사됐습니다. B와 P는 관제사에게 완전히 다른 웨이포인트로"
+      ]
+    },
+    "P2A-Q3": {
+      "verdict": "❌",
+      "model": "Taxi to holding point Charlie 2 via Golf and Lima, HL123. Roger the 8 extra\nminutes.",
+      "notes": [
+        "**`Charlie 2` 를 `Charlie 4` 로 말씀하셨습니다.** 출발 게이트가 Gate Charlie 4 였기",
+        "`acknowledge the delay` 는 수행하셨습니다(`expect eight more minutes`) — **지시문 마지막",
+        "코멘트 : `taxi to` 동사가 빠졌습니다. 유도 지시 복창은 `Taxi to ~ via ~` 로 시작합니다."
+      ]
+    },
+    "P2A-Q4": {
+      "verdict": "⚠",
+      "model": "HL123, we are on Golf now, approaching Lima, taxiing to holding point\nCharlie 2.",
+      "notes": [
+        "위치는 **그림과 일치합니다** — `We are on Golf` 정확합니다.",
+        "표준교신용어 오류 : **`negative` 로 시작할 질문이 아닙니다.** `A 냐 B 냐`를 묻는",
+        "**`say which holding point you are taxiing to` 미수행** — `Charlie 2` 가 없습니다."
+      ]
+    },
+    "P2A-Q5": {
+      "verdict": "⚠",
+      "model": "Behind the departing Boeing 777, line up and wait runway 16, HL123.",
+      "notes": [
+        "**바람을 복창에서 뺀 것은 정확한 판단**입니다. 바람은 필수 복창 항목이 아닙니다.",
+        "`line up and wait runway 16` 정확합니다.",
+        "그런데 전사가 **`before Boeing`** 입니다. 지시는 **`behind`** — **뒤**입니다. `before`",
+        "코멘트 : `Boeing Boeing` 으로 두 번 말하고 **기종 번호 777 은 빠졌습니다.** 선행기를"
+      ]
+    },
+    "P2A-Q6": {
+      "verdict": "✅",
+      "model": "Weyland Departure, HL123, passing 3,000 feet for 7,000.",
+      "notes": [
+        "**두 고도를 모두 정확히** 담았습니다. 기관 호출도 있습니다. EPTA_06 에서",
+        "코멘트 : `climbing through A to B` 도 통하지만 표준형은 **`passing A for B`** 입니다."
+      ]
+    },
+    "P2A-Q7": {
+      "verdict": "✅",
+      "model": "Unable flight level 370, HL123. Passing 12,000 feet we got a fuel imbalance —\nthe right tank has about 900 kilos more than the left, so we have to stop the climb at\nflight level 250 for about 25 minutes while we correct it.",
+      "notes": [
+        "**`unable` + FL370 + FL250 — 두 고도를 나란히 말씀하셨습니다.** P1B-Q5 와 함께 **최우선",
+        "코멘트 : 고친 것은 문법뿐입니다 — ① `we have to let us fly level 250` → `we have to stop"
+      ]
+    },
+    "P2A-Q8": {
+      "verdict": "✅",
+      "model": "We can accept flight level 250, HL123, and we need about 25 minutes. After that we\nwill request flight level 370.",
+      "notes": [
+        "**두 질문에 둘 다 답했습니다.** 이 턴은 두 값을 말하지 않으면 성립하지 않게 만든",
+        "뒤에 `after that we will request flight level 370` 을 덧붙인 것은 지시문에 없던",
+        "코멘트 : `we may need to 25 minutes` → `we need about 25 minutes`. `need` 뒤에 `to` 를"
+      ]
+    },
+    "P2A-Q9": {
+      "verdict": "❌",
+      "model": "HL123, we will continue to Ferndale. At flight level 250 it is 2 hours 45\nminutes and we have 3 hours 10 minutes of fuel on board, so we are inside our reserve. We\ndo not need Crestview.",
+      "notes": [
+        "**이 세트에서 가장 큰 실패입니다.** ① **`2 hours 45 minutes` 를 `45 minutes` 로",
+        "지시문이 `tell him both fuel figures` 였습니다. 30초 문항에 **10단어도 쓰지 않았습니다.**",
+        "코멘트 : 탑재 3시간 10분은 **Initial Situation 에 있던 값**입니다. Ⅱ-A·Ⅱ-B 는 처음"
+      ]
+    },
+    "P2A-Q10": {
+      "verdict": "✅",
+      "model": "Maintain flight level 250, cleared direct BRIMO, contact Ridgeway Control on\n133.45 in 10 minutes, HL123.",
+      "notes": [
+        "FL250 · direct BRIMO · 133.45 · `in 10 minutes` 네 요소 전부 정확합니다. **주파수는"
+      ]
+    },
+    "P2A-Q11": {
+      "verdict": "❌",
+      "model": "In this situation, I compared two numbers. At flight level 250 the flight plan gave 2 hours\n45 minutes to Ferndale, and we had 3 hours 10 minutes of fuel on board. That left about\n25 minutes over the planned burn, which is inside our final reserve, so continuing was\nsafe. Crestview was only 40 minutes away, but diverting there would have cost the\npassengers a whole day, so I kept it as a backup instead of using it.\nIn my role as a pilot, when I am held down at a lower level I always do the same three\nsteps. First I ask the controller how long the restriction will last. Second I take the new\nburn figure for that level, not the planned one. Third I subtract it from the fuel on board\nand check that what is left is more than my final reserve plus the alternate.\nFor example, if the burn at the lower level left me with less than my reserve, or if the\nweather at destination was marginal, I would divert straight away rather than continue and\narrive with nothing in hand.",
+      "notes": [
+        "**90초 문항 무응답은 혼자서 등급을 내립니다.** EPTA_05 에서 세 문항을 비워 Level 2 로",
+        "`Give an example` 은 **8세트 연속** 미수행입니다."
+      ]
+    },
+    "P2B-Q1": {
+      "verdict": "⚠",
+      "model": "Norgate Approach, HL123, level flight level 260, 70 miles from ORVIL, information\nTango.",
+      "notes": [
+        "기관 호출 → 콜사인 → 고도 → 거리 **구조는 정확합니다.** FL260 도 맞습니다.",
+        "값 두 개가 틀렸습니다 : **`70 miles` → `7 miles`**(EPTA_08 에서는 90·80마일을 통째로",
+        "코멘트 : `information Tango` 도 넣으면 관제사가 ATIS 를 다시 묻지 않습니다."
+      ]
+    },
+    "P2B-Q2": {
+      "verdict": "❌",
+      "model": "Descend to 10,000 feet, reduce speed to 250 knots, expect the ORVIL ONE arrival,\nILS runway 21, Norgate altimeter 29.92, HL123.",
+      "notes": [
+        "**10,000 은 정확합니다** — 다섯 자리 고도 2/2 성공입니다.",
+        "누락된 필수 readback 요소 : **속도 `250` 이 `509` 로 바뀌었습니다**(속도는 필수 복창),",
+        "코멘트 : `or 2?` 처럼 **답 안에서 되묻지 마십시오.** 확실하지 않으면 문항당 한 번 쓸 수"
+      ]
+    },
+    "P2B-Q3": {
+      "verdict": "⚠",
+      "model": "Approach, HL123, we have a fuel leak from the left wing — the left tank is\ndown to 900 kilos and the crossfeed is closed, so the leak is only taking from the left\nside. We have 55 minutes of fuel. Request priority for landing.",
+      "notes": [
+        "조치(`the crossfeed is closed`)와 요청(`request priority for landing`)은 정확합니다.",
+        "**사건의 이름이 없습니다.** `fuel leak` 이라는 말이 한 번도 나오지 않고 증상(좌측에",
+        "어휘 오류 : **`900 kilometer` → `900 kilos`**(킬로그램). 900킬로미터는 연료량이 아닙니다.",
+        "`we have to hold and work at least` 는 뜻이 성립하지 않습니다. 빼는 것이 낫습니다.",
+        "**잔여 55분이 없습니다** — 지문과 **그림에 두 번** 나온 값입니다."
+      ]
+    },
+    "P2B-Q4": {
+      "verdict": "❌",
+      "model": "Affirm, HL123 — we have 55 minutes of fuel and you need 20 minutes, so we can\ntake that.",
+      "notes": [
+        "**수락 판단은 정확하고, 두 숫자를 나란히 놓는 형식도 갖췄습니다.** 그런데 **값이",
+        "그 결과 **논리가 거꾸로 됩니다** : 15분 남았는데 20분 걸리는 벡터를 수락한다는 말이 되어,",
+        "코멘트 : 고친 것은 **숫자 하나(15 → 55)와 첫 단어(`Affirm`)** 뿐입니다. 문장 구조"
+      ]
+    },
+    "P2B-Q5": {
+      "verdict": "❌",
+      "model": "HL123, we have 55 minutes of fuel on board and we need 20 minutes to touchdown, so\nwe are inside our reserve.",
+      "notes": [
+        "**두 질문에 모두 답하려 한 구조는 성공입니다** — 되묻기 턴이 의도대로 작동했습니다.",
+        "그런데 **값이 세 개 다 어긋납니다** : 잔여 15분(실제 55분), 예비 30분(지문에 없는 값),",
+        "코멘트 : 이 문항이 이번 세트의 **진짜 발견**입니다. 두 값을 **말하는 동작은 생겼는데**,"
+      ]
+    },
+    "P2B-Q6": {
+      "verdict": "✅",
+      "model": "Turn right heading 310 for vectors to the ILS, descend to 6,000 feet, HL123. Our\nintention is to land as soon as possible on runway 21.",
+      "notes": [
+        "heading 310 과 6,000 둘 다 정확합니다(필수 복창 2항목).",
+        "**`our intention is to ~` 구문이 3세트 연속** 나왔습니다. 안정된 항목입니다.",
+        "코멘트 : `our intentional needs to` → **`our intention is to`**. `intentional` 은"
+      ]
+    },
+    "P2B-Q7": {
+      "verdict": "❌",
+      "model": "Affirm, HL123, we would like the fire service standing by as a precaution — we\nare still leaking fuel. And negative, there is no smoke and no fire.",
+      "notes": [
+        "**판단이 틀렸습니다.** 연료가 새는 항공기는 **소방대를 세워 두는 것이 정상**입니다. 불이",
+        "**둘째 질문을 오독했습니다.** `is there any smoke or fire?` 는 **사실을 묻는 질문**입니다.",
+        "두 질문에 둘 다 응답하려 한 **구조는 유지됐습니다**(EPTA_08 에서 하나만 답했던 항목)."
+      ]
+    },
+    "P2B-Q8": {
+      "verdict": "⚠",
+      "model": "HL123, we will wait the 6 minutes for runway 21. Runway 03 is only 2,000\nmetres and we need 2,200, so we cannot use it.",
+      "notes": [
+        "**결정과 사유가 모두 정확합니다.** 2,200m 가 필요하다는 근거를 들어 RWY21 을 기다리기로",
+        "그런데 지시문은 `tell him both distances` 였습니다 — **RWY03 의 2,000m 가 없습니다.**",
+        "코멘트 : 고친 것은 **`Runway 03 is only 2,000 metres` 한 토막 추가**뿐입니다. 나머지는"
+      ]
+    },
+    "P2B-Q9": {
+      "verdict": "⚠",
+      "model": "Descend to 2,000 feet until established, cleared for the ILS runway 21 approach,\ncontact Norgate Tower on 118.35, HL123.",
+      "notes": [
+        "주파수 118.35 정확, 활주로 21 정확, `established` 정확합니다.",
+        "표준교신용어 오류 : **`clearance` → `cleared for`**, 그리고 **`ILS` 가 빠졌습니다.**",
+        "`until` 이 전사에 잡히지 않았습니다. `descend to 2,000 feet **until** established` 의"
+      ]
+    },
+    "P2C-Q1": {
+      "verdict": "⚠",
+      "model": "During the approach phase we had a fuel leak from the left wing. Passing\n14,000 feet the left tank quantity started dropping much faster than the right, so we\nclosed the crossfeed and we had 55 minutes of fuel left. We told Approach and requested\npriority for landing. There was one aircraft ahead of us, so the controller offered us a\nvector round behind him — 20 minutes to touchdown — and we accepted it, because 20 minutes\nwas well inside our 55. Then the aircraft ahead went around and runway 21 was blocked for\nabout 6 minutes. Runway 03 was open but only 2,000 metres, and we needed 2,200, so we could\nnot use it and we waited for runway 21. The leak stopped, we had 45 minutes left, and we\nwere cleared for the ILS runway 21 approach.",
+      "notes": [
+        "분량(127단어)과 시작 틀(`during the approach phase`)은 좋습니다. 사건명도 전달됐고",
+        "전개를 **세 군데 바꿔 말했습니다** : ① 관제사는 **감속을 요구하지 않았습니다** — 20분",
+        "값 오류 : **15분(실제 55분)**, **runway 06(실제 03)**.",
+        "코멘트 : 고친 것은 ① 사건 전개를 사실대로 ② 값 두 개 ③ `we cannot upset` → `we"
+      ]
+    },
+    "P2C-Q2": {
+      "verdict": "⚠",
+      "model": "I think the ATC handled it well. First, as soon as he heard about our fuel\nleak, he gave us a vector behind the traffic and asked us how long we could stay up. He also\ninformed us that runway 21 was blocked, so we could work out how long the wait would be.\nFortunately the leak stopped, so we could land as we had planned. One thing that could have\nbeen handled differently is that he could have arranged the fire service himself instead of\nasking us, because we were busy running the checklist. Other than that, everything was\nhandled well.",
+      "notes": [
+        "**구조는 완성됐습니다** — `I think the ATC handled it well` → 구체적 근거 셋 →",
+        "문법 오류 넷 : ① **`He could have been handled differently`** → 주어가 사람이면",
+        "사실 오류 : **홀딩은 없었습니다** — 벡터였습니다. Part Ⅱ-A 와 섞인 것으로 보입니다",
+        "제안 내용은 좋습니다 — \"두 선택지를 묻지 말고 소방대를 타워에 직접 알려줬으면 좋았다\"는"
+      ]
+    }
+  }
+}

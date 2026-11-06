@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 340" width="660" height="340" font-family="Arial, Helvetica, sans-serif">
+  <rect width="660" height="340" fill="#ffffff"/>
+  <text x="20" y="34" font-size="20" font-weight="bold" fill="#1d2330">BRAKES</text>
+
+  <!-- 계통 1 — 고장 -->
+  <rect x="40" y="62" width="250" height="90" rx="6" fill="#fbeee5" stroke="#b4531c" stroke-width="3"/>
+  <text x="56" y="92" font-size="19" font-weight="bold" fill="#b4531c">BRAKE SYS 1</text>
+  <text x="56" y="128" font-size="26" font-weight="bold" fill="#b4531c">FAULT</text>
+
+  <!-- 안티스키드 — 고장 -->
+  <rect x="330" y="62" width="250" height="90" rx="6" fill="#fbeee5" stroke="#b4531c" stroke-width="3"/>
+  <text x="346" y="92" font-size="19" font-weight="bold" fill="#b4531c">ANTI-SKID</text>
+  <text x="346" y="128" font-size="26" font-weight="bold" fill="#b4531c">INOP</text>
+
+  <!-- 대체 계통 — 정상 -->
+  <rect x="40" y="166" width="250" height="56" rx="6" fill="#f1f4f8" stroke="#c9ced6" stroke-width="2"/>
+  <text x="56" y="190" font-size="17" fill="#6b7384">ALTN BRAKE</text>
+  <text x="56" y="213" font-size="18" font-weight="bold" fill="#2e8b57">NORMAL · DEGRADED</text>
+
+  <!-- 필요 착륙거리 -->
+  <rect x="330" y="166" width="250" height="56" rx="6" fill="#f1f4f8" stroke="#c9ced6" stroke-width="2"/>
+  <text x="346" y="190" font-size="17" fill="#6b7384">LDG DIST REQ</text>
+  <text x="346" y="213" font-size="20" font-weight="bold" fill="#1d2330">3,100 M</text>
+
+  <!-- 상태 요약 -->
+  <text x="40" y="266" font-size="18" font-weight="bold" fill="#1d2330">NO SMOKE · NO OTHER FAULT · NORMAL LDG DIST 1,900 M</text>
+  <text x="40" y="304" font-size="19" font-weight="bold" fill="#c02626">Braking ??</text>
+</svg>

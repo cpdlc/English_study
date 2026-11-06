@@ -1,0 +1,820 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WEAK_01 연습</title>
+<style>
+  :root {
+    --bg: #f4f5f7; --card: #ffffff; --text: #1d2330; --muted: #6b7384; --line: #e2e5ea;
+    --accent: #2459d6; --accent-soft: #e6edfc; --atc: #0f7a55; --atc-soft: #e3f4ec;
+    --warn: #b4531c; --warn-soft: #fbeee5; --done: #2e8b57; --screen: #111827; --screen-text: #7df9c1;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #12151b; --card: #1b2029; --text: #e6e9ef; --muted: #939bab; --line: #2c3340;
+      --accent: #6d9bff; --accent-soft: #1f2a44; --atc: #4fd19a; --atc-soft: #183229;
+      --warn: #f09a62; --warn-soft: #3a2518; --done: #5fcf8c; --screen: #0a0d12; --screen-text: #7df9c1;
+    }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text);
+         font: 15px/1.6 system-ui, -apple-system, "Segoe UI", "Malgun Gothic", sans-serif; }
+  header { position: sticky; top: 0; z-index: 5; background: var(--card); border-bottom: 1px solid var(--line);
+           padding: 10px 16px; display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: center; }
+  header h1 { font-size: 17px; margin: 0; }
+  header .home { color: var(--accent); text-decoration: none; font-size: 14px; white-space: nowrap; }
+  header .mine { color: var(--accent); text-decoration: none; font-size: 13px; }
+  header .progress { color: var(--muted); font-size: 13px; }
+  header .opts { margin-left: auto; display: flex; gap: 14px; flex-wrap: wrap; font-size: 13px; }
+  header label { cursor: pointer; user-select: none; }
+  .layout { display: grid; grid-template-columns: 240px 1fr; gap: 16px; max-width: 1100px;
+            margin: 16px auto; padding: 0 16px; }
+  nav { align-self: start; position: sticky; top: 64px; background: var(--card); border: 1px solid var(--line);
+        border-radius: 10px; padding: 10px; max-height: calc(100vh - 80px); overflow: auto; }
+  nav .sec { font-size: 12px; font-weight: 600; color: var(--muted); margin: 8px 2px 4px; }
+  nav .chips { display: flex; flex-wrap: wrap; gap: 4px; }
+  nav button { border: 1px solid var(--line); background: transparent; color: var(--text); border-radius: 6px;
+               font-size: 12px; padding: 2px 7px; cursor: pointer; }
+  nav button.answered { background: var(--accent-soft); border-color: var(--accent); }
+  nav button.current { outline: 2px solid var(--accent); font-weight: 700; }
+  main { min-width: 0; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 18px 20px; }
+  .sec-title { font-size: 13px; color: var(--muted); font-weight: 600; }
+  details.dir { margin: 6px 0 12px; font-size: 13px; color: var(--muted); }
+  details.dir summary { cursor: pointer; }
+  .qhead { display: flex; align-items: baseline; gap: 10px; margin: 8px 0 12px; }
+  .qhead h2 { margin: 0; font-size: 22px; }
+  .qhead .time { color: var(--muted); }
+  .block { margin: 10px 0; }
+  .seg { padding: 8px 12px; border-radius: 8px; margin: 6px 0; }
+  .seg.narration { background: var(--bg); }
+  .seg.instruction { background: var(--accent-soft); font-weight: 600; }
+  .seg.atc { background: var(--atc-soft); }
+  .seg.atc b { color: var(--atc); }
+  .seg.hidden { color: var(--muted); font-style: italic; }
+  .seg.playing { outline: 2px solid var(--accent); }
+  .seg.chime { background: transparent; color: var(--muted); padding: 2px 12px; }
+  /* 실제 응시 화면의 상단 하늘색 띠 */
+  .cuebar { background: #e8f4fb; border: 1px solid #b9d9ee; border-bottom-width: 3px;
+            border-radius: 6px; padding: 10px 14px; margin: 0 0 14px; }
+  .cuebar .cue { color: #1a5fa8; font-weight: 700; }
+  .cuebar .cue + .cue { margin-top: 4px; }
+  .cuebar .tag { color: #c02626; font-weight: 700; }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .cuebar { background: #10212e; border-color: #1f4a66; }
+  }
+  .screen { background: var(--screen); color: var(--screen-text); font-family: ui-monospace, Consolas, monospace;
+            padding: 10px 14px; border-radius: 8px; margin: 8px 0; }
+  .pre-label { font-size: 12px; color: var(--muted); font-weight: 600; margin-top: 4px; }
+  img.fig { max-width: 100%; border-radius: 8px; border: 1px solid var(--line); background: #fff; }
+  .controls { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 16px 0 10px; }
+  button.btn { border: 1px solid var(--line); background: var(--card); color: var(--text); padding: 8px 14px;
+               border-radius: 8px; cursor: pointer; font-size: 14px; }
+  button.btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+  button.btn:disabled { opacity: .45; cursor: default; }
+  .timer { flex: 1; min-width: 160px; display: flex; align-items: center; gap: 8px; }
+  .bar { flex: 1; height: 8px; background: var(--line); border-radius: 4px; overflow: hidden; }
+  .bar > div { height: 100%; width: 0; background: var(--accent); transition: width .2s linear; }
+  .bar.low > div { background: var(--warn); }
+  .timer span { font-variant-numeric: tabular-nums; min-width: 42px; text-align: right; }
+  .status { font-size: 13px; color: var(--muted); min-height: 20px; }
+  textarea { width: 100%; min-height: 90px; border: 1px solid var(--line); border-radius: 8px; padding: 10px;
+             font: inherit; background: var(--bg); color: var(--text); resize: vertical; }
+  .nokey { max-width: 1100px; margin: 12px auto 0; padding: 10px 14px; border-radius: 8px;
+           background: var(--warn-soft); color: var(--warn); font-size: 13px; }
+  .nokey .btn { padding: 5px 10px; font-size: 13px; margin-left: 4px; }
+  .live { font-size: 13px; color: var(--accent); min-height: 19px; font-style: italic; margin: 4px 0; }
+  .heard { margin: 8px 0; padding: 9px 12px; border-radius: 8px; background: var(--atc-soft);
+           font-size: 14px; }
+  .heard b { display: block; font-size: 11px; letter-spacing: .04em; color: var(--muted);
+             margin-bottom: 3px; }
+  .heard .use { margin-left: 8px; font-size: 12px; }
+  .rec { margin: 8px 0; display: flex; gap: 8px; align-items: center; flex-wrap: wrap; font-size: 13px; }
+  .sent { font-size: 12px; color: var(--muted); }
+  .sent.ok { color: var(--done); }
+  .sent.bad { color: var(--warn); }
+  .rec audio { height: 34px; }
+  details.model { margin-top: 12px; border: 1px solid var(--line); border-radius: 8px; padding: 8px 12px; }
+  details.model summary { cursor: pointer; font-weight: 600; color: var(--done); }
+  .nav-row { display: flex; justify-content: space-between; margin-top: 16px; gap: 8px; }
+  .footer { display: flex; flex-wrap: wrap; gap: 8px; margin: 14px 0 40px; }
+  @media (max-width: 760px) {
+    .layout { grid-template-columns: 1fr; }
+    nav { position: static; max-height: none; }
+    header .opts { margin-left: 0; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <a class="home" href="/">← 목록</a>
+  <h1 id="title"></h1>
+  <span class="progress" id="progress"></span>
+  <div class="opts">
+    <label><input type="checkbox" id="optScript"> 스크립트 보기</label>
+    <label><input type="checkbox" id="optSpeech" checked> 음성 인식</label>
+    <label><input type="checkbox" id="optAudio" checked> 녹음 저장</label>
+    <label><input type="checkbox" id="optAutoStart"> 다음 문항 자동 시작</label>
+    <label id="optWakeLabel"><input type="checkbox" id="optWake" checked> 화면 켜두기</label>
+    <a class="mine" id="mineLink" href="/r/">내 답안 보기 →</a>
+  </div>
+</header>
+
+<p class="nokey" id="nokey" hidden>⚠ <b>서버 저장이 꺼져</b> 있습니다. 답안은 이 브라우저에만
+   남습니다. <button class="btn" id="relogin">비밀번호 다시 입력</button></p>
+
+<div class="layout">
+  <nav id="nav"></nav>
+  <main>
+    <div class="card" id="card"></div>
+    <div class="footer">
+      <button class="btn" id="copyMd">답안 넣은 md 복사</button>
+      <button class="btn" id="downloadMd">md 다운로드</button>
+      <button class="btn" id="syncAll">모든 답안 서버로 저장</button>
+      <button class="btn" id="reset">답안 초기화</button>
+      <span class="status" id="footStatus"></span>
+    </div>
+  </main>
+</div>
+
+<script src="/gate.js"></script>
+<script id="data" type="application/json">{"title": "EPTA 약점 집중 세트 01 — 2026-11-03", "sections": [{"title": "약점 A. 복창 + α — 실패율 88%", "directions": "You will be listening to 8 ATC instructions. Each one asks you to do **more than read back.** Your callsign is HL123. \"Say again (=Repeat)\" available once only. * Response time for each question : 30 seconds or less", "questions": [{"id": "P1A-Q1", "seconds": 30, "note": "", "pre": [{"type": "say", "voice": "narrator", "kind": "narration", "text": "✅ Directions : You will be listening to 8 ATC instructions. Each one asks you to do **more than read back.** Your callsign is HL123. \"Say again (=Repeat)\" available once only. * Response time for each question : 30 seconds or less", "src": "/audio/WEAK_01/071cf15c44391575.mp3"}], "body": [{"type": "say", "voice": "narrator", "kind": "narration", "text": "Your slot at Rothbury closes at 1150Z and it is now 1131Z. You want to know what the holding will cost you.", "src": "/audio/WEAK_01/d6609542370f7e9b.mp3"}, {"type": "say", "voice": "atc", "label": "Approach", "text": "HL123, descend to 7,000 feet, expect one zero minutes of holding at VARDO.", "src": "/audio/WEAK_01/4a7d3c79d0f7536d.mp3"}, {"type": "say", "voice": "narrator", "kind": "narration", "text": "Give a full readback, and inquire what the holding will do to your arrival time.", "src": "/audio/WEAK_01/7634eab6cc6250a0.mp3"}], "hints": ["Directions", "Each", "Repeat", "Response", "Rothbury", "VARDO", "Hotel Lima one two three", "affirm", "negative", "unable", "wilco", "roger", "say again", "standby", "request", "readback", "squawk", "flight level", "heading", "altimeter", "knots", "Mach", "runway", "taxiway", "holding point", "hold short", "line up and wait", "cleared for takeoff", "cleared to land", "go around", "vectors", "troubleshooting", "souls on board", "minimum fuel", "mayday", "pan pan", "PIREP", "turbulence", "icing", "wake turbulence", "QNH", "ILS", "RNAV", "SID", "transition", "intercept", "localizer", "established", "expedite", "backtrack", "pushback", "start up", "deviation", "offset", "intentions", "descend", "climb", "maintain", "contact", "report", "due to performance", "due to weather", "clear of traffic", "in sight"]}, {"id": "P1A-Q2", "seconds": 30, "note": "", "pre": [], "body": [{"type": "screen", "text": "VARDO"}, {"type": "say", "voice": "atc", "label": "Center", "text": "HL123, cross VARDO at or above one one thousand.", "src": "/audio/WEAK_01/5cf53d0392cf4f37.mp3"}, {"type": "say", "voice": "narrator", "kind": "narration", "text": "Give a full readback, and tell him what you can do instead.", "src": "/audio/WEAK_01/5609256a0dc01c08.mp3"}], "hints": ["VARDO", "Hotel Lima one two three", "affirm", "negative", "unable", "wilco", "roger", "say again", "standby", "request", "readback", "squawk", "flight level", "heading", "altimeter", "knots", "Mach", "runway", "taxiway", "holding point", "hold short", "line up and wait", "cleared for takeoff", "cleared to land", "go around", "vectors", "troubleshooting", "souls on board", "minimum fuel", "mayday", "pan pan", "PIREP", "turbulence", "icing", "wake turbulence", "QNH", "ILS", "RNAV", "SID", "transition", "intercept", "localizer", "established", "expedite", "backtrack", "pushback", "start up", "deviation", "offset", "intentions", "descend", "climb", "maintain", "contact", "report", "due to performance", "due to weather", "clear of traffic", "in sight"]}, {"id": "P1A-Q3", "seconds": 30, "note": "", "pre": [], "body": [{"type": "say", "voice": "narrator", "kind": "narration", "text": "You cannot hold Mach decimal eight two at your present weight. The best you can do is Mach decimal seven eight.", "src": "/audio/WEAK_01/245e9e619a5e402c.mp3"}, {"type": "say", "voice": "atc", "label": "Center", "text": "HL123, climb to flight level three five zero, increase speed to Mach decimal eight two for sequence.", "src": "/audio/WEAK_01/fff2758cae979c1a.mp3"}, {"type": "say", "voice": "narrator", "kind": "narration", "text": "Give a full readback, and make a request with a reason.", "src": "/audio/WEAK_01/57e0efac3a7b9732.mp3"}], "hints": ["Mach", "Hotel Lima one two three", "affirm", "negative", "unable", "wilco", "roger", "say again", "standby", "request", "readback", "squawk", "flight level", "heading", "altimeter", "knots", "Mach", "runway", "taxiway", "holding point", "hold short", "line up and wait", "cleared for takeoff", "cleared to land", "go around", "vectors", "troubleshooting", "souls on board", "minimum fuel", "mayday", "pan pan", "PIREP", "turbulence", "icing", "wake turbulence", "QNH", "ILS", "RNAV", "SID", "transition", "intercept", "localizer", "established", "expedite", "backtrack", "pushback", "start up", "deviation", "offset", "intentions", "descend", "climb", "maintain", "contact", "report", "due to performance", "due to weather", "clear of traffic", "in sight"]}, {"id": "P1A-Q4", "seconds": 30, "note": "", "pre": [], "body": [{"type": "say", "voice": "narrator", "kind": "narration", "text": "On the taxi out you saw a large flock of birds sitting on the grass beside the runway two four threshold. You were busy with the checklist and have not reported it.", "src": "/audio/WEAK_01/1d0e6e0bc812b992.mp3"}, {"type": "say", "voice": "atc", "label": "Tower", "text": "HL123, line up and wait runway two four.", "src": "/audio/WEAK_01/49c862cfa203e14e.mp3"}, {"type": "say", "voice": "narrator", "kind": "narration", "text": "Give a full readback, and report what you saw.", "src": "/audio/WEAK_01/0e19a1a1ff4c2726.mp3"}], "hints": ["Hotel Lima one two three", "affirm", "negative", "unable", "wilco", "roger", "say again", "standby", "request", "readback", "squawk", "flight level", "heading", "altimeter", "knots", "Mach", "runway", "taxiway", "holding point", "hold short", "line up and wait", "cleared for takeoff", "cleared to land", "go around", "vectors", "troubleshooting", "souls on board", "minimum fuel", "mayday", "pan pan", "PIREP", "turbulence", "icing", "wake turbulence", "QNH", "ILS", "RNAV", "SID", "transition", "intercept", "localizer", "established", "expedite", "backtrack", "pushback", "start up", "deviation", "offset", "intentions", "descend", "climb", "maintain", "contact", "report", "due to performance", "due to weather", "clear of traffic", "in sight"]}, {"id": "P1A-Q5", "seconds": 30, "note": "", "pre": [], "body": [{"type": "say", "voice": "narrator", "kind": "narration", "text": "You need de-icing before departure and you do not know whether the de-icing bay on taxiway Golf is in use today. You want to be told before you get there.", "src": "/audio/WEAK_01/72c62b8ad5ae85f6.mp3"}, {"type": "say", "voice": "atc", "label": "Ground", "text": "HL123, taxi to holding point Kilo two via Golf, hold short of runway one six.", "src": "/audio/WEAK_01/4db2c21929b92e50.mp3"}, {"type": "say", "voice": "narrator", "kind": "narration", "text": "Give a full readback, and make a request with a reason.", "src": "/audio/WEAK_01/57e0efac3a7b9732.mp3"}], "hints": ["Golf", "Kilo", "Hotel Lima one two three", "affirm", "negative", "unable", "wilco", "roger", "say again", "standby", "request", "readback", "squawk", "flight level", "heading", "altimeter", "knots", "Mach", "runway", "taxiway", "holding point", "hold short", "line up and wait", "cleared for takeoff", "cleared to land", "go around", "vectors", "troubleshooting", "souls on board", "minimum fuel", "mayday", "pan pan", "PIREP", "turbulence", "icing", "wake turbulence", "QNH", "ILS", "RNAV", "SID", "transition", "intercept", "localizer", "established", "expedite", "backtrack", "pushback", "start up", "deviation", "offset", "intentions", "descend", "climb", "maintain", "contact", "report", "due to performance", "due to weather", "clear of traffic", "in sight"]}, {"id": "P1A-Q6", "seconds": 30, "note": "", "pre": [], "body": [{"type": "say", "voice": "narrator", "kind": "narration", "text": "You have a passenger with chest pain in row 14. You want an ambulance to meet you at the stand and you want the shortest taxi in. You have already reported the medical case to Approach — that is what his \"roger\" answers — but he does not yet know what you want.", "src": "/audio/WEAK_01/ca6ae32f406b109f.mp3"}, {"type": "say", "voice": "atc", "label": "Approach", "text": "HL123, roger, turn left heading zero niner zero, descend to 5,000 feet, vectors for Rothbury.", "src": "/audio/WEAK_01/191f01e6dafcb8d6.mp3"}, {"type": "say", "voice": "narrator", "kind": "narration", "text": "Give a full readback, and say your intentions.", "src": "/audio/WEAK_01/7f95e7949728647b.mp3"}], "hints": ["Approach", "Rothbury", "Hotel Lima one two three", "affirm", "negative", "unable", "wilco", "roger", "say again", "standby", "request", "readback", "squawk", "flight level", "heading", "altimeter", "knots", "Mach", "runway", "taxiway", "holding point", "hold short", "line up and wait", "cleared for takeoff", "cleared to land", "go around", "vectors", "troubleshooting", "souls on board", "minimum fuel", "mayday", "pan pan", "PIREP", "turbulence", "icing", "wake turbulence", "QNH", "ILS", "RNAV", "SID", "transition", "intercept", "localizer", "established", "expedite", "backtrack", "pushback", "start up", "deviation", "offset", "intentions", "descend", "climb", "maintain", "contact", "report", "due to performance", "due to weather", "clear of traffic", "in sight"]}, {"id": "P1A-Q7", "seconds": 30, "note": "", "pre": [], "body": [{"type": "say", "voice": "narrator", "kind": "narration", "text": "You called Ground for taxi a minute ago. You will not be ready for one five minutes — the cabin crew are still re-seating passengers away from the overwing exits.", "src": "/audio/WEAK_01/640a31779605ac35.mp3"}, {"type": "say", "voice": "atc", "label": "Ground", "text": "HL123, hold position. Report when you are ready to taxi, I have two inbounds for the stand next to you.", "src": "/audio/WEAK_01/27ad784727c5bc91.mp3"}, {"type": "say", "voice": "narrator", "kind": "narration", "text": "Give a full readback, acknowledge his situation, and tell him how long you need.", "src": "/audio/WEAK_01/d9acb2e3f752bf5a.mp3"}], "hints": ["Ground", "Hotel Lima one two three", "affirm", "negative", "unable", "wilco", "roger", "say again", "standby", "request", "readback", "squawk", "flight level", "heading", "altimeter", "knots", "Mach", "runway", "taxiway", "holding point", "hold short", "line up and wait", "cleared for takeoff", "cleared to land", "go around", "vectors", "troubleshooting", "souls on board", "minimum fuel", "mayday", "pan pan", "PIREP", "turbulence", "icing", "wake turbulence", "QNH", "ILS", "RNAV", "SID", "transition", "intercept", "localizer", "established", "expedite", "backtrack", "pushback", "start up", "deviation", "offset", "intentions", "descend", "climb", "maintain", "contact", "report", "due to performance", "due to weather", "clear of traffic", "in sight"]}, {"id": "P1A-Q8", "seconds": 30, "note": "", "pre": [], "body": [{"type": "say", "voice": "narrator", "kind": "narration", "text": "Your anti-ice has been on for two zero minutes and the airframe is clear. You are presently in light rain at zero degrees. You reported light icing to the previous sector one zero minutes ago and Approach has been told — he is asking you for an update.", "src": "/audio/WEAK_01/9a7d56665370fff3.mp3"}, {"type": "say", "voice": "atc", "label": "Approach", "text": "HL123, descend to 4,000 feet. Two things — say your icing condition, and say whether you need a higher speed on the approach.", "src": "/audio/WEAK_01/adfd952b82f1f9f5.mp3"}, {"type": "say", "voice": "narrator", "kind": "narration", "text": "Give a full readback, and answer both of his questions.", "src": "/audio/WEAK_01/96e70f5600aec642.mp3"}], "hints": ["Approach", "Two", "Hotel Lima one two three", "affirm", "negative", "unable", "wilco", "roger", "say again", "standby", "request", "readback", "squawk", "flight level", "heading", "altimeter", "knots", "Mach", "runway", "taxiway", "holding point", "hold short", "line up and wait", "cleared for takeoff", "cleared to land", "go around", "vectors", "troubleshooting", "souls on board", "minimum fuel", "mayday", "pan pan", "PIREP", "turbulence", "icing", "wake turbulence", "QNH", "ILS", "RNAV", "SID", "transition", "intercept", "localizer", "established", "expedite", "backtrack", "pushback", "start up", "deviation", "offset", "intentions", "descend", "climb", "maintain", "contact", "report", "due to performance", "due to weather", "clear of traffic", "in sight"]}]}, {"title": "약점 B. 판단 + 이유 — 실패율 74%", "directions": "In each question you are given your own figure and the controller gives you two choices. **Decide, say why, and give him the figure you need.** Your callsign is HL123. * Response time for each question : 30 seconds or less", "questions": [{"id": "P1B-Q1", "seconds": 30, "note": "", "pre": [{"type": "say", "voice": "narrator", "kind": "narration", "text": "✅ Directions : In each question you are given your own figure and the controller gives you two choices. **Decide, say why, and give him the figure you need.** Your callsign is HL123. * Response time for each question : 30 seconds or less", "src": "/audio/WEAK_01/3f07bf07c2d01034.mp3"}], "body": [{"type": "screen", "text": "Rothbury / Caldon"}, {"type": "say", "voice": "atc", "label": "Approach", "text": "HL123, Rothbury runway two four has 2,600 metres but you'd be one eight minutes to touchdown. Caldon is seven minutes away with 3,400 metres. What would you like?", "src": "/audio/WEAK_01/6040272fd76af83b.mp3"}, {"type": "say", "voice": "narrator", "kind": "narration", "text": "Record your response.", "src": "/audio/WEAK_01/a91b0c1fbe0d8c69.mp3"}], "hints": ["Directions", "Decide", "Response", "Rothbury", "Caldon", "What", "Hotel Lima one two three", "affirm", "negative", "unable", "wilco", "roger", "say again", "standby", "request", "readback", "squawk", "flight level", "heading", "altimeter", "knots", "Mach", "runway", "taxiway", "holding point", "hold short", "line up and wait", "cleared for takeoff", "cleared to land", "go around", "vectors", "troubleshooting", "souls on board", "minimum fuel", "mayday", "pan pan", "PIREP", "turbulence", "icing", "wake turbulence", "QNH", "ILS", "RNAV", "SID", "transition", "intercept", "localizer", "established", "expedite", "backtrack", "pushback", "start up", "deviation", "offset", "intentions", "descend", "climb", "maintain", "contact", "report", "due to performance", "due to weather", "clear of traffic", "in sight"]}, {"id": "P1B-Q2", "seconds": 30, "note": "", "pre": [], "body": [{"type": "say", "voice": "narrator", "kind": "narration", "text": "Your required landing distance today is 2,450 metres. You have no reason to be in a hurry.", "src": "/audio/WEAK_01/c28609c3e7a3c383.mp3"}, {"type": "say", "voice": "atc", "label": "Approach", "text": "HL123, runway one six has work in progress — 2,700 metres from the displaced threshold. Runway three four has the full 3,100, but you'd be number four, about one zero minutes.", "src": "/audio/WEAK_01/552e34f24b3f24a0.mp3"}, {"type": "say", "voice": "narrator", "kind": "narration", "text": "Record your response.", "src": "/audio/WEAK_01/a91b0c1fbe0d8c69.mp3"}], "hints": ["Runway", "Hotel Lima one two three", "affirm", "negative", "unable", "wilco", "roger", "say again", "standby", "request", "readback", "squawk", "flight level", "heading", "altimeter", "knots", "Mach", "runway", "taxiway", "holding point", "hold short", "line up and wait", "cleared for takeoff", "cleared to land", "go around", "vectors", "troubleshooting", "souls on board", "minimum fuel", "mayday", "pan pan", "PIREP", "turbulence", "icing", "wake turbulence", "QNH", "ILS", "RNAV", "SID", "transition", "intercept", "localizer", "established", "expedite", "backtrack", "pushback", "start up", "deviation", "offset", "intentions", "descend", "climb", "maintain", "contact", "report", "due to performance", "due to weather", "clear of traffic", "in sight"]}, {"id": "P1B-Q3", "seconds": 30, "note": "", "pre": [], "body": [{"type": "say", "voice": "narrator", "kind": "narration", "text": "Your required landing distance today is 3,100 metres.", "src": "/audio/WEAK_01/9b263cbfa47a9ad2.mp3"}, {"type": "say", "voice": "atc", "label": "Approach", "text": "HL123, Penhale runway two seven has 2,800 metres and it's five minutes away. Minsterly has 3,600 metres but it's two two minutes. Which one do you want?", "src": "/audio/WEAK_01/24ceefed286cdd9d.mp3"}, {"type": "say", "voice": "narrator", "kind": "narration", "text": "Record your response.", "src": "/audio/WEAK_01/a91b0c1fbe0d8c69.mp3"}], "hints": ["Penhale", "Minsterly", "Which", "Hotel Lima one two three", "affirm", "negative", "unable", "wilco", "roger", "say again", "standby", "request", "readback", "squawk", "flight level", "heading", "altimeter", "knots", "Mach", "runway", "taxiway", "holding point", "hold short", "line up and wait", "cleared for takeoff", "cleared to land", "go around", "vectors", "troubleshooting", "souls on board", "minimum fuel", "mayday", "pan pan", "PIREP", "turbulence", "icing", "wake turbulence", "QNH", "ILS", "RNAV", "SID", "transition", "intercept", "localizer", "established", "expedite", "backtrack", "pushback", "start up", "deviation", "offset", "intentions", "descend", "climb", "maintain", "contact", "report", "due to performance", "due to weather", "clear of traffic", "in sight"]}, {"id": "P1B-Q4", "seconds": 30, "note": "", "pre": [], "body": [{"type": "say", "voice": "narrator", "kind": "narration", "text": "You are heavy today. With the flaps you have out, **the slowest speed you can hold is two two zero knots.**", "src": "/audio/WEAK_01/7199850b66a6193a.mp3"}, {"type": "say", "voice": "atc", "label": "Approach", "text": "HL123, reduce speed to one niner zero knots until six miles. Can you do that?", "src": "/audio/WEAK_01/d666d637bc6daa02.mp3"}, {"type": "say", "voice": "narrator", "kind": "narration", "text": "Record your response.", "src": "/audio/WEAK_01/a91b0c1fbe0d8c69.mp3"}], "hints": ["With", "Can", "Hotel Lima one two three", "affirm", "negative", "unable", "wilco", "roger", "say again", "standby", "request", "readback", "squawk", "flight level", "heading", "altimeter", "knots", "Mach", "runway", "taxiway", "holding point", "hold short", "line up and wait", "cleared for takeoff", "cleared to land", "go around", "vectors", "troubleshooting", "souls on board", "minimum fuel", "mayday", "pan pan", "PIREP", "turbulence", "icing", "wake turbulence", "QNH", "ILS", "RNAV", "SID", "transition", "intercept", "localizer", "established", "expedite", "backtrack", "pushback", "start up", "deviation", "offset", "intentions", "descend", "climb", "maintain", "contact", "report", "due to performance", "due to weather", "clear of traffic", "in sight"]}, {"id": "P1B-Q5", "seconds": 30, "note": "", "pre": [], "body": [{"type": "say", "voice": "narrator", "kind": "narration", "text": "**Your maximum crosswind on a wet runway is two five knots.** The runway is wet. You are holding short of runway two four, ready for departure.", "src": "/audio/WEAK_01/e1e738e90b35d184.mp3"}, {"type": "say", "voice": "atc", "label": "Tower", "text": "HL123, runway two four, wind one eight zero at three zero, gusting three five. Runway one six is dry with wind one eight zero at one two, but it's eight minutes of taxi back. Say your intentions.", "src": "/audio/WEAK_01/29c83c757b8fe54c.mp3"}, {"type": "say", "voice": "narrator", "kind": "narration", "text": "Record your response.", "src": "/audio/WEAK_01/a91b0c1fbe0d8c69.mp3"}], "hints": ["Runway", "Hotel Lima one two three", "affirm", "negative", "unable", "wilco", "roger", "say again", "standby", "request", "readback", "squawk", "flight level", "heading", "altimeter", "knots", "Mach", "runway", "taxiway", "holding point", "hold short", "line up and wait", "cleared for takeoff", "cleared to land", "go around", "vectors", "troubleshooting", "souls on board", "minimum fuel", "mayday", "pan pan", "PIREP", "turbulence", "icing", "wake turbulence", "QNH", "ILS", "RNAV", "SID", "transition", "intercept", "localizer", "established", "expedite", "backtrack", "pushback", "start up", "deviation", "offset", "intentions", "descend", "climb", "maintain", "contact", "report", "due to performance", "due to weather", "clear of traffic", "in sight"]}, {"id": "P1B-Q6", "seconds": 30, "note": "", "pre": [], "body": [{"type": "say", "voice": "narrator", "kind": "narration", "text": "You have been in moderate turbulence at flight level three three zero for the last one five minutes. The aircraft ahead reported it smooth at flight level two niner zero. You want to descend to flight level two niner zero.", "src": "/audio/WEAK_01/c1f503fb54e93a6c.mp3"}, {"type": "say", "voice": "atc", "label": "Center", "text": "HL123, do you want to stay at three three zero, or do you want to come down?", "src": "/audio/WEAK_01/f36148c5304e6cbf.mp3"}, {"type": "say", "voice": "narrator", "kind": "narration", "text": "Record your response.", "src": "/audio/WEAK_01/a91b0c1fbe0d8c69.mp3"}], "hints": ["Hotel Lima one two three", "affirm", "negative", "unable", "wilco", "roger", "say again", "standby", "request", "readback", "squawk", "flight level", "heading", "altimeter", "knots", "Mach", "runway", "taxiway", "holding point", "hold short", "line up and wait", "cleared for takeoff", "cleared to land", "go around", "vectors", "troubleshooting", "souls on board", "minimum fuel", "mayday", "pan pan", "PIREP", "turbulence", "icing", "wake turbulence", "QNH", "ILS", "RNAV", "SID", "transition", "intercept", "localizer", "established", "expedite", "backtrack", "pushback", "start up", "deviation", "offset", "intentions", "descend", "climb", "maintain", "contact", "report", "due to performance", "due to weather", "clear of traffic", "in sight"]}]}, {"title": "약점 C. 값 유지 — 되묻기 롤플레이 (신규 최우선)", "directions": "In Part C you will be interacting with an Air traffic controller through nine turns. **The controller will ask you for the same figures again later in the scenario.** Follow the prompts and respond as necessary. \"Say again (=Repeat)\" available only once. Your callsign is HL123. * Response time for each question : 30 seconds or less Initial Situation You are the pilot of HL123, descending through flight level one niner zero for one three thousand, 45 miles from KELSO, inbound to Rothbury Airport. Your fuel endurance is two hours zero five minutes and there are one eight four persons on board. Your required landing distance is 2,450 metres, and at today's weight the slowest speed you can hold is two one zero knots. 🔔(dingdong)", "questions": [{"id": "P2A-Q1", "seconds": 30, "note": "", "pre": [{"type": "say", "voice": "narrator", "kind": "narration", "text": "✅ Directions : In Part C you will be interacting with an Air traffic controller through nine turns. **The controller will ask you for the same figures again later in the scenario.** Follow the prompts and respond as necessary. \"Say again (=Repeat)\" available only once. Your callsign is HL123. * Response time for each question : 30 seconds or less", "src": "/audio/WEAK_01/27e57f5a392df104.mp3"}, {"type": "say", "voice": "narrator", "kind": "narration", "text": "Initial Situation You are the pilot of HL123, descending through flight level one niner zero for one three thousand, 45 miles from KELSO, inbound to Rothbury Airport. Your fuel endurance is two hours zero five minutes and there are one eight four persons on board. Your required landing distance is 2,450 metres, and at today's weight the slowest speed you can hold is two one zero knots.", "src": "/audio/WEAK_01/428f971e5f05037c.mp3"}, {"type": "chime"}], "body": [{"type": "say", "voice": "narrator", "kind": "instruction", "text": "Contact Rothbury Approach and report your position and level.", "src": "/audio/WEAK_01/24fd64d7945efd55.mp3"}], "hints": ["Directions", "Part", "Air", "Follow", "Repeat", "Response", "Initial", "Situation", "KELSO", "Rothbury", "Airport", "Approach", "Hotel Lima one two three", "affirm", "negative", "unable", "wilco", "roger", "say again", "standby", "request", "readback", "squawk", "flight level", "heading", "altimeter", "knots", "Mach", "runway", "taxiway", "holding point", "hold short", "line up and wait", "cleared for takeoff", "cleared to land", "go around", "vectors", "troubleshooting", "souls on board", "minimum fuel", "mayday", "pan pan", "PIREP", "turbulence", "icing", "wake turbulence", "QNH", "ILS", "RNAV", "SID", "transition", "intercept", "localizer", "established", "expedite", "backtrack", "pushback", "start up", "deviation", "offset", "intentions", "descend", "climb", "maintain", "contact", "report", "due to performance", "due to weather", "clear of traffic", "in sight"]}, {"id": "P2A-Q2", "seconds": 30, "note": "", "pre": [], "body": [{"type": "screen", "text": "KELSO TWO arrival"}, {"type": "say", "voice": "narrator", "kind": "instruction", "text": "Listen to the controller, give a full readback, and inquire about the braking action.", "src": "/audio/WEAK_01/e5c35d4a164abca5.mp3"}, {"type": "say", "voice": "atc", "label": "Approach", "text": "HL123, Rothbury Approach, descend to one one thousand, expect the KELSO TWO arrival, ILS runway two four. Be advised the runway is wet after heavy rain.", "src": "/audio/WEAK_01/761413e827ae276e.mp3"}], "hints": ["KELSO", "TWO", "Rothbury", "Approach", "ILS", "Hotel Lima one two three", "affirm", "negative", "unable", "wilco", "roger", "say again", "standby", "request", "readback", "squawk", "flight level", "heading", "altimeter", "knots", "Mach", "runway", "taxiway", "holding point", "hold short", "line up and wait", "cleared for takeoff", "cleared to land", "go around", "vectors", "troubleshooting", "souls on board", "minimum fuel", "mayday", "pan pan", "PIREP", "turbulence", "icing", "wake turbulence", "QNH", "ILS", "RNAV", "SID", "transition", "intercept", "localizer", "established", "expedite", "backtrack", "pushback", "start up", "deviation", "offset", "intentions", "descend", "climb", "maintain", "contact", "report", "due to performance", "due to weather", "clear of traffic", "in sight"]}, {"id": "P2A-Q3", "seconds": 30, "note": "", "pre": [], "body": [{"type": "say", "voice": "narrator", "kind": "instruction", "text": "Listen to the controller, give a full readback, and tell him what you can do instead.", "src": "/audio/WEAK_01/90b5a5c190375ce7.mp3"}, {"type": "say", "voice": "atc", "label": "Approach", "text": "HL123, reduce speed to one eight zero knots until one zero miles.", "src": "/audio/WEAK_01/3c04032e62b46074.mp3"}], "hints": ["Hotel Lima one two three", "affirm", "negative", "unable", "wilco", "roger", "say again", "standby", "request", "readback", "squawk", "flight level", "heading", "altimeter", "knots", "Mach", "runway", "taxiway", "holding point", "hold short", "line up and wait", "cleared for takeoff", "cleared to land", "go around", "vectors", "troubleshooting", "souls on board", "minimum fuel", "mayday", "pan pan", "PIREP", "turbulence", "icing", "wake turbulence", "QNH", "ILS", "RNAV", "SID", "transition", "intercept", "localizer", "established", "expedite", "backtrack", "pushback", "start up", "deviation", "offset", "intentions", "descend", "climb", "maintain", "contact", "report", "due to performance", "due to weather", "clear of traffic", "in sight"]}, {"id": "P2A-Q4", "seconds": 30, "note": "", "pre": [{"type": "say", "voice": "narrator", "kind": "narration", "text": "Situation Update Passing one two thousand feet you get a TIRE PRESSURE LOW caption on the left main gear. Your brakes and anti-skid are normal, but with one wheel unserviceable **your required landing distance is now 3,100 metres.**", "src": "/audio/WEAK_01/3278c1e045c259b9.mp3"}, {"type": "chime"}], "body": [{"type": "say", "voice": "narrator", "kind": "instruction", "text": "Report your problem to the controller, tell him what has changed, and make a request.", "src": "/audio/WEAK_01/2c946c51ed5a6320.mp3"}], "hints": ["Situation", "Update", "Passing", "TIRE", "PRESSURE", "LOW", "Hotel Lima one two three", "affirm", "negative", "unable", "wilco", "roger", "say again", "standby", "request", "readback", "squawk", "flight level", "heading", "altimeter", "knots", "Mach", "runway", "taxiway", "holding point", "hold short", "line up and wait", "cleared for takeoff", "cleared to land", "go around", "vectors", "troubleshooting", "souls on board", "minimum fuel", "mayday", "pan pan", "PIREP", "turbulence", "icing", "wake turbulence", "QNH", "ILS", "RNAV", "SID", "transition", "intercept", "localizer", "established", "expedite", "backtrack", "pushback", "start up", "deviation", "offset", "intentions", "descend", "climb", "maintain", "contact", "report", "due to performance", "due to weather", "clear of traffic", "in sight"]}, {"id": "P2A-Q5", "seconds": 30, "note": "", "pre": [], "body": [{"type": "screen", "text": "Rothbury / Caldon / landing distance available"}, {"type": "say", "voice": "narrator", "kind": "instruction", "text": "Listen to the controller, state your decision with a reason, and tell him the figure you need.", "src": "/audio/WEAK_01/0076e34155aa824f.mp3"}, {"type": "say", "voice": "atc", "label": "Approach", "text": "HL123, Rothbury runway two four gives you 2,600 metres. Caldon has 3,400 metres and it's one four minutes away. What would you like?", "src": "/audio/WEAK_01/3b19fcf5397185fd.mp3"}], "hints": ["Rothbury", "Caldon", "What", "Hotel Lima one two three", "affirm", "negative", "unable", "wilco", "roger", "say again", "standby", "request", "readback", "squawk", "flight level", "heading", "altimeter", "knots", "Mach", "runway", "taxiway", "holding point", "hold short", "line up and wait", "cleared for takeoff", "cleared to land", "go around", "vectors", "troubleshooting", "souls on board", "minimum fuel", "mayday", "pan pan", "PIREP", "turbulence", "icing", "wake turbulence", "QNH", "ILS", "RNAV", "SID", "transition", "intercept", "localizer", "established", "expedite", "backtrack", "pushback", "start up", "deviation", "offset", "intentions", "descend", "climb", "maintain", "contact", "report", "due to performance", "due to weather", "clear of traffic", "in sight"]}, {"id": "P2A-Q6", "seconds": 30, "note": "", "pre": [], "body": [{"type": "say", "voice": "narrator", "kind": "instruction", "text": "Listen to the controller and provide the requested information.", "src": "/audio/WEAK_01/d7d6770bdf00edc1.mp3"}, {"type": "say", "voice": "atc", "label": "Approach", "text": "HL123, roger, I'm passing it to Caldon. Say your fuel endurance and the number of persons on board.", "src": "/audio/WEAK_01/958a98d105b24287.mp3"}], "hints": ["Caldon", "Hotel Lima one two three", "affirm", "negative", "unable", "wilco", "roger", "say again", "standby", "request", "readback", "squawk", "flight level", "heading", "altimeter", "knots", "Mach", "runway", "taxiway", "holding point", "hold short", "line up and wait", "cleared for takeoff", "cleared to land", "go around", "vectors", "troubleshooting", "souls on board", "minimum fuel", "mayday", "pan pan", "PIREP", "turbulence", "icing", "wake turbulence", "QNH", "ILS", "RNAV", "SID", "transition", "intercept", "localizer", "established", "expedite", "backtrack", "pushback", "start up", "deviation", "offset", "intentions", "descend", "climb", "maintain", "contact", "report", "due to performance", "due to weather", "clear of traffic", "in sight"]}, {"id": "P2A-Q7", "seconds": 30, "note": "", "pre": [], "body": [{"type": "say", "voice": "narrator", "kind": "instruction", "text": "Listen to the controller, give a full readback and say your intentions.", "src": "/audio/WEAK_01/42a099ea82ac6659.mp3"}, {"type": "say", "voice": "atc", "label": "Approach", "text": "HL123, turn right heading three two zero, descend to 8,000 feet, vectors for Caldon, contact Caldon Approach on 126.35. Say your intentions.", "src": "/audio/WEAK_01/032f26bc2fa238b1.mp3"}], "hints": ["Caldon", "Approach", "Hotel Lima one two three", "affirm", "negative", "unable", "wilco", "roger", "say again", "standby", "request", "readback", "squawk", "flight level", "heading", "altimeter", "knots", "Mach", "runway", "taxiway", "holding point", "hold short", "line up and wait", "cleared for takeoff", "cleared to land", "go around", "vectors", "troubleshooting", "souls on board", "minimum fuel", "mayday", "pan pan", "PIREP", "turbulence", "icing", "wake turbulence", "QNH", "ILS", "RNAV", "SID", "transition", "intercept", "localizer", "established", "expedite", "backtrack", "pushback", "start up", "deviation", "offset", "intentions", "descend", "climb", "maintain", "contact", "report", "due to performance", "due to weather", "clear of traffic", "in sight"]}, {"id": "P2A-Q8", "seconds": 30, "note": "", "pre": [], "body": [{"type": "say", "voice": "narrator", "kind": "instruction", "text": "You are now with a new controller who has none of your figures. Listen to him and answer both of his questions.", "src": "/audio/WEAK_01/32470cdb80434782.mp3"}, {"type": "say", "voice": "atc", "label": "Approach", "text": "HL123, Caldon Approach, radar contact. For our brief — say the landing distance you need, and say your fuel endurance.", "src": "/audio/WEAK_01/8e64ad3f2399574a.mp3"}], "hints": ["Caldon", "Approach", "For", "Hotel Lima one two three", "affirm", "negative", "unable", "wilco", "roger", "say again", "standby", "request", "readback", "squawk", "flight level", "heading", "altimeter", "knots", "Mach", "runway", "taxiway", "holding point", "hold short", "line up and wait", "cleared for takeoff", "cleared to land", "go around", "vectors", "troubleshooting", "souls on board", "minimum fuel", "mayday", "pan pan", "PIREP", "turbulence", "icing", "wake turbulence", "QNH", "ILS", "RNAV", "SID", "transition", "intercept", "localizer", "established", "expedite", "backtrack", "pushback", "start up", "deviation", "offset", "intentions", "descend", "climb", "maintain", "contact", "report", "due to performance", "due to weather", "clear of traffic", "in sight"]}, {"id": "P2A-Q9", "seconds": 30, "note": "", "pre": [], "body": [{"type": "say", "voice": "narrator", "kind": "instruction", "text": "Listen to the controller, give a full readback, and say what you will need on the runway.", "src": "/audio/WEAK_01/225c373666d109c9.mp3"}, {"type": "say", "voice": "atc", "label": "Approach", "text": "HL123, turn left heading two six zero, descend to 2,500 feet until established, cleared for the ILS runway one eight approach, contact Caldon Tower on 120.9.", "src": "/audio/WEAK_01/0bedbe23ce2071a0.mp3"}], "hints": ["ILS", "Caldon", "Tower", "Hotel Lima one two three", "affirm", "negative", "unable", "wilco", "roger", "say again", "standby", "request", "readback", "squawk", "flight level", "heading", "altimeter", "knots", "Mach", "runway", "taxiway", "holding point", "hold short", "line up and wait", "cleared for takeoff", "cleared to land", "go around", "vectors", "troubleshooting", "souls on board", "minimum fuel", "mayday", "pan pan", "PIREP", "turbulence", "icing", "wake turbulence", "QNH", "ILS", "RNAV", "SID", "transition", "intercept", "localizer", "established", "expedite", "backtrack", "pushback", "start up", "deviation", "offset", "intentions", "descend", "climb", "maintain", "contact", "report", "due to performance", "due to weather", "clear of traffic", "in sight"]}]}, {"title": "약점 D. 발신 — 기관 호출 · REQUEST + 명사구 — 실패율 64%", "directions": "In Part D **there is no controller transmission.** You call first. Each situation tells you what you want. Your callsign is HL123. * Response time for each question : 20 seconds or less", "questions": [{"id": "P2B-Q1", "seconds": 20, "note": "", "pre": [{"type": "say", "voice": "narrator", "kind": "narration", "text": "✅ Directions : In Part D **there is no controller transmission.** You call first. Each situation tells you what you want. Your callsign is HL123. * Response time for each question : 20 seconds or less", "src": "/audio/WEAK_01/f533879230af932f.mp3"}], "body": [{"type": "screen", "text": "Caldon Control"}, {"type": "say", "voice": "narrator", "kind": "narration", "text": "Make a request with a reason.", "src": "/audio/WEAK_01/5945a8f13ccd7c04.mp3"}], "hints": ["Directions", "Part", "Each", "Response", "Caldon", "Control", "Hotel Lima one two three", "affirm", "negative", "unable", "wilco", "roger", "say again", "standby", "request", "readback", "squawk", "flight level", "heading", "altimeter", "knots", "Mach", "runway", "taxiway", "holding point", "hold short", "line up and wait", "cleared for takeoff", "cleared to land", "go around", "vectors", "troubleshooting", "souls on board", "minimum fuel", "mayday", "pan pan", "PIREP", "turbulence", "icing", "wake turbulence", "QNH", "ILS", "RNAV", "SID", "transition", "intercept", "localizer", "established", "expedite", "backtrack", "pushback", "start up", "deviation", "offset", "intentions", "descend", "climb", "maintain", "contact", "report", "due to performance", "due to weather", "clear of traffic", "in sight"]}, {"id": "P2B-Q2", "seconds": 20, "note": "", "pre": [], "body": [{"type": "screen", "text": "Rothbury Delivery"}, {"type": "say", "voice": "narrator", "kind": "narration", "text": "Report your situation and make a request.", "src": "/audio/WEAK_01/59b96fdb1d1930c6.mp3"}], "hints": ["Rothbury", "Delivery", "Hotel Lima one two three", "affirm", "negative", "unable", "wilco", "roger", "say again", "standby", "request", "readback", "squawk", "flight level", "heading", "altimeter", "knots", "Mach", "runway", "taxiway", "holding point", "hold short", "line up and wait", "cleared for takeoff", "cleared to land", "go around", "vectors", "troubleshooting", "souls on board", "minimum fuel", "mayday", "pan pan", "PIREP", "turbulence", "icing", "wake turbulence", "QNH", "ILS", "RNAV", "SID", "transition", "intercept", "localizer", "established", "expedite", "backtrack", "pushback", "start up", "deviation", "offset", "intentions", "descend", "climb", "maintain", "contact", "report", "due to performance", "due to weather", "clear of traffic", "in sight"]}, {"id": "P2B-Q3", "seconds": 20, "note": "", "pre": [], "body": [{"type": "say", "voice": "narrator", "kind": "narration", "text": "You were cleared to climb to one one thousand feet. By mistake you set nine thousand and you are now levelling off at nine thousand. No one has said anything to you. You want your climb back. Contact Minsterly Departure.", "src": "/audio/WEAK_01/01a13c095380f5f7.mp3"}, {"type": "say", "voice": "narrator", "kind": "narration", "text": "Report your status and make a request.", "src": "/audio/WEAK_01/00678350a32f1fc2.mp3"}], "hints": ["Minsterly", "Departure", "Hotel Lima one two three", "affirm", "negative", "unable", "wilco", "roger", "say again", "standby", "request", "readback", "squawk", "flight level", "heading", "altimeter", "knots", "Mach", "runway", "taxiway", "holding point", "hold short", "line up and wait", "cleared for takeoff", "cleared to land", "go around", "vectors", "troubleshooting", "souls on board", "minimum fuel", "mayday", "pan pan", "PIREP", "turbulence", "icing", "wake turbulence", "QNH", "ILS", "RNAV", "SID", "transition", "intercept", "localizer", "established", "expedite", "backtrack", "pushback", "start up", "deviation", "offset", "intentions", "descend", "climb", "maintain", "contact", "report", "due to performance", "due to weather", "clear of traffic", "in sight"]}, {"id": "P2B-Q4", "seconds": 20, "note": "", "pre": [], "body": [{"type": "screen", "text": "TAMLYN"}, {"type": "say", "voice": "narrator", "kind": "narration", "text": "Make a request with a reason.", "src": "/audio/WEAK_01/5945a8f13ccd7c04.mp3"}], "hints": ["TAMLYN", "Hotel Lima one two three", "affirm", "negative", "unable", "wilco", "roger", "say again", "standby", "request", "readback", "squawk", "flight level", "heading", "altimeter", "knots", "Mach", "runway", "taxiway", "holding point", "hold short", "line up and wait", "cleared for takeoff", "cleared to land", "go around", "vectors", "troubleshooting", "souls on board", "minimum fuel", "mayday", "pan pan", "PIREP", "turbulence", "icing", "wake turbulence", "QNH", "ILS", "RNAV", "SID", "transition", "intercept", "localizer", "established", "expedite", "backtrack", "pushback", "start up", "deviation", "offset", "intentions", "descend", "climb", "maintain", "contact", "report", "due to performance", "due to weather", "clear of traffic", "in sight"]}, {"id": "P2B-Q5", "seconds": 20, "note": "", "pre": [], "body": [{"type": "say", "voice": "narrator", "kind": "narration", "text": "Caldon Control has just cleared you to hold at OBREN as published, with no expected approach time, and you read it back. You have one hour one zero minutes of fuel and your diversion to Penhale needs three five minutes. You want to know when you can expect to leave the hold. Contact Caldon Control.", "src": "/audio/WEAK_01/5828d6dfc29dfad7.mp3"}, {"type": "say", "voice": "narrator", "kind": "narration", "text": "Report your status and make a request.", "src": "/audio/WEAK_01/00678350a32f1fc2.mp3"}], "hints": ["Caldon", "Control", "OBREN", "Penhale", "Hotel Lima one two three", "affirm", "negative", "unable", "wilco", "roger", "say again", "standby", "request", "readback", "squawk", "flight level", "heading", "altimeter", "knots", "Mach", "runway", "taxiway", "holding point", "hold short", "line up and wait", "cleared for takeoff", "cleared to land", "go around", "vectors", "troubleshooting", "souls on board", "minimum fuel", "mayday", "pan pan", "PIREP", "turbulence", "icing", "wake turbulence", "QNH", "ILS", "RNAV", "SID", "transition", "intercept", "localizer", "established", "expedite", "backtrack", "pushback", "start up", "deviation", "offset", "intentions", "descend", "climb", "maintain", "contact", "report", "due to performance", "due to weather", "clear of traffic", "in sight"]}, {"id": "P2B-Q6", "seconds": 20, "note": "", "pre": [], "body": [{"type": "say", "voice": "narrator", "kind": "narration", "text": "Ten minutes ago, on the taxi out, you saw fuel leaking from a parked Airbus A321 at stand two eight. You did not report it at the time. You want the ground controller to know now. Contact Rothbury Ground.", "src": "/audio/WEAK_01/1afb33f684044c42.mp3"}, {"type": "say", "voice": "narrator", "kind": "narration", "text": "Make a report.", "src": "/audio/WEAK_01/312c4efd66f04e25.mp3"}], "hints": ["Ten", "Airbus", "Rothbury", "Ground", "Hotel Lima one two three", "affirm", "negative", "unable", "wilco", "roger", "say again", "standby", "request", "readback", "squawk", "flight level", "heading", "altimeter", "knots", "Mach", "runway", "taxiway", "holding point", "hold short", "line up and wait", "cleared for takeoff", "cleared to land", "go around", "vectors", "troubleshooting", "souls on board", "minimum fuel", "mayday", "pan pan", "PIREP", "turbulence", "icing", "wake turbulence", "QNH", "ILS", "RNAV", "SID", "transition", "intercept", "localizer", "established", "expedite", "backtrack", "pushback", "start up", "deviation", "offset", "intentions", "descend", "climb", "maintain", "contact", "report", "due to performance", "due to weather", "clear of traffic", "in sight"]}]}, {"title": "약점 E. 90초 자유응답 — 실패율 100%", "directions": "You will be asked four questions. **You have up to 90 seconds for each.** Answer every part of the question.", "questions": [{"id": "P2C-Q1", "seconds": 90, "note": "", "pre": [{"type": "say", "voice": "narrator", "kind": "narration", "text": "✅ Directions : You will be asked four questions. **You have up to 90 seconds for each.** Answer every part of the question.", "src": "/audio/WEAK_01/4b55255522efd5f0.mp3"}], "body": [{"type": "say", "voice": "narrator", "kind": "narration", "text": "Follow up question.", "src": "/audio/WEAK_01/b436ed9e2fb376ef.mp3"}, {"type": "say", "voice": "narrator", "kind": "narration", "text": "In this situation, you were given a runway that was shorter than the one you needed. What figures did you compare before you answered, and why? In your role as a pilot, how do you keep track of the numbers a controller gives you over a long approach — what do you write down, and how do you write it? Give an example of a figure you were asked for a second time and had to find again.", "src": "/audio/WEAK_01/86a6e5750c3a0d9b.mp3"}], "hints": ["Directions", "Answer", "Follow", "What", "Hotel Lima one two three", "affirm", "negative", "unable", "wilco", "roger", "say again", "standby", "request", "readback", "squawk", "flight level", "heading", "altimeter", "knots", "Mach", "runway", "taxiway", "holding point", "hold short", "line up and wait", "cleared for takeoff", "cleared to land", "go around", "vectors", "troubleshooting", "souls on board", "minimum fuel", "mayday", "pan pan", "PIREP", "turbulence", "icing", "wake turbulence", "QNH", "ILS", "RNAV", "SID", "transition", "intercept", "localizer", "established", "expedite", "backtrack", "pushback", "start up", "deviation", "offset", "intentions", "descend", "climb", "maintain", "contact", "report", "due to performance", "due to weather", "clear of traffic", "in sight"]}, {"id": "P2C-Q2", "seconds": 90, "note": "", "pre": [], "body": [{"type": "say", "voice": "narrator", "kind": "narration", "text": "Follow up question.", "src": "/audio/WEAK_01/b436ed9e2fb376ef.mp3"}, {"type": "say", "voice": "narrator", "kind": "narration", "text": "In this situation, you were asked to hold a speed your aircraft could not hold. How did you tell the controller what you could do instead, and why does it matter that you gave him a figure? From your own experiences, how do you keep a minimum and a maximum from getting mixed up when both are in the same clearance? Give an example of a limit you have had to refuse.", "src": "/audio/WEAK_01/c446f3de0dc4e28d.mp3"}], "hints": ["Follow", "How", "From", "Hotel Lima one two three", "affirm", "negative", "unable", "wilco", "roger", "say again", "standby", "request", "readback", "squawk", "flight level", "heading", "altimeter", "knots", "Mach", "runway", "taxiway", "holding point", "hold short", "line up and wait", "cleared for takeoff", "cleared to land", "go around", "vectors", "troubleshooting", "souls on board", "minimum fuel", "mayday", "pan pan", "PIREP", "turbulence", "icing", "wake turbulence", "QNH", "ILS", "RNAV", "SID", "transition", "intercept", "localizer", "established", "expedite", "backtrack", "pushback", "start up", "deviation", "offset", "intentions", "descend", "climb", "maintain", "contact", "report", "due to performance", "due to weather", "clear of traffic", "in sight"]}, {"id": "P2C-Q3", "seconds": 90, "note": "", "pre": [{"type": "say", "voice": "narrator", "kind": "instruction", "text": "Now listen to the controller's radiotelephony messages.", "src": "/audio/WEAK_01/064cae18db1402a6.mp3"}, {"type": "say", "voice": "atc", "label": "ATC", "text": "HL123, Rothbury Approach, descend to one one thousand, expect the KELSO TWO arrival, ILS runway two four. Be advised the runway is wet after heavy rain.", "src": "/audio/WEAK_01/761413e827ae276e.mp3"}, {"type": "say", "voice": "atc", "label": "ATC", "text": "HL123, reduce speed to one eight zero knots until one zero miles.", "src": "/audio/WEAK_01/3c04032e62b46074.mp3"}, {"type": "say", "voice": "atc", "label": "ATC", "text": "HL123, Rothbury runway two four gives you 2,600 metres. Caldon has 3,400 metres and it's one four minutes away. What would you like?", "src": "/audio/WEAK_01/3b19fcf5397185fd.mp3"}, {"type": "say", "voice": "atc", "label": "ATC", "text": "HL123, roger, I'm passing it to Caldon. Say your fuel endurance and the number of persons on board.", "src": "/audio/WEAK_01/958a98d105b24287.mp3"}, {"type": "say", "voice": "atc", "label": "ATC", "text": "HL123, turn right heading three two zero, descend to 8,000 feet, vectors for Caldon, contact Caldon Approach on 126.35. Say your intentions.", "src": "/audio/WEAK_01/032f26bc2fa238b1.mp3"}, {"type": "say", "voice": "atc", "label": "ATC", "text": "HL123, Caldon Approach, radar contact. For our brief — say the landing distance you need, and say your fuel endurance.", "src": "/audio/WEAK_01/8e64ad3f2399574a.mp3"}, {"type": "say", "voice": "atc", "label": "ATC", "text": "HL123, turn left heading two six zero, descend to 2,500 feet until established, cleared for the ILS runway one eight approach, contact Caldon Tower on 120.9.", "src": "/audio/WEAK_01/0bedbe23ce2071a0.mp3"}, {"type": "chime"}, {"type": "say", "voice": "narrator", "kind": "instruction", "text": "Now answer the questions.", "src": "/audio/WEAK_01/54a523a246e18a47.mp3"}], "body": [{"type": "say", "voice": "narrator", "kind": "narration", "text": "What happened to your aircraft (HL123)? Explain the nature of the incident.", "src": "/audio/WEAK_01/b55b0c790f9a94b5.mp3"}], "hints": ["Rothbury", "Approach", "KELSO", "TWO", "ILS", "Caldon", "What", "For", "Tower", "Hotel Lima one two three", "affirm", "negative", "unable", "wilco", "roger", "say again", "standby", "request", "readback", "squawk", "flight level", "heading", "altimeter", "knots", "Mach", "runway", "taxiway", "holding point", "hold short", "line up and wait", "cleared for takeoff", "cleared to land", "go around", "vectors", "troubleshooting", "souls on board", "minimum fuel", "mayday", "pan pan", "PIREP", "turbulence", "icing", "wake turbulence", "QNH", "ILS", "RNAV", "SID", "transition", "intercept", "localizer", "established", "expedite", "backtrack", "pushback", "start up", "deviation", "offset", "intentions", "descend", "climb", "maintain", "contact", "report", "due to performance", "due to weather", "clear of traffic", "in sight"]}, {"id": "P2C-Q4", "seconds": 90, "note": "", "pre": [], "body": [{"type": "say", "voice": "narrator", "kind": "narration", "text": "How do you think the incident was handled by the air traffic controller? Do you feel the situation could have been handled differently? Make a comment from a pilot's point of view.", "src": "/audio/WEAK_01/a0bd8a27f261ce2d.mp3"}], "hints": ["How", "Hotel Lima one two three", "affirm", "negative", "unable", "wilco", "roger", "say again", "standby", "request", "readback", "squawk", "flight level", "heading", "altimeter", "knots", "Mach", "runway", "taxiway", "holding point", "hold short", "line up and wait", "cleared for takeoff", "cleared to land", "go around", "vectors", "troubleshooting", "souls on board", "minimum fuel", "mayday", "pan pan", "PIREP", "turbulence", "icing", "wake turbulence", "QNH", "ILS", "RNAV", "SID", "transition", "intercept", "localizer", "established", "expedite", "backtrack", "pushback", "start up", "deviation", "offset", "intentions", "descend", "climb", "maintain", "contact", "report", "due to performance", "due to weather", "clear of traffic", "in sight"]}]}], "set": "WEAK_01", "raw": "# EPTA 약점 집중 세트 01 — 2026-11-03\n\n안 내 실전 모의세트가 아니다. 11세트 318문항 채점 결과에서 **실패율이 높은 다섯 유형만**\n모았다. **거의 맞히는 유형은 넣지 않았다** — 순수 복창(Ⅰ-A), 5요소 긴 클리어런스, 접근 허가\n복창, 조건절 유지, 주파수는 각각 2~8세트 연속 정확했으므로 제외했다. 다만 **답하려면 앞선\n교신이 있어야 하는 문항에는 그 교신을 지문에 적어 두었다** — 빼 버린 유형 때문에 답의 근거가\n사라지지 않게 한 것이다. 메모 가능 / 문항당 1회 Say again.\n응시자 콜사인은 항상 **HL123**.\n\n| 파트 | 겨냥하는 유형 | 누적 실패율 | 문항 |\n|---|---|---:|---:|\n| A | **복창 + α** (복창은 하고 두 번째 일을 안 한다) | **88%** | 8 |\n| B | **판단 + 이유** (숫자 비교, 최저↔최대 뒤집기) | **74%** | 6 |\n| C | **값 유지** (적어 둔 값이 턴을 넘기면 달라진다) | 신규 최우선 | 9 |\n| D | **발신** (기관 호출 · REQUEST + 명사구) | 64% | 6 |\n| E | **90초 자유응답** | **100%** | 4 |\n\n---\n\n## 약점 A. 복창 + α — 실패율 88%\n\n✅ Directions : You will be listening to 8 ATC instructions. Each one asks you to do\n**more than read back.** Your callsign is HL123. \"Say again (=Repeat)\" available once only.\n  * Response time for each question : 30 seconds or less\n\n**P1A-Q1** 🎙 30초\nYour slot at Rothbury closes at 1150Z and it is now 1131Z. You want to know what the\nholding will cost you.\nApproach : HL123, descend to 7,000 feet, expect one zero minutes of holding at VARDO.\n\nGive a full readback, and inquire what the holding will do to your arrival time.\n\n[정답]\n\n\n---\n\n**P1A-Q2** 🎙 30초\n🖥 [ VARDO ]\nYour present rate of climb will put you at 10,200 feet at VARDO. You want the restriction\nchanged to something you can make.\nCenter : HL123, cross VARDO at or above one one thousand.\n\nGive a full readback, and tell him what you can do instead.\n\n[정답]\n\n\n---\n\n**P1A-Q3** 🎙 30초\nYou cannot hold Mach decimal eight two at your present weight. The best you can do is Mach\ndecimal seven eight.\nCenter : HL123, climb to flight level three five zero, increase speed to Mach decimal eight\ntwo for sequence.\n\nGive a full readback, and make a request with a reason.\n\n[정답]\n\n\n---\n\n**P1A-Q4** 🎙 30초\nOn the taxi out you saw a large flock of birds sitting on the grass beside the runway two\nfour threshold. You were busy with the checklist and have not reported it.\nTower : HL123, line up and wait runway two four.\n\nGive a full readback, and report what you saw.\n\n[정답]\n\n\n---\n\n**P1A-Q5** 🎙 30초\nYou need de-icing before departure and you do not know whether the de-icing bay on taxiway\nGolf is in use today. You want to be told before you get there.\nGround : HL123, taxi to holding point Kilo two via Golf, hold short of runway one six.\n\nGive a full readback, and make a request with a reason.\n\n[정답]\n\n\n---\n\n**P1A-Q6** 🎙 30초\nYou have a passenger with chest pain in row 14. You want an ambulance to meet you at the\nstand and you want the shortest taxi in. You have already reported the medical case to\nApproach — that is what his \"roger\" answers — but he does not yet know what you want.\nApproach : HL123, roger, turn left heading zero niner zero, descend to 5,000 feet, vectors\nfor Rothbury.\n\nGive a full readback, and say your intentions.\n\n[정답]\n\n\n---\n\n**P1A-Q7** 🎙 30초\nYou called Ground for taxi a minute ago. You will not be ready for one five minutes — the\ncabin crew are still re-seating passengers away from the overwing exits.\nGround : HL123, hold position. Report when you are ready to taxi, I have two inbounds for\nthe stand next to you.\n\nGive a full readback, acknowledge his situation, and tell him how long you need.\n\n[정답]\n\n\n---\n\n**P1A-Q8** 🎙 30초\nYour anti-ice has been on for two zero minutes and the airframe is clear. You are presently\nin light rain at zero degrees. You reported light icing to the previous sector one zero\nminutes ago and Approach has been told — he is asking you for an update.\nApproach : HL123, descend to 4,000 feet. Two things — say your icing condition, and say\nwhether you need a higher speed on the approach.\n\nGive a full readback, and answer both of his questions.\n\n[정답]\n\n\n---\n\n## 약점 B. 판단 + 이유 — 실패율 74%\n\n✅ Directions : In each question you are given your own figure and the controller gives you\ntwo choices. **Decide, say why, and give him the figure you need.** Your callsign is HL123.\n  * Response time for each question : 30 seconds or less\n\n**P1B-Q1** 🎙 30초\n🖥 [ Rothbury / Caldon ]\nYour required landing distance today is 2,300 metres. You have a passenger with chest pain\non board, so you want to be on the ground as soon as you can.\nApproach : HL123, Rothbury runway two four has 2,600 metres but you'd be one eight minutes\nto touchdown. Caldon is seven minutes away with 3,400 metres. What would you like?\n\nRecord your response.\n\n[정답]\n\n\n---\n\n**P1B-Q2** 🎙 30초\nYour required landing distance today is 2,450 metres. You have no reason to be in a hurry.\nApproach : HL123, runway one six has work in progress — 2,700 metres from the displaced\nthreshold. Runway three four has the full 3,100, but you'd be number four, about one zero\nminutes.\n\nRecord your response.\n\n[정답]\n\n\n---\n\n**P1B-Q3** 🎙 30초\nYour required landing distance today is 3,100 metres.\nApproach : HL123, Penhale runway two seven has 2,800 metres and it's five minutes away.\nMinsterly has 3,600 metres but it's two two minutes. Which one do you want?\n\nRecord your response.\n\n[정답]\n\n\n---\n\n**P1B-Q4** 🎙 30초\nYou are heavy today. With the flaps you have out, **the slowest speed you can hold is two\ntwo zero knots.**\nApproach : HL123, reduce speed to one niner zero knots until six miles. Can you do that?\n\nRecord your response.\n\n[정답]\n\n\n---\n\n**P1B-Q5** 🎙 30초\n**Your maximum crosswind on a wet runway is two five knots.** The runway is wet. You are\nholding short of runway two four, ready for departure.\nTower : HL123, runway two four, wind one eight zero at three zero, gusting three five.\nRunway one six is dry with wind one eight zero at one two, but it's eight minutes of taxi\nback. Say your intentions.\n\nRecord your response.\n\n[정답]\n\n\n---\n\n**P1B-Q6** 🎙 30초\nYou have been in moderate turbulence at flight level three three zero for the last one five\nminutes. The aircraft ahead reported it smooth at flight level two niner zero. You want to\ndescend to flight level two niner zero.\nCenter : HL123, do you want to stay at three three zero, or do you want to come down?\n\nRecord your response.\n\n[정답]\n\n\n---\n\n## 약점 C. 값 유지 — 되묻기 롤플레이 (신규 최우선)\n\n✅ Directions : In Part C you will be interacting with an Air traffic controller through\nnine turns. **The controller will ask you for the same figures again later in the\nscenario.** Follow the prompts and respond as necessary. \"Say again (=Repeat)\" available\nonly once. Your callsign is HL123.\n  * Response time for each question : 30 seconds or less\n\nInitial Situation You are the pilot of HL123, descending through flight level one niner\nzero for one three thousand, 45 miles from KELSO, inbound to Rothbury Airport. Your fuel\nendurance is two hours zero five minutes and there are one eight four persons on board.\nYour required landing distance is 2,450 metres, and at today's weight the slowest speed you\ncan hold is two one zero knots. 🔔(dingdong)\n\n**P2A-Q1** 🎙 30초\n☞ Contact Rothbury Approach and report your position and level.\n\n[정답]\n\n\n---\n\n**P2A-Q2** 🎙 30초\n🖥 [ KELSO TWO arrival ]\n☞ Listen to the controller, give a full readback, and inquire about the braking action.\nApproach : HL123, Rothbury Approach, descend to one one thousand, expect the KELSO TWO\narrival, ILS runway two four. Be advised the runway is wet after heavy rain.\n\n[정답]\n\n\n---\n\n**P2A-Q3** 🎙 30초\n☞ Listen to the controller, give a full readback, and tell him what you can do instead.\nApproach : HL123, reduce speed to one eight zero knots until one zero miles.\n\n[정답]\n\n\n---\n\nSituation Update Passing one two thousand feet you get a TIRE PRESSURE LOW caption on the\nleft main gear. Your brakes and anti-skid are normal, but with one wheel unserviceable\n**your required landing distance is now 3,100 metres.** 🔔(dingdong)\n\n**P2A-Q4** 🎙 30초\n☞ Report your problem to the controller, tell him what has changed, and make a request.\n\n[정답]\n\n\n---\n\n**P2A-Q5** 🎙 30초\n🖥 [ Rothbury / Caldon / landing distance available ]\n☞ Listen to the controller, state your decision with a reason, and tell him the figure you\nneed.\nApproach : HL123, Rothbury runway two four gives you 2,600 metres. Caldon has 3,400 metres\nand it's one four minutes away. What would you like?\n\n[정답]\n\n\n---\n\n**P2A-Q6** 🎙 30초\n☞ Listen to the controller and provide the requested information.\nApproach : HL123, roger, I'm passing it to Caldon. Say your fuel endurance and the number\nof persons on board.\n\n[정답]\n\n\n---\n\n**P2A-Q7** 🎙 30초\n☞ Listen to the controller, give a full readback and say your intentions.\nApproach : HL123, turn right heading three two zero, descend to 8,000 feet, vectors for\nCaldon, contact Caldon Approach on 126.35. Say your intentions.\n\n[정답]\n\n\n---\n\n**P2A-Q8** 🎙 30초\n☞ You are now with a new controller who has none of your figures. Listen to him and answer\nboth of his questions.\nApproach : HL123, Caldon Approach, radar contact. For our brief — say the landing distance\nyou need, and say your fuel endurance.\n\n[정답]\n\n\n---\n\n**P2A-Q9** 🎙 30초\n☞ Listen to the controller, give a full readback, and say what you will need on the runway.\nApproach : HL123, turn left heading two six zero, descend to 2,500 feet until established,\ncleared for the ILS runway one eight approach, contact Caldon Tower on 120.9.\n\n[정답]\n\n\n---\n## 약점 D. 발신 — 기관 호출 · REQUEST + 명사구 — 실패율 64%\n\n✅ Directions : In Part D **there is no controller transmission.** You call first. Each\nsituation tells you what you want. Your callsign is HL123.\n  * Response time for each question : 20 seconds or less\n\n**P2B-Q1** 🎙 20초\n🖥 [ Caldon Control ]\nYou are at flight level three one zero and the headwind is stronger than planned. You want\nto go direct to OBREN to save fuel. Contact Caldon Control.\n\nMake a request with a reason.\n\n[정답]\n\n\n---\n\n**P2B-Q2** 🎙 20초\n🖥 [ Rothbury Delivery ]\nYour flight plan has you at flight level three seven zero, but at today's weight you cannot\nreach it until one hour after departure. You want flight level three three zero first.\nContact Rothbury Delivery.\n\nReport your situation and make a request.\n\n[정답]\n\n\n---\n\n**P2B-Q3** 🎙 20초\nYou were cleared to climb to one one thousand feet. By mistake you set nine thousand and\nyou are now levelling off at nine thousand. No one has said anything to you. You want your\nclimb back. Contact Minsterly Departure.\n\nReport your status and make a request.\n\n[정답]\n\n\n---\n\n**P2B-Q4** 🎙 20초\n🖥 [ TAMLYN ]\nYou are twelve miles from TAMLYN and a line of thunderstorms sits on your track. You want\nto go one five miles left of track to get round it and rejoin at TAMLYN. Contact Caldon\nControl.\n\nMake a request with a reason.\n\n[정답]\n\n\n---\n\n**P2B-Q5** 🎙 20초\nCaldon Control has just cleared you to hold at OBREN as published, with no expected\napproach time, and you read it back. You have one hour one zero minutes of fuel and your\ndiversion to Penhale needs three five minutes. You want to know when you can expect to\nleave the hold. Contact Caldon Control.\n\nReport your status and make a request.\n\n[정답]\n\n\n---\n\n**P2B-Q6** 🎙 20초\nTen minutes ago, on the taxi out, you saw fuel leaking from a parked Airbus A321 at stand\ntwo eight. You did not report it at the time. You want the ground controller to know now.\nContact Rothbury Ground.\n\nMake a report.\n\n[정답]\n\n\n---\n\n## 약점 E. 90초 자유응답 — 실패율 100%\n\n✅ Directions : You will be asked four questions. **You have up to 90 seconds for each.**\nAnswer every part of the question.\n\n**P2C-Q1** 🎙 90초\nFollow up question.\n\nIn this situation, you were given a runway that was shorter than the one you needed. What\nfigures did you compare before you answered, and why? In your role as a pilot, how do you\nkeep track of the numbers a controller gives you over a long approach — what do you write\ndown, and how do you write it? Give an example of a figure you were asked for a second time\nand had to find again.\n\n[정답]\n\n\n\n\n---\n\n**P2C-Q2** 🎙 90초\nFollow up question.\n\nIn this situation, you were asked to hold a speed your aircraft could not hold. How did you\ntell the controller what you could do instead, and why does it matter that you gave him a\nfigure? From your own experiences, how do you keep a minimum and a maximum from getting\nmixed up when both are in the same clearance? Give an example of a limit you have had to\nrefuse.\n\n[정답]\n\n\n\n\n---\n\n☞ Now listen to the controller's radiotelephony messages.\n\nATC: HL123, Rothbury Approach, descend to one one thousand, expect the KELSO TWO arrival,\nILS runway two four. Be advised the runway is wet after heavy rain.\nATC: HL123, reduce speed to one eight zero knots until one zero miles.\nATC: HL123, Rothbury runway two four gives you 2,600 metres. Caldon has 3,400 metres and\nit's one four minutes away. What would you like?\nATC: HL123, roger, I'm passing it to Caldon. Say your fuel endurance and the number of\npersons on board.\nATC: HL123, turn right heading three two zero, descend to 8,000 feet, vectors for Caldon,\ncontact Caldon Approach on 126.35. Say your intentions.\nATC: HL123, Caldon Approach, radar contact. For our brief — say the landing distance you\nneed, and say your fuel endurance.\nATC: HL123, turn left heading two six zero, descend to 2,500 feet until established, cleared\nfor the ILS runway one eight approach, contact Caldon Tower on 120.9. 🔔(dingdong)\n\n☞ Now answer the questions.\n\n**P2C-Q3** 🎙 90초\nWhat happened to your aircraft (HL123)? Explain the nature of the incident.\n\n[정답]\n\n\n\n\n---\n\n**P2C-Q4** 🎙 90초\nHow do you think the incident was handled by the air traffic controller? Do you feel the\nsituation could have been handled differently? Make a comment from a pilot's point of view.\n\n[정답]\n\n\n\n\n---\n", "answers": {}}</script>
+<script>
+(() => {
+  const DATA = JSON.parse(document.getElementById('data').textContent);
+  const KEY = 'epta:' + DATA.set;
+  const PAUSE_MS = 600;
+
+  const flat = [];
+  DATA.sections.forEach((sec, si) => sec.questions.forEach((q, qi) => flat.push({ ...q, si, first: qi === 0 })));
+
+  const store = {
+    get(name, fallback) {
+      try { return JSON.parse(localStorage.getItem(KEY + ':' + name)) ?? fallback; } catch { return fallback; }
+    },
+    set(name, value) { try { localStorage.setItem(KEY + ':' + name, JSON.stringify(value)); } catch {} },
+  };
+
+  const answers = store.get('answers', {});
+  const sayAgainUsed = store.get('sayagain', {});
+  const recordings = {};                 // id → blob URL (이 탭에서만)
+  const opts = store.get('opts', { script: false, speech: true, audio: true, autoStart: false, wake: true });
+  opts.wake ??= true;                   // 예전에 저장된 설정에도 기본값을 준다
+  // 녹음이 기본 꺼짐이던 때 저장된 설정을 한 번만 켜준다
+  if (!store.get('optsV2', false)) {
+    opts.audio = true; opts.speech = true;
+    store.set('opts', opts); store.set('optsV2', true);
+  }
+
+  function stamp() {
+    const d = new Date(), z = (n) => String(n).padStart(2, '0');
+    return `${d.getFullYear()}${z(d.getMonth() + 1)}${z(d.getDate())}-${z(d.getHours())}${z(d.getMinutes())}${z(d.getSeconds())}`;
+  }
+
+  // 응시 세션 — 서버에 이 묶음으로 저장된다. '답안 초기화' 하면 새 세션이 열린다.
+  let session = store.get('session', '');
+  if (!session) { session = stamp(); store.set('session', session); }
+
+  // 서버 비밀키는 들어올 때 비밀번호를 확인한 서버가 내려준다 (gate.js → /api/login).
+  // HTML 소스에도, 주소에도 들어가지 않는다.
+  let token = '';
+
+  let idx = Math.min(store.get('idx', 0), flat.length - 1);
+  let phase = 'idle';                    // idle | playing | answering | done
+  let revealed = false;
+  let runId = 0;                         // 재생·타이머 취소용
+  let timerHandle = null;
+  let recorder = null, micStream = null;
+  let recog = null, recogFinal = '', recogBase = '';
+  let recStop = null;                    // 녹음 마무리를 기다리는 약속
+  let speechStarted = false;             // 인식이 실제로 시작됐는지
+  let speechError = '';                  // 인식이 실패한 이유
+  const sent = {};                       // id → 전송 상태 문자열
+  const lastSent = {};                   // id → 서버로 보낸 마지막 글자
+  const heard = {};                      // id → 서버가 녹음에서 알아들은 글자
+  const sentAudio = {};                  // id → 녹음까지 보냈는지
+  let typeTimer = null;
+
+  const $ = (id) => document.getElementById(id);
+  const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+
+  /* ───────── 소리 ───────── */
+
+  const player = new Audio();
+  let actx = null;
+  const ctx = () => (actx ??= new (window.AudioContext || window.webkitAudioContext)());
+
+  function tone(freq, start, dur, gain = 0.25) {
+    const c = ctx(), o = c.createOscillator(), g = c.createGain();
+    o.type = 'sine'; o.frequency.value = freq;
+    g.gain.setValueAtTime(gain, c.currentTime + start);
+    g.gain.exponentialRampToValueAtTime(0.001, c.currentTime + start + dur);
+    o.connect(g).connect(c.destination);
+    o.start(c.currentTime + start); o.stop(c.currentTime + start + dur);
+  }
+  const chime = () => { tone(784, 0, 0.9); tone(622, 0.45, 1.1); return wait(1600); };
+  const beep = () => { tone(1000, 0, 0.35, 0.2); };
+  const wait = (ms) => new Promise((r) => setTimeout(r, ms));
+
+  function playSrc(src) {
+    return new Promise((resolve, reject) => {
+      player.src = src;
+      player.onended = resolve;
+      player.onerror = () => reject(new Error('음성 파일을 열 수 없습니다: ' + src));
+      player.play().catch(reject);
+    });
+  }
+
+  async function playSegments(segs, my) {
+    for (const seg of segs) {
+      if (my !== runId) return false;
+      if (seg.type === 'chime') { await chime(); continue; }
+      if (seg.type !== 'say') continue;
+      const el = document.querySelector(`[data-src="${seg.src}"]`);
+      el?.classList.add('playing');
+      try { await playSrc(seg.src); } finally { el?.classList.remove('playing'); }
+      if (my !== runId) return false;
+      await wait(PAUSE_MS);
+    }
+    return my === runId;
+  }
+
+  function stopAll() {
+    runId++;
+    player.pause();
+    clearInterval(timerHandle);
+    stopSpeech();
+    stopRecording();
+  }
+
+  /* ───────── 화면 꺼짐 방지 ─────────
+     문제를 듣는 20~30초, 답하는 30~90초 동안 손을 대지 않으므로 화면 자동 잠금이 걸린다.
+     첫 '시작' 때 Screen Wake Lock 을 잡고 세트를 끝낼 때까지 들고 있는다.
+     브라우저가 탭을 숨기면 OS 가 잠금을 알아서 풀기 때문에, 돌아왔을 때 다시 잡아준다. */
+
+  const wakeSupported = 'wakeLock' in navigator;
+  let wakeSentinel = null;              // 지금 잡고 있는 잠금
+  let wakeWanted = false;               // 잡고 있어야 하는 상태인가
+
+  async function wakeOn() {
+    wakeWanted = true;
+    if (!opts.wake || !wakeSupported || wakeSentinel) return;
+    if (document.visibilityState !== 'visible') return;
+    try {
+      wakeSentinel = await navigator.wakeLock.request('screen');
+      wakeSentinel.addEventListener('release', () => { wakeSentinel = null; });
+    } catch {
+      wakeSentinel = null;              // 배터리 절약 모드 등에서는 거부된다
+    }
+  }
+
+  function wakeOff({ keep = false } = {}) {
+    if (!keep) wakeWanted = false;
+    wakeSentinel?.release?.().catch(() => {});
+    wakeSentinel = null;
+  }
+
+  /* ───────── 음성 인식 — 말하면 바로 글자로 ───────── */
+
+  const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+
+  function startSpeech(id) {
+    if (!opts.speech) return;
+    if (!SR) { setStatus('이 브라우저는 음성 인식을 지원하지 않습니다 — 타이핑으로 답하세요.'); return; }
+
+    recogBase = (answers[id] || '').trim();   // 이미 적어둔 내용은 보존하고 뒤에 붙인다
+    recogFinal = '';
+    speechStarted = false;
+    speechError = '';
+    const r = new SR();
+    recog = r;
+    r.lang = 'en-US';
+    r.continuous = true;
+    r.interimResults = true;
+    r.maxAlternatives = 1;
+
+    r.onresult = (e) => {
+      let interim = '';
+      for (let i = e.resultIndex; i < e.results.length; i++) {
+        const txt = e.results[i][0].transcript.trim();
+        if (e.results[i].isFinal) { if (txt) recogFinal += (recogFinal ? ' ' : '') + txt; }
+        else interim += txt + ' ';
+      }
+      const merged = [recogBase, recogFinal].filter(Boolean).join(' ');
+      answers[id] = merged;
+      store.set('answers', answers);
+      const ta = $('answer'); if (ta) ta.value = merged;
+      const lv = $('live'); if (lv) lv.textContent = interim ? '… ' + interim : '';
+    };
+
+    r.onstart = () => { speechStarted = true; };
+
+    r.onerror = (e) => {
+      const why = {
+        'not-allowed': '마이크 권한이 거부되었습니다',
+        'service-not-allowed': '브라우저가 음성 인식을 막았습니다',
+        'network': '음성 인식 서버에 연결할 수 없습니다',
+        'audio-capture': '마이크를 잡을 수 없습니다 (녹음과 충돌했을 수 있습니다)',
+        'aborted': '',
+        'no-speech': '',
+      }[e.error] ?? `음성 인식 오류 (${e.error})`;
+      if (why) { speechError = why; setStatus(why + ' — 타이핑으로 답하세요.'); }
+    };
+
+    // 안드로이드 크롬은 잠깐 조용하면 알아서 끊긴다. 응답시간 동안은 계속 되살린다.
+    r.onend = () => { if (recog === r && phase === 'answering') { try { r.start(); } catch {} } };
+
+    try { r.start(); } catch { recog = null; }
+  }
+
+  function stopSpeech() {
+    const r = recog;
+    if (!r) return;
+    recog = null;
+    r.onend = null;
+    try { r.stop(); } catch {}
+    const lv = $('live'); if (lv) lv.textContent = '';
+  }
+
+  /* ───────── 녹음 (선택 — 나중에 다시 들어보려면) ───────── */
+
+  async function startRecording(id) {
+    recStop = null;
+    if (!opts.audio) return;
+    if (!window.MediaRecorder || !navigator.mediaDevices?.getUserMedia) {
+      setStatus('이 브라우저는 녹음을 지원하지 않습니다 — 답안은 글자로만 저장됩니다.');
+      return;
+    }
+    try {
+      micStream ??= await navigator.mediaDevices.getUserMedia({ audio: true });
+    } catch {
+      setStatus('마이크 권한이 없어 녹음을 못 합니다 — 답안은 글자로만 저장됩니다.');
+      return;
+    }
+
+    // ★ recorder 를 지역 변수로 붙잡는다. 전역만 쓰면 stop 뒤에 null 이 되어
+    //   onstop 안에서 터지고 녹음 파일이 만들어지지 않는다.
+    let rec;
+    try { rec = new MediaRecorder(micStream); }
+    catch { setStatus('녹음을 시작할 수 없습니다 — 답안은 글자로만 저장됩니다.'); return; }
+
+    const chunks = [];
+    recorder = rec;
+    recStop = new Promise((resolve) => {
+      rec.ondataavailable = (e) => e.data.size && chunks.push(e.data);
+      rec.onerror = () => { setStatus('녹음 중 오류가 났습니다 — 글자만 저장됩니다.'); resolve(); };
+      rec.onstop = () => {
+        if (chunks.length) {
+          if (recordings[id]) URL.revokeObjectURL(recordings[id].url);
+          const blob = new Blob(chunks, { type: rec.mimeType || 'audio/webm' });
+          recordings[id] = { blob, url: URL.createObjectURL(blob) };
+          if (flat[idx].id === id) renderRecording();
+        }
+        resolve();
+      };
+    });
+    try { rec.start(); } catch { recorder = null; recStop = null; }
+  }
+
+  function stopRecording() {
+    const rec = recorder;
+    recorder = null;
+    if (rec && rec.state !== 'inactive') rec.stop();
+    else recStop = null;
+  }
+
+  /* ───────── 진행 ───────── */
+
+  async function start() {
+    const q = flat[idx];
+    wakeOn();
+    stopAll();
+    const my = runId;
+    phase = 'playing'; render();
+    setStatus('듣는 중…');
+    try {
+      if (!(await playSegments(q.pre, my))) return;
+      if (!(await playSegments(q.body, my))) return;
+    } catch (e) { setStatus(e.message); phase = 'idle'; render(); return; }
+    answer(my);
+  }
+
+  async function sayAgain() {
+    const q = flat[idx];
+    if (sayAgainUsed[q.id]) return;
+    sayAgainUsed[q.id] = true; store.set('sayagain', sayAgainUsed);
+    wakeOn();
+    stopAll();
+    const my = runId;
+    phase = 'playing'; render();
+    setStatus('Say again — 다시 듣는 중…');
+    try {
+      if (!(await playSegments(q.body, my))) return;
+    } catch (e) { setStatus(e.message); phase = 'idle'; render(); return; }
+    answer(my);
+  }
+
+  function answer(my) {
+    const q = flat[idx];
+    phase = 'answering'; render();
+    setStatus((opts.speech ? '응답하세요 — 말하면 글자로 들어갑니다' : '응답하세요 — 타이핑')
+      + (opts.audio ? ' · 녹음 중' : ''));
+    // 인식이 마이크를 먼저 잡게 하고, 녹음을 뒤에 붙인다 (동시에 열면 인식이 밀린다)
+    startSpeech(q.id);
+    setTimeout(() => { if (my === runId) startRecording(q.id); }, 400);
+    const total = q.seconds * 1000, t0 = Date.now();
+    const tick = () => {
+      if (my !== runId) return;
+      const left = Math.max(0, total - (Date.now() - t0));
+      setTimer(left / 1000, q.seconds);
+      if (left <= 0) finish(true);
+    };
+    tick();
+    timerHandle = setInterval(tick, 200);
+  }
+
+  async function finish(timeUp) {
+    const q = flat[idx];
+    stopAll();
+    if (timeUp) beep();
+    phase = 'done'; revealed = true;
+    render();
+    setStatus(timeUp ? '시간 종료' : '응답 종료');
+
+    // 녹음 파일이 다 만들어질 때까지 기다린다 (최대 3초)
+    const pending = recStop;
+    recStop = null;
+    if (pending) await Promise.race([pending, wait(3000)]);
+    // 음성 인식의 마지막 조각이 들어올 시간
+    await wait(400);
+
+    if (opts.speech && !recogFinal.trim()) {
+      setStatus(
+        speechError ? `${speechError} — 답안이 비었습니다. 타이핑해 주세요.`
+        : !SR ? '이 브라우저는 음성 인식을 지원하지 않습니다 — 타이핑해 주세요.'
+        : !speechStarted ? '음성 인식이 시작되지 않았습니다 — 녹음 저장을 끄고 다시 해보세요.'
+        : '음성 인식이 아무 말도 못 들었습니다 — 마이크에 가까이, 또는 타이핑해 주세요.');
+    }
+    submit(q);
+  }
+
+  /* ───────── 서버 전송 ───────── */
+
+  // 아직 서버에 안 보낸 내용이 있는지
+  function dirty(id) {
+    const text = (answers[id] || '').trim();
+    if (text && text !== lastSent[id]) return true;
+    return !!(recordings[id]?.blob && !sentAudio[id]);
+  }
+
+  async function submit(q, { keepalive = false } = {}) {
+    if (!token) return false;           // 주소에 #k=... 가 없으면 로컬에만 남는다
+    if (!dirty(q.id)) return true;      // 이미 보낸 그대로면 다시 보내지 않는다
+
+    const text = (answers[q.id] || '').trim();
+    const blob = sentAudio[q.id] ? null : recordings[q.id]?.blob;
+    if (!text && !blob) return true;
+
+    sent[q.id] = '보내는 중…'; renderSent();
+    const body = {
+      set: DATA.set, session, qid: q.id,
+      answer: text, seconds: q.seconds, hints: q.hints || [],
+    };
+    // 페이지가 닫히는 중이면 녹음은 포기하고 글자만 확실히 보낸다
+    if (blob && !keepalive) {
+      body.mime = blob.type || 'audio/webm';
+      body.audio = await toBase64(blob);
+    }
+    try {
+      const r = await fetch('/api/submit', {
+        method: 'POST',
+        headers: { 'content-type': 'application/json', 'x-epta-token': token },
+        body: JSON.stringify(body),
+        keepalive,
+      });
+      const j = await r.json().catch(() => ({}));
+      if (r.ok) {
+        lastSent[q.id] = text;
+        if (body.audio) sentAudio[q.id] = true;
+        sent[q.id] = body.audio ? '저장됨 · 녹음 포함' : '저장됨';
+
+        const said = (j.transcript || '').trim();
+        if (said) {
+          heard[q.id] = said;
+          // 답안칸이 비어 있으면 서버가 알아들은 것으로 채운다
+          if (!text) {
+            answers[q.id] = said;
+            lastSent[q.id] = said;       // 방금 서버에서 온 것이니 다시 보낼 필요 없다
+            store.set('answers', answers);
+            if (flat[idx].id === q.id) { const ta = $('answer'); if (ta) ta.value = said; }
+            renderNav();
+          }
+          if (flat[idx].id === q.id) renderHeard();
+        }
+        if (j.sttError && flat[idx].id === q.id) {
+          setStatus('녹음은 저장됐지만 서버 전사에 실패했습니다: ' + j.sttError);
+        }
+      } else {
+        sent[q.id] = `저장 실패 (${j.error || r.status})`;
+      }
+      renderSent();
+      return r.ok;
+    } catch {
+      sent[q.id] = '저장 실패 — 네트워크';
+      renderSent();
+      return false;
+    }
+  }
+
+  // 타이핑이 멈추면 조금 뒤에 저장한다
+  function queueSubmit(q) {
+    clearTimeout(typeTimer);
+    typeTimer = setTimeout(() => submit(q), 1500);
+  }
+
+  // 남은 것 전부 — 화면을 떠날 때, 그리고 버튼을 눌렀을 때
+  async function flushAll(opts2 = {}) {
+    const todo = flat.filter((q) => dirty(q.id));
+    if (!todo.length) return { ok: 0, fail: 0, todo: 0 };
+    let ok = 0;
+    for (const q of todo) ok += (await submit(q, opts2)) ? 1 : 0;
+    return { ok, fail: todo.length - ok, todo: todo.length };
+  }
+
+  function toBase64(blob) {
+    return new Promise((resolve, reject) => {
+      const fr = new FileReader();
+      fr.onload = () => resolve(String(fr.result).split(',')[1]);
+      fr.onerror = reject;
+      fr.readAsDataURL(blob);
+    });
+  }
+
+  function renderHeard() {
+    const box = $('heard'); if (!box) return;
+    const said = heard[flat[idx].id];
+    if (!said) { box.innerHTML = ''; return; }
+    const same = said === (answers[flat[idx].id] || '').trim();
+    box.innerHTML = `<b>녹음에서 알아들은 말 (서버)</b>${esc(said)}`
+      + (same ? '' : `<button class="btn use" id="useHeard">이걸 답안으로</button>`);
+    $('useHeard')?.addEventListener('click', () => {
+      const q = flat[idx];
+      answers[q.id] = said;
+      store.set('answers', answers);
+      const ta = $('answer'); if (ta) ta.value = said;
+      renderNav(); renderHeard();
+      submit(q);
+    });
+  }
+
+  function renderSent() {
+    const el = $('sent'); if (!el) return;
+    const s = sent[flat[idx].id] || '';
+    el.textContent = s;
+    el.className = 'sent' + (s.startsWith('저장됨') ? ' ok' : s.startsWith('저장 실패') ? ' bad' : '');
+  }
+
+  function go(to) {
+    if (to < 0 || to >= flat.length) return;
+    clearTimeout(typeTimer);
+    submit(flat[idx]);                  // 떠나기 전에 지금 문항을 저장한다
+    stopAll();
+    idx = to; store.set('idx', idx);
+    phase = 'idle'; revealed = false;
+    render();
+    window.scrollTo({ top: 0 });
+    if (opts.autoStart) start();
+  }
+
+  /* ───────── 화면 ───────── */
+
+  function segHtml(seg) {
+    const show = opts.script || revealed;
+    if (seg.type === 'chime') return `<div class="seg chime">🔔 dingdong</div>`;
+    if (seg.type === 'screen') return `<div class="cue">☞ ${esc(seg.text)}</div>`;
+    if (seg.type === 'image') return `<img class="fig" src="${esc(seg.src)}" alt="">`;
+    if (seg.kind === 'instruction') return `<div class="seg instruction" data-src="${seg.src}">☞ ${esc(seg.text)}</div>`;
+    if (seg.voice === 'atc') {
+      return show
+        ? `<div class="seg atc" data-src="${seg.src}"><b>${esc(seg.label)} :</b> ${esc(seg.text)}</div>`
+        : `<div class="seg atc hidden" data-src="${seg.src}"><b>${esc(seg.label)} :</b> 🔊 (음성)</div>`;
+    }
+    const tag = /^(Flight Paths|Initial Situation|Situation Update)\.?\s*/.exec(seg.text || '');
+    const body = tag ? seg.text.slice(tag[0].length) : (seg.text || '');
+    const head = tag ? `<span class="tag">[${esc(tag[1])}]</span> ` : '';
+    return show
+      ? `<div class="seg narration" data-src="${seg.src}">${head}${esc(body)}</div>`
+      : `<div class="seg narration hidden" data-src="${seg.src}">🔊 상황 설명 (음성)</div>`;
+  }
+
+  function render() {
+    const q = flat[idx], sec = DATA.sections[q.si];
+    const model = (DATA.answers || {})[q.id];
+    const used = !!sayAgainUsed[q.id];
+
+    $('title').textContent = DATA.set;
+    $('progress').textContent = `${idx + 1} / ${flat.length}`;
+
+    // 실제 시험처럼 화면 클루(☞)는 본문에서 빼서 맨 위 띠에 모아 보여준다
+    const isCue = (s) => s.type === 'screen';
+    const cues = [...q.pre, ...q.body].filter(isCue);
+    const pre = q.pre.filter((s) => !isCue(s));
+    const body = q.body.filter((s) => !isCue(s));
+
+    $('card').innerHTML = `
+      <div class="sec-title">${esc(sec.title)}</div>
+      ${q.first && sec.directions ? `<details class="dir"${phase === 'idle' ? ' open' : ''}><summary>Directions</summary>${esc(sec.directions)}</details>` : ''}
+      ${cues.length ? `<div class="cuebar">${cues.map(segHtml).join('')}</div>` : ''}
+      ${pre.length ? `<div class="pre-label">SITUATION</div><div class="block">${pre.map(segHtml).join('')}</div>` : ''}
+      <div class="qhead"><h2>${esc(q.id)}</h2><span class="time">🎙 ${q.seconds}초 ${esc(q.note)}</span></div>
+      <div class="block">${body.map(segHtml).join('')}</div>
+
+      <div class="controls">
+        ${phase === 'playing' || phase === 'answering'
+          ? `<button class="btn" id="stop">■ ${phase === 'answering' ? '응답 끝' : '멈춤'}</button>`
+          : `<button class="btn primary" id="start">▶ ${phase === 'done' ? '처음부터 다시' : '시작'}</button>`}
+        <button class="btn" id="again" ${used || phase === 'idle' || phase === 'playing' ? 'disabled' : ''}>Say again ${used ? '(사용함)' : '(1회)'}</button>
+        <div class="timer"><div class="bar" id="bar"><div></div></div><span id="left">${q.seconds}s</span></div>
+      </div>
+      <div class="status" id="status"></div>
+
+      <textarea id="answer" placeholder="말하면 여기에 바로 들어옵니다. 말할 수 없는 상황이면 직접 타이핑하세요.">${esc(answers[q.id] || '')}</textarea>
+      <div class="live" id="live"></div>
+      <div class="heard" id="heard"></div>
+      <div class="rec" id="rec"></div>
+
+      ${model ? `<details class="model"><summary>모범답안 보기</summary>${esc(model)}</details>` : ''}
+
+      <div class="nav-row">
+        <button class="btn" id="prev" ${idx === 0 ? 'disabled' : ''}>← 이전</button>
+        <button class="btn" id="next" ${idx === flat.length - 1 ? 'disabled' : ''}>다음 →</button>
+      </div>`;
+
+    $('start')?.addEventListener('click', start);
+    $('stop')?.addEventListener('click', () => (phase === 'answering' ? finish(false) : (stopAll(), phase = 'idle', render())));
+    $('again').addEventListener('click', sayAgain);
+    $('prev').addEventListener('click', () => go(idx - 1));
+    $('next').addEventListener('click', () => go(idx + 1));
+    $('answer').addEventListener('input', (e) => {
+      answers[q.id] = e.target.value; store.set('answers', answers); renderNav();
+      queueSubmit(q);
+    });
+    renderRecording();
+    renderHeard();
+    renderNav();
+  }
+
+
+  function renderRecording() {
+    const rec = recordings[flat[idx].id];
+    const box = $('rec'); if (!box) return;
+    box.innerHTML = (rec
+      ? `내 녹음 <audio controls src="${rec.url}"></audio> <a href="${rec.url}" download="${DATA.set}_${flat[idx].id}.webm">저장</a> `
+      : '') + `<span class="sent" id="sent"></span>`;
+    renderSent();
+  }
+
+  function renderNav() {
+    let html = '', lastSec = -1;
+    flat.forEach((q, i) => {
+      if (q.si !== lastSec) {
+        if (lastSec !== -1) html += '</div>';
+        html += `<div class="sec">${esc(DATA.sections[q.si].title.replace(/\..*$/, ''))}</div><div class="chips">`;
+        lastSec = q.si;
+      }
+      const cls = [(answers[q.id] || '').trim() ? 'answered' : '', i === idx ? 'current' : ''].join(' ');
+      html += `<button class="${cls}" data-i="${i}">${esc(q.id.split('-')[1])}</button>`;
+    });
+    $('nav').innerHTML = html + '</div>';
+    $('nav').querySelectorAll('button').forEach((b) => b.addEventListener('click', () => go(+b.dataset.i)));
+  }
+
+  function setTimer(left, total) {
+    const bar = $('bar'); if (!bar) return;
+    bar.firstElementChild.style.width = `${(1 - left / total) * 100}%`;
+    bar.classList.toggle('low', left <= 5);
+    $('left').textContent = `${Math.ceil(left)}s`;
+  }
+  const setStatus = (msg) => { const s = $('status'); if (s) s.textContent = msg; };
+
+  /* ───────── md 내보내기 ───────── */
+
+  function filledMarkdown() {
+    const out = [];
+    let cur = null, skipping = false;
+    for (const line of DATA.raw.split(/\r?\n/)) {
+      const m = line.trim().match(/^\*\*(P\d[ABC]-Q\d+)\*\*/);
+      if (m) cur = m[1];
+      if (skipping) {
+        if (line.trim() === '---') { out.push('', line); skipping = false; }
+        continue;
+      }
+      out.push(line);
+      if (line.trim() === '[정답]' && cur && (answers[cur] || '').trim()) {
+        out.push(answers[cur].trim());
+        skipping = true;
+      }
+    }
+    return out.join('\n');
+  }
+
+  $('copyMd').addEventListener('click', async () => {
+    try { await navigator.clipboard.writeText(filledMarkdown()); $('footStatus').textContent = '복사했습니다.'; }
+    catch { $('footStatus').textContent = '복사 실패 — md 다운로드를 쓰세요.'; }
+  });
+  $('downloadMd').addEventListener('click', () => {
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(new Blob([filledMarkdown()], { type: 'text/markdown' }));
+    a.download = `${DATA.set}.md`;
+    a.click();
+  });
+  $('reset').addEventListener('click', () => {
+    if (!confirm('이 세트의 답안과 Say again 기록을 지울까요?')) return;
+    for (const k of Object.keys(answers)) delete answers[k];
+    for (const k of Object.keys(sayAgainUsed)) delete sayAgainUsed[k];
+    for (const k of Object.keys(sent)) delete sent[k];
+    store.set('answers', answers); store.set('sayagain', sayAgainUsed);
+    session = stamp(); store.set('session', session);
+    go(0);
+  });
+
+  /* ───────── 이탈 시 저장 ───────── */
+
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) {
+      clearTimeout(typeTimer); flushAll({ keepalive: true });
+      wakeOff({ keep: true });          // OS 가 이미 풀었을 수 있다 — 상태만 남겨 둔다
+    } else if (wakeWanted) {
+      wakeOn();                         // 돌아왔으면 다시 잡는다
+    }
+  });
+  window.addEventListener('pagehide', () => {
+    clearTimeout(typeTimer); flushAll({ keepalive: true });
+    wakeOff();
+  });
+
+  $('syncAll').addEventListener('click', async () => {
+    if (!token) {
+      $('footStatus').textContent = '비밀키가 없어 서버로 못 보냅니다 — md 다운로드를 쓰세요.';
+      return;
+    }
+    clearTimeout(typeTimer);
+    $('footStatus').textContent = '보내는 중…';
+    const { ok, fail, todo } = await flushAll();
+    $('footStatus').textContent = todo === 0
+      ? '보낼 것이 없습니다 (모두 저장됨).'
+      : `${ok}문항 저장${fail ? `, ${fail}문항 실패` : ''}`;
+  });
+
+  function showKeyState() {
+    $('nokey').hidden = !!token;
+  }
+  showKeyState();
+  $('mineLink').href = '/r/?set=' + encodeURIComponent(DATA.set);
+
+  $('relogin').addEventListener('click', () => {
+    window.eptaForget();
+    window.eptaGate((tok) => {
+      token = tok;
+      showKeyState();
+      $('footStatus').textContent = '로그인했습니다. 이제 서버로 보낼 수 있습니다.';
+      flushAll();                       // 그동안 못 보낸 답안을 올린다
+    });
+  });
+
+  // 들어올 때 비밀번호를 확인하고 키를 받는다
+  window.eptaGate((tok) => {
+    token = tok;
+    showKeyState();
+    flushAll();                         // 로컬에만 남아 있던 답안이 있으면 올린다
+  });
+
+  /* ───────── 옵션 ───────── */
+
+  const bindOpt = (id, name) => {
+    $(id).checked = opts[name];
+    $(id).addEventListener('change', (e) => { opts[name] = e.target.checked; store.set('opts', opts); render(); });
+  };
+  bindOpt('optScript', 'script');
+  bindOpt('optSpeech', 'speech');
+  bindOpt('optAudio', 'audio');
+  bindOpt('optAutoStart', 'autoStart');
+
+  $('optWake').checked = opts.wake;
+  $('optWake').addEventListener('change', (e) => {
+    opts.wake = e.target.checked; store.set('opts', opts);
+    if (opts.wake) { if (wakeWanted) wakeOn(); } else wakeOff();
+  });
+  if (!wakeSupported) {
+    $('optWake').checked = false;
+    $('optWake').disabled = true;
+    $('optWakeLabel').title = '이 브라우저는 화면 켜두기(Screen Wake Lock)를 지원하지 않습니다 — '
+      + 'iOS 는 16.4 이상, 설정 ▸ 디스플레이 ▸ 자동 잠금을 길게 두세요.';
+  }
+
+  render();
+})();
+</script>
+</body>
+</html>

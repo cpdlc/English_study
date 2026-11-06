@@ -1,0 +1,12 @@
+{
+  "set": "EPTA_11",
+  "session": "20261103-170150",
+  "qid": "P2A-Q2",
+  "answer": "",
+  "transcript": "Descend NIDAL 1000, reduce speed 250 knot, expect TREB01 arrival, ILS runway two seven, altimeter two NIDAL 86, Hotel Lima one two three.",
+  "sttError": null,
+  "audioPath": "r/EPTA_11/20261103-170150/P2A-Q2.webm",
+  "seconds": 30,
+  "at": "2026-11-03T08:13:04+00:00",
+  "patchedAt": "2026-11-03T08:46:52+00:00"
+}

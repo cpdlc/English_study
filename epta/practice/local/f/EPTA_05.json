@@ -1,0 +1,284 @@
+{
+  "set": "EPTA_05",
+  "level": "Level 2",
+  "summary": "",
+  "gradedAt": "2026-11-03",
+  "items": {
+    "P1A-Q1": {
+      "verdict": "⚠",
+      "model": "Follow the Dash 8 ahead, hold short of Delta, HL123.",
+      "notes": [
+        "누락된 필수 readback 요소 : **따라갈 항공기 `the Dash 8`**",
+        "표준교신용어 오류 : 없음",
+        "코멘트 : `hold short of Delta` 는 정확합니다. 그런데 `follow ahead` 만으로는 **무엇을 따라가는지**가 없습니다. follow 지시는 지상 충돌을 막는 지시라 대상이 핵심입니다 — 앞에 여러 대가 있으면 엉뚱한 기체를 따라갑니다."
+      ]
+    },
+    "P1A-Q2": {
+      "verdict": "✅",
+      "model": "Cleared for takeoff runway 22, climb to 4,000 feet, report passing 2,000 feet, HL123.",
+      "notes": [
+        "누락된 필수 readback 요소 : 없음",
+        "표준교신용어 오류 : 없음 (`taked off` 는 오탈자로 보고 감점하지 않았습니다)",
+        "코멘트 : **두 개의 네 자리 피트 고도(4,000 과 2,000)를 둘 다 정확히** 받았습니다. EPTA_04 에서 `report passing 3,000` 을 8,000 으로 틀린 바로 그 유형입니다."
+      ]
+    },
+    "P1A-Q3": {
+      "verdict": "✅",
+      "model": "Descend to 3,000 feet, cleared for the ILS runway 09 approach, HL123.",
+      "notes": [
+        "누락된 필수 readback 요소 : 없음 (`caution birds` 는 복창 불필요 — 제외한 판단 정확)",
+        "표준교신용어 오류 : 없음. `roger` 뒤가 아니라 앞에 내용이 다 있으므로 단독 오용이 아닙니다 — 다만 불필요합니다",
+        "코멘트 : **접근 허가를 복창했습니다.** `approach` 단어가 빠졌지만 `cleared ILS runway 09` 로 허가 복창은 성립합니다."
+      ]
+    },
+    "P1A-Q4": {
+      "verdict": "✅",
+      "model": "Cleared to Larkin Airport via the DELMA ONE departure, maintain 5,000 feet, squawk 6170, HL123.",
+      "notes": [
+        "누락된 필수 readback 요소 : 없음 (`via`·`Airport` 누락은 경미)",
+        "표준교신용어 오류 : 없음",
+        "코멘트 : **squawk 6170 을 정확히 복창했습니다.** 6107·6710 으로 뒤집기 쉬운 값을 함정으로 넣은 것인데(같은 세트 P1B-Q5 가 그 상황을 다룹니다) 통과했습니다."
+      ]
+    },
+    "P1B-Q1": {
+      "verdict": "❌",
+      "model": "Unable to cross TORIN at 11,000, HL123 — we have 40 miles to run and we need 43 miles for that descent. Request descent now, or a speed reduction.",
+      "notes": [
+        "누락된 필수 readback 요소 : **unable · 사유 · 요청 — 지시문이 요구한 세 가지 전부**",
+        "표준교신용어 오류 : **할 수 없는 것을 그대로 복창했습니다.** 이대로면 관제사는 TORIN 을 11,000 으로 통과하겠다는 약속을 받은 것이 되고, 실제로는 못 지킵니다.",
+        "코멘트 : 지문이 **43마일 필요 / 40마일 남음** 이라고 두 숫자를 나란히 줬습니다. 43 > 40 이라는 한 줄의 비교만 하면 답이 나오는 문항이었습니다. **EPTA_04 에서 최우선으로 지적한 \"받아적은 숫자를 비교하지 않는다\" 가 그대로 반복됐습니다.**"
+      ]
+    },
+    "P1B-Q2": {
+      "verdict": "⚠",
+      "model": "Taxi to stand 7 via Golf and Hotel, HL123. And be advised, on final we noticed about four approach lights out on the left side.",
+      "notes": [
+        "누락된 필수 readback 요소 : **유도로 `Hotel`** — Golf 만 복창했습니다",
+        "표준교신용어 오류 : 없음",
+        "코멘트 : **복합 지시 두 부분을 모두 수행했고, 등화 개수와 위치까지 정확히** 보고했습니다. `be advised` 로 보고를 연 것도 적절합니다. 고칠 것은 ① 유도로 하나 ② `4 light` 가 어떤 등화인지(approach lights) 밝히는 것입니다."
+      ]
+    },
+    "P1B-Q3": {
+      "verdict": "✅",
+      "model": "Negative, maintaining 3,000 feet due to terrain caution, HL123.",
+      "notes": [
+        "누락된 필수 readback 요소 : 없음",
+        "표준교신용어 오류 : `maintain` → `maintaining` (현재 상태 보고이므로 진행형)",
+        "코멘트 : **NEGATIVE + 실제 값 + 사유 세 토막이 다 있습니다. 세 세트 연속 유지**입니다 — 이 패턴은 완전히 몸에 붙었다고 봅니다."
+      ]
+    },
+    "P1B-Q4": {
+      "verdict": "✅",
+      "model": "Negative, HL123 — it is a dark night with no horizon and we are not familiar with the terrain east of the field. Request vectors for the ILS.",
+      "notes": [
+        "누락된 필수 readback 요소 : 없음",
+        "표준교신용어 오류 : `are you able ~?` 는 **AFFIRM/NEGATIVE** 질문입니다. `unable` 도 뜻은 통하지만 첫 단어는 `Negative` 가 표준입니다.",
+        "코멘트 : **unable + 사유 + 대안 세 토막을 갖췄고 `request vectors` 로 대안이 구체적**입니다. 다만 사유가 절반입니다 — 지문의 핵심은 \"어두운 밤, 수평선 없음\"인데 `not familiar with this airport` 만 썼습니다. 야간 시각참조 부재가 시각접근을 거부하는 본질적 이유입니다."
+      ]
+    },
+    "P1B-Q5": {
+      "verdict": "✅",
+      "model": "HL123, correction — we had 6107 set by mistake. Now squawking 6170.",
+      "notes": [
+        "누락된 필수 readback 요소 : 없음",
+        "표준교신용어 오류 : 없음",
+        "코멘트 : **잘못 넣은 값 6107 을 말했습니다.** EPTA_04 에서 `we set another squawk by mistake` 로 뭉개 관제사가 화면과 대조할 수 없었던 문항입니다 — **해결**."
+      ]
+    },
+    "P1B-Q6": {
+      "verdict": "⚠",
+      "model": "Southgate Control, HL123, we have 50 minutes of fuel on board and our alternate needs 30, so 20 minutes of holding would leave us no reserve. Request holding reduced to 10 minutes, or priority for the approach.",
+      "notes": [
+        "누락된 필수 readback 요소 : **① 기관 호출 `Southgate Control` ② 문제의 근거(대체공항 30분 때문에 예비가 0 이 된다)**",
+        "표준교신용어 오류 : 없음",
+        "코멘트 : **비교를 일부 해냈습니다** — 홀딩을 20분에서 10분으로 줄여달라는 요청은 계산의 결과입니다. 그런데 **왜 20분이 안 되는지**를 말하지 않아 관제사는 근거 없는 요청으로 받습니다. 50 − 20 = 30 이고 대체공항이 30분이면 예비가 0 이라는 한 문장이 있어야 요청이 성립합니다. 조종사가 먼저 부르는 문항인데 기관 호출도 빠졌습니다."
+      ]
+    },
+    "P2A-Q1": {
+      "verdict": "❌",
+      "model": "Southgate Control, HL123, level at flight level 340, 120 miles from TORIN, request descent.",
+      "notes": [
+        "누락된 필수 readback 요소 : **위치(TORIN 까지 120마일)**",
+        "표준교신용어 오류 : **고도를 FL340 이 아니라 FL350 으로** 말했습니다. 값 오류입니다. `maintain` → `level at` (상태 보고 동사)",
+        "코멘트 : 기관 호출과 요청은 정확합니다. 그런데 **자기 고도를 틀리게 보고하면** 관제사의 분리 계산이 어긋납니다. 지문 첫 줄에 FL340 이 적혀 있었습니다."
+      ]
+    },
+    "P2A-Q2": {
+      "verdict": "⚠",
+      "model": "Descend to flight level 240, expect 10 minutes of holding at TORIN, HL123. What will that do to our arrival time? We have a curfew at 2300.",
+      "notes": [
+        "누락된 필수 readback 요소 : **도착시각 문의** — 지시문의 뒷부분입니다",
+        "표준교신용어 오류 : 없음",
+        "코멘트 : 복창은 정확합니다. 그런데 이 문항은 **커퓨 2300 에 도착예정 2252 인 상황에서 10분 홀딩을 통보받은 것**입니다. 물어야 할 이유가 지문에 깔려 있었고 지시문도 `inquire` 라고 적혀 있었습니다."
+      ]
+    },
+    "P2A-Q3": {
+      "verdict": "❌",
+      "model": "Southgate Control, HL123 — 10 minutes of holding would put us at 2302, and Larkin takes no landings after 2300. Request direct TORIN with no holding, or priority for the approach.",
+      "notes": [
+        "코멘트 : **Level 1.** 이 문항이 이번 세트의 **최우선 타깃**이었습니다 — 도착예정 2252 + 홀딩 10분 = 2302 이고 커퓨가 2300 이므로 2분 초과입니다. 세 숫자를 비교하면 답이 나오고, 그 비교를 말하는 것이 곧 \"이유\"였습니다. 비우면 그 연습이 통째로 사라집니다.",
+        "뼈대 : `(기관) + (콜사인) + 홀딩하면 몇 시가 된다 + 커퓨는 몇 시다 + 그래서 못 내린다` → `request (대안 1), or (대안 2)`. **숫자 두 개(2302 / 2300)를 나란히 말하는 것이 곧 사유**입니다. 대안은 둘 다 댈 필요는 없고 하나면 됩니다."
+      ]
+    },
+    "P2A-Q4": {
+      "verdict": "✅",
+      "model": "Larkin Approach, HL123, descending through flight level 180 for 11,000 feet.",
+      "notes": [
+        "누락된 필수 readback 요소 : 없음",
+        "표준교신용어 오류 : 없음",
+        "코멘트 : **기관 호출 + FL 통과고도 + 피트 목표고도.** 두 단위를 정확히 구분했습니다 — 세 세트 연속 안정적입니다."
+      ]
+    },
+    "P2A-Q5": {
+      "verdict": "✅",
+      "model": "Descend to 4,000 feet, reduce speed to 200 knots, expect the TORIN TWO arrival, ILS runway 09, altimeter 30.04, HL123.",
+      "notes": [
+        "누락된 필수 readback 요소 : 없음",
+        "표준교신용어 오류 : 없음",
+        "코멘트 : **다섯 요소 전부 정확합니다.** 네 세트 연속으로 이 유형을 잡고 있습니다."
+      ]
+    },
+    "P2A-Q6": {
+      "verdict": "❌",
+      "model": "HL123 — before I answer, how many minutes would that slowdown cost us? Our estimate is 2251 and the curfew is 2300, so we have about nine minutes in hand. If the delay is more than that, we will need your priority.",
+      "notes": [
+        "뼈대 : `before I answer / before we decide, + (물어야 할 값)?` → 그다음 `우리 숫자는 이렇다` → `그보다 크면 (요청)`. **물어야 할 값은 \"감속하면 몇 분 늦어지는가\" 하나**입니다. 관제사가 이미 `tell me now and I will give you priority` 로 답을 깔아줬으니, 물어보고 숫자를 비교해 말하면 끝입니다.",
+        "코멘트 : **Level 1.** **\"결정 전에 묻기\" 는 EPTA_02·03·04 에서 세 세트 연속 실패한 항목**이고, 이번에 그것을 겨냥해 넣은 문항입니다. 게다가 관제사가 `tell me now and I will give you priority` 로 **먼저 길을 열어줬습니다** — 감속하면 몇 분 늦어지는지만 물으면 우선권을 받을 수 있었습니다. 가장 아까운 한 문항입니다."
+      ]
+    },
+    "P2A-Q7": {
+      "verdict": "✅",
+      "model": "Cleared for the ILS runway 09 approach, maintain 180 knots to 4 miles, contact Larkin Tower on 119.45, HL123.",
+      "notes": [
+        "누락된 필수 readback 요소 : `to 4 miles` 범위 (경미)",
+        "표준교신용어 오류 : 없음",
+        "코멘트 : **접근 허가 + 속도 + 기관명 + 주파수 119.45 전부 정확합니다.** 주파수는 네 세트 중 세 번 틀렸던 항목인데 이번엔 맞았습니다."
+      ]
+    },
+    "P2A-Q8": {
+      "verdict": "❌",
+      "model": "Larkin Tower, HL123, established on the ILS runway 09, passing 1,800 feet, request landing.",
+      "notes": [
+        "누락된 필수 readback 요소 : **① 위치(ILS 09 안착) ② 의도(착륙 요청)**",
+        "표준교신용어 오류 : **1,800 피트를 18000 으로** 말했습니다. 0 하나가 붙어 **1,800 과 18,000** 이 됩니다 — 착륙 직전과 순항 강하의 차이입니다.",
+        "코멘트 : 기관 호출은 했습니다. 그런데 P1A-Q2 에서 2,000 피트를 정확히 받은 같은 세트에서 이 값을 놓쳤습니다. 네 자리 피트는 `1800` 처럼 **쉼표 없이 네 자리로 적고 자릿수를 한 번 더 확인**하세요."
+      ]
+    },
+    "P2A-Q9": {
+      "verdict": "⚠",
+      "model": "Cleared to land runway 09, HL123, and after landing we will taxi via Kilo. How long will that taxi take?",
+      "notes": [
+        "누락된 필수 readback 요소 : **지상 이동 소요시간 문의** — 지시문의 뒷부분",
+        "표준교신용어 오류 : 없음 (`toi` 는 오탈자)",
+        "코멘트 : 착륙 허가와 우회 경로는 정확히 복창했고 바람도 제외했습니다. 문의가 빠졌습니다 — 커퓨가 걸린 상황이라 지상 이동이 길어지는 것도 운항에 영향을 줍니다. **이 세트에서 `inquire` 지시가 세 번(P2A-Q2·Q6·Q9) 나왔고 세 번 다 하지 않았습니다.**"
+      ]
+    },
+    "P2A-Q10": {
+      "verdict": "❌",
+      "model": "세 부분을 순서대로 :\n① **롤플레이에서 왜 그랬는지** : \"The problem was that my estimate for Larkin was already 2252, and the curfew closes the airport at 2300. Ten minutes of holding would have put me at 2302, so I would have arrived two minutes after the airport closed and I would not have been allowed to land. So I told the controller that the holding would take us past the curfew, and I requested direct TORIN with no holding, or priority for the approach.\"\n② **조종사로서 일반적으로 어떻게 하는지** : \"In my role as a pilot, when I am running late towards a curfew, the first thing I do is work out the latest time I can still accept a delay and land. Then I give ATC that number early, before the delay happens, because once I am in the hold it is too late to negotiate. At the same time I check my fuel and my alternate, so if the curfew cannot be met I already know where I am going instead of deciding under pressure.\"\n③ **예시로 닫기** : \"For example, on a night flight to an airport with a 2300 curfew, if I were given twenty minutes of holding and my fuel allowed only ten, I would not press on hoping the curfew would be waived. I would divert to my alternate while I still had the fuel for a full approach there. Pressing on in that situation turns a scheduling problem into a fuel emergency, and that is never worth it.\"",
+      "notes": [
+        "뼈대 : `The problem was that ...` → `In my role as a pilot, ...` → `For example, ...`. **이 세 문두만 외워 두면 90초가 채워집니다.** ①은 문제에 나온 숫자(2252 / 10분 / 2300)를 그대로 쓰면 되고, ③은 경험이 없어도 **가정 예시(`if I were ...`)로 답해도 정답**입니다.",
+        "코멘트 : **Level 1.** 90초 자유응답은 Fluency·Structure·Vocabulary 를 한꺼번에 보는 문항이고 배점이 가장 큽니다. EPTA_01 1차 이후 처음 나온 Follow-up 무응답입니다. 할 말이 떠오르지 않아도 \"홀딩 10분이면 2302 가 되어 커퓨를 넘는다\" 한 문장만 말하면 0 은 면합니다. **침묵이 가장 낮은 점수입니다.**"
+      ]
+    },
+    "P2B-Q1": {
+      "verdict": "✅",
+      "model": "Ashford Approach, HL123, descending through flight level 140 for 8,000 feet, information Mike.",
+      "notes": [
+        "누락된 필수 readback 요소 : ATIS Mike (있으면 좋지만 필수는 아닙니다)",
+        "표준교신용어 오류 : `to` → `for` (경미)",
+        "코멘트 : 기관 호출과 두 고도값이 정확합니다."
+      ]
+    },
+    "P2B-Q2": {
+      "verdict": "✅",
+      "model": "Descend and maintain 8,000 feet, reduce speed to 210 knots, expect the VESPA ONE arrival, ILS runway 15, altimeter 29.76, HL123.",
+      "notes": [
+        "누락된 필수 readback 요소 : 없음",
+        "표준교신용어 오류 : 없음",
+        "코멘트 : **다섯 요소 전부 정확.** 한 세트에서 이 유형을 두 번(P2A-Q5, P2B-Q2) 완전히 잡았습니다."
+      ]
+    },
+    "P2B-Q3": {
+      "verdict": "✅",
+      "model": "Ashford Approach, HL123, we have a nose gear unsafe indication. Maintaining 8,000 feet, request holding while we work the checklist.",
+      "notes": [
+        "누락된 필수 readback 요소 : 없음 — **세 가지 요구를 모두 수행했습니다**",
+        "표준교신용어 오류 : `maintain` → `maintaining` (경미)",
+        "코멘트 : **기관 호출을 했습니다.** `controller` 를 호출부호로 쓰던 오류가 EPTA_02·03·04 세 세트 연속이었는데 **이번에 해결**됐습니다. 상황·고도·요청 세 요소가 다 있습니다."
+      ]
+    },
+    "P2B-Q4": {
+      "verdict": "⚠",
+      "model": "Holding at VESPA, left turns, maintain 8,000 feet, HL123. Our intention is to work the checklist, then request a low pass for a visual check of the nose gear before we commit to landing.",
+      "notes": [
+        "누락된 필수 readback 요소 : **intentions**",
+        "표준교신용어 오류 : 없음",
+        "코멘트 : 복창은 정확합니다(홀딩 지점·선회 방향·고도). 그런데 **intentions 가 다섯 세트 연속 빠졌습니다** — EPTA_01 `ready` → 02 `report ready` → 03 `direct kimhae airport` → 04 \"나중에 말하겠다\" → 05 아예 없음. 관제사가 `Say your intentions when you are ready` 라고 명시한 문항입니다."
+      ]
+    },
+    "P2B-Q5": {
+      "verdict": "⚠",
+      "model": "HL123, fuel endurance one hour 10 minutes, 186 passengers and 9 crew, 195 souls on board.",
+      "notes": [
+        "누락된 필수 readback 요소 : 없음 — **두 가지를 다 답했습니다**",
+        "표준교신용어 오류 : **승객이 186 이 아니라 180 입니다** (승무원 9 는 정확)",
+        "코멘트 : **구조는 해결됐습니다.** EPTA_03 에서 souls on board 를 통째로 빠뜨리고 EPTA_04 에서 178→70 으로 틀려 두 세트 연속 실패한 항목인데, 이번엔 두 항목을 다 말했고 연료도 분 단위까지 정확합니다. 남은 것은 숫자 하나입니다 — 탑승 인원은 소방·구조 규모를 정하는 값이라 정확해야 합니다."
+      ]
+    },
+    "P2B-Q6": {
+      "verdict": "❌",
+      "model": "HL123, before we decide — request the weather at Brampton and whether their fire service is available. We have 70 minutes of fuel, so the low pass and re-approach at 25 minutes total is well inside that, and we would rather confirm the gear here than divert. Request the low pass.",
+      "notes": [
+        "누락된 필수 readback 요소 : **의도 진술과 이유 — 지시문의 뒷부분 전부**",
+        "표준교신용어 오류 : 없음",
+        "코멘트 : **묻는 동작 자체는 나왔습니다** — 세 세트 연속 못 했던 것이라 그 부분은 진전입니다. 그런데 **물은 내용이 이 상황의 변수가 아닙니다.** 기수 기어 문제에서 Brampton 의 활주로 길이는 판단 요소가 아닙니다(기어가 안 내려가면 길이로 해결되지 않습니다). 필요한 정보는 Brampton 의 기상이나 소방대 가용 여부입니다. 그리고 **잔여 70분 vs 저속통과+재접근 25분 vs 대체 35분** 이라는 세 숫자가 주어졌는데 비교가 없고 결정도 없습니다."
+      ]
+    },
+    "P2B-Q7": {
+      "verdict": "⚠",
+      "model": "Ashford Approach, HL123. The tower reports the nose gear looks down and in place after the low pass, and we now have 55 minutes of fuel. We will land at Ashford — request the ILS runway 15 with the fire service standing by.",
+      "notes": [
+        "누락된 필수 readback 요소 : **① 기관 호출 ② 상황 갱신(저속통과 결과와 잔여 연료)**",
+        "표준교신용어 오류 : **`visual approach` 는 이 상황에 맞지 않습니다.** 원래 ILS 15 로 복귀하는 맥락이고, 시각접근을 요청할 이유가 없습니다.",
+        "코멘트 : 결정(Ashford 착륙)과 소방대 요청은 적절합니다. 빠진 것은 **갱신**입니다 — 저속통과에서 기어가 내려간 것으로 보인다는 사실이 바로 착륙을 결정한 근거인데, 그걸 말하지 않으면 관제사는 왜 갑자기 착륙하겠다는지 모릅니다."
+      ]
+    },
+    "P2B-Q8": {
+      "verdict": "✅",
+      "model": "Turn left heading 180, descend to 2,500 feet until established, cleared for the ILS runway 15 approach, HL123.",
+      "notes": [
+        "누락된 필수 readback 요소 : 없음",
+        "표준교신용어 오류 : 없음 (`leftrun` 은 `left turn` 오탈자)",
+        "코멘트 : **선회 방향·기수·고도·established·접근 허가 전부.** EPTA_04 에서 이 유형에서 선회 방향을 빠뜨렸는데 이번엔 넣었고, 접근 허가도 유지했습니다. **접근 허가 복창은 두 세트 연속 안정적입니다.**"
+      ]
+    },
+    "P2B-Q9": {
+      "verdict": "⚠",
+      "model": "HL123, we do not expect to stop on the runway, and we would like the fire service following us.",
+      "notes": [
+        "누락된 필수 readback 요소 : **활주로 정지 여부 — 두 질문 중 하나**",
+        "표준교신용어 오류 : 없음",
+        "코멘트 : 소방대 쪽은 \"following\" 으로 분명히 답했습니다. 그런데 **활주로에 정지할지 여부를 빠뜨렸습니다** — EPTA_04 P2B-Q9 와 똑같은 실패입니다. 그 답에 따라 타워가 후속 항공기를 언제 접근시킬지가 달라집니다. 관제사가 `two things` 라고 세어줬습니다."
+      ]
+    },
+    "P2C-Q1": {
+      "verdict": "⚠",
+      "model": "During the approach we were getting ready for landing, so we extended the gear, but the nose gear indication showed unsafe. We recycled the gear and used the alternate system and it still showed unsafe. We informed the controller of our situation and requested holding, and we also passed our fuel endurance and souls on board. The controller gave us some options — landing at another airport, or a low pass for a visual check at the original airport. We chose the visual check, and after that we decided to land at the original airport using the ILS, with the fire service following us after landing.",
+      "notes": [
+        "누락된 필수 readback 요소 : 해당 없음 (자유응답)",
+        "표준교신용어 오류 : 해당 없음",
+        "코멘트 : **전개를 거의 다 담았습니다** — 기어 전개, 표시 이상, 상황 통보, 홀딩 요청, 연료·SOB 보고, 두 선택지, 저속통과 선택, ILS 착륙, 소방대. 그리고 **EPTA_04 에서 다른 파트(구급차)를 섞어 넣었던 문제가 이번엔 없습니다.** 비행 단계도 `approach phase` 로 맞게 썼습니다(EPTA_03 에서는 상승 중을 접근 중으로 틀렸습니다). 빠진 것은 **재순환·대체 전개를 시도했는데도 안 됐다는 조치**입니다 — 그게 사건의 심각도를 정합니다. 문법 교정 : `extract the gear` → `extended the gear`(extract 는 추출), `seems to strange that the indication indicate something problem` → `the nose gear indication showed unsafe`, `we are ready` → `we were getting ready`(시제), `the atc inform us` → `the controller gave us`."
+      ]
+    },
+    "P2C-Q2": {
+      "verdict": "⚠",
+      "model": "I think the controller handled it well. As soon as we told him the nose gear indication was unsafe, he gave us holding at VESPA so we could work the checklist, and then he laid out both options — a low pass for a visual check, or a diversion to Brampton — and let us choose. One thing that could have been handled differently is the diversion option: Brampton was 35 minutes away, and with 70 minutes of fuel that was possible but it would have left us thin, so I would rather he had offered the low pass first. He could also have had the fire service in position earlier instead of waiting for us to ask.",
+      "notes": [
+        "누락된 필수 readback 요소 : 해당 없음 (자유응답)",
+        "표준교신용어 오류 : 해당 없음",
+        "코멘트 : **`one thing that i want to handle different is …` 로 질문 후반부에 답했습니다 — 세 세트 연속**입니다. 그리고 **숫자를 근거로 들었습니다**(`because it takes 35min`) — 이번 세트가 겨냥한 \"숫자로 판단하기\" 가 여기서는 나왔습니다. 다만 **판단이 틀렸습니다** : 연료 70분에 대체 35분이면 불가능하지 않습니다. \"충분하지 않다\"가 아니라 \"여유가 얇아진다\"가 맞습니다. 그리고 첫 문장이 `I think this happen handled well` 로 시작해 곧바로 `as pilot, they did…` 로 **조종사를 평가**합니다 — 질문은 관제사를 묻습니다(**세 세트 연속 같은 패턴**). 마지막 `her name is Jeff pushing all that we should get it` 은 문맥과 무관한 문장입니다 — 입력 사고로 보고 채점에서 제외했습니다. 문법 교정 : `they inform their situation to controller is the best thing what they do` → 문장이 성립하지 않습니다, `braking equipment` → 무슨 장비인지 전달되지 않습니다."
+      ]
+    }
+  }
+}

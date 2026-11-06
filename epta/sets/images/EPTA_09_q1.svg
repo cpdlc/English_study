@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 400" width="680" height="400" font-family="Arial, Helvetica, sans-serif">
+  <rect width="680" height="400" fill="#e9e9e9"/>
+
+  <!-- 활주로 16 (흑백 지상도) -->
+  <rect x="40" y="46" width="600" height="46" fill="#2b2b2b"/>
+  <text x="56" y="77" font-size="20" font-weight="bold" fill="#ffffff">RWY 16</text>
+
+  <!-- 유도로 Bravo — 폐쇄 -->
+  <rect x="200" y="92" width="22" height="160" fill="#cfcfcf"/>
+  <line x1="200" y1="100" x2="222" y2="244" stroke="#1b1b1b" stroke-width="4"/>
+  <line x1="222" y1="100" x2="200" y2="244" stroke="#1b1b1b" stroke-width="4"/>
+  <text x="172" y="112" font-size="19" font-weight="bold" fill="#1b1b1b">B</text>
+  <rect x="140" y="156" width="104" height="26" fill="#ffffff" stroke="#1b1b1b" stroke-width="2"/>
+  <text x="152" y="175" font-size="16" font-weight="bold" fill="#1b1b1b">CLOSED</text>
+
+  <!-- 유도로 Lima -->
+  <rect x="488" y="92" width="22" height="160" fill="#cfcfcf"/>
+  <text x="520" y="180" font-size="19" font-weight="bold" fill="#1b1b1b">L</text>
+
+  <!-- 대기지점 Charlie 2 -->
+  <line x1="476" y1="104" x2="522" y2="104" stroke="#1b1b1b" stroke-width="4"/>
+  <rect x="534" y="92" width="52" height="26" fill="#ffffff" stroke="#1b1b1b" stroke-width="2"/>
+  <text x="544" y="111" font-size="16" font-weight="bold" fill="#1b1b1b">C2</text>
+
+  <!-- 유도로 Golf -->
+  <rect x="60" y="252" width="560" height="24" fill="#cfcfcf"/>
+  <text x="68" y="246" font-size="19" font-weight="bold" fill="#1b1b1b">G</text>
+
+  <!-- 터미널 · Gate Charlie 4 -->
+  <polygon points="60,330 300,330 300,392 60,392" fill="#2b2b2b"/>
+  <text x="112" y="368" font-size="19" font-weight="bold" fill="#ffffff">TERMINAL</text>
+  <line x1="150" y1="330" x2="150" y2="276" stroke="#9a9a9a" stroke-width="3"/>
+  <rect x="92" y="292" width="116" height="26" fill="#ffffff" stroke="#1b1b1b" stroke-width="2"/>
+  <text x="102" y="311" font-size="16" font-weight="bold" fill="#1b1b1b">GATE C4</text>
+
+  <!-- 자기 항공기 — Golf 위, Lima 교차점 못 미침 -->
+  <polygon points="372,264 350,252 350,276" fill="#6fb7e3"/>
+  <rect x="300" y="196" width="96" height="28" fill="#ffffff" stroke="#1b1b1b" stroke-width="2"/>
+  <text x="310" y="216" font-size="18" font-weight="bold" fill="#1b1b1b">HL123</text>
+  <line x1="348" y1="224" x2="356" y2="246" stroke="#c02626" stroke-width="3"/>
+  <polygon points="358,254 348,244 360,240" fill="#c02626"/>
+
+  <!-- 묻는 지점 -->
+  <circle cx="499" cy="264" r="30" fill="none" stroke="#c02626" stroke-width="4"/>
+  <text x="396" y="332" font-size="22" font-weight="bold" fill="#c02626">Position ??</text>
+  <text x="396" y="360" font-size="20" font-weight="bold" fill="#c02626">Golf or Lima ??</text>
+</svg>

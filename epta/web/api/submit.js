@@ -1,4 +1,4 @@
-import { put } from '@vercel/blob';
+import { put, get } from '@vercel/blob';
 
 /*
  * POST /api/submit
@@ -92,6 +92,29 @@ export default async function handler(req, res) {
 
   const base = `r/${safe(set)}/${safe(session)}/${safe(qid)}`;
   const common = { access: 'private', addRandomSuffix: false, allowOverwrite: true };
+
+  // patch — 녹음은 그대로 두고 전사본만 고쳐 쓴다. 90초 문항은 서버 STT 가 60초
+  // inline 제한에 걸려 늘 빈칸이므로, 로컬 transcribe.py 가 그 결과를 올려준다.
+  if (req.body.patch) {
+    let rec;
+    try {
+      const r = await get(base + '.json', { access: 'private' });
+      if (!r) return res.status(404).json({ error: '그 문항의 기록이 없습니다' });
+      rec = JSON.parse(await new Response(r.stream).text());
+    } catch (e) {
+      return res.status(500).json({ error: `기록을 읽지 못했습니다: ${e.message}` });
+    }
+    rec.transcript = String(req.body.transcript ?? '');
+    rec.sttError = null;
+    rec.patchedAt = new Date().toISOString();
+    try {
+      await put(base + '.json', JSON.stringify(rec, null, 2),
+        { ...common, contentType: 'application/json' });
+    } catch (e) {
+      return res.status(500).json({ error: `저장 실패: ${e.message}` });
+    }
+    return res.status(200).json({ ok: true, patched: `${set}/${session}/${qid}` });
+  }
 
   let transcript = '';
   let sttError = null;

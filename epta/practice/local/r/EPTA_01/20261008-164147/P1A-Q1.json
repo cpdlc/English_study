@@ -1,0 +1,12 @@
+{
+  "set": "EPTA_01",
+  "session": "20261008-164147",
+  "qid": "P1A-Q1",
+  "answer": "taxi via C hold short of runway 27 hl123",
+  "transcript": "",
+  "sttError": null,
+  "audioPath": "r/EPTA_01/20261008-164147/P1A-Q1.webm",
+  "seconds": null,
+  "at": "2026-11-03T06:09:08+00:00",
+  "restoredFrom": "practice\\results\\EPTA_01.md"
+}

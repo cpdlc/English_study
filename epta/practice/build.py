@@ -94,6 +94,9 @@ def speech(text):
     t = t.replace(_T, "3")
 
     t = re.sub(r"\bHL\s?123\b", "Hotel Lima one two three", t, flags=re.I)
+    # Flight Paths 고정구는 `the pilot flying Hotel Lima 123` 처럼 콜사인을 이미 풀어
+    # 쓰면서 숫자만 남겨 둔다. 그대로 두면 TTS 가 "one hundred twenty-three" 로 읽는다.
+    t = re.sub(r"\bHotel Lima\s?(\d{3})\b", lambda m: "Hotel Lima " + spell(m[1]), t, flags=re.I)
     t = re.sub(r"\bFL\s?(\d{2,3})\b", lambda m: "flight level " + spell(m[1]), t)
     t = re.sub(r"\bflight level (\d{2,3})\b", lambda m: "flight level " + spell(m[1]), t, flags=re.I)
     t = re.sub(r"\bMach 0?\.(\d+)", lambda m: "Mach point " + spell(m[1]), t)
@@ -414,7 +417,9 @@ def main():
     total = sum(len(s["questions"]) for s in data["sections"])
     print(f"{out} 생성 — {len(data['sections'])}개 파트, {total}문항")
     print(f"목록 갱신 — {len(sets)}개 세트 ({', '.join(sets)})")
-    print("배포: npx vercel deploy --prod web")
+    # 2026-11-03 이후 Vercel 을 쓰지 않는다 (Blob Advanced Operations 한도 소진).
+    # 로컬 서버가 web/ 를 그대로 읽으므로 배포 단계가 없다 — CLAUDE.md §5-1.
+    print("실행: python practice/serve.py        (폰에서 쓰려면 cloudflared tunnel 추가)")
 
 
 def write_index():

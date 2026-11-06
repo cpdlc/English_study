@@ -1,0 +1,12 @@
+{
+  "set": "SAMPLE_01",
+  "session": "restored",
+  "qid": "P2B-Q7",
+  "answer": "Clear to public airport. Turn right. Heading 140. Maintain 4000. Hotel amount 123.",
+  "transcript": "",
+  "sttError": null,
+  "audioPath": null,
+  "seconds": null,
+  "at": "2026-11-03T06:10:36+00:00",
+  "restoredFrom": "sets\\SAMPLE_01_feedback.md"
+}

@@ -45,7 +45,7 @@
 | `such as heigh indication ... ask the exact height` | `our airspeed indications ... ask for the groundspeed` | 이 사건은 **속도** 문제였다. 핵심 단어를 틀리면 리포팅 전체가 어긋난다 | EPTA_02 · 05 · 06 P2C-Q2 (→ S01 에서 해결) |
 | `I think we handled it well` (관제사를 묻는 질문) | `I think the controller handled it well.` | Task C Q2 의 주어는 **관제사**. 2세트 연속 `we` 로 시작 | EPTA_02 · 05 · 06 P2C-Q2 (→ S01 에서 해결) |
 | (3세트 연속 무응답) | `One thing that could have been handled differently is that he could have told us earlier …` | Task C Q2 **후반부**. 이 틀로 한 문장만 붙이면 된다 | EPTA_01·02 P2C-Q2 |
-| (3세트 연속 무응답) | `For example, on a wet runway at high take-off weight, 2,150 metres would not be enough for us.` | Follow-up 의 `Give an example.` — 경험이 없으면 **가정 예시**로 | EPTA_01·02 Follow-up · 06 P2A-Q11 · 07 P2A-Q11 |
+| (3세트 연속 무응답) | `For example, on a wet runway at high take-off weight, 2,150 metres would not be enough for us.` | Follow-up 의 `Give an example.` — 경험이 없으면 **가정 예시**로 | EPTA_01·02 Follow-up · 06 · 07 · 08 P2A-Q11 |
 
 | ~~`expect ils runway 36`~~ → 3/3 복창 **해결(10-21)** | `Cleared for the ILS runway 36 approach.` | **3세트 연속 누락.** `cleared for` 가 있어야 허가를 받았다는 확인이 된다 | EPTA_03 P2A-Q8 · P2B-Q8 |
 | `mayday mayday mayday hl123 …` | `Mayday, mayday, mayday, Sejong Control, HL123, engine number one fire, engine shut down.` | MAYDAY×3 다음은 **기관명 → 콜사인 → 사건** 순 (`atc-terminology.md` §8-1) | EPTA_03 P2B-Q3 |
@@ -63,7 +63,7 @@
 | `we want to land on runway 08` (바람이 바뀌어 26 의 배풍이 사라진 뒤) | `The tailwind on 26 has gone — we will take runway 26, because we need 2,400 metres and 08 is only 2,300.` | Situation Update 가 답을 알려주고 있었다 | EPTA_04 P2B-Q7 |
 | `red wood is profitable for our aircraft` | `Redwood is suitable for us — it is only 60 miles and the runway is 2,600 metres.` | `profitable`(수익성) ≠ `suitable`(적합). 그리고 **이유를 붙인다** | EPTA_04 P2A-Q4 |
 | `we will let you know as complete as possible` (say your intentions 에 대한 답) | `Our intention is to land with flaps 15 — we will need the longest runway available.` | "나중에 말하겠다" 는 intentions 가 아니다. **4세트 연속 회피** | EPTA_04 · 05 P2B-Q4 · 06 P2B-Q5(구문 사용) · S01 P2B-Q4 · 07 P2B-Q6(재발) |
-| `request fire service follow in` (two things 질문) | `Affirm we expect to be able to vacate at the end, and request the fire service to follow us in.` | 관제사가 `two things` 라고 하면 **둘 다** | EPTA_04 · 05 P2B-Q9 · 06 P2B-Q6 |
+| `request fire service follow in` (two things 질문) | `Affirm we expect to be able to vacate at the end, and request the fire service to follow us in.` | 관제사가 `two things` 라고 하면 **둘 다** | EPTA_04 · 05 P2B-Q9 · 06 P2B-Q6 · 08 P2B-Q6(재발) |
 | `we have 1hr 20min` (endurance + 가능 선회수 질문) | `Endurance one hour 20 minutes. Our alternate needs 40 minutes, so we can take about 10 more turns.` | 여유 40분 ÷ 1회전 4분 = 10회전. **계산해서 답하기** | EPTA_04 P1B-Q1 |
 | `we set another squawk by mistake` | `We had 2064 set by mistake. Now squawking 2046.` | **틀린 값을 말해야** 관제사가 화면과 대조할 수 있다 | EPTA_04 P1B-Q5 |
 | `we will stop at the end of the runway and request stand ambulance` (inquire where 질문) | `Where will the ambulance meet us — at the end of the runway or on the stand?` | `inquire` 는 **물음표로 끝나는 문장** | EPTA_04 P2A-Q10 · 05 P2A-Q2·Q9 |
@@ -138,6 +138,60 @@
 | `the aircraft is unservisable , we have to use the longest runway` (고장난 것은 앞의 A350) | `the A350 ahead of us was unserviceable, so taking 32R also put us first for departure` | 고장난 주체를 혼동하면 결론이 뒤집힌다 | EPTA_07 P2A-Q11 |
 | `it helped us something to find` / `all the atc did is perfect` | `it helped us work out where we could go` / `everything the controller did was good` | 문장이 성립하지 않는다. **짧고 맞는 문장**이 낫다 | EPTA_07 P2C-Q2 |
 
+| `negative ... we have to use 230 knots or less` (관제사가 210kt 요구) | `Affirm — our limit is 230 knots and 210 is inside that, so we can accept 210.` | **제한이 230 이하면 210 은 된다.** 제한을 정확히 말하면서 그것을 거부 근거로 썼다. EPTA_07 P2A-Q4 와 동일 구조 | EPTA_08 P2B-Q4 |
+| `Affirmative um access intersection departure` (필요 2,100 / 가용 2,400) | `Affirm — we need 2,100 metres and Golf 4 gives us 2,400, so we can accept it.` | 판단은 맞았는데 **숫자가 하나도 없다.** 근거가 답에 남지 않는다 | EPTA_08 P1B-Q1 |
+| `Request expected further clearance` (EFC 20분을 이미 받은 상태) | `We can accept the 20-minute delay. We have 1 hour 10 minutes of fuel and our alternate needs 25, so we can hold for up to 45 minutes.` | **이미 받은 것을 다시 요청.** 1:10 − 25분 = 45분이라는 뺄셈이 이 문항의 전부였다 | EPTA_08 P1B-Q6 |
+| `we have only one hour fuel so if we do hold I'm not sure we use the reserve` (소요 25분 / 연료 65분) | `15 minutes plus 10 to touchdown is 25 minutes, and we have 1 hour 5 minutes of fuel, so that is well inside our reserve.` | **결론은 맞는데 근거가 거꾸로.** 65분으로 25분을 하는 데 불안할 이유가 없다 | EPTA_08 P2A-Q4 |
+| `Recast label down due to drone` (본 것을 보고하라는 자리) | `Maintain flight level 330. And be advised, in the cruise we saw a drone about 2 miles at our ten o'clock.` | **보고를 요청으로 바꾸면** 관제사가 현재 위협으로 받고 주변 항공기를 움직인다 | EPTA_08 P1B-Q3 |
+| `I think the fire Services because there's no fire in the engine` | `Affirm, we would like the fire service standing by as a precaution. And negative, we do not need to shut the engine down.` | 불이 없는데 소방대를 원한다는 모순. 이유는 **`as a precaution`**. 그리고 `two things` 는 토막 두 개 | EPTA_08 P2B-Q6 |
+| `Decent 1000` (지시는 10,000) / `passing 1,500 feet` (실제 15,000) | `descend to one zero thousand` / `passing one five thousand` | **네 자리는 정확한데 다섯 자리에서 0 이 빠진다.** 자릿수를 끊어 말한다 | EPTA_08 P2B-Q2 · Q3 |
+| `Miles from dolin` / `a mile from Versa` | `90 miles from DORLIN` / `80 miles from BARSO` | 거리 숫자가 빠지면 "~마일"은 정보가 아니다. **Initial Situation 의 숫자를 메모 맨 위에** | EPTA_08 P2A-Q1 · P2B-Q1 |
+| `we have some abnormal issues about engine before` | `The vibration has dropped and engine number 2 is now running normally at reduced thrust.` | 갱신은 **"지금 어떤가"**. 쌍발기는 **엔진 번호**가 소방 배치를 정한다 | EPTA_08 P2B-Q8 · 07 P2B-Q8 |
+| `if able` (Delta 로 빠질 수 있냐는 질문에) | `we can vacate via Delta` | 관제사 말을 되돌려준 것이지 답이 아니다. 뒤 항공기 간격이 걸려 있다 | EPTA_08 P2A-Q8 |
+| `Hold that. Stand 24.` (이유·요청 요구) | `We will hold for stand 24 rather than take the long taxi — 8 extra minutes costs more fuel than waiting. Request a holding point clear of the traffic behind us.` | 30초 문항에 **다섯 단어**로 답하면 관제사가 다시 물어야 한다 | EPTA_08 P2A-Q10 |
+| `expect on runway 15` (지시는 `expect further clearance at one five`) | `expect further clearance at one five` | 홀딩 뒤에 오는 고정 표현. **뒤에 오는 것은 시각**이지 활주로가 아니다 | EPTA_08 P2A-Q5 |
+| `Affirmative` | `Affirm` | ICAO 표준어는 `AFFIRM` | EPTA_08 P1B-Q1 |
+| `the vibration was released` | `the vibration is gone` / `the vibration stopped` | `release` 는 **풀어주다·방출하다**(release the brakes / released the fire bottles) — 진동이 "방출됐다" 는 **시작됐다**는 뜻으로 들려 의미가 뒤집힌다. `has settled` 가 어려우면 `is gone` 으로 대체 | 2026-11-01 질문 |
+| `We have 15 minute as a Reserve, so 20 minute is acceptable` (잔여 55분) | `We have 55 minutes of fuel and you need 20, so we can take that.` | **틀이 아니라 값이 문제.** 15분 남았는데 20분 벡터를 수락하면 관제사는 연료 부족 항공기를 더 돌리는 셈이 된다. 같은 55→15 오류가 **세 문항에서 반복** | EPTA_09 P2B-Q4 · Q5 · P2C-Q1 |
+| `We will not need to file service standing by` (연료 누출 중) | `We would like the fire service standing by as a precaution.` | **불이 없다 ≠ 소방대가 필요 없다.** 착륙 후 뜨거운 브레이크와 새는 연료가 만나면 그때 불이 난다. 이유는 `as a precaution` 한 마디 | EPTA_09 P2B-Q7 |
+| `we don't need smoke on fire` (`is there any smoke or fire?`) | `Negative, there is no smoke and no fire.` | **사실을 묻는 질문을 필요 여부로 오독.** `is there any ~?` 는 상태 확인이지 요청 접수가 아니다 | EPTA_09 P2B-Q7 |
+| `Increase speed 300` (현재 상태 보고 자리) | `We are maintaining 300 knots.` | **지시 복창 동사 vs 상태 보고 동사.** `increase speed 300` 은 "이제 300으로 올리겠다"로 들린다. CLAUDE.md §6-1 의 `maintain 12,000` vs `level at 12,000` 과 같은 유형 | EPTA_09 P1B-Q2 |
+| `Our company restriction, visibility is 8,000 metre` (회사 최저 5,000) | `The reported visibility is 8,000 metres and our company minimum is 5,000.` | **두 값의 역할이 바뀌면 비교가 성립하지 않는다.** 8,000 은 보고값, 5,000 이 내 기준. 그리고 `restriction` → `minimum` | EPTA_09 P1B-Q1 |
+| `we have to let us fly level 250` | `we have to stop the climb at flight level 250` | `let us ~` 는 "우리에게 허락해 달라" — 주체가 뒤바뀐다. 내가 하는 조치는 평서문으로 | EPTA_09 P2A-Q7 |
+| `He could have been handled differently` | `he could have handled it differently` | **사람 주어에 수동태를 붙이지 않는다.** 수동태는 `the situation could have been handled` 쪽에만. `everything has been handled with well` → `everything was handled well` | EPTA_09 P2C-Q2 |
+| `we have only 900 kilometer` | `the left tank is down to 900 kilos` | **연료 단위는 kilos(=kilograms)**. 900킬로미터는 연료량이 아니다 | EPTA_09 P2B-Q3 |
+| `our intentional needs to land` | `our intention is to land` | `intentional` 은 형용사("고의적인"). 구문은 **`Our intention is to ~`** 로 고정 | EPTA_09 P2B-Q6 |
+| `Request transition altitude` (두 값이 안 맞아 확인하는 자리) | `Request confirmation of the transition altitude — our charts show 10,000 but the briefing sheet says 18,000.` | **이미 가진 것을 다시 요청.** 필요한 것은 값이 아니라 **어느 쪽이 맞는지**. 전이고도는 필수 복창 7항목 | EPTA_09 P1B-Q6 |
+| `clearance Runway 21 approach` (ILS 누락) | `cleared for the ILS runway 21 approach` | 접근 **방식**(ILS/RNAV/visual)이 빠지면 어느 접근인지 합의되지 않는다. `clear`/`clearance` → `cleared for` 는 누적 4세트째 | EPTA_09 P2B-Q9 · P1A-Q4 |
+| `it depends our fuel` / `take a one more time` / `it is our 0.1 with our passenger` | `it depends on my fuel` / `take off again` / `it costs our passengers far more time` | 90초 자유응답에서 길어지면 깨지는 자리 | EPTA_08 P2A-Q11 |
+
+| `Request present level` (착빙 이탈을 요청하는 자리) | `Request descent due to light icing. Maintaining flight level one six zero.` | **present level 은 요청 대상이 아니라 보고 대상이다.** REQUEST 뒤 명사구에는 "내가 받고 싶은 것"(강하·고도 변경)이 들어간다. 현재 고도는 그 뒤에 따로 보고 | EPTA_10 P1B-Q3 |
+| `our limit is 150 per minute` (실제 1,500 fpm) | `the best we can give is one five zero zero feet per minute` | **150 fpm 과 1,500 fpm 은 열 배 차이**다. 메모에 **단위를 숫자에 붙여**(`1500fpm`) 적고, 말할 때 **자릿수를 하나씩 끊는다.** 틀 자체는(unable+사유+대안) 정확했으므로 남은 것은 값 | EPTA_10 P1B-Q5 |
+| `seven miles from SOBAEK` (실제 70마일) | `seven zero miles from SOBAEK` | 두 자리 이상 거리는 **자릿수를 끊어** 7 과 구분한다. EPTA_09 와 **같은 값에서 같은 오류** | EPTA_10 P2B-Q1 · 09 |
+| `Maintain runway heading ... negative` | `Negative, HL123. We turned right heading zero four zero to stay clear of a build-up.` | **`confirm ~?` 응답의 첫 단어는 예외 없이 NEGATIVE/AFFIRM.** 내용부터 말하면 관제사는 그 순간 "유지 중"으로 받아들이고, 뒤에 붙은 negative 는 이미 늦다 | EPTA_10 P1B-Q1 |
+| `Roger. We can accept runway one four` (are you able ~? 에 대한 답) | `Affirm, we can accept runway one four — our wet runway crosswind limit is two five knots.` | `are you able ~?` 의 첫 단어는 **AFFIRM**. EPTA_07 에서 2/2 로 해결했던 항목의 후퇴 | EPTA_10 P1B-Q2 |
+| `we are continued to taxi on Mike` (실제로는 정지 상태) | `we are stopped on Mike, holding short of Sierra` | 지문이 "정지"라고 했으면 보고도 정지다. 지상 위치보고는 **"지금 어디 + 무엇 앞에서 멈췄는지"** 두 조각. 선택 질문("A 냐 B 냐")에 `Negative` 로 답하지 않는다 | EPTA_10 P2A-Q4 |
+| `we will expect to wait for Boeing 767` (inquire 지시) | `Request an estimate of how long we will be held.` | 수락은 질문이 아니다. `inquire`/`ask how long` 지시에는 **관제사가 답할 수 있는 질문 한 줄**을 복창 뒤에 붙인다 | EPTA_10 P2A-Q3 |
+| `We will not expect stand on Runway` (소방대 대기 거부) | `Affirm, we do want the fire service standing by — our braking is degraded.` | **비정상 상황에서 지원 제안은 기본적으로 받는다.** 사실 질문(연기·냄새)과 필요 질문(대기 여부)이 한 문장에 붙어도 **답의 방향은 반대일 수 있다.** EPTA_09 연료 누출 건과 **같은 오류 2세트 연속** | EPTA_10 P2B-Q6 · 09 P2B-Q7 |
+| `Our intention is to Priority landing` | `Our intention is to make a priority landing.` | `intention is to` 뒤에는 **동사원형**. 구문 자체는 4세트 연속 유지 중 | EPTA_10 P2B-Q5 |
+| `we have to attend attention on slot time` | `we have to pay attention to the slot time` | 명사 `attention` 과 동사 `attend` 가 섞였다. 90초 응답에서 **3회 반복**된 표현 | EPTA_10 P2A-Q11 |
+| `we are really appreciated for it` | `we were really grateful for that` | **appreciate 는 사람이 주어일 때 수동으로 쓰지 않는다.** `we appreciated it` 또는 `we were grateful` | EPTA_10 P2C-Q2 |
+| `they can rely to Tower` (개선 제안) | `he could have left it to the Tower` | 뜻이 성립하지 않는다. 그리고 **개선 제안은 타이밍·정보 순서**를 지적하는 쪽이 안전하다 — "소방대를 묻지 말았어야 했다"는 안전 판단이 거꾸로 | EPTA_10 P2C-Q2 |
+| `we could have been handled different` | `it could have been handled differently` | 수동태의 주어는 **상황**(it/the situation). 사람 주어면 능동(`he could have handled it`). 부사는 `differently`. EPTA_09 와 같은 자리 | EPTA_10 P2C-Q2 · 09 |
+
+| `our flap up speed limit is two one zero` (유지 가능한 **최저**속도가 210kt) | `the slowest speed we can hold with our present flaps is two one zero knots` | **최저 ↔ 최대가 뒤집히면 판단이 반대로 간다.** `flap up speed limit` 은 "플랩을 올릴 수 있는 최대속도"로 읽힌다. 그리고 그 값을 말하면서 180kt 를 `Affirm` 으로 수락해 **한 답 안에서 모순**이 생겼다 | EPTA_11 P1B-Q2 |
+| `request, descend, we are on the right condition` | `request descent to flight level three one zero due to moderate turbulence` | **REQUEST + 명사(구)** — `descend` 는 동사다. 그리고 요청에는 **목표값**이 들어가야 한다. 사유는 `due to ~` | EPTA_11 P1B-Q3 |
+| `request inbounds, Thatcham airport` (위치보고 자리) | `inbound Thatcham, information Delta` | **위치보고에 REQUEST 가 들어갈 자리가 없다.** 목적지는 `inbound + 지명` 으로 평서문. EPTA_06 의 "REQUEST 뒤 동사구" 재발 | EPTA_11 P2A-Q1 |
+| `There's no nothing smoke in cabin` (연기가 아직 남은 상태) | `Affirm, the smoke is still in the cabin.` | ① 이중부정 ② **사실과 반대 보고** — 연기가 멈춘 것은 두 턴 뒤다. 부정 답은 `NEGATIVE` 로 시작하고, 긍정이면 `Affirm` | EPTA_11 P2B-Q7 |
+| `Hold short, hold stand one two` | `we will hold for stand one two` | **`hold short` 는 활주로 앞 정지**를 뜻하는 고정 표현이다. 주기장 대기에 쓰면 관제사는 활주로 쪽으로 이해한다 | EPTA_11 P2A-Q9 |
+| `our intention is to request fire service standing by` | `Our intention is to land at Brindle and stop on the runway for a cabin inspection. We request the fire service standing by.` | **intentions 는 "내가 무엇을 할 것인지"**다. 요청은 intentions 가 아니라 그 뒤에 따로 붙인다. 구문(`our intention is to`)은 5세트 연속 유지 중 | EPTA_11 P2B-Q6 |
+| `1 hour 15 minute fuel and 170 souls` / 여덟 턴 뒤 `one hour 30 minutes` (실제 1시간 50분·147명) | `fuel endurance one hour five zero minutes, one four seven persons on board` | **같은 값을 두 번 물었더니 두 번 다른 답.** `five zero` 를 `one five` 로, `one four seven` 을 `one seven zero` 로 적는 습관. 메모에 `FUEL/SOB` 고정 칸을 만들고 되물으면 그 칸을 읽는다 | EPTA_11 P2B-Q4 · Q8 |
+| `we can accept the runway` (두 공항 중 선택하는 자리) | `request Brindle, niner minutes, 3,000 metres` | **어느 쪽인지 말하지 않으면 벡터를 받을 수 없다.** 두 값이 **모두 기준을 넘으면 길이로 갈리지 않는다** — 그때는 시간으로 고른다 | EPTA_11 P2B-Q5 |
+| `On taxiway Kilo` (관제사가 "안 보인다"고 물음) | `we are stopped on taxiway Kilo, short of taxiway Juliet` | 지상 위치보고는 **"어느 유도로 + 무엇 앞"** 두 조각이다. 유도로 이름만으로는 구간 어디든 될 수 있다. EPTA_10 과 같은 유형 | EPTA_11 P2A-Q10 |
+| `if briefing, we will make the checklist` / `we have to make many happening` | `in the briefing we prepare a checklist` / `we have more to do` | 90초 응답에서 깨지는 자리. `if` 와 `in` 혼동, `make + happening` 은 성립하지 않는다 | EPTA_11 P2A-Q11 |
+| `expert passing one two thousand` (`expedite until passing ~`) | `expedite until passing one two thousand` | **`until` 이 빠지면 어디까지 서두를지가 사라진다.** 조건부 지시는 경계어가 핵심 | EPTA_11 P1A-Q3 |
+| `contact tower control one two three point four` (실제 Hartwell Control 132.4) | `contact Hartwell Control on one three two decimal four` | 주파수 **앞 두 자리 뒤집기**(132→123)와 기관명 누락이 함께 났다. 상승 중인데 tower 로 간다는 복창이 된다 | EPTA_11 P2B-Q2 |
+
 ## 2. 실제 출제 음성에서 확인된 핵심 표현
 
 `reference/exam-spec.md` §5-3 에서 옮긴 것. 아직 채점 사례는 없지만 미리 외워 둘 것.
@@ -153,3 +207,24 @@
 | request towing assistance | 견인 지원 요청 | 착륙 후 자력 이동 불가 시 |
 | offset (거리) right/left to avoid weather | 기상 회피를 위해 ~마일 측면 이탈 | 편차 요청 |
 | unable due to performance, request (대안) | 성능상 불가, 대안 요청 | **unable 은 반드시 사유 + 대안 3단 구조** |
+
+## WEAK_02 (2026-11-05) — 상한·하한, 그리고 반대말
+
+| 내 표현 | 고친 표현 | 왜 |
+|---|---|---|
+| `pembury runway 18 is over our limit` (RVR 450 / 최저 550) | `Pembury runway one eight is 450 metres, which is **below our minimum** of 550` | RVR·활주로 거리는 **하한**이다. `over the limit` 은 측풍·무게처럼 **상한**이 있는 값에 쓴다. 반대말을 써서 이유가 거꾸로 섰다 |
+| `affirm ... speed 260knots or greater until mavik` (제한 = 최대 230) | `Negative. Unable two six zero knots or greater — we are limited to two three zero knots or less. We can give you two three zero until MAVIK` | 상한을 하한처럼 읽었다. 거부할 때는 **줄 수 있는 값**을 반드시 붙인다 |
+| `roger 7000 reduce spped 160 until 10miles` (최저 180) | `Unable one six zero knots — the slowest speed we can hold is one eight zero knots. We can maintain one eight zero until one zero miles` | 받을 수 없는 지시에 **ROGER 를 단독으로 쓸 수 없다** |
+| `our available distance is 2700m` | `we **require** 2,700 metres` | `required landing distance`(내가 필요한 것) ↔ `landing distance available`(활주로가 주는 것). 바꿔 쓰면 뜻이 정반대 |
+| `we can accept 12min delay` (관제사는 `saves you one two minutes`) | `it saves us one two minutes` | 단축을 지연으로 반대로 들었다 |
+| `request gosma 2 lidro 1 arrival` | `Request the LIDRO ONE **departure**` | 클루의 두 칸은 철자를 주는 것이지 둘 다 말하라는 뜻이 아니다. SID 는 departure |
+| `request dirct dunmere` (원한 것 = 기상) | `Request the **latest Dunmere weather**` | 발신 문항은 ATC 대사가 없으므로 **지문이 유일한 근거**다 |
+| `how long will it to wait` | `Request our revised delay` / `request the expected delay now` | 정보를 원할 때는 **REQUEST + 명사구** |
+| `we have had set 280 knots by mistake request reduce speed 260knots` | `correction — we set two eight zero knots in error. We were cleared two five zero and we are reducing to two five zero now` | ① 이미 받은 허가를 `request` 하지 않는다 ② 정정은 **현재 상태 → 받은 허가 → 지금 하는 조치** 3단 |
+| `our intention is medical team standing by` | `Our intentions are **to land** at Wexcombe on the next available runway, and we **request** a medical team at the stand` | 의도는 `to + 동사`, 지원은 `request + 명사구`. 둘을 한 덩어리로 붙이면 문장이 안 선다 |
+| `passing 2000ft on ils runway 18` (복행 후) | `**going around** from the ILS runway one eight, now passing 2,000 feet` | 복행 사실이 빠지면 "아직 접근 중"으로 들린다 |
+| `we lost 800feet and 15knots by windshear` | `we lost one five knots in windshear **at** 800 feet` | 잃은 것은 속도, 800피트는 그 고도. 두 숫자의 역할을 섞었다 |
+| `we have serious burn on 1 hand on aircraft` | `we have **a cabin crew member** with a serious burn to one hand` | 다친 사람이 승객인지 승무원인지로 대응이 달라진다 |
+| `our no2 oil is drop` | `the oil **quantity** on engine number two is **dropping**` | 무엇이 떨어지는지 + 진행 중임 |
+| `we had have raizer on cockpick` | `a **green laser** from the ground lit up our cockpit` | 시제 중복. 레이저 보고에서 **색**은 필수 항목 |
+| `afirm ... but the icing is still on the left wing` | `**Negative.** ... there is still ice on the left wing` | 첫 단어가 뜻을 못 박는다. 내용을 뒤에서 정정해도 첫 단어가 반대면 모순이다 |

@@ -1,0 +1,12 @@
+{
+  "set": "SAMPLE_01",
+  "session": "restored",
+  "qid": "P2A-Q12",
+  "answer": "I'm not sure we can get the winter clearance on golf too. So, request hold. Request hold for the golf stream pass. Hotel amount 123.",
+  "transcript": "",
+  "sttError": null,
+  "audioPath": null,
+  "seconds": null,
+  "at": "2026-11-03T06:10:36+00:00",
+  "restoredFrom": "sets\\SAMPLE_01_feedback.md"
+}

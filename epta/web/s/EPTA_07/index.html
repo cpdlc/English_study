@@ -116,6 +116,7 @@
     <label><input type="checkbox" id="optSpeech" checked> 음성 인식</label>
     <label><input type="checkbox" id="optAudio" checked> 녹음 저장</label>
     <label><input type="checkbox" id="optAutoStart"> 다음 문항 자동 시작</label>
+    <label id="optWakeLabel"><input type="checkbox" id="optWake" checked> 화면 켜두기</label>
     <a class="mine" id="mineLink" href="/r/">내 답안 보기 →</a>
   </div>
 </header>
@@ -158,7 +159,8 @@
   const answers = store.get('answers', {});
   const sayAgainUsed = store.get('sayagain', {});
   const recordings = {};                 // id → blob URL (이 탭에서만)
-  const opts = store.get('opts', { script: false, speech: true, audio: true, autoStart: false });
+  const opts = store.get('opts', { script: false, speech: true, audio: true, autoStart: false, wake: true });
+  opts.wake ??= true;                   // 예전에 저장된 설정에도 기본값을 준다
   // 녹음이 기본 꺼짐이던 때 저장된 설정을 한 번만 켜준다
   if (!store.get('optsV2', false)) {
     opts.audio = true; opts.speech = true;
@@ -244,6 +246,33 @@
     clearInterval(timerHandle);
     stopSpeech();
     stopRecording();
+  }
+
+  /* ───────── 화면 꺼짐 방지 ─────────
+     문제를 듣는 20~30초, 답하는 30~90초 동안 손을 대지 않으므로 화면 자동 잠금이 걸린다.
+     첫 '시작' 때 Screen Wake Lock 을 잡고 세트를 끝낼 때까지 들고 있는다.
+     브라우저가 탭을 숨기면 OS 가 잠금을 알아서 풀기 때문에, 돌아왔을 때 다시 잡아준다. */
+
+  const wakeSupported = 'wakeLock' in navigator;
+  let wakeSentinel = null;              // 지금 잡고 있는 잠금
+  let wakeWanted = false;               // 잡고 있어야 하는 상태인가
+
+  async function wakeOn() {
+    wakeWanted = true;
+    if (!opts.wake || !wakeSupported || wakeSentinel) return;
+    if (document.visibilityState !== 'visible') return;
+    try {
+      wakeSentinel = await navigator.wakeLock.request('screen');
+      wakeSentinel.addEventListener('release', () => { wakeSentinel = null; });
+    } catch {
+      wakeSentinel = null;              // 배터리 절약 모드 등에서는 거부된다
+    }
+  }
+
+  function wakeOff({ keep = false } = {}) {
+    if (!keep) wakeWanted = false;
+    wakeSentinel?.release?.().catch(() => {});
+    wakeSentinel = null;
   }
 
   /* ───────── 음성 인식 — 말하면 바로 글자로 ───────── */
@@ -359,6 +388,7 @@
 
   async function start() {
     const q = flat[idx];
+    wakeOn();
     stopAll();
     const my = runId;
     phase = 'playing'; render();
@@ -374,6 +404,7 @@
     const q = flat[idx];
     if (sayAgainUsed[q.id]) return;
     sayAgainUsed[q.id] = true; store.set('sayagain', sayAgainUsed);
+    wakeOn();
     stopAll();
     const my = runId;
     phase = 'playing'; render();
@@ -711,10 +742,16 @@
   /* ───────── 이탈 시 저장 ───────── */
 
   document.addEventListener('visibilitychange', () => {
-    if (document.hidden) { clearTimeout(typeTimer); flushAll({ keepalive: true }); }
+    if (document.hidden) {
+      clearTimeout(typeTimer); flushAll({ keepalive: true });
+      wakeOff({ keep: true });          // OS 가 이미 풀었을 수 있다 — 상태만 남겨 둔다
+    } else if (wakeWanted) {
+      wakeOn();                         // 돌아왔으면 다시 잡는다
+    }
   });
   window.addEventListener('pagehide', () => {
     clearTimeout(typeTimer); flushAll({ keepalive: true });
+    wakeOff();
   });
 
   $('syncAll').addEventListener('click', async () => {
@@ -763,6 +800,18 @@
   bindOpt('optSpeech', 'speech');
   bindOpt('optAudio', 'audio');
   bindOpt('optAutoStart', 'autoStart');
+
+  $('optWake').checked = opts.wake;
+  $('optWake').addEventListener('change', (e) => {
+    opts.wake = e.target.checked; store.set('opts', opts);
+    if (opts.wake) { if (wakeWanted) wakeOn(); } else wakeOff();
+  });
+  if (!wakeSupported) {
+    $('optWake').checked = false;
+    $('optWake').disabled = true;
+    $('optWakeLabel').title = '이 브라우저는 화면 켜두기(Screen Wake Lock)를 지원하지 않습니다 — '
+      + 'iOS 는 16.4 이상, 설정 ▸ 디스플레이 ▸ 자동 잠금을 길게 두세요.';
+  }
 
   render();
 })();

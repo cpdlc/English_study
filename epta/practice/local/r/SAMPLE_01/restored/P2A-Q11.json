@@ -1,0 +1,12 @@
+{
+  "set": "SAMPLE_01",
+  "session": "restored",
+  "qid": "P2A-Q11",
+  "answer": "Runway 13 left. Runway 13 left. Turn left on golf. Cross runway 22 right. Follow golf stream. Pass to right. Hotel amount 123.",
+  "transcript": "",
+  "sttError": null,
+  "audioPath": null,
+  "seconds": null,
+  "at": "2026-11-03T06:10:36+00:00",
+  "restoredFrom": "sets\\SAMPLE_01_feedback.md"
+}

@@ -1,0 +1,12 @@
+{
+  "set": "EPTA_01",
+  "session": "20261008-164147",
+  "qid": "P2A-Q8",
+  "answer": "expect rnav approach speed 170 knots contact 119.75 hl123",
+  "transcript": "",
+  "sttError": null,
+  "audioPath": null,
+  "seconds": null,
+  "at": "2026-11-03T06:09:08+00:00",
+  "restoredFrom": "practice\\results\\EPTA_01.md"
+}

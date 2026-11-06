@@ -173,6 +173,30 @@ Task B 문항은 **두 형태**가 있다.
 
 출제 시 **6문항 중 0~2문항을 발신형**으로 둔다.
 
+### 3-1-1. ★★ 상황설명이 "무엇을 원하는지"를 한 문장으로 못 박는다 (2026-11-03 발견)
+
+4세트 원문을 다시 보니 **예외가 없다.** 상황설명은 사실만 늘어놓지 않고, **조종사의 의도·
+능력·상태를 한 문장으로 명시**한다. 지시문은 그 뒤에 붙는 **기능 라벨**일 뿐이다.
+
+| 문항 | 상황설명의 '의도' 문장 | 지시문 |
+|---|---|---|
+| test04-Q5 (발신형) | **`You want to have PIREP, including turbulence information at lower altitude.`** | `Contact controller. Report your status and make a request.` |
+| test04-Q2 (발신형) | **`You are unsure about clearance.`** | `Contact approach. Make a confirmation and clarify your intention.` |
+| test04 응답형 | **`You can climb to flight level 310 in one hour due to performance.`** | `Respond accordingly with a reason.` |
+
+**그래서 출제 시 지켜야 할 것 :**
+
+- 상황설명 끝에 **`You want to ~` / `You can ~` / `You are unsure ~`** 중 하나로 **의도
+  문장을 반드시 넣는다.** 이것이 없으면 응시자는 "무엇을 말해야 하는지"를 추측해야 하고,
+  채점자도 정답을 확정할 수 없다.
+- **요청의 목표값을 지문에 준다.** "A level change would take you out of it" 처럼 암시만
+  하면 응시자가 고도를 지어내야 한다. `You want to descend to flight level one four zero`
+  처럼 값을 박아 준다 (CLAUDE.md §6-1 의 "지어내게 만드는 문항은 만들지 않는다"와 같은 취지).
+- **실패 사례 — EPTA_10-P1B-Q3** : 착빙 상황에 의도 문장도, 목표 고도도 없이
+  `Make a request with a reason` 만 주고 클루에 지시문 문구를 되풀이했다. 응시자가
+  "막 얘기해야 한다"고 느낀 것이 정당한 결함이다. 모범답안의 `flight level one four zero`
+  도 출제자가 뒤늦게 지어낸 값이었다.
+
 ### 3-2. 4세트 24문항 전수 기능 분류
 
 | 기능 | 해당 문항 | 합 |
@@ -253,6 +277,12 @@ Listen to the controller, make a readback, and a request with a reason.
 Listen to the controller. Explain your situation and request to go around for stable approach.
 Listen to the transmission, and make a request with a reason.
 ```
+
+⚠ **사전에 없는 문구를 만들지 않는다.** EPTA_09-P1B-Q6 에서 `Make a confirmation and say
+what you have` 를 썼는데, `say what you have` 는 실제 음성에도 이 사전에도 없는 조어다.
+"내가 가진 값을 말하라"는 뜻이면 실제 문구는 **`clarify your intention`** 이다. 기능을
+더하고 싶으면 사전 안의 토막(`with a reason` / `and make a request` / `state your
+decision`)을 조합한다.
 
 ★ **test04 의 지시문은 2~3개 기능을 한 번에 요구한다** — `make a readback, and a request with
 a reason` / `Report your status and make a request` / `Explain your situation and request to
@@ -673,7 +703,16 @@ Seoul Radio
 2. **여러 항목을 나열할 때는 슬래시(`/`)**, 절차명과 지명을 묶을 때는 쉼표.
 3. **조종사가 먼저 말해야 하는 발신 문항**에서는 클루가 **해야 할 기능의 목록**이 된다
    (`Contact / ground operations / possibility of defuel & duration`).
-4. 빈도 : **32문항 중 7문항(22%)**. Ⅰ-A 4문항 중 1개, Ⅰ-B 6문항 중 1개,
+4. **★ 클루에 지시문 문구를 그대로 넣지 않는다 (2026-11-03 추가).** 실제 7건의 슬래시
+   칸은 전부 **내용어**다 — `possibility of defuel & duration`, `hold position / towing`,
+   `unsure of wingtip clearance`. `request with a reason` · `report your status` 처럼
+   **음성 지시문의 기능 라벨을 옮겨 적은 칸은 한 건도 없다.** 그렇게 쓰면 클루가 음성을
+   되풀이할 뿐 아무 정보도 주지 않는다. (EPTA_10-P1B-Q3 에서
+   `🖥 [ Gangneung Control / request with a reason / present level ]` 로 그 잘못을 했다.)
+5. **★ 기능 나열 클루는 Part Ⅱ Task A 에서만 확인됐다.** 7건 중 Ⅰ-B 의 클루는
+   `FRISO` **고유명사 하나**였다. Ⅰ-B 에 3칸 기능 목록을 띄우는 것은 근거가 없다 —
+   Ⅰ-B 클루는 고유명사 1~2개로 둔다.
+6. 빈도 : **32문항 중 7문항(22%)**. Ⅰ-A 4문항 중 1개, Ⅰ-B 6문항 중 1개,
    Ⅱ-A 13문항 중 3개, Ⅱ-B 7문항 중 2개. **Task C 에는 없다.**
 
 ### 11-4. 이미지
@@ -752,9 +791,25 @@ Seoul Radio
 | **0.81 / 0.94 (채택)** | **156** | **142** | **164** | **1.26배** |
 
 실제와 똑같은 124 WPM 으로 맞춰 봤더니 연습용으로는 늘어진다는 판단이 나와(2026-10-23),
-기본값과 실제값의 중간보다 약간 빠른 쪽으로 정했다. **실제보다 1.26배 빠르므로 듣기
-부담은 실제 시험보다 크다 — 의도된 설정이다.** ATC 를 내레이션보다 느리게 두는 실제
+기본값과 실제값의 중간보다 약간 빠른 쪽으로 정했다. ATC 를 내레이션보다 느리게 두는 실제
 관례는 유지했다. **EPTA_05 부터 적용.**
+
+**★ 위 TTS 표의 WPM 은 과대 측정값이다 (2026-11-02 정정).** 실제 음성 표(124 WPM)는
+자막을 센 것이라 숫자가 `flight level 160` 처럼 **아라비아 숫자 = 1단어**로 잡히는데,
+TTS 표는 발화 스크립트를 세어 `one six zero` 를 3단어로 잡았다. 같은 기준으로 다시
+재려면 **md 원문 단어 수 ÷ (0.6초 넘는 무음을 뺀 재생시간)** 으로 계산해야 한다.
+EPTA_09 의 실제 음성 60개를 그렇게 재면:
+
+| | EPTA_09 (TTS 0.81/0.94) | 실제 음성 4세트 | 비율 |
+|---|---|---|---|
+| ATC 대사 | **103.5** | ≈102 | **1.01배** |
+| 내레이션 | **155.9** | ≈120 | 1.30배 |
+| 전체 | **129.5** | 124 | 1.04배 |
+
+→ **ATC 대사는 실제 시험과 사실상 같은 속도**다. 빠른 쪽은 내레이션(상황설명·지시문)
+하나뿐이고, 이건 2026-10-23 에 내레이션을 실제 속도(≈124 WPM, rate 0.75)까지 내려
+들어보고 "늘어진다"고 판단해 올려 둔 결과다. 복창·응답 대상인 ATC 대사가 실제와
+일치하므로 **현재 설정을 유지한다.**
 
 ### 10-2. 응답 허용시간 — 이 녹음에는 들어 있지 않다
 

@@ -1,0 +1,12 @@
+{
+  "set": "SAMPLE_01",
+  "session": "restored",
+  "qid": "P2C-Q2",
+  "answer": "Uh... I think it handled well... Well, as soon as we noticed that the display out, we informed the controller our situation and they... and we asked to hold at 4,000. Right after that, they gave us the priority and holding at 4,000. And deviation to other heading. Also, when we asked the other airport... sorry. The controller gave us two options and we asked. Then the controller gave us the information about the weather. So, we can choose the right airport right after informing us. One thing that we have been handled differently is... that the controller may not ask, just gave us the right airport.",
+  "transcript": "",
+  "sttError": null,
+  "audioPath": null,
+  "seconds": null,
+  "at": "2026-11-03T06:10:36+00:00",
+  "restoredFrom": "sets\\SAMPLE_01_feedback.md"
+}

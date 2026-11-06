@@ -1,0 +1,12 @@
+{
+  "set": "EPTA_06",
+  "session": "20261027-144521",
+  "qid": "P2B-Q2",
+  "answer": "descend fl240 , reduce speed 280 expect magru 1 arrival ils runway 33 approach altimeter 2992 hl123",
+  "transcript": "",
+  "sttError": null,
+  "audioPath": null,
+  "seconds": null,
+  "at": "2026-11-03T06:09:09+00:00",
+  "restoredFrom": "practice\\results\\EPTA_06.md"
+}

@@ -145,7 +145,7 @@ RESULT_HTML = """<!doctype html>
   $('title').textContent = set || '내 답안 보기';
   if (!set) { $('meta').textContent = '세트를 지정하지 않았습니다.'; return; }
 
-  let sessions = [], grade = null, head = null, qmap = {};
+  let sessions = [], grade = null, head = null, qmap = {}, qorder = [], noteMsg = '';
 
   /* ── 문제 음성 재생 ── */
   const player = new Audio();
@@ -237,15 +237,16 @@ RESULT_HTML = """<!doctype html>
       if (rq.ok) {
         const qd = await rq.json();
         for (const sec of qd.sections || [])
-          for (const q of sec.questions || []) qmap[q.id] = q;
+          for (const q of sec.questions || []) { qmap[q.id] = q; qorder.push(q.id); }
       }
 
-      if (!r1.ok) {
+      if (r1.ok) {
+        sessions = (await r1.json()).sessions || [];
+      } else {
+        // 응답 기록을 못 불러와도 문제·정답은 보여준다 (암기용).
         const j = await r1.json().catch(() => ({}));
-        $('meta').textContent = `불러오지 못했습니다 — ${j.error || r1.status}`;
-        return;
+        noteMsg = `응답 기록을 불러오지 못했습니다 — ${j.error || r1.status}`;
       }
-      sessions = (await r1.json()).sessions || [];
       grade = r2.ok ? await r2.json().catch(() => null) : null;
       if (grade && !grade.items) grade = null;
     } catch (e) {
@@ -253,7 +254,13 @@ RESULT_HTML = """<!doctype html>
       return;
     }
 
-    if (!sessions.length) { $('meta').textContent = '아직 저장된 응시 기록이 없습니다.'; return; }
+    if (!sessions.length) {
+      if (!qorder.length) {
+        $('meta').textContent = noteMsg || '아직 저장된 응시 기록이 없습니다.';
+        return;
+      }
+      sessions = [{ session: noteMsg || '(응시 기록 없음)', answers: [] }];
+    }
 
     if (sessions.length > 1) {
       $('sess').hidden = false;
@@ -267,8 +274,13 @@ RESULT_HTML = """<!doctype html>
   function show(i) {
     stop();
     const s = sessions[i];
-    const done = s.answers.filter((a) => (a.answer || a.transcript || '').trim()).length;
-    $('meta').textContent = `응시 ${s.session} · ${done}/${s.answers.length} 문항 응답`
+    const amap = {};
+    for (const a of s.answers) amap[a.qid] = a;
+    // 세트의 전 문항을 순서대로 세운다. 응답이 없는 문항도 문제·정답은 보여야 한다.
+    const rows = (qorder.length ? qorder : s.answers.map((a) => a.qid))
+      .map((qid) => amap[qid] || { qid });
+    const done = rows.filter((a) => (a.answer || a.transcript || '').trim()).length;
+    $('meta').textContent = `응시 ${s.session} · ${done}/${rows.length} 문항 응답`
       + (grade ? ` · 채점 ${grade.gradedAt || ''}` : ' · 아직 채점 전');
 
     $('grade').innerHTML = grade && grade.level
@@ -277,11 +289,12 @@ RESULT_HTML = """<!doctype html>
         + `</div>`
       : '';
 
-    $('list').innerHTML = s.answers.map((a) => {
+    $('list').innerHTML = rows.map((a) => {
       const g = grade?.items?.[a.qid];
       const q = qmap[a.qid];
-      const mine = (a.answer || '').trim();
+      const typed = (a.answer || '').trim();
       const heard = (a.transcript || '').trim();
+      const mine = typed || heard;          // 타이핑을 안 했으면 음성 전사본이 내 답안이다
       const segs = q ? [...(q.pre || []), ...(q.body || [])] : [];
       const hasAudio = segs.some((x) => x.src);
       return `<div class="q" id="q-${esc(a.qid)}">
@@ -292,9 +305,9 @@ RESULT_HTML = """<!doctype html>
           </span>
         </h2>
         ${segs.length ? `<div class="lab">문제</div>${segs.map(segHtml).join('')}` : ''}
-        <div class="lab">내 답안</div>
+        <div class="lab">내 답안${typed ? '' : (heard ? ' (음성 전사)' : '')}</div>
         <div class="val mine">${mine ? esc(mine) : '<span class="none">(무응답)</span>'}</div>
-        ${heard && heard !== mine ? `<div class="lab">음성 전사본 (서버)</div><div class="val heard">${esc(heard)}</div>` : ''}
+        ${typed && heard && heard !== typed ? `<div class="lab">음성 전사본 (서버)</div><div class="val heard">${esc(heard)}</div>` : ''}
         ${a.sttError ? `<div class="lab">전사 오류</div><div class="val heard">${esc(a.sttError)}</div>` : ''}
         ${a.audioPath ? `<div class="lab">내 녹음</div><div id="rec-${esc(a.qid)}">
           <button class="btn" data-rec="${esc(a.audioPath)}" data-qid="${esc(a.qid)}">🔊 내 녹음 듣기</button>

@@ -17,8 +17,14 @@ epta/web/.env.local
 epta/web/audio/
 # 실제 출제 녹음 — 용량이 크고 저작권이 있으므로 로컬에만 둔다
 epta/reference/audio/
-# 서버에서 내려받은 응시 기록 — pull.py 로 다시 받는다
+# 서버에서 내려받은 응시 기록 — 답안 원문은 sets/*_feedback.md 에 그대로 인용돼
+# 커밋되므로 여기 두지 않는다. (2026-11-03 주의 : "pull.py 로 다시 받는다"는 전제는
+# 서버 Blob 이 살아 있을 때만 참이다. 스토어가 정지되자 다시 받을 수 없었다.)
 epta/practice/results/
+# 응시 녹음 백업 — backup.py 가 받아 둔 원본. 용량이 커서 커밋하지 않는다.
+# 이게 유일한 사본이므로 절대 지우지 말 것. webm 은 확장자 규칙에 안 걸리므로 명시한다.
+epta/practice/recordings/
+*.webm
 # practice/ 의 옛 출력 경로 (지금은 web/ 로 나간다)
 epta/practice/audio/
 

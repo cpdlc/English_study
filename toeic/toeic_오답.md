@@ -1175,6 +1175,17 @@
 - 해설: 연계 문제. 이메일(4/22) "you and three other reporters from your newspaper plan to attend" → Frank 씨 포함 4명 예정. 이후 제출한 등록 양식에는 Deborah Frank + 추가 인원 Hendrick Stevenson, Pamela Consuelo(사진기자) → 3명. 4명 → 3명으로 줄었으므로 "대표단(파견 인원)을 축소했다". downsize a delegation = 파견단 규모를 줄이다. (A) 미국 내 행사만 다룬다는 근거 없음(Memphis가 미국이라는 사실만으로는 "only"를 단정 못 함 — only/exclusively 보기는 근거가 확실해야 함). (C)(D) 언급 없음.
 - 유형: 매칭
 
+## 2026-11-03 (개인 교재)
+
+### Part 5
+
+#### Q121 (Mr. Lee CFO 부임). Mr. Lee ------- on July 10 to assume the role of chief financial officer at Central Bank.
+(A) arriving (B) arrive (C) will be arriving (D) has arrived
+- 정답: C / 내 답: D (사진의 체크 표시 기준)
+- 해석: Lee 씨는 Central Bank의 최고재무책임자(CFO) 직을 맡기 위해 7월 10일에 도착할 예정이다.
+- 해설: 현재완료(has arrived)는 "과거~지금"의 완료·결과를 나타내므로 on July 10 같은 특정 시점 표현과 함께 쓸 수 없음(특정 과거 시점이면 과거 arrived, 미래 시점이면 미래형). 또 to assume the role(직책을 맡기 위해)은 앞으로 할 일이라 문맥상 미래 → 미래진행 will be arriving(예정된 일정). (B) arrive는 3인칭 단수 주어라 arrives여야 함 — arrives였다면 확정 일정의 현재시제로 정답 가능(교재 메모와 일치). (A) arriving은 -ing 단독이라 본동사 불가.
+- 유형: 문법
+
 ---
 
 ## 누적 통계
@@ -1182,6 +1193,6 @@
 | 유형 | 횟수 |
 |---|---|
 | 어휘 | 32 |
-| 문법 | 82 |
+| 문법 | 83 |
 | 매칭 | 25 |
 | 시간 | 0 |
